@@ -108,34 +108,6 @@ public ResponseEntity<Void> deleteMember(@PathVariable Long id) {
 }
 ```
 
-## PUT vs PATCH 차이
-
-```
-[기존 데이터]
-{"id": 1, "name": "홍길동", "email": "hong@test.com", "age": 25}
-
-[PUT — 전체 교체]
-PUT /members/1
-{"name": "홍길동", "email": "new@test.com"}
-
-결과: {"id": 1, "name": "홍길동", "email": "new@test.com", "age": null}
-→ 보내지 않은 필드(age)가 null로 초기화됨
-
-[PATCH — 부분 수정]
-PATCH /members/1
-{"email": "new@test.com"}
-
-결과: {"id": 1, "name": "홍길동", "email": "new@test.com", "age": 25}
-→ 보낸 필드(email)만 수정, 나머지는 유지
-```
-
-|항목|PUT|PATCH|
-|---|---|---|
-|**수정 범위**|리소스 전체 교체|변경할 필드만 수정|
-|**누락 필드**|null 또는 기본값으로 초기화|기존 값 유지|
-|**멱등성**|✅ (같은 요청 반복 시 같은 결과)|❌ (구현에 따라 다를 수 있음)|
-|**실무 사용**|전체 폼 수정|일부 필드 수정|
-
 ## 멱등성과 안전성
 
 ### [[멱등성]] (Idempotent)
@@ -201,5 +173,4 @@ Allow: GET, POST, PUT, DELETE, OPTIONS
 ## 면접 포인트
 
 - 각 Method의 **의미를 지켜서 사용하는 것이 RESTful API 설계의 핵심**이며, 예를 들어 조회에 POST를 사용하거나 삭제에 GET을 사용하는 것은 안티패턴입니다.
-- PUT과 PATCH의 차이를 **전체 교체 vs 부분 수정**, 그리고 **멱등성 여부**로 구분할 수 있어야 합니다.
 - 멱등성은 실무에서 **네트워크 장애 시 재시도 정책**과 직결됩니다. 멱등한 GET, PUT, DELETE는 안전하게 재시도할 수 있지만, POST는 중복 생성 위험이 있어 별도의 중복 방지 로직이 필요합니다.
