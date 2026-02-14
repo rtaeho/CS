@@ -1,4 +1,4 @@
-Lock-Based Concurrency Control(LBCC)은 **트랜잭션이 데이터에 접근할 때 락(Lock)을 획득하여 다른 트랜잭션의 접근을 제어하는 동시성 제어 기법**입니다.
+qLock-Based Concurrency Control(LBCC)은 **트랜잭션이 데이터에 접근할 때 락(Lock)을 획득하여 다른 트랜잭션의 접근을 제어하는 동시성 제어 기법**입니다.
 
 ## MVCC와의 관계
 
