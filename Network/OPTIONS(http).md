@@ -48,7 +48,7 @@ Origin = Scheme + Host + Port
 |`https://example.com`|`https://api.example.com`|❌ host 다름|
 |`https://example.com`|`https://example.com:8080`|❌ port 다름|
 
-## 프리플라이트 요청 (Preflight Request)
+## 프리플라이트 요청 ([[Preflight Request]])
 
 브라우저가 본 요청을 보내기 전에 **OPTIONS로 먼저 서버에 허락을 구하는 사전 요청**입니다.
 
