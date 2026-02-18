@@ -161,7 +161,7 @@ public ResponseEntity<Page<MemberResponse>> complexSearch(
 }
 ```
 
-### 방법 3: Elasticsearch 스타일
+### 방법 3: [[Elasticsearch]] 스타일
 
 ```http
 // Elasticsearch는 GET Body를 허용하는 대표적인 사례
