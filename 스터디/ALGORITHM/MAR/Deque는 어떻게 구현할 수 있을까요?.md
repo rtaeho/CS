@@ -134,7 +134,7 @@ class CircularDeque {
 |캐시 효율|낮음|높음 ✓|
 |크기 제한|없음 ✓|고정 (확장 필요)|
 
-## Java의 ArrayDeque
+## Java의 [[ArrayDeque]]
 
 ```java
 // Java의 ArrayDeque는 원형 배열로 구현
