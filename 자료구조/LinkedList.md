@@ -85,4 +85,4 @@ list.get(1);       // O(n)
 list.remove(0);    // O(1)
 ```
 
-> Java의 `LinkedList`는 이중 연결 리스트로 구현되며, `Deque`도 구현하므로 [[큐]]/[[스택]]으로도 활용 가능합니다.
+> Java의 `LinkedList`는 이중 연결 리스트로 구현되며, `Deque`도 구현하므로 [[Queue]]/[[Stack]]으로도 활용 가능합니다.
