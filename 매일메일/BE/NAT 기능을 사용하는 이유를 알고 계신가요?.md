@@ -7,4 +7,5 @@ IP 주소는 **공인 IP 주소(Public IP Address)** 와 **사설 IP 주소(P
 ## [](https://www.maeil-mail.kr/question/164#nat-%EB%B3%80%ED%99%98-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%97%90%EC%84%9C-%EA%B3%B5%EC%9D%B8-ip-%EC%A3%BC%EC%86%8C%EC%99%80-%EC%82%AC%EC%84%A4-ip-%EC%A3%BC%EC%86%8C%EB%8A%94-%EC%9D%BC%EB%8C%80%EC%9D%BC%EB%A1%9C-%EB%8C%80%EC%9D%91%EB%90%98%EC%96%B4-%EC%9E%88%EB%82%98%EC%9A%94-)NAT 변환 테이블에서 공인 IP 주소와 사설 IP 주소는 일대일로 대응되어 있나요? 🤔
 
 일대일 대응이라면 사설 IP 주소만큼 공인 IP가 필요하기 때문에 한계가 있습니다. 따라서, 일반적으로 공인 IP와 사설 IP가 일대일로 대응하지 않고, **NAPT(Network Address Port Translation)** 이라는 포트 기반의 NAT를 사용합니다. 해당 기능에서는 NAPT 변환 테이블에 IP 주소 쌍과 함께 포트도 함께 기록됩니다. 다음은 NAPT 변환 테이블의 예시입니다.
+![[Pasted image 20260416114750.png]]
 
