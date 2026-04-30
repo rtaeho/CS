@@ -161,7 +161,7 @@ list.sort((a, b) -> b.getKey().compareTo(a.getKey()));         // 내림차순
 
 ### 다중 기준 정렬 (값 우선, 같으면 키)
 
-> Comparator 체이닝, 람다 vs 메서드 레퍼런스, 함정(int 오버플로 등)은 정렬 노트에서 별도로 다룰 예정.
+> Comparator 체이닝, 람다 vs 메서드 레퍼런스, 함정(int 오버플로 등) 자세한 내용은 [[Comparator]] 참고.
 
 ```java
 list.sort(
