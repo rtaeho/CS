@@ -30,7 +30,7 @@ public void createOrder() {
 |**JoinPoint**|Advice가 적용될 수 있는 지점 (메서드 실행 시점)|
 |**Pointcut**|Advice를 적용할 대상을 선별하는 표현식|
 |**Target**|Advice가 적용되는 실제 객체|
-|**Proxy**|Target을 감싸서 부가 기능을 제공하는 대리 객체|
+|**[[Spring Proxy|Proxy]]**|Target을 감싸서 부가 기능을 제공하는 대리 객체|
 
 ## 동작 원리
 
@@ -39,7 +39,7 @@ public void createOrder() {
               (Spring이 자동 생성)
 ```
 
-Spring은 **프록시 패턴**을 사용하여 AOP를 구현합니다.
+Spring은 [[Spring Proxy|프록시 패턴]]을 사용하여 AOP를 구현합니다.
 
 |방식|설명|
 |---|---|

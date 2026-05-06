@@ -115,7 +115,7 @@ public class CacheConfig {
 
 |주의점|설명|
 |---|---|
-|**프록시 기반**|`@Transactional`과 동일하게 내부 호출(self-invocation) 시 캐시 미적용|
+|**[[Spring Proxy|프록시 기반]]**|`@Transactional`과 동일하게 내부 호출(self-invocation) 시 캐시 미적용|
 |**키 설계**|키가 동일하면 다른 파라미터여도 같은 캐시를 반환하므로 키 설계가 중요|
 |**직렬화**|Redis 등 외부 캐시 사용 시 객체가 `Serializable`이어야 함|
 |**캐시 일관성**|데이터 변경 시 `@CacheEvict` 또는 `@CachePut`으로 캐시 동기화 필요|
