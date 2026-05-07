@@ -292,7 +292,7 @@ TreeSet<Student> byScore = new TreeSet<>(
 );
 ```
 
-### 3. PriorityQueue
+### 3. [[PriorityQueue]]
 
 ```java
 // 최대 힙

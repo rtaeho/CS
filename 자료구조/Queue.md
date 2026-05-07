@@ -224,9 +224,9 @@ deque.offer(1);        // = offerLast
 deque.poll();          // = pollFirst
 ```
 
-## 우선순위 큐 (Priority Queue)
+## [[PriorityQueue|우선순위 큐]] (Priority Queue)
 
-FIFO가 아니라 **우선순위가 높은 원소**가 먼저 나갑니다.
+FIFO가 아니라 **우선순위가 높은 원소**가 먼저 나갑니다. 자세한 내용은 [[PriorityQueue]] 참고.
 
 ```java
 // 기본: 오름차순 (작은 값이 높은 우선순위)
