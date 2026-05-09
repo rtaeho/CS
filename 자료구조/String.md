@@ -21,8 +21,8 @@ s = s + " world";    // 기존 "hello"가 변하는 게 아니라
 |---|---|
 |[[String.startsWith]]|특정 문자열로 시작하는지|
 |`endsWith`|특정 문자열로 끝나는지|
-|`charAt(i)`|i번째 문자|
-|`length()`|문자열 길이|
+|[[String.charAt]]|i번째 문자|
+|[[String.length]]|문자열 길이|
 |`substring(start, end)`|부분 문자열 추출|
 |`indexOf` / `lastIndexOf`|특정 문자/문자열의 위치|
 |`equals` / `equalsIgnoreCase`|내용 비교|
