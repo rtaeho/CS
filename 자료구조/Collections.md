@@ -19,6 +19,7 @@ List, Set 등은 자체 메서드로 제공되지 않는 작업이 많음:
 |메서드|용도|
 |---|---|
 |[[Collections.sort]]|List 정렬|
+|[[Collections.reverseOrder]]|역순 비교자 반환 (최대 힙 / 내림차순)|
 |`Collections.shuffle`|List 무작위 섞기|
 |`Collections.reverse`|List 뒤집기|
 |`Collections.max` / `min`|최댓값 / 최솟값|
