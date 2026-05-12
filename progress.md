@@ -94,7 +94,7 @@ last_category: BE
 - [x] 힙 객체 참조 유형
 - [ ] Bean Validation (@Valid, @Validated)
 - [ ] @ControllerAdvice / @ExceptionHandler
-- [ ] Filter vs Interceptor
+- [x] Filter vs Interceptor
 - [ ] @Scheduled
 - [ ] @EventListener
 - [ ] 빈 스코프
