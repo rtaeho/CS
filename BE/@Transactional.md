@@ -72,6 +72,47 @@ public void process() throws Exception {
 
 Spring은 [[Spring Proxy|프록시 객체]]를 통해 트랜잭션을 관리하기 때문에, 주의할 점이 있습니다.
 
+## 격리 수준 (Isolation)
+
+동시에 여러 트랜잭션이 실행될 때 서로 얼마나 영향을 주는지 결정합니다.
+
+| 격리 수준 | Dirty Read | Non-Repeatable Read | Phantom Read |
+|---|---|---|---|
+| READ_UNCOMMITTED | 발생 | 발생 | 발생 |
+| READ_COMMITTED | ✅ 방지 | 발생 | 발생 |
+| REPEATABLE_READ | ✅ 방지 | ✅ 방지 | 발생 |
+| SERIALIZABLE | ✅ 방지 | ✅ 방지 | ✅ 방지 |
+
+> MySQL InnoDB 기본값: `REPEATABLE_READ` / 대부분 DB 기본값: `READ_COMMITTED`
+
+```java
+@Transactional(isolation = Isolation.READ_COMMITTED)
+public void processOrder() { ... }
+```
+
+## REQUIRES_NEW 실전 예시
+
+```java
+@Service
+public class OrderService {
+
+    @Transactional
+    public void placeOrder(Order order) {
+        orderRepository.save(order);
+        notificationService.sendEmail(order);  // 실패해도 주문은 살리고 싶을 때
+    }
+}
+
+@Service
+public class NotificationService {
+
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    public void sendEmail(Order order) {
+        // 별도 트랜잭션 → 여기서 예외 나도 placeOrder 롤백 안 됨
+    }
+}
+```
+
 ## ⚠️ 자주 발생하는 실수
 
 ### 1. 내부 호출 시 트랜잭션 미적용
