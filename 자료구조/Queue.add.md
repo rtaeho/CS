@@ -145,3 +145,5 @@ ll.add(0, 99);      // ✅ List.add — 인덱스 삽입 가능 (LinkedList는 L
 ## 핵심 정리
 
 `add`는 큐의 rear에 원소를 삽입하는 표준 enqueue 연산이며, 형제 메서드 `offer`와의 차이는 **용량 초과 시 예외 vs false 반환**입니다. `LinkedList`/`ArrayDeque`처럼 용량 제한이 없는 구현체에서는 동작이 동일하며, 코딩테스트에서 BFS·작업 큐·레벨 순회의 출발점으로 가장 자주 쓰입니다.
+
+→ [[Queue.offer]]
