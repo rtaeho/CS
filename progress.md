@@ -92,7 +92,7 @@ last_category: BE
 - [x] 통합 테스트
 - [x] 함수형 프로그래밍
 - [x] 힙 객체 참조 유형
-- [ ] Bean Validation (@Valid, @Validated)
+- [x] Bean Validation (@Valid, @Validated)
 - [ ] @ControllerAdvice / @ExceptionHandler
 - [x] Filter vs Interceptor
 - [ ] @Scheduled
