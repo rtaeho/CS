@@ -282,6 +282,8 @@ last_category: BE
 - [x] B-Tree
 - [x] B+Tree
 - [x] 해시 충돌
+- [x] Heap
+- [x] Red-Black Tree
 - [ ] 트라이 (Trie)
 - [ ] 세그먼트 트리
 - [ ] 유니온 파인드
