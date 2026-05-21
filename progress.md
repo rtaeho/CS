@@ -97,7 +97,7 @@ last_category: BE
 - [x] Filter vs Interceptor
 - [ ] @Scheduled
 - [ ] @EventListener
-- [ ] 빈 스코프
+- [x] 빈 스코프
 - [ ] 빈 생명주기
 - [ ] Spring Security 기초
 - [ ] OAuth2
