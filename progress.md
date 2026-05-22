@@ -100,7 +100,9 @@ last_category: BE
 - [x] 빈 스코프
 - [ ] 빈 생명주기
 - [ ] Spring Security 기초
+- [ ] Spring Security 필터 체인
 - [ ] OAuth2
+- [ ] Spring WebFlux / Reactor
 
 ---
 
@@ -143,6 +145,7 @@ last_category: BE
 - [ ] 파티셔닝
 - [ ] 샤딩
 - [ ] 슬로우 쿼리
+- [ ] Vector DB
 
 ---
 
@@ -205,6 +208,7 @@ last_category: BE
 - [ ] HTTP/3
 - [ ] WebSocket
 - [ ] gRPC
+- [ ] Protocol Buffers
 - [ ] OAuth
 
 ---
@@ -248,6 +252,8 @@ last_category: BE
 - [ ] CI/CD
 - [ ] Blue-Green 배포
 - [ ] Canary 배포
+- [ ] Grafana / Loki
+- [ ] GCS
 
 ---
 
