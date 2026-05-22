@@ -362,6 +362,44 @@ list.sort(
 list.sort(String.CASE_INSENSITIVE_ORDER);
 ```
 
+### 문자열 연결 비교 — 가장 큰 수 패턴
+
+숫자 배열을 이어붙였을 때 가장 큰 수를 만드는 정렬 순서를 결정할 때 사용.
+
+```java
+// a=3, b=30 → "330" vs "303" → "330"이 크므로 3을 앞에
+Arrays.sort(strNumbers, (a, b) -> (b + a).compareTo(a + b));
+```
+
+```
+[ 핵심 아이디어 ]
+a와 b 중 어느 것을 앞에 놓을지:
+  "ab" > "ba"  →  a를 앞에  →  (b+a).compareTo(a+b) < 0  →  a가 먼저
+  "ba" > "ab"  →  b를 앞에  →  (b+a).compareTo(a+b) > 0  →  b가 먼저
+
+예: a="3", b="30"
+  b+a = "303"
+  a+b = "330"
+  "303".compareTo("330") < 0  →  a("3")가 먼저  ✅
+```
+
+```java
+// 전체 흐름
+int[] numbers = {3, 30, 34, 5, 9};
+String[] strs = Arrays.stream(numbers)
+    .mapToObj(String::valueOf)
+    .toArray(String[]::new);
+
+Arrays.sort(strs, (a, b) -> (b + a).compareTo(a + b));   // 내림차순 연결
+
+// 모두 0인 엣지 케이스
+if (strs[0].equals("0")) return "0";
+
+String result = String.join("", strs);   // "9534330"
+```
+
+주의: `a - b` 같은 산술 비교 불가 → 자릿수가 다른 숫자를 이어붙인 문자열 비교가 핵심.
+
 ---
 
 ## 핵심 정리
