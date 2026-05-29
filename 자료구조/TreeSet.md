@@ -117,6 +117,12 @@ if (map.merge(max, -1, Integer::sum) == 0) map.remove(max);
 
 ## 핵심 정리
 
-`TreeSet`은 **Red-Black Tree 기반의 정렬된 집합**으로, 양 끝(최솟값·최댓값) 접근·삭제가 모두 O(log n)입니다. `PriorityQueue`가 한쪽 끝만 효율적으로 다루는 것과 달리, TreeSet은 **양 끝을 동시에 다루는 이중 우선순위 큐** 구현에 적합합니다. 단, 중복 원소가 있으면 TreeMap으로 빈도를 관리해야 합니다.
+- **[[Red-Black Tree]] 기반 정렬 집합** — 삽입과 동시에 정렬, 모든 연산 O(log n)
+
+- `PriorityQueue`와 달리 **양 끝(최솟값·최댓값) 접근·삭제 모두 O(log n)** → 이중 우선순위 큐에 적합
+
+- 중복 원소 불허 — 중복이 필요하면 `TreeMap<Integer, Integer>`으로 빈도 관리
+
+- `b - a` Comparator는 오버플로 위험 → `Integer.compare(b, a)` 또는 `Comparator.reverseOrder()` 권장
 
 → [[Red-Black Tree]] | [[PriorityQueue]]
