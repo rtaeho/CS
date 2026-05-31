@@ -251,10 +251,10 @@ last_category: Infa
 - [x] 세션 클러스터링
 - [x] scale-out / scale-up
 - [x] 메시징 시스템 활용 방식
-- [ ] Docker
+- [x] Docker
 - [ ] Kubernetes
-- [ ] CI/CD
-- [ ] Blue-Green 배포
+- [x] CI/CD
+- [x] Blue-Green 배포
 - [ ] Canary 배포
 - [ ] Grafana / Loki
 - [ ] GCS
