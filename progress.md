@@ -98,6 +98,16 @@ last_category: Infa
 - [x] 힙 객체 참조 유형
 - [x] Bean Validation (@Valid, @Validated)
 - [ ] @ControllerAdvice / @ExceptionHandler
+- [x] 접근 제어자
+- [x] static
+- [x] final
+- [x] 다형성
+- [x] 상속 vs 합성
+- [x] 제네릭
+- [x] equals와 hashCode
+- [x] Enum
+- [x] Optional
+- [x] 불변 객체
 - [x] Filter vs Interceptor
 - [ ] @Scheduled
 - [ ] @EventListener
