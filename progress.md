@@ -106,7 +106,11 @@ last_category: Infa
 - [ ] Spring Security 기초
 - [ ] Spring Security 필터 체인
 - [ ] OAuth2
-- [ ] Spring WebFlux / Reactor
+- [x] Spring WebFlux / Reactor
+- [x] SSE
+- [x] Command 패턴
+- [x] RAG
+- [x] LangChain4j
 
 ---
 
@@ -149,7 +153,7 @@ last_category: Infa
 - [ ] 파티셔닝
 - [ ] 샤딩
 - [ ] 슬로우 쿼리
-- [ ] Vector DB
+- [x] Vector DB
 
 ---
 
@@ -182,7 +186,9 @@ last_category: Infa
 - [ ] useMemo / useCallback
 - [ ] 웹 성능 최적화
 - [ ] WebSocket
-- [ ] PWA
+- [x] PWA
+- [x] Vuex
+- [x] AbortController
 
 ---
 
@@ -211,7 +217,7 @@ last_category: Infa
 - [ ] HTTP/2
 - [ ] HTTP/3
 - [ ] WebSocket
-- [ ] gRPC
+- [x] gRPC
 - [ ] Protocol Buffers
 - [ ] OAuth
 
