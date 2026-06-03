@@ -126,3 +126,4 @@ if (map.merge(max, -1, Integer::sum) == 0) map.remove(max);
 - `b - a` Comparator는 오버플로 위험 → `Integer.compare(b, a)` 또는 `Comparator.reverseOrder()` 권장
 
 → [[Red-Black Tree]] | [[PriorityQueue]]
+

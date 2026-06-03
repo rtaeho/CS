@@ -82,3 +82,4 @@ BaaS 중 **모바일 앱** 특화 버전. 모바일 SDK, 오프라인 동기화,
 - **FaaS**: 서버 없이 함수만 배포, 이벤트 발생 시에만 실행 — 콜드 스타트가 단점
 
 - 실무에서는 혼합 사용 → PaaS(Cloud Run)로 메인 서버 + FaaS(Lambda)로 비동기 처리 + BaaS(Supabase)로 Auth
+

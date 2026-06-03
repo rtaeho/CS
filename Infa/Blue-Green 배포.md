@@ -73,3 +73,4 @@ gcloud run services update-traffic my-app \
 - 점진적 노출이 필요하다면 [[Canary 배포]] 선택
 
 → [[CI·CD]] | [[로드 밸런싱]]
+

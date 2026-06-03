@@ -106,3 +106,4 @@ void setColor(Color color) {}
 - `EnumSet`/`EnumMap`은 일반 Set/Map보다 성능이 우수 — enum 전용 내부 최적화
 
 → [[static]] | [[인터페이스]]
+

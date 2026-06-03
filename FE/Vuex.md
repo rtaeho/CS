@@ -113,3 +113,4 @@ store.state.post.posts
 - Vue 3에서는 Pinia가 공식 권장 (Vuex 5 = Pinia) — 보일러플레이트 대폭 감소
 
 → [[Redux]] | [[Zustand]]
+

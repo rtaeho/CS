@@ -111,3 +111,4 @@ public class Singleton {
 - 유틸리티 메서드, 상수, 싱글톤 구현에 주로 사용
 
 → [[JVM]] | [[Runtime Data Area]]
+

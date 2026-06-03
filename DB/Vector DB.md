@@ -88,3 +88,4 @@ Layer 0 (전체):  1─2─3─4─5─6─7─8─9
 - RDB와 함께 사용하는 경우가 많음 — pgvector로 PostgreSQL에 통합하거나, 별도 Vector DB + RDB 메타데이터 조인
 
 → [[RAG]] | [[NoSQL]] | [[Elasticsearch]]
+

@@ -109,3 +109,4 @@ history.redo();   // "Hello World"
 - 전략 패턴(알고리즘 교체)과 달리 Command 패턴은 "실행 이력 관리"에 목적이 있음
 
 → [[SOLID]]
+

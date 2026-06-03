@@ -139,3 +139,4 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 - 로컬 멀티 컨테이너 → Docker Compose / 운영 오케스트레이션 → [[Kubernetes]]
 
 → [[XaaS]] | [[CI/CD]]
+

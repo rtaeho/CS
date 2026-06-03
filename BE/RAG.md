@@ -100,3 +100,4 @@ List<EmbeddingMatch<TextSegment>> matches = store.findRelevant(queryEmbedding, 3
 - 청킹 품질과 임베딩 모델 선택이 RAG 성능의 핵심
 
 → [[Vector DB]] | [[LangChain4j]]
+

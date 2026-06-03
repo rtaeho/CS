@@ -87,3 +87,4 @@ Runnable r = () -> System.out.println(x);  // x가 effectively final이면 OK
 - String이 `final class`인 이유 — 불변성을 보장해 String Pool·보안·해시 캐싱에 활용
 
 → [[불변 객체]] | [[static]]
+

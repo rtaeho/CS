@@ -132,3 +132,4 @@ Assistant assistant = AiServices.builder(Assistant.class)
 - 멀티 LLM 지원(OpenAI, Anthropic, Ollama 등)으로 모델 교체가 쉬움
 
 → [[RAG]] | [[SSE]] | [[Spring WebFlux]]
+

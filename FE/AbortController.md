@@ -100,3 +100,4 @@ controller.abort()
 - 취소는 정상 흐름 — `err.name === 'AbortError'` 분기로 네트워크 에러와 구분해야 함
 
 → [[비동기]] | [[Promise]]
+

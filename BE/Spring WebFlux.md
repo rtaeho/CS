@@ -97,3 +97,4 @@ public SseEmitter streamAI() {
 - MVC와 WebFlux는 같은 프로젝트에서 혼용 가능 — 스트리밍 엔드포인트만 WebFlux 방식으로
 
 → [[SSE]] | [[비동기]] | [[Spring MVC vs WebFlux]]
+

@@ -99,3 +99,4 @@ opt.orElseGet(() -> expensiveOperation());  // opt가 empty일 때만 호출
 - 반환 타입으로만 사용 — 필드·파라미터로는 사용 금지
 
 → [[함수형 프로그래밍]]
+

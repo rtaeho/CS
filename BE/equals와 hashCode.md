@@ -109,3 +109,4 @@ set.contains(new Point(1, 2));  // hashCode 없으면 false
 - equals() true → hashCode() 같음 (역은 성립하지 않아도 됨 — 해시 충돌 허용)
 
 → [[동등성]] | [[동일성]] | [[HashMap]]
+

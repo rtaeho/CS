@@ -94,3 +94,4 @@ es.onerror = () => es.close();
 - Spring MVC → `SseEmitter` / Spring WebFlux → `Flux<ServerSentEvent>` 로 구현
 
 → [[Spring WebFlux]] | [[WebSocket]]
+

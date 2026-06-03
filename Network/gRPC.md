@@ -99,3 +99,4 @@ PostResponse res = stub.getPost(PostRequest.newBuilder().setId(1).build());
 - REST는 브라우저 외부 API에, gRPC는 서버 간 내부 통신에 적합
 
 → [[REST]] | [[HTTP]] | [[TCP]]
+

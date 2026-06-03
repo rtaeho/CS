@@ -92,3 +92,4 @@ if ('serviceWorker' in navigator) {
 - 캐싱 전략은 리소스 유형에 따라 다르게 — 정적 파일은 Cache First, API는 Network First
 
 → [[CSR]] | [[SSR]] | [[렌더링]]
+

@@ -126,3 +126,4 @@ env:
 - 시크릿은 코드에 절대 넣지 말고 GitHub Secrets → `${{ secrets.KEY }}` 참조
 
 → [[Docker]] | [[Blue-Green 배포]] | [[Canary 배포]]
+
