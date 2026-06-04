@@ -275,6 +275,7 @@ last_category: Infa
 - [ ] Grafana / Loki
 - [ ] GCS
 - [x] XaaS (IaaS / PaaS / SaaS / BaaS / MBaaS / FaaS)
+- [x] 모놀리식 vs MSA
 
 ---
 
