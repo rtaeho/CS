@@ -260,6 +260,104 @@ public class ProductSearchService {
 }
 ```
 
+## Analyzer — 텍스트 분석 파이프라인
+
+역색인을 만들기 위해 텍스트를 토큰으로 분해하는 과정입니다.
+
+```
+[Analyzer 처리 흐름]
+원문: "무선 블루투스 이어폰입니다!"
+        │
+        ▼
+  [Character Filter]  → 불필요한 문자 제거/변환 (HTML 태그 제거 등)
+        │
+        ▼
+  [Tokenizer]         → 공백, 형태소 등으로 단어 분리
+        │              "무선", "블루투스", "이어폰입니다", "!"
+        ▼
+  [Token Filter]      → 소문자화, 불용어 제거, 동의어 처리
+                       "무선", "블루투스", "이어폰"
+```
+
+| Analyzer | 언어 | 특징 |
+|---|---|---|
+| `standard` | 범용 | 공백/특수문자 기준 분리 |
+| `nori` | 한국어 | 형태소 분석 (은/는/이/가 등 조사 제거) |
+| `english` | 영어 | 어간 추출 (running → run) |
+| `whitespace` | 범용 | 공백 기준만 분리 |
+
+```json
+// 한국어 인덱스 매핑 — nori 분석기 지정
+PUT /products
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "korean": {
+                    "type": "nori"
+                }
+            }
+        }
+    },
+    "mappings": {
+        "properties": {
+            "name": {
+                "type": "text",
+                "analyzer": "nori"
+            }
+        }
+    }
+}
+```
+
+## Aggregation — 집계/분석
+
+검색과 함께 통계를 내는 기능입니다. SQL의 `GROUP BY + 집계 함수`와 유사합니다.
+
+```http
+// 카테고리별 평균 가격 집계
+GET /products/_search
+{
+    "size": 0,
+    "aggs": {
+        "by_category": {
+            "terms": {
+                "field": "category"
+            },
+            "aggs": {
+                "avg_price": {
+                    "avg": {
+                        "field": "price"
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 응답
+{
+    "aggregations": {
+        "by_category": {
+            "buckets": [
+                {"key": "전자기기", "doc_count": 150, "avg_price": {"value": 45000}},
+                {"key": "의류",    "doc_count": 300, "avg_price": {"value": 32000}}
+            ]
+        }
+    }
+}
+```
+
+주요 집계 타입:
+
+| 타입 | 예시 | 설명 |
+|---|---|---|
+| `terms` | GROUP BY category | 값별 버킷 분류 |
+| `range` | 가격 구간별 | 범위별 버킷 |
+| `date_histogram` | 월별 판매량 | 시간 단위 버킷 |
+| `avg` / `sum` / `max` / `min` | 평균 가격 | 숫자 통계 |
+| `cardinality` | 고유 사용자 수 | 중복 제거 카운트 |
+
 ## RDBMS + Elasticsearch 병행 구조
 
 실무에서는 Elasticsearch를 DB 대체가 아닌 **검색 전용 계층**으로 함께 사용합니다.
