@@ -272,7 +272,7 @@ last_category: Infa
 - [x] CI/CD
 - [x] Blue-Green 배포
 - [ ] Canary 배포
-- [ ] Grafana / Loki
+- [x] Grafana / Loki
 - [ ] GCS
 - [x] XaaS (IaaS / PaaS / SaaS / BaaS / MBaaS / FaaS)
 - [x] 모놀리식 vs MSA
