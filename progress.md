@@ -268,12 +268,12 @@ last_category: Infa
 - [x] scale-out / scale-up
 - [x] 메시징 시스템 활용 방식
 - [x] Docker
-- [ ] Kubernetes
+- [x] Kubernetes
 - [x] CI/CD
 - [x] Blue-Green 배포
-- [ ] Canary 배포
+- [x] Canary 배포
 - [x] Grafana / Loki
-- [ ] GCS
+- [x] GCS
 - [x] XaaS (IaaS / PaaS / SaaS / BaaS / MBaaS / FaaS)
 - [x] 모놀리식 vs MSA
 
