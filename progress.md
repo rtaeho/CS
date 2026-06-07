@@ -276,6 +276,9 @@ last_category: Infa
 - [x] GCS
 - [x] XaaS (IaaS / PaaS / SaaS / BaaS / MBaaS / FaaS)
 - [x] 모놀리식 vs MSA
+- [x] Terraform
+- [x] API Gateway
+- [x] Service Mesh / Istio
 
 ---
 
