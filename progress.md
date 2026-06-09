@@ -279,6 +279,9 @@ last_category: Infa
 - [x] Terraform
 - [x] API Gateway
 - [x] Service Mesh / Istio
+- [x] Helm
+- [x] 분산 추적
+- [x] Rate Limiting
 
 ---
 
