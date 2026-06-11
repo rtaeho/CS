@@ -1,7 +1,6 @@
 ---
 status: draft
 ---
-
 # CS 학습 진행 현황
 
 > `/cs` 인자 없이 호출하면 이 파일 기반으로 다음 학습 주제를 추천합니다.
@@ -13,221 +12,221 @@ last_category: Infa
 
 ## BE
 
-- [x] @Async
-- [x] @Autowired
-- [x] @Bean
-- [x] @Cacheable
-- [x] @Component
-- [x] @Configuration
-- [x] @Controller
-- [x] @Repository
-- [x] @Service
-- [x] @Transactional
-- [x] AOT
-- [x] CDC
-- [x] Cache Aside
-- [x] Cache Invalidation
-- [x] Call By Reference
-- [x] Call By Value
-- [x] Class Loader
-- [x] DI
-- [x] EntityManager
-- [x] Exception
-- [x] Execution Engine
-- [x] G1 GC
-- [x] GC 동작 과정
-- [x] GC 종류
-- [x] GC
-- [x] Hibernate
-- [x] HikariCP
-- [x] IoC
-- [x] JDBC
-- [x] JDK
-- [x] JIT
-- [x] JPA
-- [x] JPQL
-- [x] JRE
-- [x] JVM
-- [x] JWT
-- [x] Lombok
-- [x] N+1 문제
-- [x] Native Query
-- [x] Outbox 패턴
-- [x] PER
-- [x] Reachability
-- [x] Reference Counting
-- [x] Runtime Data Area
-- [x] SOLID
-- [x] STW
-- [x] Spring AOP
-- [x] Spring Container
-- [x] Spring Proxy
-- [x] TDD
-- [x] Write Behind
-- [x] Write Through
-- [x] ZGC
-- [x] record
-- [x] 결합도
-- [x] 깊은 복사
-- [x] 단위 테스트
-- [x] 동등성
-- [x] 동일성
-- [x] 런타임
-- [x] 리플렉션
-- [x] 방어적 복사
-- [x] 보일러플레이트
-- [x] 세션
-- [x] 슬라이스 테스트
-- [x] 얕은 복사
-- [x] 어노테이션
-- [x] 영속성 컨텍스트
-- [x] 응집도
-- [x] 인가
-- [x] 인증
-- [x] 인터페이스
-- [x] 인터프리터
-- [x] 일급 컬렉션
-- [x] 지연 로딩
-- [x] 직렬화
-- [x] 추상 클래스
-- [x] 캐시 스탬피드
-- [x] 캡슐화
-- [x] 컴파일
-- [x] 통합 테스트
-- [x] 함수형 프로그래밍
-- [x] 힙 객체 참조 유형
-- [x] Bean Validation (@Valid, @Validated)
+- [X] @Async
+- [X] @Autowired
+- [X] @Bean
+- [X] @Cacheable
+- [X] @Component
+- [X] @Configuration
+- [X] @Controller
+- [X] @Repository
+- [X] @Service
+- [X] @Transactional
+- [X] AOT
+- [X] CDC
+- [X] Cache Aside
+- [X] Cache Invalidation
+- [X] Call By Reference
+- [X] Call By Value
+- [X] Class Loader
+- [X] DI
+- [X] EntityManager
+- [X] Exception
+- [X] Execution Engine
+- [X] G1 GC
+- [X] GC 동작 과정
+- [X] GC 종류
+- [X] GC
+- [X] Hibernate
+- [X] HikariCP
+- [X] IoC
+- [X] JDBC
+- [X] JDK
+- [X] JIT
+- [X] JPA
+- [X] JPQL
+- [X] JRE
+- [X] JVM
+- [X] JWT
+- [X] Lombok
+- [X] N+1 문제
+- [X] Native Query
+- [X] Outbox 패턴
+- [X] PER
+- [X] Reachability
+- [X] Reference Counting
+- [X] Runtime Data Area
+- [X] SOLID
+- [X] STW
+- [X] Spring AOP
+- [X] Spring Container
+- [X] Spring Proxy
+- [X] TDD
+- [X] Write Behind
+- [X] Write Through
+- [X] ZGC
+- [X] record
+- [X] 결합도
+- [X] 깊은 복사
+- [X] 단위 테스트
+- [X] 동등성
+- [X] 동일성
+- [X] 런타임
+- [X] 리플렉션
+- [X] 방어적 복사
+- [X] 보일러플레이트
+- [X] 세션
+- [X] 슬라이스 테스트
+- [X] 얕은 복사
+- [X] 어노테이션
+- [X] 영속성 컨텍스트
+- [X] 응집도
+- [X] 인가
+- [X] 인증
+- [X] 인터페이스
+- [X] 인터프리터
+- [X] 일급 컬렉션
+- [X] 지연 로딩
+- [X] 직렬화
+- [X] 추상 클래스
+- [X] 캐시 스탬피드
+- [X] 캡슐화
+- [X] 컴파일
+- [X] 통합 테스트
+- [X] 함수형 프로그래밍
+- [X] 힙 객체 참조 유형
+- [X] Bean Validation (@Valid, @Validated)
 - [ ] @ControllerAdvice / @ExceptionHandler
-- [x] 접근 제어자
-- [x] static
-- [x] final
-- [x] 다형성
-- [x] 상속 vs 합성
-- [x] 제네릭
-- [x] equals와 hashCode
-- [x] Enum
-- [x] Optional
-- [x] 불변 객체
-- [x] Filter vs Interceptor
+- [X] 접근 제어자
+- [X] static
+- [X] final
+- [X] 다형성
+- [X] 상속 vs 합성
+- [X] 제네릭
+- [X] equals와 hashCode
+- [X] Enum
+- [X] Optional
+- [X] 불변 객체
+- [X] Filter vs Interceptor
 - [ ] @Scheduled
 - [ ] @EventListener
-- [x] 빈 스코프
+- [X] 빈 스코프
 - [ ] 빈 생명주기
 - [ ] Spring Security 기초
 - [ ] Spring Security 필터 체인
 - [ ] OAuth2
-- [x] Spring WebFlux / Reactor
-- [x] SSE
-- [x] Command 패턴
-- [x] RAG
-- [x] LangChain4j
+- [X] Spring WebFlux / Reactor
+- [X] SSE
+- [X] Command 패턴
+- [X] RAG
+- [X] LangChain4j
 
 ---
 
 ## DB
 
-- [x] ACID
-- [x] Aggregation Pipeline
-- [x] Binary log
-- [x] Clustered Index
-- [x] DB Replication
-- [x] Elasticsearch
-- [x] Hidden Clustered Index
-- [x] InnoDB
-- [x] LBCC
-- [x] Liquibase
-- [x] MVCC
-- [x] MySQL
-- [x] NoSQL
-- [x] Non-Clustered Index
-- [x] RDB
-- [x] Redis
-- [x] 격리 수준
-- [x] 공유 락
-- [x] 데드 락
-- [x] 데이터베이스 활용 방식
-- [x] 동시성(DB)
-- [x] 무결성
-- [x] 배타 락
-- [x] 복합 인덱스
-- [x] 인덱스
-- [x] 인덱스가 안 타는 케이스
-- [x] 정합성
-- [x] 카디널리티
-- [x] 커넥션 풀
-- [x] 키 생성 전략
-- [x] 트랜잭션
+- [X] ACID
+- [X] Aggregation Pipeline
+- [X] Binary log
+- [X] Clustered Index
+- [X] DB Replication
+- [X] Elasticsearch
+- [X] Hidden Clustered Index
+- [X] InnoDB
+- [X] LBCC
+- [X] Liquibase
+- [X] MVCC
+- [X] MySQL
+- [X] NoSQL
+- [X] Non-Clustered Index
+- [X] RDB
+- [X] Redis
+- [X] 격리 수준
+- [X] 공유 락
+- [X] 데드 락
+- [X] 데이터베이스 활용 방식
+- [X] 동시성(DB)
+- [X] 무결성
+- [X] 배타 락
+- [X] 복합 인덱스
+- [X] 인덱스
+- [X] 인덱스가 안 타는 케이스
+- [X] 정합성
+- [X] 카디널리티
+- [X] 커넥션 풀
+- [X] 키 생성 전략
+- [X] 트랜잭션
 - [ ] 정규화
 - [ ] 역정규화
 - [ ] ERD
 - [ ] 파티셔닝
 - [ ] 샤딩
 - [ ] 슬로우 쿼리
-- [x] Vector DB
+- [X] Vector DB
 
 ---
 
 ## FE
 
-- [x] CSR
-- [x] SSR
-- [x] DOM
-- [x] Virtual DOM
-- [x] hydration
-- [x] 렌더링
-- [x] 이벤트 루프
-- [x] 클로저
-- [x] 호이스팅
-- [x] 프로토타입(fe)
-- [x] Promise
-- [x] async
-- [x] 비동기
-- [x] useState
-- [x] useRef
-- [x] 메모이제이션
-- [x] Redux
-- [x] Zustand
-- [x] Tanstack-Query
-- [x] 타입스크립트
-- [x] 번들러
-- [x] 코드 스플리팅
-- [x] 레이지 로딩
+- [X] CSR
+- [X] SSR
+- [X] DOM
+- [X] Virtual DOM
+- [X] hydration
+- [X] 렌더링
+- [X] 이벤트 루프
+- [X] 클로저
+- [X] 호이스팅
+- [X] 프로토타입(fe)
+- [X] Promise
+- [X] async
+- [X] 비동기
+- [X] useState
+- [X] useRef
+- [X] 메모이제이션
+- [X] Redux
+- [X] Zustand
+- [X] Tanstack-Query
+- [X] 타입스크립트
+- [X] 번들러
+- [X] 코드 스플리팅
+- [X] 레이지 로딩
 - [ ] useEffect
 - [ ] useMemo / useCallback
 - [ ] 웹 성능 최적화
 - [ ] WebSocket
-- [x] PWA
-- [x] Vuex
-- [x] AbortController
+- [X] PWA
+- [X] Vuex
+- [X] AbortController
 
 ---
 
 ## Network
 
-- [x] 3-Way Handshake
-- [x] HTTP
-- [x] HTTPS
-- [x] TCP
-- [x] UDP
-- [x] DNS
-- [x] REST
-- [x] CORS
-- [x] CSRF
-- [x] OSI 7계층
-- [x] TLS
-- [x] SSL
-- [x] NAT
-- [x] URI / URL / URN
-- [x] 공개키
-- [x] 대칭키
-- [x] 프록시
-- [x] 리버스 프록시
-- [x] 포워드 프록시
-- [x] 멱등성
+- [X] 3-Way Handshake
+- [X] HTTP
+- [X] HTTPS
+- [X] TCP
+- [X] UDP
+- [X] DNS
+- [X] REST
+- [X] CORS
+- [X] CSRF
+- [X] OSI 7계층
+- [X] TLS
+- [X] SSL
+- [X] NAT
+- [X] URI / URL / URN
+- [X] 공개키
+- [X] 대칭키
+- [X] 프록시
+- [X] 리버스 프록시
+- [X] 포워드 프록시
+- [X] 멱등성
 - [ ] HTTP/2
 - [ ] HTTP/3
 - [ ] WebSocket
-- [x] gRPC
+- [X] gRPC
 - [ ] Protocol Buffers
 - [ ] OAuth
 
@@ -235,18 +234,18 @@ last_category: Infa
 
 ## OS
 
-- [x] 프로세스
-- [x] 스레드
-- [x] Context Switch
-- [x] CPU 스케줄링
-- [x] deadlock
-- [x] 뮤텍스 락
-- [x] 동시성
-- [x] 병렬성
-- [x] 인터럽트
-- [x] 시스템 콜
-- [x] 커널
-- [x] 페이지 폴트
+- [X] 프로세스
+- [X] 스레드
+- [X] Context Switch
+- [X] CPU 스케줄링
+- [X] deadlock
+- [X] 뮤텍스 락
+- [X] 동시성
+- [X] 병렬성
+- [X] 인터럽트
+- [X] 시스템 콜
+- [X] 커널
+- [X] 페이지 폴트
 - [ ] 가상 메모리
 - [ ] 페이징
 - [ ] 세그멘테이션
@@ -257,46 +256,46 @@ last_category: Infa
 
 ## Infa
 
-- [x] CAP
-- [x] CDN
-- [x] WAS
-- [x] 로드 밸런싱
-- [x] 서킷 브레이커
-- [x] 벌크헤드 패턴
-- [x] 캐싱
-- [x] 세션 클러스터링
-- [x] scale-out / scale-up
-- [x] 메시징 시스템 활용 방식
-- [x] Docker
-- [x] Kubernetes
-- [x] CI/CD
-- [x] Blue-Green 배포
-- [x] Canary 배포
-- [x] Grafana / Loki
-- [x] GCS
-- [x] XaaS (IaaS / PaaS / SaaS / BaaS / MBaaS / FaaS)
-- [x] 모놀리식 vs MSA
-- [x] Terraform
-- [x] API Gateway
-- [x] Service Mesh / Istio
-- [x] Helm
-- [x] 분산 추적
-- [x] Rate Limiting
+- [X] CAP
+- [X] CDN
+- [X] WAS
+- [X] 로드 밸런싱
+- [X] 서킷 브레이커
+- [X] 벌크헤드 패턴
+- [X] 캐싱
+- [X] 세션 클러스터링
+- [X] scale-out / scale-up
+- [X] 메시징 시스템 활용 방식
+- [X] Docker
+- [X] Kubernetes
+- [X] CI/CD
+- [X] Blue-Green 배포
+- [X] Canary 배포
+- [X] Grafana / Loki
+- [X] GCS
+- [X] XaaS (IaaS / PaaS / SaaS / BaaS / MBaaS / FaaS)
+- [X] 모놀리식 vs MSA
+- [X] Terraform
+- [X] API Gateway
+- [X] Service Mesh / Istio
+- [X] Helm
+- [X] 분산 추적
+- [X] Rate Limiting
 
 ---
 
 ## 알고리즘
 
-- [x] DP
-- [x] 그래프
-- [x] 그리디
-- [x] 정렬
-- [x] 커스텀 Comparator (문자열 연결 비교 패턴)
-- [x] 탐색
-- [x] 분할정복
-- [x] 문자열
-- [x] 수학
-- [x] 백트래킹
+- [X] DP
+- [X] 그래프
+- [X] 그리디
+- [X] 정렬
+- [X] 커스텀 Comparator (문자열 연결 비교 패턴)
+- [X] 탐색
+- [X] 분할정복
+- [X] 문자열
+- [X] 수학
+- [X] 백트래킹
 - [ ] 위상 정렬
 - [ ] 최단 경로 (다익스트라, 벨만포드)
 - [ ] 최소 신장 트리 (크루스칼, 프림)
@@ -306,19 +305,19 @@ last_category: Infa
 
 ## 자료구조
 
-- [x] 배열
-- [x] LinkedList
-- [x] Stack
-- [x] Queue
-- [x] Deque
-- [x] PriorityQueue
-- [x] HashMap
-- [x] Set
-- [x] B-Tree
-- [x] B+Tree
-- [x] 해시 충돌
-- [x] Heap
-- [x] Red-Black Tree
+- [X] 배열
+- [X] LinkedList
+- [X] Stack
+- [X] Queue
+- [X] Deque
+- [X] PriorityQueue
+- [X] HashMap
+- [X] Set
+- [X] B-Tree
+- [X] B+Tree
+- [X] 해시 충돌
+- [X] Heap
+- [X] Red-Black Tree
 - [ ] 트라이 (Trie)
 - [ ] 세그먼트 트리
 - [ ] 유니온 파인드
