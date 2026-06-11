@@ -1,8 +1,14 @@
+---
+title: "@Bean"
+tags: [Spring, 빈, DI]
+status: published
+---
+
 **메서드의 반환값을 빈(Bean)으로 등록**하는 [[어노테이션]]입니다. [[@Component]]가 클래스를 자동 등록하는 것과 달리, **개발자가 직접 만들지 않은 외부 라이브러리 클래스를 빈으로 등록**할 때 주로 사용합니다.
 
 ## 왜 필요한가?
 
-```
+```java
 @Component는 클래스 선언부에 붙여야 함:
 
 @Component
@@ -12,7 +18,7 @@ public class EmailService { }   ← 내가 만든 클래스 → OK
 public class ObjectMapper { }   ← 외부 라이브러리 → X 코드 수정 불가
 ```
 
-```
+```java
 @Bean은 메서드에 붙임 → 외부 객체를 감싸서 등록 가능:
 
 @Configuration

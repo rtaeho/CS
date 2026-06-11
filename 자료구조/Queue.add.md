@@ -1,3 +1,9 @@
+---
+title: "Queue.add"
+tags: [큐, BFS]
+status: published
+---
+
 [[Queue]]의 **rear(뒤)에 원소를 삽입**합니다 (enqueue). 같은 역할의 메서드로 `offer`가 있으며, **실패 시 동작이 다릅니다**.
 
 ## 시그니처

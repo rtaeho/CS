@@ -1,3 +1,9 @@
+---
+title: "컴포넌트(react)"
+tags: [React, 컴포넌트]
+status: published
+---
+
 UI를 독립적이고 재사용 가능한 단위로 쪼갠 것으로, React 애플리케이션을 구성하는 기본 단위입니다.
 
 ## 구조

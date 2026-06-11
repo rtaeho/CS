@@ -1,3 +1,9 @@
+---
+title: "Tanstack-Query"
+tags: [React, 데이터페칭]
+status: published
+---
+
 TanStack Query는 React, Vue, Solid, Svelte 등에서 사용할 수 있는 **비동기 상태 관리 라이브러리**입니다. 원래 "React Query"라는 이름으로 시작했지만, 다른 프레임워크도 지원하게 되면서 TanStack Query로 이름이 바뀌었습니다.
 
 ## 주요 기능

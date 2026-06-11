@@ -1,3 +1,9 @@
+---
+title: "SOP"
+tags: [보안, 브라우저, CORS]
+status: published
+---
+
 웹 브라우저에서 **다른 출처(Origin)의 리소스에 접근하는 것을 기본적으로 차단**하는 보안 정책입니다.
 
 ## 출처(Origin)란?

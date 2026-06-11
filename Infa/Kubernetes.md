@@ -1,3 +1,9 @@
+---
+title: "Kubernetes"
+tags: [Kubernetes, 컨테이너]
+status: published
+---
+
 컨테이너화된 애플리케이션의 배포·확장·관리를 자동화하는 오픈소스 컨테이너 오케스트레이션 플랫폼입니다.
 
 ## 왜 필요한가

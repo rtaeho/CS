@@ -1,3 +1,9 @@
+---
+title: "PWA"
+tags: [웹, 최적화]
+status: published
+---
+
 웹 기술로 만들었지만 **네이티브 앱처럼 설치·오프라인 동작·푸시 알림이 가능한** 웹 애플리케이션입니다 (Progressive Web App).
 
 ## 3가지 핵심 요건

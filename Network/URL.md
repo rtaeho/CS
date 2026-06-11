@@ -1,3 +1,9 @@
+---
+title: "URL"
+tags: [HTTP, URI]
+status: published
+---
+
 인터넷에서 자원(Resource)의 **위치(주소)를 나타내는 문자열**로, 브라우저가 서버에서 자원을 찾을 수 있도록 경로를 지정합니다.
 
 ## 구성 요소

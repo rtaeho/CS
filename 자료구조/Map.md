@@ -1,3 +1,9 @@
+---
+title: "Map"
+tags: [자료구조, Map, 컬렉션]
+status: published
+---
+
 키(Key)와 값(Value)의 쌍으로 데이터를 저장하는 자료구조입니다. 키로 값을 빠르게 조회할 수 있습니다.
 
 ## 특징

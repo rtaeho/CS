@@ -1,3 +1,9 @@
+---
+title: "key(react)"
+tags: [React, 성능]
+status: published
+---
+
 React가 리스트의 각 요소를 **고유하게 식별**하기 위해 사용하는 특수한 문자열 속성으로, Virtual DOM 비교(Reconciliation) 시 어떤 요소가 변경·추가·삭제되었는지 판단하는 기준입니다.
 
 ## key가 없으면 어떻게 되는가?

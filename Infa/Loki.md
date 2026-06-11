@@ -1,3 +1,9 @@
+---
+title: "Loki"
+tags: [로깅, 모니터링]
+status: published
+---
+
 로그를 레이블 기반으로 인덱싱해 저장하는 경량 로그 집계 시스템으로, Grafana Labs가 만들었으며 [[Grafana]]와 함께 사용합니다.
 
 ## 핵심 특징

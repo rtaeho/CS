@@ -1,3 +1,9 @@
+---
+title: "state"
+tags: [React, 상태관리]
+status: published
+---
+
 **컴포넌트가 스스로 관리하는 데이터**입니다.
 
 ---

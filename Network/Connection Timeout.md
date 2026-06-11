@@ -1,3 +1,9 @@
+---
+title: "Connection Timeout"
+tags: [타임아웃, TCP]
+status: published
+---
+
 클라이언트가 서버에 TCP 연결을 시도할 때 **지정된 시간 내에 연결이 수립되지 않으면** 연결 시도를 포기하고 오류를 발생시키는 메커니즘입니다.
 
 ## Connection Timeout vs Read Timeout

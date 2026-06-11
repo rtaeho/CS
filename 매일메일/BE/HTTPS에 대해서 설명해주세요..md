@@ -1,3 +1,9 @@
+---
+title: "HTTPS에 대해서 설명해주세요."
+tags: [HTTPS, 보안, 암호화]
+status: published
+---
+
 **[[HTTP]](Hypertext Transfer Protocol)** 는 웹에서 클라이언트와 서버 간 통신을 위한 통신 규약입니다. 하지만, HTTP는 암호화되지 않는 평문 데이터를 전송하기 때문에 제 3자가 정보를 조회할 수 있다는 위험이 있습니다. 이를 해결하기 위해서 HTTPS가 등장했습니다.
 
 **[[HTTPS]](Hyertext Transfer Protocol Secure)** 는 HTTP에 데이터 암호화가 추가되었습니다. 암호화된 데이터를 전송하기 때문에 제 3자가 볼 수 없도록 할 수 있습니다.

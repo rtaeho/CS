@@ -1,3 +1,9 @@
+---
+title: "B+Tree"
+tags: [인덱스, 데이터베이스]
+status: published
+---
+
 **[[B-Tree]]의 변형으로, 실제 데이터를 리프 노드에만 저장**합니다. 대부분의 DB(MySQL InnoDB 등)가 사용합니다.
 
 ---

@@ -1,3 +1,9 @@
+---
+title: "@Repository"
+tags: [Spring, JPA, DI]
+status: published
+---
+
 Spring에서 데이터 접근을 담당하는 계층 빈을 등록하는 어노테이션입니다. DB와 통신하며, 예외 변환 기능이 추가되어 있습니다.
 
 ## 기본 사용법

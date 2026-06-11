@@ -1,3 +1,9 @@
+---
+title: "Call By Value와 Call By Reference에 대해서 설명해주세요."
+tags: [Java, 메모리]
+status: published
+---
+
 특정 메서드를 호출하는 경우 인자로 전달하는 방법은 크게 2가지가 존재하는데요. 값에 의한 호출(Call By Value), 참조에 의한 호출(Call By Reference)이 이에 해당됩니다.
 
 **값에 의한 호출([[Call By Value]])** 은 메서드를 호출할 때, 값 자체를 넘겨주는 방식입니다. 메서드를 호출하는 함수의 변수와 호출된 함수의 파라미터는 서로 다른 변수입니다.

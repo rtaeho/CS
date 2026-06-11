@@ -1,3 +1,9 @@
+---
+title: "JPA의 ddl-auto 옵션은 각각 어떤 동작을 하고 어떤 상황에서 사용해야 할까요?"
+tags: [JPA, Hibernate, 마이그레이션]
+status: published
+---
+
 ddl-auto 옵션은 스프링 부트 애플리케이션에서 [[Hibernate]]와 같은 JPA 구현체를 사용할 때 데이터베이스 스키마 관리를 제어하는 설정입니다. 이 옵션은 `application.properties` 또는 `application.yml` 파일에서 설정할 수 있으며, 다양한 값에 따라 데이터베이스 스키마에 대해 다른 동작을 수행합니다. ddl-auto 옵션에는 none, validate, update, create, create-drop 등이 존재합니다.
 
 ## [](https://www.maeil-mail.kr/question/28#%EA%B0%81-%EC%98%B5%EC%85%98%EC%97%90-%EB%8C%80%ED%95%9C-%EC%84%A4%EB%AA%85%EC%9D%84-%ED%95%B4%EC%A3%BC%EC%8B%9C%EA%B2%A0%EC%96%B4%EC%9A%94-)각 옵션에 대한 설명을 해주시겠어요?

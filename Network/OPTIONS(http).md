@@ -1,3 +1,9 @@
+---
+title: "OPTIONS(http)"
+tags: [CORS, HTTP]
+status: published
+---
+
 OPTIONS는 특정 리소스에 대해 **서버가 허용하는 통신 옵션(메서드, 헤더 등)을 확인하기 위한 HTTP 메서드**이며, 실무에서는 주로 CORS 프리플라이트 요청에서 사용됩니다.
 
 ## 기본 동작
@@ -54,7 +60,7 @@ Origin = Scheme + Host + Port
 
 ### 전체 흐름
 
-```
+```http
 [1단계 — 프리플라이트 (OPTIONS)]
 브라우저 → 서버: "이런 요청 보내도 돼?"
 OPTIONS /members HTTP/1.1

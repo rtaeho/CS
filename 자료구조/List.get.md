@@ -1,3 +1,9 @@
+---
+title: "List.get"
+tags: [컬렉션, 배열]
+status: published
+---
+
 [[List]]에서 **인덱스로 원소를 조회**합니다.
 
 ## 시그니처

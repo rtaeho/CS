@@ -1,3 +1,9 @@
+---
+title: "Reference Counting"
+tags: [GC, 메모리, Python]
+status: published
+---
+
 객체를 **참조하는 횟수를 카운팅**하여 카운트가 0이 되면 메모리를 해제하는 GC 방식입니다.
 
 ## 동작 방식

@@ -1,3 +1,9 @@
+---
+title: "Connection Timeout, Socket Timeout, Read Timeout의 차이점은 무엇인가요?"
+tags: [타임아웃, 네트워크, TCP]
+status: published
+---
+
 **[[Connection Timeout]]**은 클라이언트가 서버에 연결을 시도할 때, 일정 시간 내에 연결이 이루어지지 않으면 발생하는 타임아웃입니다. TCP 소켓 통신에서 클라이언트와 서버가 연결될 때, 정확한 전송을 보장하기 위해 사전에 세션을 수립하는데, 이 과정을 3-way-handshake라고 합니다. Connection Timeout은 이 3-way-handshake가 일정 시간 내에 완료되지 않을 때 발생합니다. 즉, 서버의 장애나 응답 지연으로 인해 연결을 맺지 못하면 Connection Timeout이 발생합니다.
 
 **[[Socket Timeout]]**은 Connection Timeout 이후에 발생할 수 있는 타임아웃입니다. 클라이언트와 서버가 연결된 후, 서버는 데이터를 클라이언트에게 전송합니다. 이때 하나의 데이터 덩어리가 아니라 여러 개의 패킷 단위로 쪼개서 전송되는데, 각 패킷이 전송될 때의 시간 차이 제한을 Socket Timeout이라고 합니다. 만약 서버가 일정 시간 내에 다음 패킷을 보내지 않으면, 클라이언트는 Socket Timeout을 발생시키고 연결을 종료할 수 있습니다.

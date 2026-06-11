@@ -1,3 +1,9 @@
+---
+title: "Context API"
+tags: [React, 상태관리]
+status: published
+---
+
 [[리액트]]에서 **컴포넌트 트리 전체에 데이터를 공유**할 수 있게 해주는 내장 상태 관리 API로, Props Drilling 없이 전역 데이터를 전달할 수 있습니다.
 
 ## 핵심 구성 요소

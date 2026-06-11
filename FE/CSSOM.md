@@ -1,3 +1,9 @@
+---
+title: "CSSOM"
+tags: [CSS, DOM]
+status: published
+---
+
 **CSS를 브라우저가 트리 구조로 변환한 것**입니다.
 
 DOM의 CSS 버전입니다.

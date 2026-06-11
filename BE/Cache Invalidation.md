@@ -1,3 +1,9 @@
+---
+title: "Cache Invalidation"
+tags: [캐시, Redis]
+status: published
+---
+
 캐시에 저장된 데이터가 **더 이상 유효하지 않을 때 제거하거나 갱신하는 것**입니다.
 
 ## 왜 필요한가?

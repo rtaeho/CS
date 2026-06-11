@@ -1,3 +1,9 @@
+---
+title: "API"
+tags: [REST, API]
+status: published
+---
+
 **애플리케이션 간에 데이터와 기능을 주고받기 위한 통신 규약(인터페이스)**입니다.
 
 ## 핵심 개념

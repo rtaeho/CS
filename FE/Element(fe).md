@@ -1,3 +1,9 @@
+---
+title: "Element(fe)"
+tags: [DOM, JavaScript]
+status: published
+---
+
 DOM에서 **HTML 태그에 해당하는 Node**로, Node의 하위 개념입니다.
 
 ## [[Node(fe)]]와의 관계

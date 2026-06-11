@@ -1,3 +1,9 @@
+---
+title: "JVM"
+tags: [JVM, 바이트코드, 메모리]
+status: published
+---
+
 **Java Virtual Machine**, 자바 프로그램을 실행하는 가상 컴퓨터입니다.
 
 ## 왜 필요한가

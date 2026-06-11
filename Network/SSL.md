@@ -1,3 +1,9 @@
+---
+title: "SSL"
+tags: [TLS, 보안]
+status: published
+---
+
 인터넷에서 데이터를 암호화해 안전하게 전송하기 위한 보안 프로토콜입니다. 현재는 TLS로 대체되었지만 여전히 SSL이라는 용어가 많이 쓰입니다.
 
 ## SSL vs [[TLS]]

@@ -1,3 +1,9 @@
+---
+title: "URI"
+tags: [REST, HTTP]
+status: published
+---
+
 인터넷에서 자원(Resource)을 식별하기 위한 **통합 자원 식별자**로, URL과 URN을 포함하는 상위 개념입니다.
 
 ## 구조 관계

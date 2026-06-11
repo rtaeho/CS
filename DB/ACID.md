@@ -1,3 +1,9 @@
+---
+title: "ACID"
+tags: [트랜잭션, ACID]
+status: published
+---
+
 ## Atomicity (원자성)
 
 **전부 성공하거나 전부 실패**합니다. 중간 상태가 없습니다.

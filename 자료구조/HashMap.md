@@ -1,3 +1,9 @@
+---
+title: "HashMap"
+tags: [자료구조, HashMap, 해시]
+status: published
+---
+
 키(Key)와 값(Value)을 쌍으로 저장하며, 해시 함수를 통해 **평균 O(1)에 데이터를 저장·조회**하는 자료구조입니다.
 
 ## 구조

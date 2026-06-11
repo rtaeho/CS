@@ -1,3 +1,9 @@
+---
+title: "HashMap.put"
+tags: [HashMap, 자료구조, 컬렉션]
+status: published
+---
+
 키-값 쌍을 [[HashMap]]에 **저장**합니다. 키가 이미 있으면 값을 **덮어쓰고**, 덮어쓰기 전 값을 반환합니다.
 
 ## 시그니처

@@ -1,3 +1,9 @@
+---
+title: "String.length"
+tags: [문자열, Java]
+status: published
+---
+
 [[String]]의 **문자 개수(UTF-16 코드 유닛 수)** 를 반환합니다. `String`이 내부적으로 길이를 저장하고 있어 O(1)에 즉시 반환됩니다.
 
 ## 시그니처

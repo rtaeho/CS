@@ -1,3 +1,9 @@
+---
+title: "Preflight Request"
+tags: [CORS, HTTP, 브라우저]
+status: published
+---
+
 Preflight Request는 **브라우저가 본 요청을 보내기 전에 OPTIONS 메서드로 서버에 "이 요청을 보내도 되는지" 사전에 확인하는 요청**입니다.
 
 ## 왜 필요한가

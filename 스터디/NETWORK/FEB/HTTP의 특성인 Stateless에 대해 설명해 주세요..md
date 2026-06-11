@@ -1,3 +1,9 @@
+---
+title: "HTTP의 특성인 Stateless에 대해 설명해 주세요."
+tags: [HTTP]
+status: published
+---
+
 [[Stateless]](무상태)란 서버가 클라이언트의 이전 요청 정보를 저장하지 않고, **매 요청을 독립적으로 처리하는 HTTP의 핵심 특성**입니다.
 
 ## 왜 HTTP는 Stateless로 설계되었는가

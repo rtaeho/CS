@@ -1,3 +1,9 @@
+---
+title: "Hidden Clustered Index"
+tags: [InnoDB, 인덱스, 클러스터드인덱스]
+status: published
+---
+
 InnoDB에서 테이블의 실제 데이터를 **기본키 순서로 정렬하여 저장하는 인덱스 구조**입니다.
 
 ## 클러스터드 인덱스 구조

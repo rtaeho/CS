@@ -1,3 +1,9 @@
+---
+title: "List.add"
+tags: [자료구조, List, 컬렉션]
+status: published
+---
+
 [[List]]에 원소를 추가합니다. 끝에 추가하거나 특정 인덱스에 삽입할 수 있습니다.
 
 ## 시그니처

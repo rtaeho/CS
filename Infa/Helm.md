@@ -1,3 +1,9 @@
+---
+title: "Helm"
+tags: [Kubernetes, 배포]
+status: published
+---
+
 [[Kubernetes]] 애플리케이션을 패키지(Chart) 단위로 관리하는 패키지 매니저로, 복잡한 K8s YAML을 템플릿화하고 환경별 설정을 values.yaml로 분리합니다.
 
 ## 왜 필요한가

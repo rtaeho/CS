@@ -1,3 +1,9 @@
+---
+title: "Red-Black Tree"
+tags: [자료구조, 트리, B-Tree]
+status: published
+---
+
 삽입/삭제 후에도 자동으로 균형을 유지하는 **자가 균형 이진 탐색 트리**로, 모든 연산을 O(log n)에 보장합니다.
 
 ## 핵심 규칙 (5가지)

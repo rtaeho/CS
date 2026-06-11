@@ -1,3 +1,9 @@
+---
+title: "Grafana"
+tags: [모니터링]
+status: published
+---
+
 다양한 데이터 소스(Prometheus, Loki 등)에 연결해 [[메트릭]]과 [[로그]]를 시각화하는 오픈소스 대시보드 도구입니다.
 
 ## 핵심 특징

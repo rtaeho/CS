@@ -1,3 +1,9 @@
+---
+title: "SSR(Server Side Rendering)에 대해 설명해주세요."
+tags: [SSR, CSR, 렌더링]
+status: published
+---
+
 **[[SSR]](Server Side Rendering)** 방식은 **서버에서 완성된 정적 [[HTML]]을 클라이언트에 내려주는 방식**입니다. 클라이언트 측에서는 해당 HTML을 파싱만 하여 화면을 그리게 됩니다.
 반면, **[[CSR]](Client Side Rendering)** 방식은 **브라우저가 서버로부터 비어있는 뼈대 HTML을 받아온 후, 필요한 자바스크립트 번들을 다운로드하고 번들을 실행하여 동적으로 컨텐츠를 채우는 방식입니다**.
 

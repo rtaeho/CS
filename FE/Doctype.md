@@ -1,3 +1,9 @@
+---
+title: "Doctype"
+tags: [HTML]
+status: published
+---
+
 [[HTML]] 문서의 **최상단에 위치하는 선언문**으로, 브라우저에게 해당 문서가 어떤 버전의 HTML로 작성되었는지 알려주는 역할을 합니다.
 
 ## 기본 형태

@@ -1,3 +1,9 @@
+---
+title: "프로토타입(fe)"
+tags: [JavaScript, 프로토타입]
+status: published
+---
+
 JavaScript에서 **모든 객체가 공유하는 속성과 메서드를 정의하는 객체**로, 상속을 구현하는 핵심 메커니즘입니다.
 
 ## 핵심 개념

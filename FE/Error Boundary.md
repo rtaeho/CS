@@ -1,3 +1,9 @@
+---
+title: "Error Boundary"
+tags: [React, 에러처리]
+status: published
+---
+
 React에서 **하위 컴포넌트 트리에서 발생한 JavaScript 에러를 잡아 앱 전체가 crash되는 것을 방지하는 컴포넌트**입니다.
 
 ## 핵심 개념

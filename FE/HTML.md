@@ -1,3 +1,9 @@
+---
+title: "HTML"
+tags: [HTML, 웹서버]
+status: published
+---
+
 **HyperText Markup Language**, 웹 페이지의 구조를 정의하는 언어입니다.
 
 ---

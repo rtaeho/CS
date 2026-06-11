@@ -1,3 +1,9 @@
+---
+title: "HTTP 1.1과 HTTP 2.0에 대해서 설명해주세요."
+tags: [HTTP, 프로토콜, 성능]
+status: published
+---
+
 ## [](https://www.maeil-mail.kr/question/130#http11%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)HTTP/1.1에 대해서 설명해주세요.
 
 [[HTTP]]는 웹상에서 클라이언트와 서버 간 통신을 위한 프로토콜입니다. HTTP/1.0의 경우에는 한 개의 요청과 응답마다 TCP 커넥션을 생성하여 사용됐습니다. 하지만, 이러한 방식은 매 요청마다 연결을 생성하는 오버헤드가 발생합니다. **HTTP/1.1**은 이러한 문제를 **지속 커넥션(Persistent Connection)** 이라는 지정한 타임아웃만큼 커넥션을 종료하지 않는 방식으로 해결합니다.

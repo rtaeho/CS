@@ -1,3 +1,9 @@
+---
+title: "Grafana & Loki"
+tags: [모니터링, 로깅]
+status: published
+---
+
 [[Grafana]]와 [[Loki]]를 중심으로 한 PLG 스택은 [[메트릭]]과 [[로그]]를 통합해 시스템 가시성(Observability)을 확보합니다.
 
 ## PLG 스택 전체 구조

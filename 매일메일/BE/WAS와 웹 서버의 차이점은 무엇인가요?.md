@@ -1,3 +1,9 @@
+---
+title: "WAS와 웹 서버의 차이점은 무엇인가요?"
+tags: [WAS, 웹서버, 아키텍처]
+status: published
+---
+
 **[[웹 서버]]**는 정적 컨텐츠(HTML, CSS, JS, 이미지 등)를 제공하는 역할을 수행합니다. 동적 컨텐츠 요청 시 요청을 [[WAS]]로 전달할 수도 있습니다. 대표적인 웹 서버로는 Apache, Nginx 등이 있습니다. 반면, 자바 진영에서 **WAS(Web Application Server)** 는 서블릿 컨테이너 기능을 제공하고, 동적 컨텐츠를 생성하거나, 애플리케이션 로직을 실행하는 데 특화되어 있습니다. 대표적인 WAS로는 Tomcat이 있습니다. 정리하자면, 웹 서버는 정적 컨텐츠 제공에 특화되어 있으며, WAS는 동적인 컨텐츠 생성과 데이터 처리에 특화되어 있습니다.
 
 ## [](https://www.maeil-mail.kr/question/105#was%EB%8F%84-%EC%A0%95%EC%A0%81-%EC%BB%A8%ED%85%90%EC%B8%A0%EB%A5%BC-%EC%A0%9C%EA%B3%B5%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94%EB%8D%B0-%EC%9B%B9-%EC%84%9C%EB%B2%84%EA%B0%80-%EB%94%B0%EB%A1%9C-%ED%95%84%EC%9A%94%ED%95%9C-%EC%9D%B4%EC%9C%A0%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-)WAS도 정적 컨텐츠를 제공할 수 있는데 웹 서버가 따로 필요한 이유는 무엇인가요?

@@ -1,3 +1,9 @@
+---
+title: "제로 런타임 CSS"
+tags: [CSS]
+status: published
+---
+
 CSS 스타일을 런타임(브라우저)이 아닌 빌드 타임에 미리 생성하여, 실행 중 JavaScript로 스타일을 계산하지 않는 CSS-in-JS 방식입니다.
 
 ## 기존 CSS-in-JS vs 제로 런타임

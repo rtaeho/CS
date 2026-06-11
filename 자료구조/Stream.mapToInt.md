@@ -1,3 +1,9 @@
+---
+title: "Stream.mapToInt"
+tags: [Stream, 자료구조, Java]
+status: published
+---
+
 [[Stream]]의 각 원소를 **`int`로 변환**해 `IntStream`을 반환합니다. `Stream<Integer>` → `IntStream`으로 **언박싱**하는 핵심 메서드이며, 이후 `sum()`, `average()`, `toArray()` 같은 원시 타입 전용 연산을 쓸 수 있게 해줍니다.
 
 ## 시그니처

@@ -1,3 +1,9 @@
+---
+title: "HashMap.remove"
+tags: [자료구조, 해시]
+status: published
+---
+
 [[HashMap]]에서 **키-값 쌍을 삭제**하고, 삭제된 값을 반환합니다.
 
 ## 시그니처

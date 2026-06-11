@@ -1,3 +1,9 @@
+---
+title: "ES Module"
+tags: [JavaScript, 번들러]
+status: published
+---
+
 JavaScript의 **공식 표준 모듈 시스템**으로, `import`로 모듈을 불러오고 `export`로 내보내는 방식입니다.
 
 ## 왜 등장했는가

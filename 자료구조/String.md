@@ -1,3 +1,9 @@
+---
+title: "String"
+tags: [String, 자료구조, Java]
+status: published
+---
+
 **문자(char)들의 시퀀스를 다루는 불변(immutable) 객체**입니다. Java에서 가장 많이 쓰이는 클래스 중 하나.
 
 ## 불변(Immutable)이란

@@ -1,3 +1,9 @@
+---
+title: "WCAG"
+tags: [접근성, HTML]
+status: published
+---
+
 WCAG(Web Content Accessibility Guidelines)는 W3C에서 제정한 **웹 콘텐츠의 접근성을 보장하기 위한 국제 표준 지침**으로, 장애인을 포함한 모든 사용자가 웹을 이용할 수 있도록 구체적인 기준을 제시합니다.
 
 ## WCAG 버전 역사

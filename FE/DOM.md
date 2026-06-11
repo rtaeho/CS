@@ -1,3 +1,9 @@
+---
+title: "DOM"
+tags: [DOM, JavaScript]
+status: published
+---
+
 **DOM(Document Object Model)** 은 **HTML 문서를 JavaScript로 다룰 수 있게 객체로 바꿔놓은 것**입니다.
 
 ## 쉽게 말하면

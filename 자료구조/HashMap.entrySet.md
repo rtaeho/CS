@@ -1,3 +1,9 @@
+---
+title: "HashMap.entrySet"
+tags: [자료구조, HashMap, 컬렉션]
+status: published
+---
+
 [[HashMap]]에 저장된 **모든 키-값 쌍을 `Set<Map.Entry>` 형태로 반환**합니다. **키·값을 둘 다 쓸 때 가장 효율적인 순회 방법**입니다.
 
 ## 시그니처

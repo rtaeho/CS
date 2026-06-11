@@ -1,3 +1,9 @@
+---
+title: "Socket Timeout"
+tags: [네트워크, TCP]
+status: published
+---
+
 소켓을 통한 네트워크 통신에서 **특정 작업이 지정된 시간 내에 완료되지 않으면 예외를 발생시키는 메커니즘의 총칭**으로, Connection Timeout과 Read Timeout을 포함합니다.
 
 ## Socket Timeout의 종류

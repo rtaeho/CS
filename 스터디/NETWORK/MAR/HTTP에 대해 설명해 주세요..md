@@ -1,3 +1,9 @@
+---
+title: "HTTP에 대해 설명해 주세요."
+tags: [HTTP, REST]
+status: published
+---
+
 웹에서 클라이언트와 서버가 데이터를 주고받기 위한 응용 계층(Application Layer)의 통신 프로토콜입니다.
 
 ## 기본 동작

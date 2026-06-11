@@ -1,3 +1,9 @@
+---
+title: "MySQL"
+tags: [MySQL, SQL, 인덱스]
+status: published
+---
+
 **오픈소스 관계형 데이터베이스(RDBMS)**입니다.
 
 ---

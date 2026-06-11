@@ -1,3 +1,9 @@
+---
+title: "외래키 값은 NULL이 들어올 수 있나요?"
+tags: [SQL, 데이터베이스]
+status: published
+---
+
 네, **외래키 컬럼은 기본적으로 NULL을 허용**합니다.
 
 ## NULL 외래키의 의미

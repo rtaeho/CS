@@ -1,3 +1,9 @@
+---
+title: "static"
+tags: [Java, 클래스]
+status: published
+---
+
 **인스턴스가 아닌 클래스 자체에 속하는** 변수·메서드·블록을 선언하는 키워드입니다.
 
 ## static 변수 (클래스 변수)

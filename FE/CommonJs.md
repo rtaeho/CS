@@ -1,3 +1,9 @@
+---
+title: "CommonJs"
+tags: [JavaScript, 모듈]
+status: published
+---
+
 Node.js에서 시작된 **JavaScript 모듈 시스템**으로, `require()`로 모듈을 불러오고 `module.exports`로 내보내는 방식입니다.
 
 ## 왜 필요했는가

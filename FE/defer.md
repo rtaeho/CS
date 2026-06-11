@@ -1,3 +1,9 @@
+---
+title: "defer"
+tags: [JavaScript, 브라우저]
+status: published
+---
+
 HTML에서 외부 스크립트를 **파싱과 병렬로 다운로드하되, HTML 파싱이 완전히 끝난 후 선언 순서대로 실행하게 하는 `<script>` 태그 속성**입니다.
 
 ## 동작 원리

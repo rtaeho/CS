@@ -1,3 +1,9 @@
+---
+title: "GC 동작 과정"
+tags: [Java, GC, 메모리]
+status: published
+---
+
 Java의 GC는 **Young Generation의 Minor GC와 Old Generation의 Major GC**로 나뉘며, 객체의 생존 기간에 따라 단계적으로 관리됩니다.
 
 ## 전체 힙 구조

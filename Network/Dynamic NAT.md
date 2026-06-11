@@ -1,3 +1,9 @@
+---
+title: "Dynamic NAT"
+tags: [네트워크, NAT, IP]
+status: published
+---
+
 공인 IP 풀(Pool)에서 사설 IP에 **동적으로 공인 IP를 할당**하는 NAT 방식입니다.
 
 ## 동작 방식

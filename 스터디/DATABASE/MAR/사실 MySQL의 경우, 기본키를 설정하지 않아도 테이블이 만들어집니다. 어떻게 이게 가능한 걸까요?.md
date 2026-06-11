@@ -1,3 +1,9 @@
+---
+title: "사실 MySQL의 경우, 기본키를 설정하지 않아도 테이블이 만들어집니다. 어떻게 이게 가능한 걸까요?"
+tags: [SQL, 인덱스]
+status: published
+---
+
 [[MySQL]]이 기본키가 없어도 내부적으로 **숨겨진 클러스터드 인덱스([[Hidden Clustered Index]])** 를 자동 생성하기 때문입니다.
 
 ## InnoDB의 기본키 결정 순서

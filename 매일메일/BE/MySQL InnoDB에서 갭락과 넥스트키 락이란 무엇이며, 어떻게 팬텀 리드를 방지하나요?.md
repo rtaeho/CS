@@ -1,3 +1,9 @@
+---
+title: "MySQL InnoDB에서 갭락과 넥스트키 락이란 무엇이며, 어떻게 팬텀 리드를 방지하나요?"
+tags: [락, 트랜잭션, 격리수준]
+status: published
+---
+
 ## [](https://www.maeil-mail.kr/question/93#phantom-read%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94)Phantom Read란 무엇인가요?
 
 Phantom Read는 [[트랜잭션]]이 동일한 조건의 쿼리를 반복 실행할 때, 나중에 실행된 쿼리에서 처음에는 존재하지 않았던 새로운 행이 나타나는 현상을 말합니다. 이는 주로 **읽기 일관성(Read Consistency)** 을 유지하는 과정에서 발생할 수 있는 문제로, 데이터의 삽입이나 삭제가 다른 트랜잭션에 의해 이루어질 때 발생합니다.

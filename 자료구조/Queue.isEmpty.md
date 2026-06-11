@@ -1,3 +1,9 @@
+---
+title: "Queue.isEmpty"
+tags: [큐, BFS]
+status: published
+---
+
 [[Queue]]가 **비어있는지** 확인합니다. 큐 처리 루프의 표준 종료 조건이며, `poll`/`peek` 호출 전 안전 검사로 거의 항상 함께 쓰입니다.
 
 ## 시그니처

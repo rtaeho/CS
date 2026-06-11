@@ -1,3 +1,9 @@
+---
+title: "JpaEntityInformation"
+tags: [JPA, Spring]
+status: published
+---
+
 `JpaEntityInformation`은 Spring Data [[JPA]]에서 **Entity의 메타데이터 정보를 제공하는 인터페이스**입니다.
 
 ## 주요 역할

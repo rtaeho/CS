@@ -1,3 +1,9 @@
+---
+title: "sessionStorage"
+tags: [저장소, 웹]
+status: published
+---
+
 브라우저에 **탭/창이 열려있는 동안만 데이터를 저장하는 클라이언트 사이드 저장소**입니다.
 
 ## localStorage와의 차이

@@ -1,3 +1,9 @@
+---
+title: "record"
+tags: [Java, 불변]
+status: published
+---
+
 Java 14에서 도입된 **불변 데이터 객체를 간결하게 정의하기 위한 클래스 형태**입니다.
 
 ## 기존 방식 vs record

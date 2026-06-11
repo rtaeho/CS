@@ -1,3 +1,9 @@
+---
+title: "@Service"
+tags: [Spring, 빈]
+status: published
+---
+
 Spring에서 비즈니스 로직을 처리하는 서비스 계층 빈을 등록하는 어노테이션입니다. Controller와 Repository 사이에서 핵심 로직을 담당합니다.
 
 ## 기본 사용법

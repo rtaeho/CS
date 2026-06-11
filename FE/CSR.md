@@ -1,3 +1,9 @@
+---
+title: "CSR"
+tags: [렌더링]
+status: published
+---
+
 CSR(Client-Side Rendering)은 **브라우저(클라이언트)가 JavaScript를 실행하여 화면을 렌더링하는 방식**으로, 서버는 빈 HTML과 JS 번들만 전달합니다.
 
 ## 동작 흐름

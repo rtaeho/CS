@@ -1,3 +1,9 @@
+---
+title: "Spring Proxy"
+tags: [Spring, 프록시, AOP]
+status: published
+---
+
 **런타임에 자동으로 만들어진 자식 클래스가 원본의 메서드 호출을 가로채서 부가 동작을 끼워넣는 메커니즘**입니다. Spring의 거의 모든 어노테이션 기반 기능(`@Transactional`, `@Async`, `@Cacheable`, `@Configuration`, AOP 등)이 이 원리로 동작합니다.
 
 ## 왜 필요한가?
@@ -13,7 +19,7 @@ class UserService {
 → register()는 적힌 본문만 실행. 트랜잭션·로깅·캐시 같은 부가 동작은 직접 짜야 함.
 ```
 
-```
+```java
 [ 프록시 활용 ]
 class UserService {
     @Transactional
@@ -29,7 +35,7 @@ class UserService {
 
 ## 동작 원리 — 런타임 자식 클래스 생성
 
-```
+```java
 [ 너의 코드 ]
 @Service
 class UserService {
@@ -61,7 +67,7 @@ class UserService$$EnhancerByCGLIB$$abc123 extends UserService {
                             진짜 UserService가 아니라 자식
 ```
 
-```
+```java
 [ 호출 시 ]
 @Autowired UserService userService;   // 실제로는 자식 인스턴스
 userService.register(u);              // 자식의 오버라이드 메서드 호출

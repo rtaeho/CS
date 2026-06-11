@@ -1,3 +1,9 @@
+---
+title: "TDZ"
+tags: [JavaScript, 변수]
+status: published
+---
+
 let/const로 선언한 변수가 호이스팅은 되지만, 선언문에 도달하기 전까지 접근할 수 없는 구간입니다.
 
 ## 왜 존재하나?

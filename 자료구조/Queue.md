@@ -1,3 +1,9 @@
+---
+title: "Queue"
+tags: [큐, BFS]
+status: published
+---
+
 데이터를 **선입선출(FIFO, First In First Out)** 순서로 삽입·삭제하는 선형 자료구조입니다.
 
 ## 핵심 개념

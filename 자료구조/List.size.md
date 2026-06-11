@@ -1,3 +1,9 @@
+---
+title: "List.size"
+tags: [컬렉션, 배열]
+status: published
+---
+
 [[List]]에 저장된 **원소 개수**를 반환합니다.
 
 ## 시그니처

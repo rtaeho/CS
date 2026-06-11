@@ -1,3 +1,9 @@
+---
+title: "List.set"
+tags: [컬렉션, 배열]
+status: published
+---
+
 [[List]]의 **인덱스 위치 값을 변경**하고, **이전 값을 반환**합니다.
 
 ## 시그니처

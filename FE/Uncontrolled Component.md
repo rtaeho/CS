@@ -1,3 +1,9 @@
+---
+title: "Uncontrolled Component"
+tags: [React, 폼]
+status: published
+---
+
 **DOM이 폼 요소의 값을 직접 관리**하는 방식입니다.
 
 ---

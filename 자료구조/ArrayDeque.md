@@ -1,3 +1,9 @@
+---
+title: "ArrayDeque"
+tags: [덱, 큐]
+status: published
+---
+
 내부적으로 **동적 원형 배열**을 사용해 앞뒤 양방향 삽입/삭제를 모두 O(1)에 지원하는 Java의 자료구조입니다.
 
 ## 구조

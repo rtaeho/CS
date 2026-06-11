@@ -1,3 +1,9 @@
+---
+title: "JpaPersistableEntityInformation"
+tags: [JPA, 영속성, 엔티티]
+status: published
+---
+
 `JpaPersistableEntityInformation`은 **Entity가 `Persistable` 인터페이스를 구현했을 때 사용되는 구현체**입니다.
 
 ## Persistable 인터페이스

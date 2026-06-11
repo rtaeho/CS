@@ -1,3 +1,9 @@
+---
+title: "CSS-in-JS"
+tags: [CSS, 컴포넌트]
+status: published
+---
+
 JavaScript 파일 안에서 CSS 스타일을 작성하는 방식으로, 컴포넌트 단위로 스타일을 관리할 수 있게 해주는 기술입니다.
 
 ## 기존 CSS와의 차이

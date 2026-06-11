@@ -1,3 +1,8 @@
+---
+title: "자바에서 Checked Exception과 Unchecked Exception에 대해서 설명해주세요."
+tags: [예외처리, Java, 프로그래밍]
+status: published
+---
 
 Checked [[Exception]]은 **[[컴파일]] 시점에 확인**되며, **반드시 처리해야 하는 예외**입니다. 자바에서는 `IOException`, `SQLException` 등이 이에 속합니다. Checked Exception을 유발하는 메서드를 호출하는 경우, 메서드 시그니처에 `throws`를 사용하여 호출자에게 예외를 위임하거나 메서드 내에서 try-catch를 사용하여 해당 예외를 반드시 처리해야합니다.
 

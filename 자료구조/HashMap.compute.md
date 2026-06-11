@@ -1,3 +1,9 @@
+---
+title: "HashMap.compute"
+tags: [해시맵, 함수형]
+status: published
+---
+
 [[HashMap]]에서 키에 대해 **현재 값을 받아 새 값을 계산**하는 메서드들. `compute`, `computeIfAbsent`, `computeIfPresent` 세 가지가 있습니다.
 
 ## 시그니처

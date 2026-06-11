@@ -1,3 +1,9 @@
+---
+title: "const"
+tags: [JavaScript, 변수]
+status: published
+---
+
 ES6에서 도입된 상수 선언 키워드입니다. 블록 스코프를 가지며, 한 번 할당하면 재할당이 불가능합니다.
 
 ## 특징 요약

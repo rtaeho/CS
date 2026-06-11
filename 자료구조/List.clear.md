@@ -1,3 +1,9 @@
+---
+title: "List.clear"
+tags: [컬렉션, 배열]
+status: published
+---
+
 [[List]]의 **모든 원소를 삭제**합니다. List 자체는 그대로 유지(재사용 가능).
 
 ## 시그니처

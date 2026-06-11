@@ -1,8 +1,14 @@
+---
+title: "Spring Container"
+tags: [Spring, IoC]
+status: published
+---
+
 **빈(Bean)을 생성·관리하고 의존성을 주입하는 Spring의 핵심 [[IoC]] 컨테이너**입니다. 개발자가 직접 `new`로 객체를 만들지 않고, 컨테이너에 등록된 빈을 가져다 씁니다.
 
 ## 왜 필요한가?
 
-```
+```java
 [ 컨테이너 없을 때 ]
 public static void main(String[] args) {
     EmailService email = new EmailService();
@@ -185,7 +191,7 @@ Spring Boot에서는 `SpringApplication.run()`이 알아서 적절한 구현체 
 
 ## 빈 스코프 (간단 소개)
 
-```
+```java
 기본은 싱글톤 — 컨테이너당 한 개만 생성
 
 @Component
@@ -202,7 +208,7 @@ public class TempBuffer { }    // 요청할 때마다 새로 생성
 
 ## 빈 생명주기 (간단 소개)
 
-```
+```java
 1. 객체 생성 (constructor)
 2. 의존성 주입 (@Autowired)
 3. 초기화 콜백 (@PostConstruct)

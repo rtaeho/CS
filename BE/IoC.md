@@ -1,3 +1,9 @@
+---
+title: "IoC"
+tags: [Spring, DI]
+status: published
+---
+
 **객체의 생성·생명주기·의존성 관리를 개발자가 아닌 외부 컨테이너가 책임지도록 뒤집는 설계 원칙**입니다 (Inversion of Control). [[DI]]보다 큰 개념으로, DI는 IoC를 구현하는 방법 중 하나입니다.
 
 ## 왜 필요한가?

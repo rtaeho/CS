@@ -1,3 +1,9 @@
+---
+title: "Reachability"
+tags: [Java, GC, 메모리]
+status: published
+---
+
 **GC Root에서 시작하여 참조를 따라가며 도달 가능한 객체를 탐색**하고, 도달할 수 없는 객체를 수거하는 GC 방식입니다.
 
 ## 동작 방식

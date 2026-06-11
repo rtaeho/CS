@@ -1,3 +1,9 @@
+---
+title: "scale-out"
+tags: [로드밸런싱, 확장성]
+status: published
+---
+
 스케일아웃(Scale-Out)은 서버의 처리 능력을 높이기 위해 **동일한 역할의 서버 수를 늘려 부하를 분산**하는 확장 방식입니다.
 
 ## [[scale-up]] vs Scale-Out

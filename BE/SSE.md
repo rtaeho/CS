@@ -1,3 +1,9 @@
+---
+title: "SSE"
+tags: [HTTP, 웹소켓]
+status: published
+---
+
 서버가 클라이언트에게 **HTTP 연결을 유지하며 단방향으로 이벤트를 스트리밍**하는 기술입니다 (Server-Sent Events).
 
 ## 핵심 특징

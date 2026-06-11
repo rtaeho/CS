@@ -1,3 +1,9 @@
+---
+title: "POST와 PUT, PATCH의 차이는 무엇인가요?"
+tags: [HTTP, REST]
+status: published
+---
+
 POST는 **새로운 리소스를 생성**, PUT은 **리소스 전체를 교체**, PATCH는 **리소스의 일부만 수정**하는 메서드이며, 멱등성과 리소스 식별 방식에서 핵심적인 차이가 있습니다.
 
 ## 핵심 차이
@@ -161,7 +167,7 @@ public MemberResponse patch(Long id, MemberPatchRequest request) {
 
 ### POST — 멱등하지 않음 X
 
-```
+```http
 POST /members {name: "홍길동"} → 생성 (id: 1)
 POST /members {name: "홍길동"} → 생성 (id: 2)
 POST /members {name: "홍길동"} → 생성 (id: 3)
@@ -171,7 +177,7 @@ POST /members {name: "홍길동"} → 생성 (id: 3)
 
 ### PUT — 멱등 O
 
-```
+```http
 PUT /members/1 {name: "김철수", email: "kim@test.com"}
 → {id: 1, name: "김철수", email: "kim@test.com"}
 

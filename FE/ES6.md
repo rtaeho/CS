@@ -1,3 +1,9 @@
+---
+title: "ES6"
+tags: [JavaScript, ES6]
+status: published
+---
+
 2015년에 발표된 **JavaScript의 6번째 표준 명세(ECMAScript 2015)**로, `let/const`, 화살표 함수, 클래스, Promise, 모듈 등 **현대 JavaScript의 핵심 문법 대부분이 도입된 가장 큰 변화의 버전**입니다.
 
 ## 핵심 개념

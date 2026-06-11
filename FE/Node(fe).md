@@ -1,3 +1,9 @@
+---
+title: "Node(fe)"
+tags: [DOM, JavaScript]
+status: published
+---
+
 웹 브라우저가 HTML을 파싱하여 생성하는 **[[DOM]](Document Object Model) 트리의 기본 구성 단위**입니다.
 
 ## DOM 트리 구조

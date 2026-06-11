@@ -1,3 +1,9 @@
+---
+title: "Arrays.parallelSort"
+tags: [정렬, 병렬]
+status: published
+---
+
 [[Arrays]]의 **배열을 멀티스레드로 병렬 정렬**하는 정적 메서드. 대용량 배열에서 [[Arrays.sort]]보다 빠릅니다.
 
 ## 시그니처

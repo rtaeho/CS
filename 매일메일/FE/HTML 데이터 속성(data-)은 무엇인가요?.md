@@ -1,3 +1,9 @@
+---
+title: "HTML 데이터 속성(data-)은 무엇인가요?"
+tags: [HTML, DOM]
+status: published
+---
+
 **데이터 속성은 사용자 정의 데이터를 [[HTML]] 요소에 저장하기 위해 사용되는 속성**입니다. 선언 방법은 `data-`로 시작하는 속성을 HTML 태그에 추가하면 됩니다. 예를 들어, `<div data-user-id="12345" data-role="admin"></div>`와 같이 사용할 수 있습니다. 여기서 `data-user-id`와 `data-role`이 데이터 속성에 해당합니다.
 
 자바스크립트를 통해 데이터 속성에 접근하려면 `dataset` 객체를 활용합니다. 중요한 점은 HTML의 데이터 속성 이름이 JS의 camelCase 형식으로 매핑된다는 것입니다. 예를 들어, `data-user-id`는 `dataset.userId`로, `data-role`은 `dataset.role`로 접근할 수 있습니다. 예를 들어 앞선 예제에서 `해당요소.dataset.userId`를 호출하면 `“12345”`라는 값이 반환됩니다.

@@ -1,3 +1,9 @@
+---
+title: "REST"
+tags: [REST, HTTP, API]
+status: published
+---
+
 **HTTP를 기반으로 자원을 URL로 표현하고, HTTP 메서드로 행위를 나타내는 아키텍처 스타일**입니다.
 
 ## 핵심 원칙

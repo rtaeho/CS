@@ -1,3 +1,9 @@
+---
+title: "MVCC"
+tags: [동시성, MVCC, 일관된읽기]
+status: published
+---
+
 MVCC(Multi-Version Concurrency Control)는 데이터를 수정할 때 **이전 버전을 유지하여, 읽기 작업과 쓰기 작업이 서로 차단하지 않고 동시에 수행**될 수 있게 하는 동시성 제어 기법입니다.
 
 ## 왜 필요한가

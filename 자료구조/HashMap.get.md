@@ -1,3 +1,9 @@
+---
+title: "HashMap.get"
+tags: [해시맵, 해시]
+status: published
+---
+
 [[HashMap]]에서 **키로 값을 조회**합니다. 키가 없으면 `null`을 반환합니다.
 
 ## 시그니처

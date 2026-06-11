@@ -1,3 +1,9 @@
+---
+title: "var"
+tags: [JavaScript, 변수]
+status: published
+---
+
 ES5 이전부터 사용된 변수 선언 키워드입니다. 함수 스코프를 가지며, 현재는 let/const에 밀려 거의 사용하지 않습니다.
 
 ## 특징 요약

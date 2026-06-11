@@ -1,3 +1,9 @@
+---
+title: "@Controller"
+tags: [Spring, MVC]
+status: published
+---
+
 Spring MVC에서 HTTP 요청을 처리하는 프레젠테이션 계층 빈을 등록하는 [[어노테이션]]입니다. 클라이언트 요청을 받아 응답을 반환합니다.
 
 ## 기본 사용법

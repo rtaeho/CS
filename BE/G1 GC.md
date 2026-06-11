@@ -1,3 +1,9 @@
+---
+title: "G1 GC"
+tags: [Java, GC, 성능]
+status: published
+---
+
 힙을 동일한 크기의 **Region으로 분할**하여 가비지가 많은 Region부터 우선 수거하는 방식입니다.
 
 ## 기존 GC와의 차이

@@ -1,3 +1,9 @@
+---
+title: "HashMap.keySet"
+tags: [해시맵, 해시]
+status: published
+---
+
 [[HashMap]]에 저장된 **모든 키를 Set 형태로 반환**합니다. 주로 키 순회나 키 집합 연산에 사용됩니다.
 
 ## 시그니처

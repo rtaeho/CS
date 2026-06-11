@@ -1,3 +1,9 @@
+---
+title: "GC 종류"
+tags: [Java, GC]
+status: published
+---
+
 ## Serial GC
 
 단일 스레드로 GC를 수행하는 가장 단순한 GC입니다.

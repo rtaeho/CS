@@ -1,3 +1,9 @@
+---
+title: "Set.size"
+tags: [집합, 해시]
+status: published
+---
+
 [[Set]]에 저장된 **원소의 개수**를 반환합니다.
 
 ## 시그니처

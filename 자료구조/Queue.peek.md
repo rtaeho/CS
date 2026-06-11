@@ -1,3 +1,9 @@
+---
+title: "Queue.peek"
+tags: [자료구조, 큐]
+status: published
+---
+
 [[Queue]]의 **front(앞) 원소를 제거하지 않고 조회**합니다. 같은 역할의 메서드로 `element`가 있으며, **빈 큐에서 동작이 다릅니다**.
 
 ## 시그니처

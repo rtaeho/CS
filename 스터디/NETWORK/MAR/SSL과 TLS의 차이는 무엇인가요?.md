@@ -1,3 +1,9 @@
+---
+title: "SSL과 TLS의 차이는 무엇인가요?"
+tags: [HTTPS, 보안]
+status: published
+---
+
 [[SSL]]의 취약점을 개선하여 만든 것이 [[TLS]]로, 현재 SSL은 deprecated되었고 실질적으로 TLS가 표준으로 사용되고 있습니다.
 
 ## 역사적 흐름

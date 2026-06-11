@@ -1,3 +1,9 @@
+---
+title: "Interceptor"
+tags: [Spring, MVC, 필터]
+status: published
+---
+
 Spring MVC의 DispatcherServlet 이후에서 동작하며, Controller 호출 전·후·완료 시점을 세분화해 공통 처리를 수행하는 컴포넌트입니다.
 
 ## 동작 위치

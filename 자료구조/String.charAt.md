@@ -1,3 +1,9 @@
+---
+title: "String.charAt"
+tags: [String, 자료구조, 문자열]
+status: published
+---
+
 [[String]]의 **i번째 문자(`char`)** 를 반환합니다. 인덱스 기반 문자 접근의 가장 기본 메서드이며, 대부분의 단일 순회 시나리오에서 `toCharArray()`보다 빠릅니다.
 
 ## 시그니처

@@ -1,3 +1,9 @@
+---
+title: "Body"
+tags: [HTTP, REST]
+status: published
+---
+
 HTTP 메시지에서 실제 전송할 데이터(콘텐츠)를 담는 부분입니다.
 
 ## HTTP 메시지 구조

@@ -1,3 +1,9 @@
+---
+title: "let"
+tags: [JavaScript, 변수]
+status: published
+---
+
 ES6에서 도입된 변수 선언 키워드입니다. 블록 스코프를 가지며, 재할당이 필요한 변수에 사용합니다.
 
 ## 특징 요약

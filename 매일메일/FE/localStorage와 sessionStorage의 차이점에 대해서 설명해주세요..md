@@ -1,3 +1,9 @@
+---
+title: "localStorage와 sessionStorage의 차이점에 대해서 설명해주세요."
+tags: [브라우저, 저장소]
+status: published
+---
+
 `localStorage`와 `sessionStorage는` 브라우저에서 제공하는 클라이언트 측 저장소 API로, 둘 다 데이터를 키-값 쌍 형태로 저장합니다.
 
 차이점은 **데이터의 지속성**과 **범위**에 있습니다.

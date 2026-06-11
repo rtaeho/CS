@@ -1,3 +1,9 @@
+---
+title: "Call By Value"
+tags: [Java, 메모리]
+status: published
+---
+
 함수 호출 시 인자의 **값 자체를 복사**하여 전달하는 방식으로, 함수 내부에서 값을 변경해도 원본에 영향을 주지 않습니다.
 
 ## Call By Value vs [[Call By Reference]]

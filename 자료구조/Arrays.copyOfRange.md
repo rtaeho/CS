@@ -1,3 +1,9 @@
+---
+title: "Arrays.copyOfRange"
+tags: [배열, 유틸]
+status: published
+---
+
 [[Arrays]]의 **배열의 특정 범위를 잘라 새 배열로 반환**하는 정적 메서드입니다.
 
 ## 시그니처

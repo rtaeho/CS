@@ -1,3 +1,9 @@
+---
+title: "Mount Unmount"
+tags: [React, 생명주기]
+status: published
+---
+
 ## 마운트 (Mount)
 
 컴포넌트가 화면(DOM)에 **추가되는 것**입니다.

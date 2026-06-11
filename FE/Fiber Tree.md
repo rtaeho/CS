@@ -1,3 +1,9 @@
+---
+title: "Fiber Tree"
+tags: [React, VirtualDOM]
+status: published
+---
+
 리액트의 내부 자료구조로, 컴포넌트 트리를 Fiber 객체 단위로 표현하여 렌더링 작업을 잘게 쪼개고 우선순위에 따라 중단·재개할 수 있게 하는 구조.
 
 ## Fiber 객체

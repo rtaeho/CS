@@ -1,3 +1,9 @@
+---
+title: "HTTP"
+tags: [HTTP, REST]
+status: published
+---
+
 웹에서 클라이언트와 서버가 데이터를 주고받기 위한 프로토콜입니다. 브라우저가 서버에 요청하고 응답을 받는 규칙이라고 보면 됩니다.
 
 ## 핵심 특징
@@ -8,7 +14,7 @@
 
 ## 요청과 응답 구조
 
-```
+```http
 [요청]
 GET /index.html HTTP/1.1
 Host: www.example.com

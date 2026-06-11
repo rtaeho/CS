@@ -1,3 +1,9 @@
+---
+title: "Set.removeAll"
+tags: [자료구조, Set, 컬렉션]
+status: published
+---
+
 [[Set]]에서 **다른 컬렉션에 포함된 원소를 모두 삭제**합니다. 이는 곧 **차집합** 연산입니다.
 
 ## 시그니처

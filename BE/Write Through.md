@@ -1,3 +1,9 @@
+---
+title: "Write Through"
+tags: [캐시]
+status: published
+---
+
 데이터를 쓸 때 **캐시와 DB에 동시에 저장하는 캐싱 전략**입니다.
 
 ## 동작 방식

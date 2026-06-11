@@ -1,3 +1,9 @@
+---
+title: "HashMap.values"
+tags: [해시맵, 해시]
+status: published
+---
+
 [[HashMap]]에 저장된 **모든 값을 Collection 형태로 반환**합니다.
 
 ## 시그니처

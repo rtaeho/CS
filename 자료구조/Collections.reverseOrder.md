@@ -1,3 +1,9 @@
+---
+title: "Collections.reverseOrder"
+tags: [자료구조, 정렬, Java]
+status: published
+---
+
 **역순(내림차순) 정렬용 [[Comparator]]** 를 반환하는 정적 메서드입니다 ([[Collections]]). 자연 순서의 반대로 비교하는 비교자를 만들어 정렬·우선순위 큐 등에 넘깁니다.
 
 ## 시그니처

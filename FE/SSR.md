@@ -1,3 +1,9 @@
+---
+title: "SSR"
+tags: [렌더링, 성능]
+status: published
+---
+
 SSR(Server-Side Rendering)은 **서버에서 HTML을 완성하여 클라이언트에 전달하는 렌더링 방식**으로, 브라우저가 받자마자 콘텐츠를 표시할 수 있습니다.
 
 ## CSR vs SSR

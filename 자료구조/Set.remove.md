@@ -1,3 +1,9 @@
+---
+title: "Set.remove"
+tags: [자료구조, Set, 컬렉션]
+status: published
+---
+
 [[Set]]에서 **원소를 삭제**하고, 삭제 여부를 boolean으로 반환합니다.
 
 ## 시그니처

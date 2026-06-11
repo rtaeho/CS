@@ -1,3 +1,9 @@
+---
+title: "Queue.poll"
+tags: [큐, BFS]
+status: published
+---
+
 [[Queue]]의 **front(앞) 원소를 제거하고 반환**합니다 (dequeue). 같은 역할의 메서드로 `remove`가 있으며, **빈 큐에서 동작이 다릅니다**.
 
 ## 시그니처

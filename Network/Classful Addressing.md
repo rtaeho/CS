@@ -1,3 +1,9 @@
+---
+title: "Classful Addressing"
+tags: [네트워크, IP]
+status: published
+---
+
 IP 주소를 **고정된 클래스(A, B, C, D, E)로 나누어 네트워크와 호스트를 구분**하는 초기 IP 주소 체계입니다.
 
 ## 클래스 구분

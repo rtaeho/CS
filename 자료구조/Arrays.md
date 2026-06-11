@@ -1,3 +1,9 @@
+---
+title: "Arrays"
+tags: [배열, 유틸]
+status: published
+---
+
 **배열을 다루는 정적 메서드의 모음**입니다 (`java.util.Arrays`). 정렬·복사·검색·변환을 한 줄로 처리할 수 있습니다.
 
 ## 왜 필요한가?

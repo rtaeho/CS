@@ -1,3 +1,9 @@
+---
+title: "Error Boundary가 무엇이며, 이를 사용하는 이유는 무엇인가요?"
+tags: [React, 예외처리]
+status: published
+---
+
 ### Error Boundary란?
 
 **[[Error Boundary]]**는 React **컴포넌트에서 발생하는 오류를 잡아내고, 전체 애플리케이션이 다운되는 것을 방지하기 위한 특수한 컴포넌트**입니다. 일반적으로 클라이언트에서 오류가 발생할 때 표시할 UI를 제공하여, 애플리케이션의 신뢰성과 사용자 경험을 높이는 데 활용됩니다. 클래스형 컴포넌트의 `componentDidCatch`와 `getDerivedStateFromError` 두 가지 라이프사이클 메서드를 사용하여 오류 발생 시의 행동을 정의할 수 있습니다. Error Boundary는 **클래스형 컴포넌트에서만 사용**할 수 있습니다.

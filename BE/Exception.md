@@ -1,3 +1,9 @@
+---
+title: "Exception"
+tags: [Java, 예외처리, 에러]
+status: published
+---
+
 프로그램 실행 중 발생하는 **예외 상황**입니다.
 
 ## 예시

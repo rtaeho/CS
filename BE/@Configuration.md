@@ -1,3 +1,9 @@
+---
+title: "@Configuration"
+tags: [Spring, 빈, DI]
+status: published
+---
+
 **[[@Bean]] 메서드들을 모아두는 설정 클래스**임을 [[Spring Container|Spring 컨테이너]]에게 알리는 [[어노테이션]]입니다. 단순히 메서드를 모으는 것을 넘어, **빈의 싱글톤을 보장하는 프록시**를 자동으로 만들어줍니다.
 
 ## 왜 필요한가?
@@ -226,7 +232,7 @@ public class AppConfig {
 }
 ```
 
-```
+```java
 proxyBeanMethods = true (기본값):  CGLIB 프록시 → 싱글톤 보장
 proxyBeanMethods = false:         프록시 없음 → 메모리·시작 시간 ↓
                                     대신 @Bean 메서드끼리 호출 시 주의 필요

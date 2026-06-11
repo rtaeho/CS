@@ -1,3 +1,9 @@
+---
+title: "private 메서드에 @Transactional 선언하면 트랜잭션이 동작할까요?"
+tags: [Spring, AOP, 트랜잭션]
+status: published
+---
+
 기본적으로 [[@Transactional]], [[@Cacheable]], [[@Async]] 등의 애너테이션은 런타임에 동작하는 [[Spring AOP]]를 기반으로 동작합니다. Spring AOP가 제공하는 JDK Dynamic Proxy, CGLIB 방식 모두 타깃이 구현하는 인터페이스나 구체 클래스를 대상으로 프록시를 만들어서 타깃 클래스의 메서드 수행 전후에 횡단 관심사에 대한 처리를 할 수 있습니다.
 
 Spring은 빈 생성시, 해당 빈에 AOP 애너테이션이 있는지 검사하고, 있다면 프록시 객체를 생성하여 빈을 대체합니다. AOP 적용 대상인 클래스의 경우, 즉, `@Transactional`과 같은 AOP 애너테이션이 하나라도 선언된 클래스는 프록시로 감싸집니다.
