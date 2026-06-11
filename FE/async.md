@@ -1,3 +1,9 @@
+---
+title: "async"
+tags: [비동기, Promise]
+status: published
+---
+
 JavaScript에서 **비동기 작업을 동기 코드처럼 읽기 쉽게 작성할 수 있게 해주는 키워드**입니다.
 
 ## 왜 필요한가
@@ -323,7 +329,7 @@ async function good() {
 
 ## async/await의 본질
 
-```
+```javascript
 async/await는 Promise의 문법적 설탕(Syntactic Sugar)
 
 // 이 코드는

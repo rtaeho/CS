@@ -1,3 +1,9 @@
+---
+title: "Aggregation Pipeline"
+tags: [NoSQL, MongoDB, 집계]
+status: published
+---
+
 MongoDB에서 데이터를 **여러 단계(Stage)를 순차적으로 거쳐 집계·변환·분석하는 처리 방식**입니다.
 
 ## 핵심 개념

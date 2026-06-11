@@ -1,3 +1,9 @@
+---
+title: "Service Mesh"
+tags: [MSA, Kubernetes]
+status: published
+---
+
 [[MSA]]에서 서비스 간 통신을 애플리케이션 코드 변경 없이 인프라 레이어(사이드카 프록시)에서 관리하는 아키텍처 패턴으로, Istio가 대표적인 구현체입니다.
 
 ## 왜 필요한가

@@ -1,3 +1,9 @@
+---
+title: "Rate Limiting"
+tags: [보안, APIGateway]
+status: published
+---
+
 서버가 처리할 수 있는 요청 수를 제한해 과부하·DDoS를 방지하고 공정한 자원 사용을 보장하는 기법입니다.
 
 ## 주요 알고리즘

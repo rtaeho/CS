@@ -1,3 +1,9 @@
+---
+title: "Virtual DOM"
+tags: [VirtualDOM, React]
+status: published
+---
+
 실제 [[DOM]]을 직접 조작하는 대신 **메모리에 가상의 DOM 트리를 유지**하여 변경사항을 효율적으로 반영하는 기술입니다.
 
 ## 왜 필요한가?

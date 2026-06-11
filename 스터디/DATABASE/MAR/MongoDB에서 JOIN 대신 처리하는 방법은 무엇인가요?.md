@@ -1,3 +1,9 @@
+---
+title: "MongoDB에서 JOIN 대신 처리하는 방법은 무엇인가요?"
+tags: [NoSQL, 데이터베이스]
+status: published
+---
+
 MongoDB는 JOIN 대신 **임베딩(Embedding)** 과 **$lookup** 두 가지 방식으로 관계를 처리합니다.
 
 ## 1. 임베딩 (Embedding) - 가장 권장

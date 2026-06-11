@@ -1,3 +1,9 @@
+---
+title: "LangChain4j"
+tags: [Java, RAG, LLM]
+status: published
+---
+
 **Java용 LLM 오케스트레이션 프레임워크**로, OpenAI·Anthropic·온프레미스 LLM과의 연동, 메모리, 툴 사용, RAG 파이프라인을 추상화해 제공합니다.
 
 ## 핵심 구성요소

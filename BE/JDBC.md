@@ -1,3 +1,9 @@
+---
+title: "JDBC"
+tags: [Java, SQL, 데이터베이스]
+status: published
+---
+
 **JDBC(Java Database Connectivity)**는 Java에서 데이터베이스에 접속할 수 있게 해주는 **표준 API**입니다.
 
 ## 한마디로

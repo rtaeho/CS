@@ -1,3 +1,9 @@
+---
+title: "Class Loader"
+tags: [JVM, 클래스로딩, 메모리]
+status: published
+---
+
 .class 파일(바이트코드)을 JVM 메모리에 동적으로 로드·링크·초기화하는 JVM의 서브시스템입니다.
 
 ## 동작 3단계

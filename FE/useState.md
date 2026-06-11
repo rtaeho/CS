@@ -1,3 +1,9 @@
+---
+title: "useState"
+tags: [React, Hook]
+status: published
+---
+
 React에서 **컴포넌트의 상태(state)를 관리**하고, 상태가 변경되면 **자동으로 리렌더링**을 트리거하는 Hook입니다.
 
 ## 기본 사용법

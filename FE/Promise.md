@@ -1,3 +1,9 @@
+---
+title: "Promise"
+tags: [비동기, JavaScript]
+status: published
+---
+
 JavaScript에서 **비동기 작업의 완료 또는 실패를 나타내는 객체**로, 콜백 지옥을 해결하고 비동기 흐름을 체이닝 방식으로 깔끔하게 제어할 수 있게 해줍니다.
 
 ## 핵심 개념

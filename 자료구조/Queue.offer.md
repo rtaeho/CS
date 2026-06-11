@@ -1,3 +1,9 @@
+---
+title: "Queue.offer"
+tags: [큐, BFS]
+status: published
+---
+
 [[Queue]]의 **rear(뒤)에 원소를 삽입**합니다 (enqueue). 같은 역할의 [[Queue.add]]와 달리 **실패 시 예외 대신 false를 반환**합니다.
 
 ## 시그니처

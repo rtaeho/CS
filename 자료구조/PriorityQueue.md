@@ -1,3 +1,9 @@
+---
+title: "PriorityQueue"
+tags: [우선순위큐, 힙]
+status: published
+---
+
 **원소를 우선순위에 따라 꺼내는 큐**로, 내부적으로 **이진 힙(binary heap)** 으로 구현된 자료구조입니다 (`java.util.PriorityQueue`).
 
 ## 핵심 특징

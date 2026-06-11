@@ -1,3 +1,9 @@
+---
+title: "List.isEmpty"
+tags: [자료구조, List, 컬렉션]
+status: published
+---
+
 [[List]]가 **비어있는지** 확인합니다.
 
 ## 시그니처

@@ -1,3 +1,9 @@
+---
+title: "gRPC"
+tags: [네트워크, RPC, HTTP]
+status: published
+---
+
 Google이 개발한 **HTTP/2 + Protocol Buffers 기반 고성능 RPC(Remote Procedure Call) 프레임워크**입니다.
 
 ## 핵심 특징

@@ -1,3 +1,9 @@
+---
+title: "final"
+tags: [Java, 불변성, 키워드]
+status: published
+---
+
 **변수·메서드·클래스에 붙어 "변경 불가"를 선언하는 키워드**입니다.
 
 ## final 변수

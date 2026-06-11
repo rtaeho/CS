@@ -1,3 +1,9 @@
+---
+title: "Arrays.sort"
+tags: [정렬, 배열]
+status: published
+---
+
 [[Arrays]]의 **배열을 정렬**하는 정적 메서드. 기본은 **오름차순**, `Comparator`를 넘기면 커스텀 정렬 가능합니다.
 
 ## 시그니처

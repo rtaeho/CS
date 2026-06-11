@@ -1,3 +1,9 @@
+---
+title: "리액트의 Controlled Component와 Uncontrolled Component의 차이점에 대해서 설명해주세요."
+tags: [React, 폼]
+status: published
+---
+
 **[[Controlled Component]]**는 리액트 상태(`state`)를 통해 입력 값을 제어하는 컴포넌트를 말합니다. 이 방식에서는 입력 요소의 값(`value`)을 리액트 상태와 동기화하고, 사용자가 입력을 변경할 때마다 `onChange` 이벤트 핸들러를 통해 상태를 업데이트합니다. Controlled Component는 값이 리액트의 `state`로 관리되므로, 입력 시마다 값을 검증하거나, 값을 자유롭게 변경할 수 있으며, 복잡한 폼 로직을 처리하는 데 유용합니다.
 
 **[[Uncontrolled Component]]**는 입력 값을 리액트의 상태로 관리하지 않고, DOM을 통해 입력 값을 제어하는 방식입니다. 즉, 입력 요소의 값은 DOM에서 직접 관리되며, 리액트는 이를 제어하지 않습니다. 이 방식에서는 `useRef`를 사용해 생성된 참조 객체인 `ref`를 사용하여 DOM 요소에 직접 접근하여 값을 읽거나 조작합니다. Uncontrolled Component는 리액트 상태 관리에 따른 성능 비용이 없으므로 상대적으로 간단한 폼에서 주로 사용됩니다.

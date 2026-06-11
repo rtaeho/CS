@@ -1,3 +1,9 @@
+---
+title: "Native Query"
+tags: [SQL, JPA]
+status: published
+---
+
 **Native Query**는 **JPA에서 SQL을 직접 사용하는 방식**입니다.
 
 ## 쉽게 말하면

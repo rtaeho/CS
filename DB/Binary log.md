@@ -1,3 +1,9 @@
+---
+title: "Binary log"
+tags: [MySQL, 리플리케이션, 바이너리로그]
+status: published
+---
+
 MySQL 서버에서 발생하는 **모든 데이터 변경 이벤트(INSERT, UPDATE, DELETE, DDL)를 순서대로 기록하는 로그 파일**로, Replication과 데이터 복구의 핵심 메커니즘입니다.
 
 ## 핵심 개념

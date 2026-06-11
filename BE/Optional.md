@@ -1,3 +1,9 @@
+---
+title: "Optional"
+tags: [Java, 함수형, null]
+status: published
+---
+
 **null을 직접 다루는 대신 값이 있을 수도 없을 수도 있음을 명시적으로 표현하는 컨테이너 클래스**입니다 (Java 8+).
 
 ## 생성

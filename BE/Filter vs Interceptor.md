@@ -1,3 +1,9 @@
+---
+title: "Filter vs Interceptor"
+tags: [Spring, MVC]
+status: published
+---
+
 HTTP 요청/응답을 가로채 공통 처리를 수행하는 두 메커니즘으로, **[[Filter]]는 서블릿 레벨**, **[[Interceptor]]는 Spring MVC 레벨**에서 동작합니다.
 
 ## 처리 흐름

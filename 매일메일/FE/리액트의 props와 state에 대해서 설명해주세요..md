@@ -1,3 +1,9 @@
+---
+title: "리액트의 props와 state에 대해서 설명해주세요."
+tags: [React, 상태관리]
+status: published
+---
+
 [[props]]는 **부모 컴포넌트가 자식 컴포넌트에 전달하는 데이터**입니다. `props`는 읽기 전용으로, 자식 컴포넌트는 `props`를 수정할 수 없습니다.
 
 ```tsx

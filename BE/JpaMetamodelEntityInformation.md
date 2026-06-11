@@ -1,3 +1,9 @@
+---
+title: "JpaMetamodelEntityInformation"
+tags: [JPA, Spring]
+status: published
+---
+
 `JpaMetamodelEntityInformation`은 **[[JPA]] Metamodel을 사용해서 Entity 정보를 추출하는 기본 구현체**입니다.
 
 ## JPA Metamodel이란?

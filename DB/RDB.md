@@ -1,3 +1,9 @@
+---
+title: "RDB"
+tags: [SQL, 관계형DB, ACID]
+status: published
+---
+
 데이터를 **행(Row)과 열(Column)으로 구성된 테이블** 형태로 저장하고, 테이블 간 관계를 정의해 데이터를 관리하는 데이터베이스입니다.
 
 ## 구조

@@ -1,3 +1,9 @@
+---
+title: "ZGC"
+tags: [GC, 성능, JVM]
+status: published
+---
+
 대부분의 GC 작업을 **애플리케이션과 동시에 실행**하여 힙 크기에 관계없이 **STW를 1ms 이하**로 유지하는 초저지연 GC입니다.
 
 ## 기존 GC와의 차이

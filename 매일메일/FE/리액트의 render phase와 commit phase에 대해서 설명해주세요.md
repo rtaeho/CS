@@ -1,3 +1,9 @@
+---
+title: "리액트의 render phase와 commit phase에 대해서 설명해주세요"
+tags: [React, VirtualDOM]
+status: published
+---
+
 리액트의 렌더링 과정은 크게 두 가지 단계로 나눌 수 있습니다.
 **render phase**와 **commit phase**입니다.
 

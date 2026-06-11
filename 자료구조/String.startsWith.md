@@ -1,3 +1,9 @@
+---
+title: "String.startsWith"
+tags: [문자열, 탐색]
+status: published
+---
+
 [[String]]이 **특정 문자열로 시작하는지** 확인합니다.
 
 ## 시그니처

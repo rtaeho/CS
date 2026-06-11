@@ -1,3 +1,9 @@
+---
+title: "HashMap.getOrDefault"
+tags: [해시맵, 해시]
+status: published
+---
+
 [[HashMap]]에서 키로 값을 조회하되, **키가 없으면 지정한 기본값을 반환**합니다. 기본값을 반환할 뿐 **HashMap 자체는 변경되지 않습니다**.
 
 ## 시그니처

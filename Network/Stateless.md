@@ -1,3 +1,9 @@
+---
+title: "Stateless"
+tags: [REST, HTTP]
+status: published
+---
+
 무상태(Stateless)란 서버가 클라이언트의 이전 요청 정보를 저장하지 않고, 각 요청을 독립적으로 처리하는 통신 방식입니다.
 
 ## 핵심 개념

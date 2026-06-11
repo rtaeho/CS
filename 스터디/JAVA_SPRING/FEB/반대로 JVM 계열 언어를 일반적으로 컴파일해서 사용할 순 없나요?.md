@@ -1,3 +1,9 @@
+---
+title: "반대로 JVM 계열 언어를 일반적으로 컴파일해서 사용할 순 없나요?"
+tags: [Java, JVM]
+status: published
+---
+
 **가능합니다.** JVM 언어도 바이트코드 대신 **네이티브 기계어로 직접 컴파일([[AOT]])** 해서 JVM 없이 실행할 수 있으며, 대표적인 도구가 **GraalVM Native Image**입니다.
 
 ## 기본 흐름 vs AOT 컴파일

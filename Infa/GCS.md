@@ -1,3 +1,9 @@
+---
+title: "GCS"
+tags: [클라우드, 스토리지]
+status: published
+---
+
 Google Cloud Storage는 GCP에서 제공하는 객체 스토리지 서비스로, 파일·이미지·백업 등을 무제한으로 저장하고 URL로 접근할 수 있습니다.
 
 ## 핵심 특징

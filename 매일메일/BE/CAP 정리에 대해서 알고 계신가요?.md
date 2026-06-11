@@ -1,3 +1,9 @@
+---
+title: "CAP 정리에 대해서 알고 계신가요?"
+tags: [분산시스템, 일관성, 가용성]
+status: published
+---
+
 [[CAP]] 정리는 분산 데이터베이스 시스템이 CAP 중 2개의 속성만을 제공할 수 있다는 이론입니다. CAP 정리에 따르자면, 일관성(Consistency), 가용성(Availability), 분할 내성(Partition Tolerance) 등 3가지 속성을 모두 만족하는 분산 데이터베이스 시스템은 존재하지 않습니다.
 
 ## [](https://www.maeil-mail.kr/question/138#%EA%B0%81-%EC%86%8D%EC%84%B1%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%8B%9C%EA%B2%A0%EC%96%B4%EC%9A%94-)각 속성에 대해서 설명해주시겠어요?

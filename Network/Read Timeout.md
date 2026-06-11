@@ -1,3 +1,9 @@
+---
+title: "Read Timeout"
+tags: [타임아웃, 네트워크]
+status: published
+---
+
 TCP 연결이 수립된 후 **상대방으로부터 데이터를 수신할 때 지정된 시간 내에 데이터가 도착하지 않으면** 예외를 발생시키는 메커니즘입니다.
 
 ## Connection Timeout과의 차이

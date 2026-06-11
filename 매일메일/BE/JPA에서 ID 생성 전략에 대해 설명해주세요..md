@@ -1,3 +1,9 @@
+---
+title: "JPA에서 ID 생성 전략에 대해 설명해주세요."
+tags: [JPA, 키생성, 데이터베이스]
+status: published
+---
+
 [[JPA]]에서 ID를 생성하기 위해서는 직접 할당과 자동 할당을 사용할 수 있습니다. 직접 할당은 `@Id`[[어노테이션]]만을 사용하여 Id값을 직접 할당하는 방식입니다. 반면, 자동 할당은 `@Id`와 `@GeneratedValue`를 함께 사용해서 원하는 [[키 생성 전략]]을 선택하는 방식입니다. `@GeneratedValue`의 stretagy 옵션을 통해 생성 전략을 설정할 수 있는데, 여기에 올 수 있는 값인 GenerationType는 다음과 같습니다.
 
 ```java

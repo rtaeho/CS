@@ -1,3 +1,9 @@
+---
+title: "상속 vs 합성"
+tags: [객체지향, SOLID, 설계]
+status: published
+---
+
 코드를 재사용하는 두 가지 방법 — **상속(is-a)** 과 **합성(has-a)** 의 차이입니다.
 
 ## 상속 (Inheritance)

@@ -1,3 +1,9 @@
+---
+title: "리액트의 Strict Mode에 대해서 설명해주세요."
+tags: [React, 개발도구]
+status: published
+---
+
 리액트에서 [[Strict Mode]]는 주로 개발 중에 발생할 수 있는 잠재적인 문제를 사전에 감지하고 예방하기 위해 사용됩니다.
 
 첫째, **오래된 라이프사이클 메서드와 비권장 API의 사용을 감지**합니다. 예를 들어, `componentWillMount()`, `componentWillReceiveProps()`와 같은 메서드는 더 이상 사용이 권장되지 않는데, `StrictMode`는 이러한 메서드들이 코드에 포함된 경우 경고를 표시해줍니다. 이를 통해 개발자가 최신 React API를 사용하여 보다 안정적이고 효율적인 코드를 작성하도록 돕습니다.

@@ -1,3 +1,9 @@
+---
+title: "AbortController"
+tags: [JavaScript, 비동기]
+status: published
+---
+
 **비동기 작업(fetch, 이벤트 리스너 등)을 외부에서 취소할 수 있게 해주는 웹 API**입니다.
 
 ## 핵심 구조

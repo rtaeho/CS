@@ -1,3 +1,9 @@
+---
+title: "Stream"
+tags: [람다, 함수형]
+status: published
+---
+
 **컬렉션·배열을 함수형 스타일로 처리하는 파이프라인**입니다 (`java.util.stream.Stream`). 필터링·매핑·정렬·집계를 체이닝으로 표현합니다.
 
 ## 왜 필요한가?

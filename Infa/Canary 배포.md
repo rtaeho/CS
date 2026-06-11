@@ -1,3 +1,9 @@
+---
+title: "Canary 배포"
+tags: [배포, Kubernetes]
+status: published
+---
+
 신규 버전을 전체가 아닌 일부 트래픽에만 먼저 노출해 위험을 최소화하며 점진적으로 릴리즈하는 배포 전략입니다.
 
 ## 개념

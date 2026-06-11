@@ -1,8 +1,14 @@
+---
+title: "DI"
+tags: [Spring, IoC]
+status: published
+---
+
 **객체가 필요한 의존성을 직접 만들지 않고 외부에서 주입받는 설계 패턴**입니다 (Dependency Injection). Spring 같은 프레임워크가 객체를 만들고 연결해주므로, 클래스끼리의 결합도가 낮아지고 테스트가 쉬워집니다.
 
 ## 왜 필요한가?
 
-```
+```java
 [ DI 없이 — 강한 결합 ]
 public class UserService {
     private EmailService emailService = new EmailService();

@@ -1,3 +1,9 @@
+---
+title: "equals와 hashCode"
+tags: [Java, 컬렉션, 해시]
+status: published
+---
+
 **객체의 동등성(equals)과 해시 기반 자료구조(hashCode)를 위한 Object 핵심 메서드**입니다.
 
 ## 기본 동작

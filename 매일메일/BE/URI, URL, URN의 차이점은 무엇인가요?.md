@@ -1,3 +1,9 @@
+---
+title: "URI, URL, URN의 차이점은 무엇인가요?"
+tags: [HTTP, 웹, 프로토콜]
+status: published
+---
+
 ![](https://github.com/user-attachments/assets/6fabcb82-3a28-4de6-9870-3c466a61b775)
 
 **[[URI]] (Uniform Resource Identifier)** 는 인터넷에서 자원을 식별하기 위한 문자열입니다. URI는 URL과 URN을 포함하는 상위 개념입니다. 즉, 특정 자원을 식별하기 위한 포괄적인 방법을 제공하며, 자원의 위치나 이름을 나타낼 수 있습니다.

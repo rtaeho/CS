@@ -1,3 +1,9 @@
+---
+title: "CORS"
+tags: [CORS, 브라우저]
+status: published
+---
+
 CORS(Cross-Origin Resource Sharing)란 **브라우저가 다른 출처(Origin)의 리소스에 접근하는 것을 제어하는 보안 메커니즘**으로, 서버가 허용한 출처에서만 리소스 접근을 가능하게 합니다.
 
 ## 왜 필요한가 — 동일 출처 정책(SOP)
@@ -69,7 +75,7 @@ CORS는 SOP의 제한을 **서버가 명시적으로 허용한 범위 내에서 
 - Content-Type: application/x-www-form-urlencoded, multipart/form-data, text/plain 중 하나
 ```
 
-```
+```http
 브라우저 → 서버: 본 요청 바로 전송
 GET /api/posts HTTP/1.1
 Origin: https://frontend.com
@@ -94,7 +100,7 @@ HTTP/1.1 200 OK
 
 단순 요청 조건을 만족하지 않으면 **OPTIONS로 사전 확인 후 본 요청을 전송**합니다.
 
-```
+```http
 [1단계 — 프리플라이트 (브라우저가 자동 전송)]
 OPTIONS /api/members HTTP/1.1
 Origin: https://frontend.com

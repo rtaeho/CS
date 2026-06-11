@@ -1,3 +1,9 @@
+---
+title: "Set.isEmpty"
+tags: [집합, 해시]
+status: published
+---
+
 [[Set]]이 **비어있는지** 확인합니다.
 
 ## 시그니처

@@ -1,3 +1,9 @@
+---
+title: "DB Replication에 대해서 설명해주세요."
+tags: [리플리케이션, DB, 고가용성]
+status: published
+---
+
 [[DB Replication]]은 데이터베이스의 고가용성과 데이터 안정성을 보장하기 위해 널리 활용되는 핵심 기술입니다. 특히, 대규모 애플리케이션 환경에서는 데이터의 지속적인 가용성과 신뢰성이 매우 중요하기 때문에, 원본(Source) 서버와 복제(Replica) 서버 간의 데이터 동기화는 필수입니다. MySQL 기준으로 설명하겠습니다.
 
 ## [](https://www.maeil-mail.kr/question/109#%EB%B0%94%EC%9D%B4%EB%84%88%EB%A6%AC-%EB%A1%9C%EA%B7%B8binary-log%EB%A5%BC-%EC%A0%80%EC%9E%A5%ED%95%98%EB%8A%94-%EB%B0%A9%EC%8B%9D%EC%9D%80)바이너리 로그(Binary log)를 저장하는 방식은?

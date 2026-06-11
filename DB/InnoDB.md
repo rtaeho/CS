@@ -1,3 +1,9 @@
+---
+title: "InnoDB"
+tags: [MySQL, 스토리지엔진, 클러스터드인덱스]
+status: published
+---
+
 **[[MySQL]]의 기본 스토리지 엔진**입니다.
 
 ---

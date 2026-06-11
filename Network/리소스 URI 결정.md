@@ -1,3 +1,9 @@
+---
+title: "리소스 URI 결정"
+tags: [REST, HTTP]
+status: published
+---
+
  리소스 URI 결정이란 **새로 생성되는 리소스의 고유 식별 주소(URI)를 누가 정하는가**의 차이를 의미합니다.
 
 ## 핵심 개념
@@ -153,7 +159,7 @@ public ResponseEntity<MemberResponse> createOrUpdate(
 |**URI의 의미**|"이 컬렉션에 추가해줘"|"이 URI의 리소스를 이 데이터로 설정해줘"|
 |**서버의 역할**|새 URI를 생성하여 부여|지정된 URI에 리소스를 배치|
 
-```
+```http
 POST /members     → "members 컬렉션에 새 멤버를 추가해줘"
                     서버: "알겠어, /members/1로 만들었어"
 

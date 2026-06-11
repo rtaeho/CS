@@ -1,3 +1,9 @@
+---
+title: "HTTP Method 에 대해 설명해 주세요."
+tags: [HTTP, REST]
+status: published
+---
+
 HTTP Method는 클라이언트가 서버에 요청을 보낼 때 **해당 리소스에 대해 수행하고자 하는 동작을 나타내는 방법**입니다.
 
 ## 주요 HTTP Method

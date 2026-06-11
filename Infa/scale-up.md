@@ -1,3 +1,9 @@
+---
+title: "scale-up"
+tags: [확장성, 성능]
+status: published
+---
+
 스케일업(Scale-Up)은 **기존 서버 한 대의 하드웨어 성능(CPU, RAM, 디스크 등)을 업그레이드**하여 처리 능력을 높이는 수직 확장 방식입니다.
 
 ## 개념

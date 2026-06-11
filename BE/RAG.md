@@ -1,3 +1,9 @@
+---
+title: "RAG"
+tags: [LangChain4j, 임베딩]
+status: published
+---
+
 **벡터 검색으로 관련 문서를 검색한 뒤 LLM에 컨텍스트로 제공해 답변 정확도를 높이는 기법**입니다 (Retrieval-Augmented Generation).
 
 ## 왜 필요한가

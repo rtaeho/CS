@@ -1,3 +1,9 @@
+---
+title: "JPQL"
+tags: [JPA, SQL, 쿼리]
+status: published
+---
+
 **JPQL(Java Persistence Query Language)** 은 **엔티티 객체를 대상으로 쿼리하는 JPA 전용 쿼리 언어**입니다.
 
 ## 쉽게 말하면

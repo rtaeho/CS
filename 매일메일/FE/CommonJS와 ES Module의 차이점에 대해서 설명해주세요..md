@@ -1,3 +1,9 @@
+---
+title: "CommonJS와 ES Module의 차이점에 대해서 설명해주세요."
+tags: [JavaScript, 모듈]
+status: published
+---
+
 **[[CommonJs]]**와 **[[ES Module]](ESM)** 은 자바스크립트에서 모듈을 관리하고 불러오는 두 가지 주요 방식입니다.
 
 먼저 **CommonJS**는 주로 Node.js 환경에서 사용되며, 모듈을 동기적으로 불러옵니다. 즉, 모듈이 로드될 때까지 다음 코드가 실행되지 않는 방식입니다. CommonJS는 `require` 키워드를 사용해 모듈을 가져오고, `module.exports`를 통해 내보냅니다. 이 방식은 주로 서버측에서 사용 됐지만, 클라이언트 환경에서도 번들러를 통해 사용할 수 있습니다.

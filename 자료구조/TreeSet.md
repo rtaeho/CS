@@ -1,3 +1,9 @@
+---
+title: "TreeSet"
+tags: [이진탐색, 정렬]
+status: published
+---
+
 **내부적으로 [[Red-Black Tree]]로 구현된 정렬된 집합**으로, 삽입/삭제와 동시에 정렬 상태를 유지합니다 (`java.util.TreeSet`).
 
 ## 핵심 특징

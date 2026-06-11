@@ -1,3 +1,9 @@
+---
+title: "Non-Clustered Index"
+tags: [인덱스, 세컨더리인덱스, 조회]
+status: published
+---
+
 인덱스와 실제 데이터가 분리되어 있고, 인덱스 리프 노드가 **데이터의 위치(포인터)**를 가지는 [[인덱스]]입니다. 보조 인덱스(Secondary Index)라고도 불립니다.
 
 ---

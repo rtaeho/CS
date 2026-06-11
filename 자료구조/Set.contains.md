@@ -1,3 +1,9 @@
+---
+title: "Set.contains"
+tags: [자료구조, Set, 해시]
+status: published
+---
+
 [[Set]]에 **특정 원소가 존재하는지** 확인합니다.
 
 ## 시그니처

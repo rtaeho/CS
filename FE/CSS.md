@@ -1,3 +1,9 @@
+---
+title: "CSS"
+tags: [CSS, HTML]
+status: published
+---
+
 **CSS(Cascading Style Sheets)** 는 **HTML의 스타일(디자인)을 담당하는 언어**입니다.
 
 ## 한마디로

@@ -1,3 +1,9 @@
+---
+title: "@Component"
+tags: [Spring, DI]
+status: published
+---
+
 Spring에서 클래스를 빈(Bean)으로 등록하는 가장 기본적인 [[어노테이션]]입니다. 컴포넌트 스캔 대상이 되어 자동으로 Spring 컨테이너에 등록됩니다.
 
 ## 왜 필요한가?

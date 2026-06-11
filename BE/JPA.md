@@ -1,3 +1,9 @@
+---
+title: "JPA"
+tags: [Java, ORM]
+status: published
+---
+
 JPA(Java Persistence API)는 자바 객체와 관계형 데이터베이스를 매핑해주는 ORM 표준 명세입니다.
 
 ## 핵심 개념

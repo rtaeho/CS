@@ -1,3 +1,9 @@
+---
+title: "grid"
+tags: [CSS, 레이아웃]
+status: published
+---
+
 Grid는 **행(row)과 열(column)을 동시에 제어하여 2차원 레이아웃을 구성할 수 있는 CSS 레이아웃 모듈**입니다.
 
 ## Flexbox와의 차이

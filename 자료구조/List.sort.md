@@ -1,3 +1,9 @@
+---
+title: "List.sort"
+tags: [정렬, 컬렉션]
+status: published
+---
+
 [[List]]의 **인스턴스 메서드로 정렬**합니다. Java 8+ 도입. `Collections.sort()` 대신 권장되는 방식입니다.
 
 ## 시그니처

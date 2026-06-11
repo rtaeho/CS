@@ -1,3 +1,9 @@
+---
+title: "Streaming SSR에 관하여 설명해주세요."
+tags: [SSR, 성능, Next.js]
+status: published
+---
+
 `Streaming SSR`은 서버에서 렌더링된 HTML을 한 번에 완성해서 보내는 방식이 아니라, 준비된 부분부터 점진적으로 스트리밍해서 클라이언트에 전달하는 기술입니다. 이를 통해 사용자는 페이지의 중요한 콘텐츠를 더 빠르게 확인할 수 있습니다.
 
 기존 SSR은 서버에서 모든 데이터를 처리한 뒤 완전한 HTML을 전송하는 반면, Streaming SSR은 서버가 데이터를 준비하는 즉시 HTML 조각을 스트림 형태로 보내고, 클라이언트는 이를 실시간으로 렌더링합니다. React 18에서는 `renderToPipeableStream API`를 통해 구현할 수 있으며, 이 API는 서버에서 HTML을 조각 단위로 스트리밍할 수 있도록 지원합니다. 예를 들어, onShellReady 옵션을 사용해 스트림을 응답으로 바로 전송할 수 있습니다.

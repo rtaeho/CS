@@ -1,3 +1,9 @@
+---
+title: "useEffect와 useLayoutEffect의 차이점에 대해서 설명해주세요."
+tags: [React, Hook]
+status: published
+---
+
 `useEffect`와 `useLayoutEffect`는 모두 [[렌더링]]된 후에 특정 작업을 수행하기 위해 사용됩니다. 하지만 실행되는 **타이밍**과 **용도**가 다릅니다.
 
 먼저, `useEffect`는 **렌더링이 완료되는 시점**에 **[[비동기]]적**으로 실행됩니다. 즉, 화면이 실제로 사용자에게 그려진 후에 `useEffect`가 실행되는 방식입니다. 그래서 `useEffect`는 보통 데이터를 가져오는 작업이나 이벤트 리스너 추가 등 렌더링 후에 화면에 직접적인 영향을 주지 않는 작업에 주로 사용됩니다.

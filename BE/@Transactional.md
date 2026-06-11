@@ -1,3 +1,9 @@
+---
+title: "@Transactional"
+tags: [Spring, 트랜잭션, JPA]
+status: published
+---
+
 Spring에서 메서드 또는 클래스에 선언하여 해당 범위의 작업을 하나의 트랜잭션으로 묶어주는 어노테이션입니다.
 
 ## 기본 동작 원리

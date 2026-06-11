@@ -1,3 +1,9 @@
+---
+title: "script 태그에서 async와 defer의 차이점에 대해서 설명해주세요."
+tags: [JavaScript, 성능]
+status: published
+---
+
 먼저, 두 속성 모두 스크립트를 비동기적으로 로드한다는 공통점이 있습니다. 하지만 실행 시점에서 중요한 차이가 있습니다.
 
 ### [](https://www.maeil-mail.kr/question/37#async-%EC%86%8D%EC%84%B1)[[async]] 속성

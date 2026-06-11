@@ -1,3 +1,9 @@
+---
+title: "HashMap.putIfAbsent"
+tags: [HashMap, 자료구조, 컬렉션]
+status: published
+---
+
 [[HashMap]]에 **키가 없을 때만 저장**하고, 이미 있으면 기존 값을 유지합니다.
 
 ## 시그니처

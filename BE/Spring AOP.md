@@ -1,8 +1,14 @@
+---
+title: "Spring AOP"
+tags: [Spring, AOP]
+status: published
+---
+
 Spring에서 핵심 비즈니스 로직과 부가 기능(로깅, 트랜잭션, 보안 등)을 분리하여 모듈화하는 프로그래밍 기법입니다.
 
 ## AOP가 필요한 이유
 
-```
+```java
 [AOP 적용 전 - 부가 기능이 핵심 로직에 섞임]
 public void createOrder() {
     log.info("주문 시작");           // 로깅

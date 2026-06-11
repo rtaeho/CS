@@ -1,3 +1,9 @@
+---
+title: "css box-sizing 속성에 대해 설명해주세요."
+tags: [CSS]
+status: published
+---
+
 `box-sizing`은 **[[CSS]]에서 요소의 크기를 어떻게 계산할지를 결정하는 속성**입니다. 레이아웃을 스타일링할 때 예상치 못한 크기(너비, 높이) 변화가 발생하곤 하는데요. 그런 상황에서 `box-sizing` 속성이 도움이 될 수 있습니다.
 
 `box-sizing`에는 두 가지 옵션이 있습니다. 바로, `content-box`와 `border-box`입니다.

@@ -1,3 +1,9 @@
+---
+title: "DOM 트리"
+tags: [DOM, HTML]
+status: published
+---
+
 **HTML 문서를 브라우저가 트리 구조로 변환한 것**입니다.
 
 ---

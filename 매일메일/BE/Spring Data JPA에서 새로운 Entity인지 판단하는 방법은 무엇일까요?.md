@@ -1,3 +1,8 @@
+---
+title: "Spring Data JPA에서 새로운 Entity인지 판단하는 방법은 무엇일까요?"
+tags: [JPA, Hibernate, EntityInformation]
+status: published
+---
 
 ```java
 @Override

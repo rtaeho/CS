@@ -1,3 +1,9 @@
+---
+title: "Set.add"
+tags: [자료구조, 컬렉션, Set]
+status: published
+---
+
 [[Set]]에 원소를 추가합니다. **이미 존재하면 무시**하고, 추가 여부를 boolean으로 반환합니다.
 
 ## 시그니처

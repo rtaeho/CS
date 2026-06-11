@@ -1,3 +1,9 @@
+---
+title: "Credential Request"
+tags: [CORS, 인증]
+status: published
+---
+
 Credentialed Request는 **쿠키, Authorization 헤더, TLS 인증서 등 사용자 인증 정보를 포함하여 Cross-Origin으로 보내는 요청**입니다.
 
 ## 왜 별도 개념이 필요한가

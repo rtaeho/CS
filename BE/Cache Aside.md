@@ -1,3 +1,9 @@
+---
+title: "Cache Aside"
+tags: [캐시, Redis, 동시성]
+status: published
+---
+
 애플리케이션이 **캐시를 직접 관리하는 가장 일반적인 캐싱 전략**입니다.
 
 ## 동작 방식

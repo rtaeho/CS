@@ -1,3 +1,9 @@
+---
+title: "useRef"
+tags: [React, Hook]
+status: published
+---
+
 React에서 **렌더링과 무관하게 값을 저장**하거나, **DOM 요소에 직접 접근**할 때 사용하는 Hook입니다.
 
 ## 핵심 특징

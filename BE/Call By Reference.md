@@ -1,3 +1,9 @@
+---
+title: "Call By Reference"
+tags: [Java, 메모리, 함수]
+status: published
+---
+
 함수 호출 시 인자의 **참조(주소)를 직접 전달**하는 방식으로, 함수 내부에서 값을 변경하면 원본에도 영향을 줍니다.
 
 ## 핵심 구조

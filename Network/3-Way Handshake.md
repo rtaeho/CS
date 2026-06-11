@@ -1,3 +1,9 @@
+---
+title: "3-Way Handshake"
+tags: [네트워크, TCP, 연결]
+status: published
+---
+
 TCP 연결을 수립할 때 클라이언트와 서버가 **SYN → SYN-ACK → ACK 세 단계의 패킷을 교환하여 신뢰성 있는 양방향 통신을 준비하는 과정**입니다.
 
 ## 왜 필요한가

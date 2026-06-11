@@ -1,3 +1,9 @@
+---
+title: "인터넷 창에 www.google.com를 입력하면 무슨 일이 일어나는지 설명해주세요."
+tags: [DNS, TCP, HTTP, 렌더링]
+status: published
+---
+
 첫번째로 **[[DNS]] 조회**가 일어납니다. 사용자가 `www.google.com`을 입력하면, 브라우저는 먼저 이 도메인 이름을 IP 주소로 변환해야 합니다. 이 과정을 DNS 조회(DNS Lookup)라고 합니다. 브라우저는 캐시된 DNS 기록을 먼저 확인하고, 없으면 로컬 DNS 서버에 요청하여 `www.google.com`에 해당하는 IP 주소를 얻습니다.
 
 두번째로 **[[TCP]] 연결 수립**입니다. IP 주소가 확인되면, 브라우저는 서버와 TCP 연결을 수립합니다. TCP(Transmission Control Protocol)는 데이터를 신뢰성 있게 전달하기 위한 프로토콜입니다. 이 과정에서 브라우저는 서버와 3-way handshake를 수행합니다. 즉, 브라우저가 SYN 패킷을 보내고, 서버가 SYN-ACK 패킷을 보내며, 다시 브라우저가 ACK 패킷을 보내는 과정입니다.

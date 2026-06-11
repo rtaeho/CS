@@ -1,3 +1,9 @@
+---
+title: "Stream.sorted"
+tags: [Stream, 자료구조, 정렬]
+status: published
+---
+
 [[Stream]]을 **정렬**합니다. 원본을 변경하지 않고 **새 Stream**을 반환하는 점이 다른 정렬 메서드와의 핵심 차이입니다.
 
 ## 시그니처

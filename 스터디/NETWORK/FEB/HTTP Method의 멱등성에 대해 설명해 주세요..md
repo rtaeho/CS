@@ -1,3 +1,9 @@
+---
+title: "HTTP Method의 멱등성에 대해 설명해 주세요."
+tags: [HTTP, REST]
+status: published
+---
+
 [[멱등성]](Idempotent)이란 **동일한 요청을 한 번 보내든 여러 번 보내든 서버의 리소스 상태가 동일하게 유지되는 성질**이며, HTTP 스펙에서 각 메서드의 멱등성 보장 여부를 명시하고 있습니다.
 
 ## 핵심 개념
@@ -37,7 +43,7 @@ DELETE /members/1 → 404 Not Found (이미 없음)
 
 ### GET — 멱등 O
 
-```
+```http
 GET /members/1 → {id: 1, name: "홍길동"}
 GET /members/1 → {id: 1, name: "홍길동"}
 GET /members/1 → {id: 1, name: "홍길동"}
@@ -47,7 +53,7 @@ GET /members/1 → {id: 1, name: "홍길동"}
 
 ### PUT — 멱등 O
 
-```
+```http
 PUT /members/1 {name: "김철수", email: "kim@test.com"}
 → {id: 1, name: "김철수", email: "kim@test.com"}
 
@@ -59,7 +65,7 @@ PUT /members/1 {name: "김철수", email: "kim@test.com"}
 
 ### DELETE — 멱등 O
 
-```
+```http
 DELETE /members/1 → 200 OK (삭제됨)
 DELETE /members/1 → 404 Not Found (이미 없음)
 DELETE /members/1 → 404 Not Found (이미 없음)
@@ -69,7 +75,7 @@ DELETE /members/1 → 404 Not Found (이미 없음)
 
 ### POST — 멱등 X
 
-```
+```http
 POST /members {name: "홍길동"} → 생성됨 (id: 1)
 POST /members {name: "홍길동"} → 생성됨 (id: 2)
 POST /members {name: "홍길동"} → 생성됨 (id: 3)

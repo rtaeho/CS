@@ -1,3 +1,9 @@
+---
+title: "HikariCP"
+tags: [데이터베이스, 성능]
+status: published
+---
+
 JDBC 커넥션 풀 라이브러리로, 바이트코드 최적화와 경량 설계로 가장 빠른 성능을 제공하며 Spring Boot 2.0+의 기본 커넥션 풀입니다.
 
 ## 왜 HikariCP인가?

@@ -1,3 +1,9 @@
+---
+title: "Hibernate"
+tags: [JPA, Hibernate, ORM]
+status: published
+---
+
 **Hibernate**는 Java 진영에서 가장 널리 쓰이는 **ORM(Object-Relational Mapping) 프레임워크**입니다.
 
 ## 핵심 개념

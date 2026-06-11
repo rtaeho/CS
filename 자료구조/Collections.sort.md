@@ -1,3 +1,9 @@
+---
+title: "Collections.sort"
+tags: [정렬, 컬렉션]
+status: published
+---
+
 [[Collections]]의 **List를 정렬**하는 정적 메서드. 기본은 **오름차순**(자연 순서), `Comparator`를 넘기면 커스텀 정렬 가능합니다.
 
 ## 시그니처

@@ -1,3 +1,9 @@
+---
+title: "@Component, @Controller, @Service, @Repository의 차이점에 대해서 설명해주세요."
+tags: [Spring, DI, 빈]
+status: published
+---
+
 [[@Component]], [[@Service]], [[@Controller]], [[@Repository]]는 각각의 클래스를 특정 역할을 수행하는 Spring Bean으로 등록할 때 사용됩니다. 각 어노테이션은 클래스가 어떤 역할을 하는지를 명시적으로 나타내며, Spring의 @ComponentScan 기능을 통해 자동으로 Bean으로 등록됩니다. @Service, @Controller, @Repository 어노테이션은 내부적으로 @Component 어노테이션을 사용하고 있으며, 각 특징과 용도는 아래와 같습니다.
 
 - **@Component**는 가장 일반적인 형태의 어노테이션으로, 특정 역할에 종속되지 않는 일반적인 Spring Bean을 나타냅니다. 공통 기능을 제공하는 유틸리티 클래스나, 특정 계층에 속하지 않는 일반적인 컴포넌트를 정의할 때 사용됩니다.

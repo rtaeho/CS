@@ -1,3 +1,9 @@
+---
+title: "401 (Unauthorized) 와 403 (Forbidden)은 의미적으로 어떤 차이가 있나요?"
+tags: [HTTP, 인증, 인가]
+status: published
+---
+
 401은 **[[인증]](Authentication) 실패**, 403은 **[[인가]](Authorization) 실패**를 의미하며, "너 누구야?"와 "너 누군지는 알지만 권한이 없어"의 차이입니다.
 
 ## 인증 vs 인가
@@ -111,7 +117,7 @@ public ResponseEntity<Order> getOrder(@PathVariable Long orderId,
 
 ## 보안 관점에서의 고민: 403 대신 404를 쓰는 경우
 
-```
+```http
 GET /admin/users → 403 Forbidden
 → 공격자: "이 URL이 존재하는구나, 관리자 페이지가 있구나" ← 정보 노출
 

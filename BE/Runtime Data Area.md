@@ -1,3 +1,9 @@
+---
+title: "Runtime Data Area"
+tags: [Java, JVM, 메모리]
+status: published
+---
+
 JVM이 프로그램 실행 중 사용하는 메모리 공간을 용도별로 나눈 영역입니다.
 
 ## 전체 구조

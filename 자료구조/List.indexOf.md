@@ -1,3 +1,9 @@
+---
+title: "List.indexOf"
+tags: [컬렉션, 탐색]
+status: published
+---
+
 [[List]]에서 **특정 원소가 처음 등장하는 인덱스**를 반환합니다. 없으면 `-1`.
 
 ## 시그니처

@@ -1,3 +1,9 @@
+---
+title: "JavaScript"
+tags: [JavaScript]
+status: published
+---
+
 **웹 페이지에 동작을 추가하는 프로그래밍 언어**입니다.
 
 ---

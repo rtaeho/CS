@@ -1,3 +1,9 @@
+---
+title: "DB Replication"
+tags: [리플리케이션, 고가용성, 마스터슬레이브]
+status: published
+---
+
 하나의 데이터베이스(Master)의 데이터를 **다른 데이터베이스(Slave/Replica)에 실시간으로 복제**하여 가용성, 읽기 성능, 데이터 안정성을 높이는 기술입니다.
 
 ## 핵심 개념

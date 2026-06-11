@@ -1,3 +1,9 @@
+---
+title: "hydration"
+tags: [SSR, 렌더링]
+status: published
+---
+
 Hydration은 **서버에서 렌더링된 정적 HTML에 JavaScript 이벤트 핸들러와 상태를 연결하여 인터랙티브한 페이지로 만드는 과정**입니다.
 
 ## 왜 필요한가

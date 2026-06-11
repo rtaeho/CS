@@ -1,3 +1,9 @@
+---
+title: "List.remove"
+tags: [컬렉션, 배열]
+status: published
+---
+
 [[List]]에서 **원소를 삭제**합니다. 인덱스 또는 값으로 삭제할 수 있습니다.
 
 ## 시그니처

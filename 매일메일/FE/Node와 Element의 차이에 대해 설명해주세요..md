@@ -1,3 +1,9 @@
+---
+title: "Node와 Element의 차이에 대해 설명해주세요."
+tags: [DOM, JavaScript]
+status: published
+---
+
 [[Node(fe)]]와 [[Element(fe)]]의 핵심적인 차이점에 대해 설명드리겠습니다.
 
 Node는 **[[DOM]]을 구성하는 가장 기본적인 구성 단위**입니다. Node에는 여러 가지 타입이 존재합니다. "Document Node"는 HTML 문서 전체를 나타내는 루트 노드이며, "Element Node"는 HTML 태그를 나타내고, "Text Node"는 텍스트 내용을, "Comment Node"는 주석을 나타냅니다. 이처럼 Node는 DOM 트리의 모든 구성 요소를 포함하는 포괄적인 개념입니다.

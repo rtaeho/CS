@@ -1,3 +1,9 @@
+---
+title: "props drilling"
+tags: [React, 상태관리]
+status: published
+---
+
 상위 컴포넌트의 데이터를 하위 컴포넌트에 전달하기 위해 **중간 컴포넌트들이 불필요하게 props를 전달하는 현상**입니다.
 
 ## 발생 상황

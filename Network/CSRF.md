@@ -1,3 +1,9 @@
+---
+title: "CSRF"
+tags: [보안, 세션, 인증]
+status: published
+---
+
 CSRF(Cross-Site Request Forgery)는 **사용자가 의도하지 않은 요청을 인증된 상태에서 악성 사이트가 대신 보내는 공격**입니다.
 
 ## 공격 원리
@@ -198,7 +204,7 @@ public CookieSerializer cookieSerializer() {
 
 ### 3. Referer / Origin 헤더 검증
 
-```
+```http
 [요청 시 브라우저가 자동으로 포함하는 헤더]
 
 같은 사이트에서 요청:

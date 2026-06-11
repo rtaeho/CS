@@ -1,3 +1,9 @@
+---
+title: "API Gateway"
+tags: [MSA, API]
+status: published
+---
+
 [[MSA]]에서 클라이언트의 모든 요청을 받아 적절한 서비스로 라우팅하는 단일 진입점으로, 인증·로드밸런싱·Rate Limiting 등 공통 기능을 중앙에서 처리합니다.
 
 ## 왜 필요한가

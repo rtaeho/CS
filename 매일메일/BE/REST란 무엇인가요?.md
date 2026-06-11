@@ -1,3 +1,9 @@
+---
+title: "REST란 무엇인가요?"
+tags: [REST, HTTP, API]
+status: published
+---
+
 **[[REST]](Representational State Transfer) 는 자원의 표현을 이용하여 상태를 주고받는 것**을 의미합니다. 여기서 자원이란 소프트웨어가 관리하는 모든 것을 의미하며 자원의 표현은 자원을 나타내기 위한 이름을 의미합니다. 가령, 서버가 관리하는 주문 데이터는 `order` 라고 표현할 수 있습니다. 최근에는 일반적으로 자원의 상태를 나타내기 위해 JSON 포맷을 사용합니다. REST는 네트워크 상에서 클라이언트와 서버의 통신 방식 중 하나이며, HTTP 프로토콜을 사용합니다. 구체적으로는 HTTP URI를 활용하여 자원을 명시하고 HTTP METHOD를 통해 CRUD 연산을 적용하는 것을 의미합니다.
 
 **[[API]](Application Programming Interface)** 란 컴퓨터 프로그램 간 정보를 주고받을 수 있도록 하는 일종의 출입구와 같은 역할을 수행합니다. API가 REST 기반으로 구현되어 있다면, 이를 REST API라고 부릅니다.

@@ -1,3 +1,9 @@
+---
+title: "Multilevel Queue Scheduling"
+tags: [스케줄링, 다단계, 큐]
+status: published
+---
+
 프로세스를 **여러 그룹으로 분류**하여 각각 다른 큐에 배치하고, 큐마다 다른 스케줄링 알고리즘을 적용하는 방식입니다.
 
 ## 구조

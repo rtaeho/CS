@@ -1,3 +1,9 @@
+---
+title: "Vuex"
+tags: [상태관리, Vue]
+status: published
+---
+
 **Vue.js 공식 상태관리 라이브러리**로, Flux 패턴을 기반으로 컴포넌트 간 공유 상태를 중앙에서 관리합니다.
 
 ## Vuex의 5가지 핵심 개념

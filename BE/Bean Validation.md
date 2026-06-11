@@ -1,3 +1,9 @@
+---
+title: "Bean Validation"
+tags: [Spring, 검증]
+status: published
+---
+
 객체 필드에 선언한 어노테이션만으로 입력값을 자동 검증하는 Java 표준 스펙(JSR-380)으로, Spring에서는 `@Valid` / `@Validated`로 활성화합니다.
 
 ## 주요 어노테이션

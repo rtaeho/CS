@@ -1,3 +1,9 @@
+---
+title: "Terraform"
+tags: [배포, IaC]
+status: published
+---
+
 인프라를 코드(HCL)로 선언하고, 클라우드 리소스의 생성·변경·삭제를 자동화하는 IaC(Infrastructure as Code) 도구입니다.
 
 ## 왜 필요한가

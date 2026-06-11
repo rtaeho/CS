@@ -1,3 +1,9 @@
+---
+title: "JRE"
+tags: [Java, 런타임, 환경]
+status: published
+---
+
 Java 프로그램을 **실행**하기 위해 필요한 최소 환경으로, JVM과 표준 라이브러리를 묶은 패키지입니다.
 
 ## 포함 관계

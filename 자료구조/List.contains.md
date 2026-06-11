@@ -1,3 +1,9 @@
+---
+title: "List.contains"
+tags: [자료구조, List, 컬렉션]
+status: published
+---
+
 [[List]]에 **특정 원소가 존재하는지** 확인합니다.
 
 ## 시그니처

@@ -1,3 +1,9 @@
+---
+title: "Controlled Component"
+tags: [React, 폼]
+status: published
+---
+
 **React가 폼 요소의 값을 state로 관리**하는 방식입니다.
 
 ---

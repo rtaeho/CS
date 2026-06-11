@@ -1,3 +1,9 @@
+---
+title: "Redis"
+tags: [캐시, NoSQL, 메모리DB]
+status: published
+---
+
 데이터를 **메모리에 저장**하는 오픈소스 key-value 데이터 저장소로, 주로 캐시, 세션, 메시지 브로커로 활용됩니다.
 
 ## 핵심 특징

@@ -1,3 +1,9 @@
+---
+title: "ArrayList"
+tags: [배열, 컬렉션]
+status: published
+---
+
 **내부적으로 배열을 사용하지만 크기가 동적으로 확장되는** Java의 [[List]] 구현체입니다.
 
 ## 구조

@@ -1,3 +1,9 @@
+---
+title: "props"
+tags: [React, 컴포넌트]
+status: published
+---
+
 **부모 컴포넌트가 자식에게 전달하는 데이터**입니다.
 
 ---

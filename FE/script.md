@@ -1,3 +1,9 @@
+---
+title: "script"
+tags: [HTML, JavaScript]
+status: published
+---
+
 HTML 문서에서 **JavaScript 코드를 삽입하거나 외부 JS 파일을 연결하기 위한 HTML 태그**입니다.
 
 ## 두 가지 사용 방식

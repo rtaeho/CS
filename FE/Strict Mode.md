@@ -1,3 +1,9 @@
+---
+title: "Strict Mode"
+tags: [React, JavaScript]
+status: published
+---
+
 개발 환경에서 잠재적인 문제를 찾아주는 React의 검사 도구입니다. 실제 UI를 렌더링하지 않고, 경고만 출력합니다.
 
 ## 사용법

@@ -1,3 +1,9 @@
+---
+title: "CDC"
+tags: [데이터베이스, 실시간, 이벤트]
+status: published
+---
+
 데이터베이스의 **변경 사항(INSERT, UPDATE, DELETE)을 실시간으로 감지하여 다른 시스템에 전달**하는 기술입니다.
 
 ## 핵심 개념

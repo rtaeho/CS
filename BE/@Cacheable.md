@@ -1,3 +1,9 @@
+---
+title: "@Cacheable"
+tags: [Spring, 캐시]
+status: published
+---
+
 Spring에서 메서드의 실행 결과를 캐시에 저장하고, 동일한 요청이 오면 메서드를 실행하지 않고 캐시된 결과를 반환하는 어노테이션입니다.
 
 ## 동작 흐름

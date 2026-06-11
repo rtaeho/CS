@@ -1,3 +1,9 @@
+---
+title: "HTTPS"
+tags: [HTTPS, 보안]
+status: published
+---
+
 HTTP에 보안([[SSL]]/TLS 암호화)을 추가한 프로토콜입니다. 데이터를 암호화해서 중간에 누가 가로채도 내용을 볼 수 없게 합니다.
 
 ## HTTP vs HTTPS

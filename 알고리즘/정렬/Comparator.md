@@ -1,3 +1,9 @@
+---
+title: "Comparator"
+tags: [Java, 정렬]
+status: published
+---
+
 **두 객체를 비교해서 어느 게 먼저 오는지 결정하는 함수형 인터페이스**입니다 (`java.util.Comparator`). 정렬, TreeSet, TreeMap, PriorityQueue, [[Stream.sorted]] 등에서 순서를 정의하는 데 사용됩니다.
 
 ## 시그니처

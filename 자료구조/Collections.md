@@ -1,3 +1,9 @@
+---
+title: "Collections"
+tags: [자료구조, Java, 컬렉션]
+status: published
+---
+
 **컬렉션(List, Set, Map)을 다루는 정적 메서드의 모음**입니다 (`java.util.Collections`). 정렬·검색·셔플·동기화 같은 작업을 한 줄로 처리할 수 있습니다.
 
 ## 왜 필요한가?

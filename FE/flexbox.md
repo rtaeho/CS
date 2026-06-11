@@ -1,3 +1,9 @@
+---
+title: "flexbox"
+tags: [CSS, 레이아웃]
+status: published
+---
+
 Flexbox는 **1차원(한 방향) 레이아웃을 효율적으로 배치, 정렬, 분배할 수 있는 CSS 레이아웃 모듈**입니다.
 
 ## 왜 필요한가

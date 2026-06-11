@@ -1,3 +1,9 @@
+---
+title: "HashMap.containsKey"
+tags: [해시맵, 해시]
+status: published
+---
+
 [[HashMap]]에 **특정 키가 존재하는지** 확인합니다. 값이 `null`이어도 키만 있으면 `true`.
 
 ## 시그니처

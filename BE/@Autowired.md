@@ -1,3 +1,9 @@
+---
+title: "@Autowired"
+tags: [Spring, DI, IoC]
+status: published
+---
+
 Spring이 타입을 기준으로 빈을 자동으로 찾아 주입해주는 어노테이션으로, 주입 방식은 필드·세터·생성자 세 가지이며 **생성자 주입이 표준**입니다.
 
 ## 주입 방식 3가지

@@ -1,3 +1,9 @@
+---
+title: "Filter"
+tags: [Spring, MVC, 필터]
+status: published
+---
+
 서블릿 컨테이너(Tomcat) 레벨에서 HTTP 요청/응답을 가로채 공통 처리를 수행하는 컴포넌트로, Spring Context 밖에서 동작합니다.
 
 ## 동작 위치

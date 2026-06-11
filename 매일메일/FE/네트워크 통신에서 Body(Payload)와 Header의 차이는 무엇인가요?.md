@@ -1,3 +1,9 @@
+---
+title: "네트워크 통신에서 Body(Payload)와 Header의 차이는 무엇인가요?"
+tags: [HTTP, 네트워크]
+status: published
+---
+
 Body와 Header의 가장 큰 차이는 **정보(데이터)의 역할**입니다.
 
 **[[Header]]**는 **데이터의 메타 정보**를 담습니다. 즉, 데이터 자체가 아니라 데이터에 대한 컨텍스트 정보를 포함합니다. 이로써 **수신자가 데이터를 어떻게 처리해야 할지 지침을 제공**하는 역할을 합니다. 예를 들어, HTTP 요청이나 응답에서 Header에는 `Content-Type`, `Authorization`, `Cache-Control`과 같은 정보가 포함됩니다. 이는 정보의 유형, 인증 정보, 캐시 설정 등 컨텍스트 정보를 전달합니다.

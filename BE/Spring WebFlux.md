@@ -1,3 +1,9 @@
+---
+title: "Spring WebFlux"
+tags: [Spring, 비동기, 리액티브]
+status: published
+---
+
 Spring 5에서 도입된 **리액티브 프로그래밍 기반 논블로킹 웹 프레임워크**로, 적은 스레드로 많은 동시 요청을 처리합니다.
 
 ## 핵심 개념

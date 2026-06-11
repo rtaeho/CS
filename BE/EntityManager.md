@@ -1,3 +1,9 @@
+---
+title: "EntityManager"
+tags: [JPA, 영속성, 엔티티]
+status: published
+---
+
 **EntityManager**는 **JPA에서 엔티티(객체)를 관리하고 DB 작업을 수행하는 핵심 인터페이스**입니다.
 
 ## 쉽게 말하면

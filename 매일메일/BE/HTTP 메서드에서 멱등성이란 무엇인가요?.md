@@ -1,3 +1,9 @@
+---
+title: "HTTP 메서드에서 멱등성이란 무엇인가요?"
+tags: [HTTP, REST]
+status: published
+---
+
 연산을 여러 번 적용하더라도 결과가 달라지지 않는 성질을 [[멱등성]]이라고 합니다. HTTP 메서드의 멱등성은 동일한 요청을 한번 보내는 것과 여러번 보내는 것이 서로 동일한 효과를 지니며, 서버의 상태도 동일하게 남을 경우에 멱등하다고 이야기할 수 있습니다. 대표적으로 멱등한 메서드는 GET, HEAD, PUT, DELETE, TRACE, OPTIONS 가 있습니다.
 
 ## [](https://www.maeil-mail.kr/question/90#%EB%A9%B1%EB%93%B1%EC%84%B1%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%99%9C%EC%9A%A9%EB%90%A0-%EC%88%98-%EC%9E%88%EB%82%98%EC%9A%94-)멱등성은 어떻게 활용될 수 있나요?

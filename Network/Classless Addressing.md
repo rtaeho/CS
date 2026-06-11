@@ -1,3 +1,9 @@
+---
+title: "Classless Addressing"
+tags: [IP, 네트워크]
+status: published
+---
+
 IP 주소를 클래스(A/B/C)로 고정 구분하지 않고, **네트워크 크기를 필요에 따라 자유롭게 나누는 주소 체계**입니다.
 
 ## 등장 배경

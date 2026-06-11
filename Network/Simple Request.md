@@ -1,3 +1,9 @@
+---
+title: "Simple Request"
+tags: [CORS, HTTP]
+status: published
+---
+
 Simple Request(단순 요청)는 **Preflight 없이 브라우저가 서버에 바로 요청을 보내는 CORS 요청**으로, 특정 조건을 모두 충족해야 합니다.
 
 ## 단순 요청의 조건

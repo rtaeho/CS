@@ -1,3 +1,9 @@
+---
+title: "ACID에 대해서 설명해주세요."
+tags: [트랜잭션, 데이터베이스]
+status: published
+---
+
 [[ACID]]는 원자성(Atomicity), 일관성(Consistency), 격리성(Isolation), 지속성(Durability)의 약자이며, 데이터베이스 트랜잭션이 안전하게 수행된다는 것을 보장하기 위한 성질을 의미합니다.
 
 ## [](https://www.maeil-mail.kr/question/123#%EA%B0%81-%EC%86%8D%EC%84%B1%EC%9D%80-%EC%96%B4%EB%96%A4-%EC%9D%98%EB%AF%B8%EB%A5%BC-%EA%B0%80%EC%A7%80%EB%82%98%EC%9A%94-)각 속성은 어떤 의미를 가지나요?

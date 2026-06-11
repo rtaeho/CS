@@ -1,3 +1,9 @@
+---
+title: "Static NAT"
+tags: [NAT, IP]
+status: published
+---
+
 사설 IP 주소와 공인 IP 주소를 **1:1로 고정 매핑**하는 NAT 방식입니다.
 
 ## 동작 방식

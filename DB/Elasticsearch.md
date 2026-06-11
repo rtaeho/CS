@@ -1,3 +1,9 @@
+---
+title: "Elasticsearch"
+tags: [검색엔진, 역색인, 전문검색]
+status: published
+---
+
 Elasticsearch는 대량의 데이터를 **실시간으로 검색하고 분석할 수 있는 분산형 검색 엔진**으로, 역색인(Inverted Index) 구조를 기반으로 빠른 전문 검색(Full-Text Search)을 제공합니다.
 
 ## 왜 필요한가

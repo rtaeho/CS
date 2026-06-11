@@ -1,3 +1,9 @@
+---
+title: "Blue-Green 배포"
+tags: [배포]
+status: published
+---
+
 현재 운영 중인 환경(Blue)과 동일한 새 환경(Green)을 구성한 뒤 트래픽을 한 번에 전환해 **다운타임 없이 배포**하는 전략입니다.
 
 ## 구조

@@ -1,3 +1,9 @@
+---
+title: "Execution Engine"
+tags: [JVM, GC]
+status: published
+---
+
 JVM이 메모리에 적재된 바이트코드를 실제 기계어로 변환·실행하는 핵심 엔진입니다.
 
 ## 전체 위치

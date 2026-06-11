@@ -1,3 +1,9 @@
+---
+title: "HTTP 1.1 이후로, GET에도 Body에 데이터를 실을 수 있게 되었습니다. 그럼에도 불구하고 왜 아직도 이런 방식을 지양하는 것일까요?"
+tags: [HTTP, REST]
+status: published
+---
+
 HTTP 1.1 스펙상 GET 요청에 Body를 포함하는 것이 금지되지는 않지만, **대부분의 인프라와 라이브러리가 GET Body를 무시하거나 제거하기 때문에 사실상 신뢰할 수 없는 방식**입니다.
 
 ## [[HTTP]] 스펙에서의 GET Body
@@ -21,7 +27,7 @@ HTTP 1.1 스펙상 GET 요청에 Body를 포함하는 것이 금지되지는 않
 
 ### 1. 중간 인프라가 GET Body를 제거하거나 무시
 
-```
+```http
 클라이언트 → 프록시 → CDN → 로드밸런서 → 서버
 
 GET /search HTTP/1.1
@@ -94,7 +100,7 @@ Body: {"name": "홍길동", "age": 25}
 → 잘못된 결과 반환 X
 ```
 
-```
+```http
 GET /search (Body: {"query": "사과"}) → 결과A 캐싱
 GET /search (Body: {"query": "바나나"}) → URL 동일 → 결과A 반환 X
 
