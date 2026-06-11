@@ -128,12 +128,12 @@ keys: [a, b, c]   ← 자동 반영
 ### 순회 중 안전한 삭제
 
 ```java
-// ❌ for-each 중 map.remove → ConcurrentModificationException
+// X for-each 중 map.remove → ConcurrentModificationException
 for (String key : map.keySet()) {
     if (조건) map.remove(key);
 }
 
-// ✅ Iterator의 remove()
+// O Iterator의 remove()
 Iterator<String> it = map.keySet().iterator();
 while (it.hasNext()) {
     String key = it.next();

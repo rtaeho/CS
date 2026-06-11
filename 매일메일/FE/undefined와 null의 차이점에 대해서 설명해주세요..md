@@ -8,7 +8,7 @@
 
 반면, `null`은 **의도적으로 값을 비워 둔 상태를 나타내며, 개발자가 직접 할당하는 값**입니다. 또한, 느슨한 비교(`==`)에서는 `null`과 `undefined`가 같게 처리되지만, 엄격한 비교(`===`)에서는 다르게 취급됩니다.
 
-### [](https://www.maeil-mail.kr/question/63#undefined%EC%99%80-null%EC%9D%B4-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC%EC%99%80-%EA%B4%80%EB%A0%A8%ED%95%B4%EC%84%9C-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%B2%98%EB%A6%AC%EB%90%98%EB%8A%94%EC%A7%80-%EC%95%8C%EA%B3%A0-%EA%B3%84%EC%8B%A0%EA%B0%80%EC%9A%94-)undefined와 null이 메모리 관리와 관련해서 어떻게 처리되는지 알고 계신가요? 🤔
+### [](https://www.maeil-mail.kr/question/63#undefined%EC%99%80-null%EC%9D%B4-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC%EC%99%80-%EA%B4%80%EB%A0%A8%ED%95%B4%EC%84%9C-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%B2%98%EB%A6%AC%EB%90%98%EB%8A%94%EC%A7%80-%EC%95%8C%EA%B3%A0-%EA%B3%84%EC%8B%A0%EA%B0%80%EC%9A%94-)undefined와 null이 메모리 관리와 관련해서 어떻게 처리되는지 알고 계신가요?
 
 `null`은 개발자가 명시적으로 메모리를 해제하고자 할 때 사용하는 방법입니다. 객체를 참조하던 변수를 `null`로 설정하면, 해당 변수는 더 이상 그 객체를 가리키지 않으므로 참조가 끊어집니다. 이렇게 참조가 끊기면 JavaScript의 가비지 컬렉터는 이 객체가 더 이상 사용되지 않는다고 판단해 메모리에서 이를 제거할 수 있습니다. 예를 들어, 대용량 데이터를 담고 있는 객체가 있다고 할 때, 더 이상 사용하지 않는다면 그 객체를 `null`로 설정하여 가비지 컬렉션 대상이 되도록 유도할 수 있습니다.
 

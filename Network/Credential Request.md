@@ -49,17 +49,17 @@ axios.get('https://api.example.com/profile', {
 |옵션|같은 출처|다른 출처|
 |---|---|---|
 |**omit**|쿠키 미포함|쿠키 미포함|
-|**same-origin** (기본값)|쿠키 포함 ✅|쿠키 미포함|
-|**include**|쿠키 포함 ✅|쿠키 포함 ✅|
+|**same-origin** (기본값)|쿠키 포함 O|쿠키 미포함|
+|**include**|쿠키 포함 O|쿠키 포함 O|
 
 ```
 same-origin (기본값):
-https://example.com → https://example.com/api  → 쿠키 포함 ✅
-https://example.com → https://api.example.com  → 쿠키 미포함 ❌
+https://example.com → https://example.com/api  → 쿠키 포함 O
+https://example.com → https://api.example.com  → 쿠키 미포함 X
 
 include:
-https://example.com → https://example.com/api  → 쿠키 포함 ✅
-https://example.com → https://api.example.com  → 쿠키 포함 ✅
+https://example.com → https://example.com/api  → 쿠키 포함 O
+https://example.com → https://api.example.com  → 쿠키 포함 O
 ```
 
 ### 서버 — CORS 응답 헤더 설정
@@ -76,16 +76,16 @@ Access-Control-Allow-Credentials: true
 1. Access-Control-Allow-Credentials: true 필수
 
 2. Access-Control-Allow-Origin에 와일드카드(*) 사용 불가
-   ❌ Access-Control-Allow-Origin: *
-   ✅ Access-Control-Allow-Origin: https://frontend.com
+   X Access-Control-Allow-Origin: *
+   O Access-Control-Allow-Origin: https://frontend.com
 
 3. Access-Control-Allow-Headers에 와일드카드(*) 사용 불가
-   ❌ Access-Control-Allow-Headers: *
-   ✅ Access-Control-Allow-Headers: Content-Type, Authorization
+   X Access-Control-Allow-Headers: *
+   O Access-Control-Allow-Headers: Content-Type, Authorization
 
 4. Access-Control-Allow-Methods에 와일드카드(*) 사용 불가
-   ❌ Access-Control-Allow-Methods: *
-   ✅ Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+   X Access-Control-Allow-Methods: *
+   O Access-Control-Allow-Methods: GET, POST, PUT, DELETE
 
 → 인증 정보를 포함하는 요청에는 정확한 출처/헤더/메서드를 명시해야 함
 → *은 "누구에게나 인증 정보를 보낸다"는 뜻이므로 보안상 차단
@@ -168,10 +168,10 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
 
-        // ❌ 와일드카드 사용 불가 (Credentialed Request에서)
+        // X 와일드카드 사용 불가 (Credentialed Request에서)
         // config.setAllowedOrigins(List.of("*"));
 
-        // ✅ 정확한 출처 명시
+        // O 정확한 출처 명시
         config.setAllowedOrigins(List.of("https://frontend.com"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE"));
         config.setAllowedHeaders(List.of("Content-Type", "Authorization"));
@@ -216,7 +216,7 @@ public CorsConfigurationSource corsConfigurationSource() {
 ### 에러 1: 와일드카드 + Credentials
 
 ```
-❌ 에러 메시지:
+X 에러 메시지:
 "Access to fetch at 'https://api.example.com' from origin
 'https://frontend.com' has been blocked by CORS policy:
 The value of 'Access-Control-Allow-Origin' must not be '*'
@@ -224,15 +224,15 @@ when the request's credentials mode is 'include'."
 ```
 
 ```java
-// ❌ 원인
+// X 원인
 config.setAllowedOrigins(List.of("*"));
 config.setAllowCredentials(true);
 
-// ✅ 해결 — 정확한 출처 명시
+// O 해결 — 정확한 출처 명시
 config.setAllowedOrigins(List.of("https://frontend.com"));
 config.setAllowCredentials(true);
 
-// ✅ 또는 패턴 사용
+// O 또는 패턴 사용
 config.setAllowedOriginPatterns(List.of("*"));  // 패턴은 Credentials와 사용 가능
 config.setAllowCredentials(true);
 ```
@@ -240,26 +240,26 @@ config.setAllowCredentials(true);
 ### 에러 2: Credentials 헤더 누락
 
 ```
-❌ 에러 메시지:
+X 에러 메시지:
 "The value of 'Access-Control-Allow-Credentials' header
 must be 'true' when the request's credentials mode is 'include'."
 ```
 
 ```java
-// ❌ 원인 — 서버에서 Allow-Credentials 미설정
+// X 원인 — 서버에서 Allow-Credentials 미설정
 config.setAllowCredentials(false);
 
-// ✅ 해결
+// O 해결
 config.setAllowCredentials(true);
 ```
 
 ### 에러 3: 클라이언트 설정 누락
 
 ```javascript
-// ❌ credentials 미설정 → 쿠키가 전송되지 않음
+// X credentials 미설정 → 쿠키가 전송되지 않음
 fetch('https://api.example.com/profile');
 
-// ✅ credentials: 'include' 설정
+// O credentials: 'include' 설정
 fetch('https://api.example.com/profile', {
     credentials: 'include'
 });
@@ -271,7 +271,7 @@ fetch('https://api.example.com/profile', {
 | --------------------- | ------------------ | --------------------- | ---------------------- |
 | **Preflight**         | 없음                 | OPTIONS 발생            | 조건에 따라 발생              |
 | **인증 정보**             | 미포함                | 미포함                   | 쿠키/Authorization 포함    |
-| **Allow-Origin: ***   | 허용                 | 허용                    | ❌ 불가                   |
+| **Allow-Origin: ***   | 허용                 | 허용                    | X 불가                   |
 | **Allow-Credentials** | 불필요                | 불필요                   | true 필수                |
 | **클라이언트 설정**          | 없음                 | 없음                    | credentials: 'include' |
 | **서버 설정**             | 최소                 | 메서드/헤더 허용             | 정확한 출처 + Credentials   |

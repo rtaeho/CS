@@ -11,7 +11,7 @@
 옵션 2: @Component 클래스
   → 등록은 되지만 싱글톤 보장 X (자세한 건 아래)
 
-옵션 3: @Configuration 클래스 ✅
+옵션 3: @Configuration 클래스 O
   → 등록 + 싱글톤 보장 (프록시로 감쌈)
 ```
 
@@ -89,7 +89,7 @@ public class AppConfig {
 ## @Configuration vs @Component (with @Bean)
 
 ```java
-// 1. @Configuration — 싱글톤 보장 ✅
+// 1. @Configuration — 싱글톤 보장 O
 @Configuration
 public class Config {
     @Bean public A a() { return new A(); }
@@ -97,7 +97,7 @@ public class Config {
 }
 // a()는 단 한 번 실행 → A 인스턴스 1개
 
-// 2. @Component — 싱글톤 보장 ❌
+// 2. @Component — 싱글톤 보장 X
 @Component
 public class Config {
     @Bean public A a() { return new A(); }
@@ -108,10 +108,10 @@ public class Config {
 
 | 항목 | @Configuration | @Component (+ @Bean) |
 |---|---|---|
-| 빈 등록 | ✅ | ✅ |
-| 프록시 생성 | ✅ CGLIB로 감쌈 | ❌ 일반 클래스 |
+| 빈 등록 | O | O |
+| 프록시 생성 | O CGLIB로 감쌈 | X 일반 클래스 |
 | `@Bean` 메서드 호출 시 동작 | 캐시된 빈 반환 | 매번 new 실행 |
-| 싱글톤 보장 | ✅ | ❌ |
+| 싱글톤 보장 | O | X |
 
 > `@Bean`은 항상 `@Configuration` 클래스에 두는 것이 안전.
 
@@ -201,13 +201,13 @@ public class AppConfig {
 ## 함정: final 키워드 금지
 
 ```java
-// ❌ final 클래스는 CGLIB 프록시 생성 불가 → 싱글톤 보장 깨짐
+// X final 클래스는 CGLIB 프록시 생성 불가 → 싱글톤 보장 깨짐
 @Configuration
 public final class AppConfig {   // 컴파일은 되지만 경고 / 동작 이상
     @Bean public A a() { ... }
 }
 
-// ✅ final 키워드 빼기
+// O final 키워드 빼기
 @Configuration
 public class AppConfig {
     @Bean public A a() { ... }

@@ -119,11 +119,11 @@ Arrays.parallelSort(arr);    // NaN을 끝으로 보냄 (sort와 동일)
 
 |방법|대상|반환|in-place|언제 쓰나|
 |---|---|---|---|---|
-|[[Arrays.sort]]|배열|void|✅|기본 선택|
-|[[Collections.sort]]|List|void|✅|List 정렬|
-|[[List.sort]]|List|void|✅|Java 8+ 권장|
-|[[Stream.sorted]]|모든 컬렉션|새 Stream|❌|원본 보존|
-|`Arrays.parallelSort`|배열|void|✅|**대용량 (10만+)**|
+|[[Arrays.sort]]|배열|void|O|기본 선택|
+|[[Collections.sort]]|List|void|O|List 정렬|
+|[[List.sort]]|List|void|O|Java 8+ 권장|
+|[[Stream.sorted]]|모든 컬렉션|새 Stream|X|원본 보존|
+|`Arrays.parallelSort`|배열|void|O|**대용량 (10만+)**|
 
 ## 시간복잡도
 

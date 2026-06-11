@@ -13,7 +13,7 @@
 ## 동작 과정
 
 ```
-[1. Red] 테스트 먼저 작성 → 당연히 실패 💀
+[1. Red] 테스트 먼저 작성 → 당연히 실패
 @Test
 void 두_수의_합() {
     assertEquals(5, calculator.add(2, 3));
@@ -23,13 +23,13 @@ void 두_수의_합() {
 [2. Green] 테스트 통과하는 최소 코드 작성
 class Calculator {
     int add(int a, int b) {
-        return a + b;  // 테스트 통과 ✅
+        return a + b;  // 테스트 통과 O
     }
 }
 
 [3. Refactor] 코드 개선
 // 중복 제거, 가독성 향상 등
-// 테스트는 여전히 통과해야 함 ✅
+// 테스트는 여전히 통과해야 함 O
 ```
 
 ## Java 예시 (JUnit)
@@ -44,7 +44,7 @@ void 회원가입_이메일_중복_시_예외발생() {
 
     // when & then
     assertThrows(DuplicateEmailException.class,
-        () -> userService.join(email));  // 중복 가입 시 예외 ✅
+        () -> userService.join(email));  // 중복 가입 시 예외 O
 }
 
 // 2. 테스트 통과하는 코드 작성

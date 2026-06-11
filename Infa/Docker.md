@@ -31,7 +31,7 @@
 | 부팅 시간 | 분 단위 | 초 이내 |
 | 이미지 크기 | GB | MB |
 | 자원 오버헤드 | 높음 | 낮음 |
-| OS 공유 | ❌ | ✅ (Host OS 커널 공유) |
+| OS 공유 | X | O (Host OS 커널 공유) |
 
 ## Dockerfile
 
@@ -46,11 +46,11 @@ ENTRYPOINT ["java", "-jar", "app.jar"]  # 실행 명령
 ### 레이어 캐시 활용
 
 ```dockerfile
-# ❌ 소스 변경마다 의존성 재다운로드
+# X 소스 변경마다 의존성 재다운로드
 COPY . .
 RUN ./gradlew build
 
-# ✅ 의존성 레이어 캐시 재사용
+# O 의존성 레이어 캐시 재사용
 COPY build.gradle settings.gradle ./
 RUN ./gradlew dependencies --no-daemon
 COPY src ./src

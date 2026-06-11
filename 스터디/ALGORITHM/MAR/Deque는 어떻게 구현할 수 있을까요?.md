@@ -131,8 +131,8 @@ class CircularDeque {
 |addFirst/Last|O(1)|O(1)|
 |removeFirst/Last|O(1)|O(1)|
 |메모리|포인터 추가 비용|연속 공간, 빈 공간 낭비 가능|
-|캐시 효율|낮음|높음 ✓|
-|크기 제한|없음 ✓|고정 (확장 필요)|
+|캐시 효율|낮음|높음 O|
+|크기 제한|없음 O|고정 (확장 필요)|
 
 ## Java의 [[ArrayDeque]]
 

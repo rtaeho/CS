@@ -26,11 +26,11 @@ sessionStorage.clear();
 
 ```
 탭A: sessionStorage.setItem('user', 'kim')
-탭B: sessionStorage.getItem('user')  → null ❌
+탭B: sessionStorage.getItem('user')  → null X
 
 localStorage였다면
 탭A: localStorage.setItem('user', 'kim')
-탭B: localStorage.getItem('user')  → 'kim' ✅
+탭B: localStorage.getItem('user')  → 'kim' O
 ```
 
 ## 브라우저 저장소 최종 비교
@@ -38,20 +38,20 @@ localStorage였다면
 ||localStorage|sessionStorage|Cookie|
 |---|---|---|---|
 |**유지 기간**|영구|탭 닫으면 삭제|만료일 설정|
-|**탭 간 공유**|✅|❌|✅|
+|**탭 간 공유**|O|X|O|
 |**용량**|~5MB|~5MB|~4KB|
-|**서버 전송**|❌|❌|✅ 자동|
-|**XSS 취약**|❌|❌|HttpOnly 시 안전|
+|**서버 전송**|X|X|O 자동|
+|**XSS 취약**|X|X|HttpOnly 시 안전|
 
 ## 적합한 사용 사례
 
 ```
-✅ 적합
+O 적합
 - 페이지 이동 간 임시 데이터 유지 (멀티 스텝 폼)
 - 탭별 독립적인 상태 (여러 탭에서 다른 계정 조회)
 - 새로고침해도 유지해야 할 일시적 데이터
 
-❌ 부적합
+X 부적합
 - 탭 간 공유가 필요한 데이터 → localStorage
 - 서버에 전달해야 할 데이터 → Cookie
 - 탭 닫아도 유지해야 할 데이터 → localStorage

@@ -4,7 +4,7 @@
 
 ```
 [단일 사용자 — 문제 없음]
-사용자A: 잔액 조회 → 10,000원 → 출금 5,000원 → 잔액 5,000원 ✅
+사용자A: 잔액 조회 → 10,000원 → 출금 5,000원 → 잔액 5,000원 O
 
 [동시 접근 — 문제 발생]
 시간  사용자A                    사용자B
@@ -15,7 +15,7 @@
  │                              출금 3,000원
  │                              잔액 = 10,000 - 3,000 = 7,000원 저장
  ▼
-결과: 잔액 7,000원 (사용자A의 출금이 사라짐 ❌)
+결과: 잔액 7,000원 (사용자A의 출금이 사라짐 X)
 정상: 잔액 2,000원 (10,000 - 5,000 - 3,000)
 ```
 
@@ -31,7 +31,7 @@
 트랜잭션A: UPDATE 재고 = 10 - 1 = 9
 트랜잭션B: UPDATE 재고 = 10 - 1 = 9  ← A의 수정을 덮어씀
 
-결과: 재고 9 (실제로는 8이어야 함) ❌
+결과: 재고 9 (실제로는 8이어야 함) X
 ```
 
 ### 2. 더티 리드 (Dirty Read)
@@ -43,7 +43,7 @@
 트랜잭션B: READ 가격 = 50000 ← 커밋 안 된 데이터를 읽음
 트랜잭션A: ROLLBACK (가격 원복 → 45000)
 
-결과: 트랜잭션B는 존재하지 않는 가격(50000)으로 처리함 ❌
+결과: 트랜잭션B는 존재하지 않는 가격(50000)으로 처리함 X
 ```
 
 ### 3. 반복 불가능 읽기 (Non-Repeatable Read)
@@ -53,7 +53,7 @@
 
 트랜잭션A: READ 가격 = 45000
 트랜잭션B: UPDATE 가격 = 39000 + COMMIT
-트랜잭션A: READ 가격 = 39000 ← 같은 트랜잭션인데 값이 다름 ❌
+트랜잭션A: READ 가격 = 39000 ← 같은 트랜잭션인데 값이 다름 X
 ```
 
 ### 4. 팬텀 리드 (Phantom Read)
@@ -63,7 +63,7 @@
 
 트랜잭션A: SELECT COUNT(*) FROM orders WHERE date = '2025-02-13' → 10건
 트랜잭션B: INSERT INTO orders (...) + COMMIT
-트랜잭션A: SELECT COUNT(*) FROM orders WHERE date = '2025-02-13' → 11건 ❌
+트랜잭션A: SELECT COUNT(*) FROM orders WHERE date = '2025-02-13' → 11건 X
           → 없던 행이 유령(Phantom)처럼 등장
 ```
 
@@ -73,10 +73,10 @@ DB가 동시성 문제를 어디까지 허용할지 설정하는 수준입니다
 
 | 격리 수준                | Dirty Read | Non-Repeatable Read | Phantom Read | 성능    |
 | -------------------- | ---------- | ------------------- | ------------ | ----- |
-| **READ UNCOMMITTED** | ⚠️ 발생      | ⚠️ 발생               | ⚠️ 발생        | 가장 빠름 |
-| **READ COMMITTED**   | ✅ 방지       | ⚠️ 발생               | ⚠️ 발생        | 빠름    |
-| **REPEATABLE READ**  | ✅ 방지       | ✅ 방지                | ⚠️ 발생        | 보통    |
-| **SERIALIZABLE**     | ✅ 방지       | ✅ 방지                | ✅ 방지         | 가장 느림 |
+| **READ UNCOMMITTED** | 발생      | 발생               | 발생        | 가장 빠름 |
+| **READ COMMITTED**   | O 방지       | 발생               | 발생        | 빠름    |
+| **REPEATABLE READ**  | O 방지       | O 방지                | 발생        | 보통    |
+| **SERIALIZABLE**     | O 방지       | O 방지                | O 방지         | 가장 느림 |
 |                      |            |                     |              |       |
 
 ```sql
@@ -91,8 +91,8 @@ SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
 ```
 
 ```
-격리 수준이 높을수록 → 동시성 문제 방지 ✅ but 성능 저하 ❌
-격리 수준이 낮을수록 → 성능 좋음 ✅ but 동시성 문제 발생 가능 ❌
+격리 수준이 높을수록 → 동시성 문제 방지 O but 성능 저하 X
+격리 수준이 낮을수록 → 성능 좋음 O but 동시성 문제 발생 가능 X
 
 → 서비스 요구사항에 따라 적절한 수준 선택
 ```
@@ -133,7 +133,7 @@ public void decreaseStock(Long productId, int quantity) {
 트랜잭션A: SELECT ... FOR UPDATE (락 획득)
 트랜잭션B: SELECT ... FOR UPDATE (대기 ⏳)
 트랜잭션A: UPDATE + COMMIT (락 해제)
-트랜잭션B: 이제 락 획득 → 최신 데이터로 처리 ✅
+트랜잭션B: 이제 락 획득 → 최신 데이터로 처리 O
 ```
 
 |장점|단점|
@@ -172,10 +172,10 @@ public class Product {
 트랜잭션B: SELECT → {stock: 10, version: 0}
 
 트랜잭션A: UPDATE SET stock=9, version=1 WHERE id=1 AND version=0
-           → 성공 ✅ (version이 0에서 1로 변경)
+           → 성공 O (version이 0에서 1로 변경)
 
 트랜잭션B: UPDATE SET stock=9, version=1 WHERE id=1 AND version=0
-           → 실패 ❌ (version이 이미 1이므로 WHERE 조건 불일치)
+           → 실패 X (version이 이미 1이므로 WHERE 조건 불일치)
            → OptimisticLockException 발생
 ```
 

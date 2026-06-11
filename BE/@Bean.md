@@ -9,7 +9,7 @@
 public class EmailService { }   ← 내가 만든 클래스 → OK
 
 @Component
-public class ObjectMapper { }   ← 외부 라이브러리 → ❌ 코드 수정 불가
+public class ObjectMapper { }   ← 외부 라이브러리 → X 코드 수정 불가
 ```
 
 ```
@@ -211,9 +211,9 @@ public RequestContext requestContext() { ... }
 
 | 위치 | 동작 | 권장 |
 |---|---|---|
-| `@Configuration` 클래스 | 정상 — 싱글톤 보장 | ✅ |
-| `@Component` 클래스 | 동작은 하지만 싱글톤 보장 안 됨 | ❌ |
-| 일반 클래스 | 컨테이너에 등록 안 됨 (무시) | ❌ |
+| `@Configuration` 클래스 | 정상 — 싱글톤 보장 | O |
+| `@Component` 클래스 | 동작은 하지만 싱글톤 보장 안 됨 | X |
+| 일반 클래스 | 컨테이너에 등록 안 됨 (무시) | X |
 
 자세한 차이는 [[@Configuration]] 참고.
 

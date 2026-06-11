@@ -10,12 +10,12 @@ static final int MAX_SIZE = 100;
 
 // final 지역 변수
 final int x = 10;
-x = 20;   // ❌ 컴파일 에러
+x = 20;   // X 컴파일 에러
 
 // final 참조 변수 — 참조 자체를 바꿀 수 없을 뿐, 내부 상태는 변경 가능
 final List<String> list = new ArrayList<>();
-list.add("hello");   // ✅ 내부 상태 변경 가능
-list = new ArrayList<>();  // ❌ 참조 재할당 불가
+list.add("hello");   // O 내부 상태 변경 가능
+list = new ArrayList<>();  // X 참조 재할당 불가
 ```
 
 ## final 메서드
@@ -34,8 +34,8 @@ class Parent {
 }
 
 class Child extends Parent {
-    // void template() {}  // ❌ 컴파일 에러
-    void step1() {}        // ✅ 오버라이딩 가능 (final 아님)
+    // void template() {}  // X 컴파일 에러
+    void step1() {}        // O 오버라이딩 가능 (final 아님)
 }
 ```
 
@@ -54,7 +54,7 @@ final class ImmutablePoint {
     }
 }
 
-// class Sub extends ImmutablePoint {}  // ❌ 컴파일 에러
+// class Sub extends ImmutablePoint {}  // X 컴파일 에러
 ```
 
 > String이 final인 이유: 불변성 보장 → String Pool 공유 가능, 해시코드 캐싱 가능, 보안.

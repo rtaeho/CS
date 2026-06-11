@@ -57,7 +57,7 @@ q.remove()  → NoSuchElementException
 ```java
 // while 루프에서 큐를 비우는 표준 패턴
 while (!queue.isEmpty()) {
-    int x = queue.poll();   // ✅ 안전 — null 안 나옴 (isEmpty 체크했으므로)
+    int x = queue.poll();   // O 안전 — null 안 나옴 (isEmpty 체크했으므로)
     process(x);
 }
 
@@ -137,15 +137,15 @@ while (!queue.isEmpty()) {
 }
 ```
 
-## ⚠️ Integer 언박싱 주의
+## Integer 언박싱 주의
 
 ```java
 Queue<Integer> q = new LinkedList<>();
 
 // 빈 큐에서 poll → null
-int x = q.poll();        // ❌ NullPointerException (null → int 언박싱 실패)
+int x = q.poll();        // X NullPointerException (null → int 언박싱 실패)
 
-Integer x = q.poll();    // ✅ Integer로 받으면 null 허용
+Integer x = q.poll();    // O Integer로 받으면 null 허용
 ```
 
 ## 시간복잡도

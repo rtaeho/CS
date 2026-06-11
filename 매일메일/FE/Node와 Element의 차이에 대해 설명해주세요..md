@@ -6,7 +6,7 @@ Node는 **[[DOM]]을 구성하는 가장 기본적인 구성 단위**입니다.
 
 예를 들어 `<div>Hello<!--주석-->World</div>`라는 HTML이 있다면, div 태그는 Element Node이면서 동시에 Node입니다. 반면 'Hello'와 'World'라는 텍스트는 Text Node이며, 주석은 Comment Node입니다. 이들은 모두 Node이지만 Element는 아닙니다.
 
-## [](https://www.maeil-mail.kr/question/125#node%EC%99%80-element%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%99%80-%EA%B4%80%EB%A0%A8%EB%90%9C-%EA%B5%AC%EC%B2%B4%EC%A0%81%EC%9D%B8-%EC%98%88%EC%8B%9C%EB%A5%BC-%EB%93%A4%EC%96%B4%EC%A3%BC%EC%84%B8%EC%9A%94-)Node와 Element의 차이와 관련된 구체적인 예시를 들어주세요. 🤔
+## [](https://www.maeil-mail.kr/question/125#node%EC%99%80-element%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%99%80-%EA%B4%80%EB%A0%A8%EB%90%9C-%EA%B5%AC%EC%B2%B4%EC%A0%81%EC%9D%B8-%EC%98%88%EC%8B%9C%EB%A5%BC-%EB%93%A4%EC%96%B4%EC%A3%BC%EC%84%B8%EC%9A%94-)Node와 Element의 차이와 관련된 구체적인 예시를 들어주세요.
 
 예를 들어, `textContent`라는 속성은 Node의 속성이므로 모든 종류의 Node에서 사용할 수 있지만, `innerHTML`은 Element의 속성이므로 Element에서만 사용할 수 있습니다.
 

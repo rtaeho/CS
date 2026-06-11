@@ -56,7 +56,7 @@ function A() {
 }
 
 function D() {
-    const user = useContext(UserContext);  // 바로 접근 ✅
+    const user = useContext(UserContext);  // 바로 접근 O
     return <div>{user.name}</div>;
 }
 ```
@@ -70,7 +70,7 @@ const useStore = create((set) => ({
 }));
 
 function D() {
-    const user = useStore((state) => state.user);  // 바로 접근 ✅
+    const user = useStore((state) => state.user);  // 바로 접근 O
     return <div>{user.name}</div>;
 }
 ```

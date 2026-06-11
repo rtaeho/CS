@@ -10,10 +10,10 @@ Hydration은 **서버에서 렌더링된 정적 HTML에 JavaScript 이벤트 핸
 <input type="text" placeholder="검색어 입력">
 <div class="counter">0</div>
 
-→ 화면에 보임 ✅
-→ 버튼 클릭해도 아무 일 안 일어남 ❌
-→ 입력해도 검색 안 됨 ❌
-→ 카운터가 동작 안 함 ❌
+→ 화면에 보임 O
+→ 버튼 클릭해도 아무 일 안 일어남 X
+→ 입력해도 검색 안 됨 X
+→ 카운터가 동작 안 함 X
 
 → HTML은 "그림"일 뿐, JavaScript가 연결되지 않은 상태
 → 이 HTML에 JS를 연결하는 과정 = Hydration
@@ -55,7 +55,7 @@ Hydration은 **서버에서 렌더링된 정적 HTML에 JavaScript 이벤트 핸
           화면 보임   시작       시작
           (FCP)                          (TTI)
           │←──── 보이지만 동작 안 함 ────→│
-                  이 구간이 문제 ⚠️
+                  이 구간이 문제
 ```
 
 ## 코드로 이해하기
@@ -124,7 +124,7 @@ hydrateRoot(document.getElementById('root'), <App />);
 1. 서버 HTML과 가상 DOM 비교
    서버 HTML: <button>장바구니 담기</button>
    가상 DOM:  <button onClick={addToCart}>장바구니 담기</button>
-   → 구조 일치 확인 ✅
+   → 구조 일치 확인 O
 
 2. 이벤트 핸들러 연결
    button → onClick={addToCart} 연결
@@ -145,18 +145,18 @@ hydrateRoot(document.getElementById('root'), <App />);
 서버 HTML과 클라이언트 가상 DOM이 다르면 에러가 발생합니다.
 
 ```javascript
-// ❌ Hydration 불일치 발생
+// X Hydration 불일치 발생
 function Clock() {
     return <p>현재 시간: {new Date().toLocaleTimeString()}</p>;
 }
 
 // 서버 렌더링: <p>현재 시간: 10:00:00</p>
 // 클라이언트 Hydration: <p>현재 시간: 10:00:03</p>
-// → 불일치! → React 경고 또는 에러 ⚠️
+// → 불일치! → React 경고 또는 에러
 ```
 
 ```javascript
-// ✅ 해결 — 클라이언트 전용 로직 분리
+// O 해결 — 클라이언트 전용 로직 분리
 function Clock() {
     const [time, setTime] = useState(null);
 
@@ -220,9 +220,9 @@ function Clock() {
 [필요한 컴포넌트부터 우선 Hydration]
 
 ┌──────────────────────────────────────┐
-│ Header [✅ 우선 Hydration]           │
-│ 검색바 [✅ 우선 Hydration]           │
-│ 상품 목록 [✅ 우선 Hydration]         │
+│ Header [O 우선 Hydration]           │
+│ 검색바 [O 우선 Hydration]           │
+│ 상품 목록 [O 우선 Hydration]         │
 ├──────────────────────────────────────┤
 │ 리뷰 섹션 [⏳ 나중에]                │
 │ 추천 상품 [⏳ 나중에]                 │
@@ -276,13 +276,13 @@ function ProductPage() {
 │ Header (정적 HTML — Hydration 안 함)  │
 │                                      │
 │ ┌─────────────────┐                  │
-│ │ 검색바 (Island)  │ ← Hydration ✅  │
+│ │ 검색바 (Island)  │ ← Hydration O  │
 │ └─────────────────┘                  │
 │                                      │
 │ 상품 설명 (정적 HTML — Hydration 안 함)│
 │                                      │
 │ ┌─────────────────┐                  │
-│ │ 장바구니 (Island) │ ← Hydration ✅ │
+│ │ 장바구니 (Island) │ ← Hydration O │
 │ └─────────────────┘                  │
 │                                      │
 │ 푸터 (정적 HTML — Hydration 안 함)    │
@@ -327,7 +327,7 @@ function AddToCartButton({ productId }) {
             addToCart(productId);
             setAdded(true);
         }}>
-            {added ? '담김 ✅' : '장바구니 담기'}
+            {added ? '담김 O' : '장바구니 담기'}
         </button>
     );
 }

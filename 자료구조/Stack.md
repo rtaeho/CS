@@ -61,8 +61,8 @@ stack.peek();      // 2
 
 |클래스|특징|권장 여부|
 |---|---|---|
-|`Stack<E>`|Vector 기반, 동기화됨|❌ 레거시|
-|`ArrayDeque<E>`|배열 기반, 동기화 없음, 빠름|✅ 권장|
+|`Stack<E>`|Vector 기반, 동기화됨|X 레거시|
+|`ArrayDeque<E>`|배열 기반, 동기화 없음, 빠름|O 권장|
 |`LinkedList<E>`|연결 리스트 기반, Deque 구현|△ 가능하지만 ArrayDeque가 더 빠름|
 
 ### 2. 배열 기반 직접 구현
@@ -221,10 +221,10 @@ isValid("({[}])");  // false
 [  → push[   │ [ │
               │ { │
               │ ( │
-]  → pop[ ✅  │ { │
+]  → pop[ O  │ { │
               │ ( │
-}  → pop{ ✅  │ ( │
-)  → pop( ✅  └───┘ 비었으므로 ✅ valid
+}  → pop{ O  │ ( │
+)  → pop( O  └───┘ 비었으므로 O valid
 ```
 
 ## 스택 vs [[Queue]]

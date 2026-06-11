@@ -49,8 +49,8 @@ q.isEmpty();   // true
 ## size() == 0 vs isEmpty()
 
 ```java
-if (q.size() == 0) { ... }   // ❌ 의도가 덜 명확
-if (q.isEmpty())   { ... }   // ✅ 권장
+if (q.size() == 0) { ... }   // X 의도가 덜 명확
+if (q.isEmpty())   { ... }   // O 권장
 ```
 
 > 모든 컬렉션 인터페이스(List, Set, Map, Queue)가 `isEmpty()`를 제공.
@@ -122,7 +122,7 @@ while (!queue.isEmpty()) {
 ```java
 // isEmpty 체크가 있으면 int로 받아도 안전
 while (!queue.isEmpty()) {
-    int x = queue.poll();   // ✅ null 안 나옴
+    int x = queue.poll();   // O null 안 나옴
     process(x);
 }
 

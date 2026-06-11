@@ -6,15 +6,15 @@
 
 reflow는 `레이아웃을 다시 계산하는 과정`이고, repaint는 그 `계산 결과를 화면에 다시 그리는 과정`이라고 할 수 있습니다. 이 둘을 잘 이해하고 관리한다면 성능 최적화에 큰 도움이 됩니다.
 
-## [](https://www.maeil-mail.kr/question/3#%EB%91%98%EC%9D%84-%EC%9E%98-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%B4-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94%EC%97%90-%EB%8F%84%EC%9B%80%EC%9D%B4-%EB%90%9C%EB%8B%A4%EA%B3%A0-%ED%95%98%EC%85%A8%EB%8A%94%EB%8D%B0-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%B0%A9%EB%B2%95%EC%97%90%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B4-%EC%9E%88%EC%9D%84%EA%B9%8C%EC%9A%94-)둘을 잘 관리하는 것이 성능 최적화에 도움이 된다고 하셨는데, 최적화 방법에는 무엇이 있을까요? 🤔
+## [](https://www.maeil-mail.kr/question/3#%EB%91%98%EC%9D%84-%EC%9E%98-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%B4-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94%EC%97%90-%EB%8F%84%EC%9B%80%EC%9D%B4-%EB%90%9C%EB%8B%A4%EA%B3%A0-%ED%95%98%EC%85%A8%EB%8A%94%EB%8D%B0-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%B0%A9%EB%B2%95%EC%97%90%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B4-%EC%9E%88%EC%9D%84%EA%B9%8C%EC%9A%94-)둘을 잘 관리하는 것이 성능 최적화에 도움이 된다고 하셨는데, 최적화 방법에는 무엇이 있을까요?
 
 크게 3가지 최적화 방법에 대해 설명드리겠습니다.
 
-첫 번째로 **reflow를 유발하는 CSS 속성 사용을 최소화**하는 것입니다.  
+첫 번째로 **reflow를 유발하는 CSS 속성 사용을 최소화**하는 것입니다.
 `width`, `height`, `margin`, `padding`, `border` 등의 속성은 요소의 레이아웃을 다시 계산하게 하므로 reflow를 일으킵니다. 가능한 한 미리 CSS에서 스타일을 설정해 초기 로드 시에만 계산이 이루어지도록 하고, 이후에는 변경하지 않는 것이 좋습니다.
 
-두 번째로 **CSS 애니메이션 최적화**입니다.  
+두 번째로 **CSS 애니메이션 최적화**입니다.
 애니메이션에 `transform`과 `opacity` 속성만을 사용하는 것이 성능에 유리합니다. 이 두 속성은 GPU 가속을 사용할 수 있어 reflow를 일으키지 않고 repaint만 발생시키므로 CPU 자원을 적게 사용합니다.
 
-마지막으로 **`will-change` 속성 사용**입니다.  
+마지막으로 **`will-change` 속성 사용**입니다.
 CSS의 `will-change` 속성을 사용하여 브라우저에 특정 요소가 변경될 것이라고 미리 언질을 줄 수 있습니다. 예를 들어, `will-change: transform`으로 미리 GPU에서 요소를 준비하게 하여 reflow 및 repaint에 미치는 영향을 줄일 수 있습니다. 하지만 `will-change` 속성은 너무 자주 사용하면 메모리 낭비가 발생하므로 필요한 요소에만 적용해야 합니다.

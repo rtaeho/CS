@@ -62,10 +62,10 @@ Fixed Window의 경계 버스트를 완화
 | 알고리즘 | 버스트 허용 | 구현 복잡도 | 메모리 | 특징 |
 |---|---|---|---|---|
 | Fixed Window | △ (경계 버스트) | 낮음 | 낮음 | 단순, 경계 취약 |
-| Sliding Window Log | ✅ 정밀 | 높음 | 높음 | 정확하지만 비쌈 |
-| Sliding Window Counter | ✅ 근사 | 중간 | 낮음 | 실무 추천 |
-| Token Bucket | ✅ | 중간 | 낮음 | 버스트 허용 |
-| Leaky Bucket | ❌ | 중간 | 중간 | 출력 속도 일정 |
+| Sliding Window Log | O 정밀 | 높음 | 높음 | 정확하지만 비쌈 |
+| Sliding Window Counter | O 근사 | 중간 | 낮음 | 실무 추천 |
+| Token Bucket | O | 중간 | 낮음 | 버스트 허용 |
+| Leaky Bucket | X | 중간 | 중간 | 출력 속도 일정 |
 
 ## Spring Boot + Redis 구현
 

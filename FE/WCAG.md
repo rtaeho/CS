@@ -58,16 +58,16 @@ Level AAA:        특수한 경우에만 (의료, 공공 서비스 등)
 ```html
 <!-- 1.1.1 대체 텍스트 (Level A) -->
 
-<!-- ❌ -->
+<!-- X -->
 <img src="chart.png">
 
-<!-- ✅ 의미 있는 이미지 -->
+<!-- O 의미 있는 이미지 -->
 <img src="chart.png" alt="2024년 월별 매출 추이, 12월 최고 매출 기록">
 
-<!-- ✅ 장식용 이미지 -->
+<!-- O 장식용 이미지 -->
 <img src="divider.png" alt="">
 
-<!-- ✅ 복잡한 이미지는 긴 설명 연결 -->
+<!-- O 복잡한 이미지는 긴 설명 연결 -->
 <img src="complex-chart.png"
      alt="분기별 매출 비교 차트"
      aria-describedby="chart-desc">
@@ -80,20 +80,20 @@ Level AAA:        특수한 경우에만 (의료, 공공 서비스 등)
 ```css
 /* 1.4.3 명도 대비 (Level AA: 4.5:1 이상) */
 
-/* ❌ 대비율 1.9:1 — Level A도 미달 */
+/* X 대비율 1.9:1 — Level A도 미달 */
 .text-bad { color: #cccccc; background: #ffffff; }
 
-/* ✅ 대비율 4.6:1 — Level AA 충족 */
+/* O 대비율 4.6:1 — Level AA 충족 */
 .text-aa { color: #767676; background: #ffffff; }
 
-/* ✅ 대비율 8.6:1 — Level AAA 충족 */
+/* O 대비율 8.6:1 — Level AAA 충족 */
 .text-aaa { color: #595959; background: #ffffff; }
 
 /* 1.4.4 텍스트 크기 조절 (Level AA) */
-/* ❌ 고정 단위 — 확대 불가 */
+/* X 고정 단위 — 확대 불가 */
 .text-fixed { font-size: 14px; }
 
-/* ✅ 상대 단위 — 브라우저 설정에 따라 확대 */
+/* O 상대 단위 — 브라우저 설정에 따라 확대 */
 .text-flexible { font-size: 0.875rem; }
 ```
 
@@ -145,10 +145,10 @@ Level AAA:        특수한 경우에만 (의료, 공공 서비스 등)
 ```html
 <!-- 2.1.1 키보드 접근 (Level A) -->
 
-<!-- ❌ 키보드로 접근/실행 불가 -->
+<!-- X 키보드로 접근/실행 불가 -->
 <div onclick="openMenu()">메뉴 열기</div>
 
-<!-- ✅ 키보드로 Tab 이동 + Enter 실행 가능 -->
+<!-- O 키보드로 Tab 이동 + Enter 실행 가능 -->
 <button onclick="openMenu()">메뉴 열기</button>
 
 <!-- 2.1.2 키보드 트랩 방지 (Level A) -->
@@ -179,11 +179,11 @@ document.addEventListener('keydown', (e) => {
 ```html
 <!-- 3.3.1 + 3.3.3 오류 안내 (Level A + AA) -->
 
-<!-- ❌ 어디가 잘못인지 모름 -->
+<!-- X 어디가 잘못인지 모름 -->
 <p style="color: red;">입력이 잘못되었습니다</p>
 <input type="email">
 
-<!-- ✅ 구체적 오류 위치 + 수정 방법 안내 -->
+<!-- O 구체적 오류 위치 + 수정 방법 안내 -->
 <label for="email">이메일 주소 (필수)</label>
 <input type="email"
        id="email"
@@ -191,7 +191,7 @@ document.addEventListener('keydown', (e) => {
        aria-describedby="email-error"
        aria-required="true">
 <p id="email-error" role="alert" style="color: #d32f2f;">
-    ⚠️ 이메일 형식이 올바르지 않습니다. 예: hong@example.com
+    이메일 형식이 올바르지 않습니다. 예: hong@example.com
 </p>
 ```
 
@@ -205,13 +205,13 @@ document.addEventListener('keydown', (e) => {
 ```html
 <!-- 4.1.2 이름, 역할, 값 (Level A) -->
 
-<!-- ❌ 스크린 리더가 역할을 알 수 없음 -->
+<!-- X 스크린 리더가 역할을 알 수 없음 -->
 <div class="accordion-header" onclick="toggle()">
     자주 묻는 질문
 </div>
 <div class="accordion-body">...</div>
 
-<!-- ✅ 역할과 상태를 명확히 전달 -->
+<!-- O 역할과 상태를 명확히 전달 -->
 <button aria-expanded="false"
         aria-controls="faq-panel"
         onclick="toggleAccordion(this)">
@@ -238,23 +238,23 @@ function toggleAccordion(button) {
 
 ```
 [Level A — 최소 기준]
-✅ 이미지에 alt 텍스트
-✅ 키보드로 모든 기능 사용 가능
-✅ 페이지 언어 명시
-✅ 입력 오류 텍스트로 안내
+O 이미지에 alt 텍스트
+O 키보드로 모든 기능 사용 가능
+O 페이지 언어 명시
+O 입력 오류 텍스트로 안내
 
 [Level AA — 권장 기준 (법적 요구)]
-✅ Level A 전체 +
-✅ 명도 대비 4.5:1 이상
-✅ 텍스트 200% 확대 가능
-✅ 포커스 시각적 표시
-✅ 오류 수정 방법 제시
+O Level A 전체 +
+O 명도 대비 4.5:1 이상
+O 텍스트 200% 확대 가능
+O 포커스 시각적 표시
+O 오류 수정 방법 제시
 
 [Level AAA — 최고 수준]
-✅ Level A + AA 전체 +
-✅ 명도 대비 7:1 이상
-✅ 수어 통역 제공
-✅ 전문 용어 설명 제공
+O Level A + AA 전체 +
+O 명도 대비 7:1 이상
+O 수어 통역 제공
+O 전문 용어 설명 제공
 ```
 
 ## 국가별 법적 요구사항

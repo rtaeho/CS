@@ -76,8 +76,8 @@ list.get(list.size() - 1);   // 마지막 원소
 ### 빈 List 처리
 
 ```java
-if (list.size() == 0) { ... }   // ❌ 의도가 덜 명확
-if (list.isEmpty())   { ... }   // ✅ 권장 — [[List.isEmpty]]
+if (list.size() == 0) { ... }   // X 의도가 덜 명확
+if (list.isEmpty())   { ... }   // O 권장 — [[List.isEmpty]]
 ```
 
 ### 결과 배열 생성

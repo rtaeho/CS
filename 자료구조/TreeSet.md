@@ -81,10 +81,10 @@ return set.isEmpty() ? new int[]{0, 0} : new int[]{set.first(), set.last()};
 ### `b - a` Comparator 오버플로
 
 ```java
-// ❌ Integer.MIN_VALUE 근처에서 오버플로
+// X Integer.MIN_VALUE 근처에서 오버플로
 new TreeSet<>((a, b) -> b - a);
 
-// ✅ 안전
+// O 안전
 new TreeSet<>((a, b) -> Integer.compare(b, a));
 new TreeSet<>(Comparator.reverseOrder());
 ```

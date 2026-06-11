@@ -18,11 +18,11 @@ SHOW INDEX FROM user;
 ## 조회 성능 비교
 
 ```sql
--- ✅ UNIQUE 컬럼 조회 → 인덱스 사용 (B+Tree 탐색)
+-- O UNIQUE 컬럼 조회 → 인덱스 사용 (B+Tree 탐색)
 SELECT * FROM user WHERE email = 'kim@test.com';
 -- 시간복잡도: O(log n)
 
--- ❌ 일반 컬럼 조회 → Full Table Scan
+-- X 일반 컬럼 조회 → Full Table Scan
 SELECT * FROM user WHERE name = '김철수';
 -- 시간복잡도: O(n)
 ```
@@ -62,7 +62,7 @@ UNIQUE 인덱스 중복 검사 (B+Tree 탐색)
 
 |작업|UNIQUE 컬럼|일반 컬럼|
 |---|---|---|
-|**SELECT**|✅ 빠름 (index)|❌ 느림 (Full Scan)|
+|**SELECT**|O 빠름 (index)|X 느림 (Full Scan)|
 |**INSERT**|중복 검사 비용 추가|검사 없음|
 |**UPDATE**|중복 검사 비용 추가|검사 없음|
 

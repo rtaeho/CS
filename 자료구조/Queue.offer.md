@@ -15,7 +15,7 @@ boolean add(E e)     // 성공: true, 실패: IllegalStateException
 | 실패 (큐가 가득 참) | `IllegalStateException` | `false` |
 | 권장 상황 | 실패가 절대 없어야 할 때 | 실패를 조건 분기로 처리할 때 |
 
-> `LinkedList`, `ArrayDeque`처럼 용량 제한 없는 큐에서는 둘 다 동일하게 작동.  
+> `LinkedList`, `ArrayDeque`처럼 용량 제한 없는 큐에서는 둘 다 동일하게 작동.
 > `ArrayBlockingQueue`처럼 용량 제한 있는 큐에서만 차이가 드러남.
 
 ## 동작 추적
@@ -48,7 +48,7 @@ q.offer(30): front → [10, 20, 30] ← rear
 ```java
 // 용량 제한 없는 큐 — 어느 쪽이든 동일
 Queue<Integer> q = new LinkedList<>();
-q.offer(1);   // ✅ Java 컨벤션상 offer 권장
+q.offer(1);   // O Java 컨벤션상 offer 권장
 
 // 용량 제한 있는 큐 — offer로 조건 분기
 Queue<Integer> bq = new ArrayBlockingQueue<>(2);

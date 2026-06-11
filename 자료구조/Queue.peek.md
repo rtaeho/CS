@@ -57,7 +57,7 @@ q.peek();   // 2 — q: [2]      (그대로)
 |동작|`peek`|`poll`|
 |---|---|---|
 |반환값|front 원소|front 원소|
-|큐 변경|❌ 변경 안 함|✅ 제거함|
+|큐 변경|X 변경 안 함|O 제거함|
 |빈 큐|null|null|
 
 ## 자주 쓰는 패턴
@@ -124,20 +124,20 @@ pq.poll();   // 10 (최솟값 제거)
 
 > [[PriorityQueue]]의 peek은 항상 우선순위 최상위 원소.
 
-## ⚠️ NullPointerException 주의
+## NullPointerException 주의
 
 ```java
 Queue<Integer> q = new LinkedList<>();
 
 // 빈 큐에서 peek → null
-int x = q.peek();        // ❌ NullPointerException
+int x = q.peek();        // X NullPointerException
 
-Integer x = q.peek();    // ✅
+Integer x = q.peek();    // O
 if (x != null) { ... }
 
 // 또는 isEmpty 먼저 체크
 if (!q.isEmpty()) {
-    int x = q.peek();    // ✅ 안전
+    int x = q.peek();    // O 안전
 }
 ```
 

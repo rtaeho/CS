@@ -91,10 +91,10 @@ set(3, get(3)+1) = set(3, 2):  [0, 0, 0, 2, 0, 0, 0, 1, 0, 0]
 ```java
 List<Integer> list = new ArrayList<>();   // []
 
-// ❌ 빈 리스트에 set 호출 → 예외
+// X 빈 리스트에 set 호출 → 예외
 list.set(0, 100);   // IndexOutOfBoundsException
 
-// ✅ 먼저 add로 자리 만들고 set
+// O 먼저 add로 자리 만들고 set
 list.add(0);
 list.set(0, 100);
 ```

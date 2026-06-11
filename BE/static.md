@@ -81,7 +81,7 @@ class Outer {
     }
 }
 
-Outer.StaticNested nested = new Outer.StaticNested(); // ✅
+Outer.StaticNested nested = new Outer.StaticNested(); // O
 Outer.Inner inner = new Outer().new Inner();           // Outer 인스턴스 필요
 ```
 

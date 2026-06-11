@@ -7,9 +7,9 @@
 ```jsx
 function Form() {
     const [value, setValue] = useState('');
-    
+
     return (
-        <input 
+        <input
             value={value}                          // state가 값을 결정
             onChange={(e) => setValue(e.target.value)}  // 변경 시 state 업데이트
         />
@@ -37,11 +37,11 @@ function Form() {
 ```jsx
 function Form() {
     const inputRef = useRef();
-    
+
     const handleSubmit = () => {
         console.log(inputRef.current.value);  // DOM에서 직접 읽음
     };
-    
+
     return <input ref={inputRef} />;
 }
 ```

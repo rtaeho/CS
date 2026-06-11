@@ -52,4 +52,4 @@ return ResponseEntity.ok().headers(headers).body(data);
 |---|---|---|
 |역할|메타정보|실제 데이터|
 |크기|작음 (텍스트)|클 수 있음|
-|항상 존재|✅|❌|
+|항상 존재|O|X|

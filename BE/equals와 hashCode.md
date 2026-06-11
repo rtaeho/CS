@@ -51,7 +51,7 @@ class Point {
 Map<Point, String> map = new HashMap<>();
 map.put(new Point(1, 2), "A");
 
-map.get(new Point(1, 2));  // null ❌ — hashCode 다르면 다른 버킷
+map.get(new Point(1, 2));  // null X — hashCode 다르면 다른 버킷
 ```
 
 ## equals & hashCode 올바른 구현

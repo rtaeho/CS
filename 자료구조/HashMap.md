@@ -75,9 +75,9 @@ LinkedList → Red-Black Tree로 자동 전환 → O(log n)
 
 |항목|HashMap|HashTable|LinkedHashMap|
 |---|---|---|---|
-|동기화|❌|✅|❌|
-|null 키 허용|✅|❌|✅|
-|순서 보장|❌|❌|삽입 순서 ✅|
+|동기화|X|O|X|
+|null 키 허용|O|X|O|
+|순서 보장|X|X|삽입 순서 O|
 |성능|빠름|느림|약간 느림|
 
 > 멀티스레드 환경에서는 `HashTable` 대신 **`ConcurrentHashMap`** 사용을 권장합니다.

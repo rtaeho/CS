@@ -6,9 +6,9 @@ GET은 **서버의 리소스를 조회**하기 위한 메서드이고, POST는 *
 | ------------- | ------------------------------- | --------------- |
 | **목적**        | 리소스 조회                          | 리소스 생성 / 데이터 처리 |
 | **데이터 전달**    | URL 쿼리스트링                       | 요청 본문(Body)     |
-| **멱등성**       | ✅                               | ❌               |
-| **안전성**       | ✅ (서버 상태 변경 없음)                 | ❌               |
-| **캐싱**        | ✅ (브라우저/CDN 캐싱 가능)              | ❌               |
+| **멱등성**       | O                               | X               |
+| **안전성**       | O (서버 상태 변경 없음)                 | X               |
+| **캐싱**        | O (브라우저/CDN 캐싱 가능)              | X               |
 | **북마크**       | 가능                              | 불가능             |
 | **브라우저 히스토리** | URL에 남음                         | 남지 않음           |
 | **데이터 길이**    | URL 길이 제한 (브라우저마다 다름, 약 2,048자) | 제한 없음           |
@@ -56,7 +56,7 @@ public ResponseEntity<MemberResponse> createMember(
 ## [[캐싱]] 차이
 
 ```
-[GET — 캐싱 가능 ✅]
+[GET — 캐싱 가능 O]
 GET /members/1 → 200 OK + Cache-Control: max-age=3600
 
 브라우저: 1시간 동안 캐시된 응답 사용
@@ -64,7 +64,7 @@ GET /members/1 → 200 OK + Cache-Control: max-age=3600
 
 CDN도 GET 응답을 캐싱하여 전 세계에 분산 가능
 
-[POST — 캐싱 불가 ❌]
+[POST — 캐싱 불가 X]
 POST /members → 매번 새로운 리소스 생성
 → 이전 응답을 재사용할 수 없음
 → 브라우저, CDN 모두 캐싱하지 않음
@@ -84,12 +84,12 @@ POST는 멱등하지 않으므로
 ## [[멱등성]] 차이
 
 ```
-[GET — 멱등 ✅]
+[GET — 멱등 O]
 GET /members/1 → {id: 1, name: "홍길동"}
 GET /members/1 → {id: 1, name: "홍길동"}
 → 몇 번을 호출해도 서버 상태 동일
 
-[POST — 멱등 ❌]
+[POST — 멱등 X]
 POST /members {name: "홍길동"} → 생성 (id: 1)
 POST /members {name: "홍길동"} → 생성 (id: 2)
 → 호출할 때마다 새 리소스 생성 → 서버 상태 변경
@@ -121,16 +121,16 @@ Content-Type: application/json
 
 |노출 위치|GET|POST|
 |---|---|---|
-|**브라우저 주소창**|✅ 노출|❌|
-|**브라우저 히스토리**|✅ 저장|❌|
-|**서버 액세스 로그**|✅ URL에 포함|❌ URL만 기록|
-|**Referer 헤더**|✅ 전달 가능|❌|
-|**북마크**|✅ 쿼리스트링 포함|❌|
+|**브라우저 주소창**|O 노출|X|
+|**브라우저 히스토리**|O 저장|X|
+|**서버 액세스 로그**|O URL에 포함|X URL만 기록|
+|**Referer 헤더**|O 전달 가능|X|
+|**북마크**|O 쿼리스트링 포함|X|
 
 ## 잘못된 사용 예시
 
 ```java
-// ❌ GET으로 리소스 변경 — 안티패턴
+// X GET으로 리소스 변경 — 안티패턴
 @GetMapping("/members/1/delete")
 public ResponseEntity<Void> deleteMember() {
     memberService.delete(1L);
@@ -141,7 +141,7 @@ public ResponseEntity<Void> deleteMember() {
 // 2. 브라우저 프리패치가 실행하면 의도치 않은 삭제
 // 3. GET은 안전해야 한다는 HTTP 스펙 위반
 
-// ✅ 올바른 사용
+// O 올바른 사용
 @DeleteMapping("/members/{id}")
 public ResponseEntity<Void> deleteMember(@PathVariable Long id) {
     memberService.delete(id);
@@ -150,13 +150,13 @@ public ResponseEntity<Void> deleteMember(@PathVariable Long id) {
 ```
 
 ```java
-// ❌ POST로 단순 조회 — 캐싱 불가
+// X POST로 단순 조회 — 캐싱 불가
 @PostMapping("/members/search")
 public ResponseEntity<List<Member>> search(@RequestBody SearchRequest request) {
     return ResponseEntity.ok(memberService.search(request));
 }
 
-// ✅ GET으로 조회 — 캐싱 가능
+// O GET으로 조회 — 캐싱 가능
 @GetMapping("/members")
 public ResponseEntity<List<Member>> search(
         @RequestParam String name,
@@ -183,8 +183,8 @@ public ResponseEntity<List<Member>> search(@RequestBody ComplexSearchRequest req
 GET                              POST
 ├─ 리소스 조회                    ├─ 리소스 생성 / 처리
 ├─ 데이터: URL 쿼리스트링          ├─ 데이터: 요청 본문
-├─ 멱등 ✅ → 재시도 안전          ├─ 멱등 ❌ → 재시도 위험
-├─ 캐싱 ✅ → 성능 유리            ├─ 캐싱 ❌
+├─ 멱등 O → 재시도 안전          ├─ 멱등 X → 재시도 위험
+├─ 캐싱 O → 성능 유리            ├─ 캐싱 X
 ├─ URL 노출 → 민감 정보 부적합     ├─ 본문 전달 → 상대적으로 안전
 └─ 데이터 길이 제한 있음           └─ 데이터 길이 제한 없음
 ```

@@ -30,8 +30,8 @@ list: [10, 20, 30]
 list.get(0);    // 10
 list.get(1);    // 20
 list.get(2);    // 30
-list.get(3);    // ❌ IndexOutOfBoundsException
-list.get(-1);   // ❌ IndexOutOfBoundsException
+list.get(3);    // X IndexOutOfBoundsException
+list.get(-1);   // X IndexOutOfBoundsException
 ```
 
 ```
@@ -50,14 +50,14 @@ list.get(i) → head부터 i번 따라가야 함 → O(i) → 평균 O(n)
 ```
 
 ```java
-// ❌ LinkedList에서 for문 + get 조합 → O(n²)
+// X LinkedList에서 for문 + get 조합 → O(n²)
 LinkedList<Integer> list = new LinkedList<>();
 // ... 데이터 채움
 for (int i = 0; i < list.size(); i++) {
     System.out.println(list.get(i));   // 매번 O(i) → 전체 O(n²)
 }
 
-// ✅ for-each는 내부적으로 Iterator 사용 → O(n)
+// O for-each는 내부적으로 Iterator 사용 → O(n)
 for (int x : list) {
     System.out.println(x);
 }
@@ -113,10 +113,10 @@ for (int i = 1; i < nums.size(); i++) {
 List<Integer> list = new ArrayList<>();
 list.add(null);
 
-// ❌ Integer가 null이면 int로 언박싱 시 NullPointerException
+// X Integer가 null이면 int로 언박싱 시 NullPointerException
 int val = list.get(0);   // NPE
 
-// ✅ Integer로 받아 null 체크
+// O Integer로 받아 null 체크
 Integer val = list.get(0);
 if (val != null) { ... }
 ```

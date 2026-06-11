@@ -2,6 +2,6 @@
 
 과거에는 HTML의 다양한 버전(ex. XHTML 1.1, HTML 4.01 등)이 존재했기 때문에 브라우저가 문서를 올바른 방식으로 해석하기 위해, 적절한 방식으로 Doctype을 직접 지정해야 했습니다. HTML5에 접어들어서는 선언 방식이 단순화되어 `<!DOCTYPE html>`으로 간단하게 선언할 수 있습니다. 이 선언문은 HTML5를 사용하고 있음을 명시합니다.
 
-## [](https://www.maeil-mail.kr/question/119#doctype%EC%9D%84-%EC%84%A0%EC%96%B8%ED%95%98%EC%A7%80-%EC%95%8A%EC%95%84%EB%8F%84-%EB%90%98%EB%82%98%EC%9A%94-)Doctype을 선언하지 않아도 되나요? 🤔
+## [](https://www.maeil-mail.kr/question/119#doctype%EC%9D%84-%EC%84%A0%EC%96%B8%ED%95%98%EC%A7%80-%EC%95%8A%EC%95%84%EB%8F%84-%EB%90%98%EB%82%98%EC%9A%94-)Doctype을 선언하지 않아도 되나요?
 
 아니요, [[Doctype]]을 꼭 선언해 주어야 합니다. 만약 Doctype 선언이 없다면 브라우저는 문서를 **쿼크 모드(quirks mode)** 로 렌더링할 수 있습니다. 쿼크 모드는 오래된 웹사이트와의 호환성을 유지하기 위해 표준과 다른 방식으로 동작합니다. 이는 예상치 못한 동작을 발생시킬 수 있습니다. 따라서 정확하고 일관된 렌더링을 위해 Doctype 선언은 필수적입니다. 오늘날에는 대부분 HTML5를 사용하므로 `<!DOCTYPE html>`을 선언해주면 됩니다.

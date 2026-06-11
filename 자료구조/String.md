@@ -112,18 +112,18 @@ String[] tokens = csv.split(",");
 |---|---|---|---|
 |가변성|불변|가변|가변|
 |`+` 연산|매번 새 객체 생성|append (in-place)|append (in-place)|
-|스레드 안전|✅ (불변이므로)|❌|✅ (synchronized)|
+|스레드 안전|O (불변이므로)|X|O (synchronized)|
 |반복 누적 시간|O(n²)|O(n)|O(n)|
 |언제 쓰는가|짧은 문자열, 비교용|단일 스레드에서 반복 누적|멀티스레드 환경|
 
 > 실무에서는 멀티스레드 환경에서도 문자열 빌더를 지역 변수로 사용하므로 StringBuffer보다 StringBuilder를 압도적으로 많이 씀.
 
 ```java
-// ❌ 반복문에서 String + 사용 → O(n²)
+// X 반복문에서 String + 사용 → O(n²)
 String result = "";
 for (int i = 0; i < n; i++) result += i;
 
-// ✅ StringBuilder 사용 → O(n)
+// O StringBuilder 사용 → O(n)
 StringBuilder sb = new StringBuilder();
 for (int i = 0; i < n; i++) sb.append(i);
 String result = sb.toString();

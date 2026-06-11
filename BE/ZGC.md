@@ -79,9 +79,9 @@ if (ref의 포인터 상태 확인 필요) {
 ```
 힙 크기 100GB 가정
 
-Parallel GC: STW 수십 초 💀
+Parallel GC: STW 수십 초
 G1 GC:       STW 수백 ms
-ZGC:         STW 1ms 이하 ✅ (힙 크기 무관)
+ZGC:         STW 1ms 이하 O (힙 크기 무관)
 ```
 
 ## 장단점

@@ -91,17 +91,17 @@ var exports = module.exports;   // 같은 객체를 참조
 ```
 
 ```javascript
-// ✓ 정상 — 속성 추가는 같은 객체에 반영
+// O 정상 — 속성 추가는 같은 객체에 반영
 exports.name = "Kim";
 exports.age = 25;
 // module.exports === { name: "Kim", age: 25 }
 
-// ✗ 문제 — exports에 새 객체를 할당하면 참조가 끊김
+// X 문제 — exports에 새 객체를 할당하면 참조가 끊김
 exports = { name: "Kim" };
 // module.exports는 여전히 {} (빈 객체)
 // require 결과: {} ← 의도와 다름
 
-// ✓ 새 객체를 할당하려면 module.exports 사용
+// O 새 객체를 할당하려면 module.exports 사용
 module.exports = { name: "Kim" };
 ```
 
@@ -333,9 +333,9 @@ ESM:       add 함수만 포함 (2KB)  ← Tree Shaking
 CommonJS    ES Modules   Node.js ESM   ESM이 표준
 등장        표준 제정     정식 지원      CommonJS는 레거시
 
-브라우저:   ✗            ✓             ✓
-Node.js:   ✓ (기본)     ✓ (지원)       ✓ (권장)
-번들러:     ✓            ✓ (선호)       ✓ (기본)
+브라우저:   X            O             O
+Node.js:   O (기본)     O (지원)       O (권장)
+번들러:     O            O (선호)       O (기본)
 ```
 
 |상황|권장|

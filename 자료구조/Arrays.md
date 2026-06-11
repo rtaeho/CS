@@ -5,8 +5,8 @@
 ```
 Java 배열은 가변 메서드가 거의 없음:
   - int[] arr = new int[5];
-  - arr.sort()  ❌ (없음)
-  - arr.contains() ❌ (없음)
+  - arr.sort()  X (없음)
+  - arr.contains() X (없음)
 
 → Arrays 유틸리티 클래스가 정적 메서드로 보완:
   - Arrays.sort(arr)
@@ -35,8 +35,8 @@ Java 배열은 가변 메서드가 거의 없음:
 ```
 Arrays는 인스턴스를 만들지 않는 유틸리티 클래스:
 
-❌ Arrays a = new Arrays();        // 사용 X
-✅ Arrays.sort(arr);                // 정적 호출
+X Arrays a = new Arrays();        // 사용 X
+O Arrays.sort(arr);                // 정적 호출
 
 → Math, Collections와 같은 패턴 (유틸리티 클래스)
 ```

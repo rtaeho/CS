@@ -52,8 +52,8 @@ map: { apple=1000, banana=null }   ← 변화 없음 (조회만)
 "grape" 키는 아예 없음.
 둘 다 get() 결과가 null이라 구분 불가:
 
-map.get("banana") == null   ✅ true
-map.get("grape")  == null   ✅ true
+map.get("banana") == null   O true
+map.get("grape")  == null   O true
 ```
 
 ```java
@@ -113,14 +113,14 @@ int val = map.getOrDefault(key, 0);
 ```java
 Map<String, Integer> map = new HashMap<>();
 
-// ❌ 위험 — 키가 없으면 null이 int로 언박싱되며 NPE
+// X 위험 — 키가 없으면 null이 int로 언박싱되며 NPE
 int val = map.get("notExist");   // NullPointerException
 
-// ✅ 안전 — Integer로 받아 null 체크
+// O 안전 — Integer로 받아 null 체크
 Integer val = map.get("notExist");
 if (val != null) { ... }
 
-// ✅ 안전 — getOrDefault
+// O 안전 — getOrDefault
 int val = map.getOrDefault("notExist", 0);
 ```
 

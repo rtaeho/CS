@@ -12,13 +12,13 @@
 
 결론적으로, localStorage는 장기 데이터 저장에, sessionStorage는 탭 단위로 데이터를 관리하거나 일시적인 데이터 저장에 적합합니다.
 
-## [](https://www.maeil-mail.kr/question/85#localstorage%EC%99%80-sessionstorage%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%96%88%EC%9D%84%EB%95%8C-%EB%AC%B8%EC%A0%9C%EC%A0%90%EC%9D%80-%EC%97%86%EC%9D%84%EA%B9%8C%EC%9A%94-)localStorage와 sessionStorage를 사용했을때 문제점은 없을까요? 🤔
+## [](https://www.maeil-mail.kr/question/85#localstorage%EC%99%80-sessionstorage%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%96%88%EC%9D%84%EB%95%8C-%EB%AC%B8%EC%A0%9C%EC%A0%90%EC%9D%80-%EC%97%86%EC%9D%84%EA%B9%8C%EC%9A%94-)localStorage와 sessionStorage를 사용했을때 문제점은 없을까요?
 
 [[localStorage]]와 [[sessionStorage]] 둘다 보안 관점에서는 주의가 필요합니다. localStorage에 민감한 데이터를 저장하면 영구적으로 유지되므로 보안 위험이 큽니다.
 
 반대로, sessionStorage는 세션 종료 시 데이터가 자동 삭제되기 때문에 민감한 데이터를 임시 저장하는 데 더 적합하지만 여전히 보안적인 문제는 남아있습니다.
 
-## [](https://www.maeil-mail.kr/question/85#%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%96%88%EC%9D%84%EB%95%8C-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EB%B3%B4%EC%95%88-%EB%AC%B8%EC%A0%9C%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98%EC%9A%94-)스토리지를 사용했을때 발생하는 보안 문제는 어떻게 해결할 수 있나요? 🧐
+## [](https://www.maeil-mail.kr/question/85#%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%96%88%EC%9D%84%EB%95%8C-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EB%B3%B4%EC%95%88-%EB%AC%B8%EC%A0%9C%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98%EC%9A%94-)스토리지를 사용했을때 발생하는 보안 문제는 어떻게 해결할 수 있나요?
 
 브라우저 저장소는 데이터를 암호화하거나 보호할 방법이 기본적으로 제공되지 않기 때문에 민감한 데이터를 직접 저장하지 않는 것이 가장 중요합니다.
 

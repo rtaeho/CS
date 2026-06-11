@@ -22,7 +22,7 @@ const useUserStore = create((set) => ({
     logout: () => set({ name: '', isLogin: false })
 }));
 
-// 컴포넌트에서 사용 (Provider 없이 바로 사용 ✅)
+// 컴포넌트에서 사용 (Provider 없이 바로 사용 O)
 function Profile() {
     const { name, logout } = useUserStore();
     return (
@@ -43,18 +43,18 @@ function Profile() {
     return <div>{name}</div>;
 }
 
-// Context API는 Provider value 전체가 바뀌면 모두 리렌더링 💀
-// Zustand는 구독한 상태만 바뀔 때 리렌더링 ✅
+// Context API는 Provider value 전체가 바뀌면 모두 리렌더링
+// Zustand는 구독한 상태만 바뀔 때 리렌더링 O
 ```
 
 ## Redux vs Zustand
 
 ||Redux (Toolkit)|Zustand|
 |---|---|---|
-|**Provider**|필요|❌ 불필요|
+|**Provider**|필요|X 불필요|
 |**보일러플레이트**|많음|적음|
 |**학습 난이도**|높음|낮음|
-|**DevTools**|✅|✅ (미들웨어)|
+|**DevTools**|O|O (미들웨어)|
 |**미들웨어**|Thunk, Saga|내장 미들웨어|
 |**적합한 규모**|대규모|소~중규모|
 
@@ -66,7 +66,7 @@ const usePostStore = create((set) => ({
     fetchPosts: async () => {
         const res = await fetch('/api/posts');
         const data = await res.json();
-        set({ posts: data });  // 비동기도 간단하게 처리 ✅
+        set({ posts: data });  // 비동기도 간단하게 처리 O
     }
 }));
 ```
@@ -74,10 +74,10 @@ const usePostStore = create((set) => ({
 ## 언제 사용하나?
 
 ```
-✅ 소~중규모 프로젝트
-✅ Redux가 너무 복잡하게 느껴질 때
-✅ 빠른 개발이 필요할 때
-❌ 복잡한 미들웨어 로직이 많은 대규모 프로젝트
+O 소~중규모 프로젝트
+O Redux가 너무 복잡하게 느껴질 때
+O 빠른 개발이 필요할 때
+X 복잡한 미들웨어 로직이 많은 대규모 프로젝트
 ```
 
 > Zustand는 **단순함**이 최대 장점으로, 최근 React 생태계에서 Redux를 대체하는 가장 인기 있는 상태 관리 라이브러리로 자리잡고 있습니다.

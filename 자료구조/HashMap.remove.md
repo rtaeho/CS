@@ -119,19 +119,19 @@ for (String key : consumed) {
 ### 순회 중 안전한 삭제
 
 ```java
-// ❌ for-each 중 map.remove() → ConcurrentModificationException
+// X for-each 중 map.remove() → ConcurrentModificationException
 for (String key : map.keySet()) {
     if (조건) map.remove(key);   // 예외 발생
 }
 
-// ✅ Iterator의 remove()
+// O Iterator의 remove()
 Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator();
 while (it.hasNext()) {
     Map.Entry<String, Integer> e = it.next();
     if (e.getValue() == 0) it.remove();
 }
 
-// ✅ Java 8+ removeIf — 가장 깔끔
+// O Java 8+ removeIf — 가장 깔끔
 map.entrySet().removeIf(e -> e.getValue() == 0);
 ```
 

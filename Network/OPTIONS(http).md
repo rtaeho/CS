@@ -21,12 +21,12 @@ Allow: GET, POST, PUT, DELETE, OPTIONS
 [Same-Origin — 같은 출처]
 프론트엔드: https://example.com
 API 서버:   https://example.com/api
-→ 같은 출처 → 제한 없이 통신 가능 ✅
+→ 같은 출처 → 제한 없이 통신 가능 O
 
 [Cross-Origin — 다른 출처]
 프론트엔드: https://frontend.com
 API 서버:   https://api.backend.com
-→ 다른 출처 → 브라우저가 기본적으로 차단 ❌
+→ 다른 출처 → 브라우저가 기본적으로 차단 X
 ```
 
 브라우저는 보안을 위해 **다른 출처(Origin)로의 요청을 기본적으로 차단**합니다. 이를 허용하기 위한 메커니즘이 **CORS(Cross-Origin Resource Sharing)**이며, 그 핵심에 OPTIONS 프리플라이트 요청이 있습니다.
@@ -43,10 +43,10 @@ Origin = Scheme + Host + Port
 
 |요청 출처|대상|같은 출처?|
 |---|---|---|
-|`https://example.com`|`https://example.com/api`|✅ 같음|
-|`https://example.com`|`http://example.com`|❌ scheme 다름|
-|`https://example.com`|`https://api.example.com`|❌ host 다름|
-|`https://example.com`|`https://example.com:8080`|❌ port 다름|
+|`https://example.com`|`https://example.com/api`|O 같음|
+|`https://example.com`|`http://example.com`|X scheme 다름|
+|`https://example.com`|`https://api.example.com`|X host 다름|
+|`https://example.com`|`https://example.com:8080`|X port 다름|
 
 ## 프리플라이트 요청 ([[Preflight Request]])
 

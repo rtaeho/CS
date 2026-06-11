@@ -59,7 +59,7 @@ HTML 문서 로드
      │
      ├── <div> → DOM 노드 생성
      ├── <p> → DOM 노드 생성
-     ├── <script> → ⚠️ 파싱 중단
+     ├── <script> → 파싱 중단
      │                │
      │                ├── 인라인 → 즉시 실행
      │                └── 외부(src) → 다운로드 → 실행
@@ -82,7 +82,7 @@ HTML 문서 로드
     <script>
         // DOM이 아직 생성되기 전에 실행됨
         document.getElementById("title").textContent = "변경";
-        // ✗ 에러! #title이 아직 없음
+        // X 에러! #title이 아직 없음
     </script>
 </head>
 <body>
@@ -111,7 +111,7 @@ HTML 문서 로드
     <!-- DOM이 모두 생성된 후 실행 -->
     <script>
         document.getElementById("title").textContent = "변경";
-        // ✓ 정상 동작
+        // O 정상 동작
     </script>
 </body>
 </html>

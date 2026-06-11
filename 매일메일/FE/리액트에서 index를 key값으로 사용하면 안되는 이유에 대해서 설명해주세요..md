@@ -6,7 +6,7 @@
 
 다만, 수정/삭제 등의 변경이 절대 발생하지 않는 정적인 리스트라면 index를 사용해도 무방합니다.
 
-## [](https://www.maeil-mail.kr/question/42#key%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%A0-%EA%B3%A0%EC%9C%A0-%EA%B0%92%EC%9D%84-%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EC%97%90%EB%8A%94-%EC%96%B4%EB%96%A4-%EA%B2%83%EB%93%A4%EC%9D%B4-%EC%9E%88%EB%82%98%EC%9A%94-)key로 사용할 고유 값을 생성하는 방법에는 어떤 것들이 있나요? 🤔
+## [](https://www.maeil-mail.kr/question/42#key%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%A0-%EA%B3%A0%EC%9C%A0-%EA%B0%92%EC%9D%84-%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EC%97%90%EB%8A%94-%EC%96%B4%EB%96%A4-%EA%B2%83%EB%93%A4%EC%9D%B4-%EC%9E%88%EB%82%98%EC%9A%94-)key로 사용할 고유 값을 생성하는 방법에는 어떤 것들이 있나요?
 
 key로 사용할 고유한 값을 생성하는 방법에는 여러 가지가 있습니다. 주로 데이터의 유일성을 보장하고 변하지 않는 값을 사용하는 것이 중요합니다.
 

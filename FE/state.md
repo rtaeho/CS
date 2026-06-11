@@ -7,7 +7,7 @@
 ```jsx
 function Counter() {
     const [count, setCount] = useState(0);  // state
-    
+
     return (
         <div>
             <p>{count}</p>
@@ -38,13 +38,13 @@ function Counter() {
 ```jsx
 function Parent() {
     const [name, setName] = useState("철수");  // Parent의 state
-    
+
     return <Child name={name} />;  // Child에게는 props
 }
 
 function Child({ name }) {
     const [age, setAge] = useState(25);  // Child의 state
-    
+
     return <div>{name}은 {age}살</div>;
 }
 ```

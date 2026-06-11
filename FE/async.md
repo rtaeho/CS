@@ -124,17 +124,17 @@ const data = await fetch("/api/users");
 ### await는 async 함수 안에서만 사용 가능
 
 ```javascript
-// ✓ 정상
+// O 정상
 async function foo() {
     const data = await fetchData();
 }
 
-// ✗ 에러 — 일반 함수에서 await 사용 불가
+// X 에러 — 일반 함수에서 await 사용 불가
 function bar() {
     const data = await fetchData();  // SyntaxError
 }
 
-// ✓ 최상위 레벨 await (ES2022, 모듈에서만)
+// O 최상위 레벨 await (ES2022, 모듈에서만)
 const data = await fetchData();
 ```
 
@@ -271,13 +271,13 @@ async function resilient() {
 ### 1. 불필요한 순차 실행
 
 ```javascript
-// ✗ 서로 의존성 없는데 순차 실행
+// X 서로 의존성 없는데 순차 실행
 async function bad() {
     const user = await getUser();
     const config = await getConfig();   // user와 무관한데 기다림
 }
 
-// ✓ 병렬 실행
+// O 병렬 실행
 async function good() {
     const [user, config] = await Promise.all([
         getUser(),
@@ -289,31 +289,31 @@ async function good() {
 ### 2. forEach에서 await 무시
 
 ```javascript
-// ✗ await가 작동하지 않음
+// X await가 작동하지 않음
 const ids = [1, 2, 3];
 ids.forEach(async (id) => {
     await processItem(id);   // forEach는 await를 기다리지 않음
 });
 
-// ✓ for...of 사용 (순차)
+// O for...of 사용 (순차)
 for (const id of ids) {
     await processItem(id);
 }
 
-// ✓ Promise.all 사용 (병렬)
+// O Promise.all 사용 (병렬)
 await Promise.all(ids.map(id => processItem(id)));
 ```
 
 ### 3. await 빠뜨리기
 
 ```javascript
-// ✗ await 빠뜨림 — data는 Promise 객체
+// X await 빠뜨림 — data는 Promise 객체
 async function bad() {
     const data = fetch("/api");        // Promise 객체가 담김
     console.log(data);                  // Promise { <pending> }
 }
 
-// ✓ await로 결과값 받기
+// O await로 결과값 받기
 async function good() {
     const response = await fetch("/api");
     const data = await response.json();

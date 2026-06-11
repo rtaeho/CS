@@ -76,10 +76,10 @@ String jpql4 = "SELECT u FROM User u JOIN u.team t WHERE t.name = '개발팀'";
 
 ```java
 public interface UserRepository extends JpaRepository<User, Long> {
-    
+
     // 메서드 이름으로 자동 생성
     List<User> findByName(String name);
-    
+
     // 직접 JPQL 작성도 가능
     @Query("SELECT u FROM User u WHERE u.age >= :age")
     List<User> findByAgeGreaterThan(@Param("age") int age);

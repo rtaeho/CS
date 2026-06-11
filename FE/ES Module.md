@@ -156,10 +156,10 @@ import { format } from "./utils.js";
 
 ```javascript
 // CommonJS — 런타임에 결정 (동적)
-const mod = require(condition ? "./a" : "./b");   // ✓ 가능
+const mod = require(condition ? "./a" : "./b");   // O 가능
 
 // ESM — 파싱 타임에 결정 (정적)
-import mod from condition ? "./a" : "./b";        // ✗ 불가능
+import mod from condition ? "./a" : "./b";        // X 불가능
 // import 구문은 파일 최상위에, 정적 문자열만 가능
 ```
 
@@ -271,7 +271,7 @@ Tree Shaking 비유:
      utils.js (나무)
       ╱  │  ╲  ╲
    add sub mul div
-    ✓   ✗   ✗   ✗
+    O   X   X   X
     │
   번들에 포함     나머지는 제거 (dead code elimination)
 ```

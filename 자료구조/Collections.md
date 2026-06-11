@@ -4,9 +4,9 @@
 
 ```
 List, Set 등은 자체 메서드로 제공되지 않는 작업이 많음:
-  - list.sort() ✅ (Java 8+)
-  - list.shuffle() ❌ (없음)
-  - list.max() ❌ (없음)
+  - list.sort() O (Java 8+)
+  - list.shuffle() X (없음)
+  - list.max() X (없음)
 
 → Collections 유틸리티 클래스가 정적 메서드로 보완:
   - Collections.shuffle(list)
@@ -48,8 +48,8 @@ List, Set 등은 자체 메서드로 제공되지 않는 작업이 많음:
 ```
 Collections는 인스턴스를 만들지 않는 유틸리티 클래스:
 
-❌ Collections c = new Collections();   // 사용 X
-✅ Collections.sort(list);              // 정적 호출
+X Collections c = new Collections();   // 사용 X
+O Collections.sort(list);              // 정적 호출
 
 → Math, Arrays와 같은 패턴
 ```

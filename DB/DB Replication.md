@@ -207,7 +207,7 @@ Slave:  INSERT INTO orders VALUES (1001, ...)  ← 10:00:02
   Master (R/W) → Slave1, Slave2, Slave3
 
 Master 다운:
-  Master (✕) → Slave1, Slave2, Slave3
+  Master (X) → Slave1, Slave2, Slave3
 
 Failover 실행:
   ┌──────────────────────────────────┐

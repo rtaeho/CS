@@ -102,11 +102,11 @@ grouped: { even=[2, 4] }
 > - computeIfAbsent는 없을 때만 람다 실행 → 효율적
 
 ```java
-// ❌ putIfAbsent — 매번 ArrayList 객체 생성
+// X putIfAbsent — 매번 ArrayList 객체 생성
 map.putIfAbsent(key, new ArrayList<>());
 map.get(key).add(item);
 
-// ✅ computeIfAbsent — 없을 때만 생성 + 그 값 바로 반환
+// O computeIfAbsent — 없을 때만 생성 + 그 값 바로 반환
 map.computeIfAbsent(key, k -> new ArrayList<>()).add(item);
 ```
 

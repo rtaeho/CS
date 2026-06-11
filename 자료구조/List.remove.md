@@ -56,7 +56,7 @@ boolean ok = list.remove(Integer.valueOf(20));
 list: [10, 30]   ← 마지막 20은 그대로 (한 번만 삭제)
 ```
 
-## ❌ Integer 삭제 함정
+## X Integer 삭제 함정
 
 ```java
 List<Integer> list = new ArrayList<>(Arrays.asList(10, 20, 30));
@@ -93,28 +93,28 @@ int top = stack.remove(stack.size() - 1);   // 3 (LIFO)
 ### 순회 중 안전한 삭제
 
 ```java
-// ❌ for-each 중 list.remove → ConcurrentModificationException
+// X for-each 중 list.remove → ConcurrentModificationException
 for (Integer n : list) {
     if (n == 0) list.remove(n);   // 예외!
 }
 
-// ❌ 일반 for문 + remove도 인덱스 꼬임
+// X 일반 for문 + remove도 인덱스 꼬임
 for (int i = 0; i < list.size(); i++) {
     if (list.get(i) == 0) list.remove(i);   // i 다음에 i+1 건너뜀
 }
 
-// ✅ 뒤에서부터 순회
+// O 뒤에서부터 순회
 for (int i = list.size() - 1; i >= 0; i--) {
     if (list.get(i) == 0) list.remove(i);
 }
 
-// ✅ Iterator의 remove
+// O Iterator의 remove
 Iterator<Integer> it = list.iterator();
 while (it.hasNext()) {
     if (it.next() == 0) it.remove();
 }
 
-// ✅ Java 8+ removeIf — 가장 깔끔
+// O Java 8+ removeIf — 가장 깔끔
 list.removeIf(n -> n == 0);
 ```
 

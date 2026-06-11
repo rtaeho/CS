@@ -60,8 +60,8 @@ Stream<Integer> sorted = list.stream().sorted();
 |항목|`Stream.sorted`|`list.sort` / `Collections.sort`|
 |---|---|---|
 |반환|새 Stream|void|
-|원본 변경|❌ 보존|✅ 변경|
-|체이닝|✅ filter, map과 결합 가능|❌ 단독 호출|
+|원본 변경|X 보존|O 변경|
+|체이닝|O filter, map과 결합 가능|X 단독 호출|
 |비용|새 객체 생성 (약간 느림)|in-place|
 
 ## 자주 쓰는 패턴
@@ -118,10 +118,10 @@ students.stream()
 ```java
 int[] arr = {3, 1, 4};
 
-// ❌ IntStream.sorted()는 Comparator 못 받음
+// X IntStream.sorted()는 Comparator 못 받음
 Arrays.stream(arr).sorted(Comparator.reverseOrder());   // 컴파일 에러
 
-// ✅ boxed로 Stream<Integer>로 변환
+// O boxed로 Stream<Integer>로 변환
 int[] sorted = Arrays.stream(arr)
     .boxed()
     .sorted(Comparator.reverseOrder())
@@ -149,11 +149,11 @@ list.stream()
 
 |방법|대상|반환|in-place|
 |---|---|---|---|
-|[[Arrays.sort]]|배열|void|✅|
-|[[Collections.sort]]|List|void|✅|
-|[[List.sort]]|List|void|✅|
-|`Stream.sorted`|모든 컬렉션|새 Stream|❌|
-|[[Arrays.parallelSort]]|배열|void|✅|
+|[[Arrays.sort]]|배열|void|O|
+|[[Collections.sort]]|List|void|O|
+|[[List.sort]]|List|void|O|
+|`Stream.sorted`|모든 컬렉션|새 Stream|X|
+|[[Arrays.parallelSort]]|배열|void|O|
 
 ## 시간복잡도
 

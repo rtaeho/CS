@@ -20,7 +20,7 @@ public class EmailService {
 @Service
 public class UserService {
     private final EmailService emailService;
-    
+
     @Autowired
     public UserService(EmailService emailService) {
         this.emailService = emailService;

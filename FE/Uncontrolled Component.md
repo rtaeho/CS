@@ -7,11 +7,11 @@
 ```jsx
 function Form() {
     const inputRef = useRef();
-    
+
     const handleSubmit = () => {
         console.log(inputRef.current.value);  // DOM에서 직접 읽음
     };
-    
+
     return (
         <div>
             <input ref={inputRef} defaultValue="초기값" />

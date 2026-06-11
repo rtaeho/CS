@@ -13,7 +13,7 @@ fetch('https://bank.com/transfer', {
 
 → 서버가 DELETE를 처리한 후 응답
 → 브라우저가 CORS 에러로 응답을 차단하더라도
-→ 서버에서는 이미 삭제가 실행됨 ❌
+→ 서버에서는 이미 삭제가 실행됨 X
 
 → "위험한 요청"은 보내기 전에 먼저 확인이 필요
 → 이것이 Preflight Request의 역할
@@ -25,7 +25,7 @@ fetch('https://bank.com/transfer', {
 1. 브라우저: OPTIONS로 "DELETE 보내도 돼?" 사전 확인
 2. 서버: "안 돼" 또는 "돼" 응답
 3-a. 허용: 브라우저가 본 요청(DELETE) 전송
-3-b. 거부: 브라우저가 본 요청을 보내지 않음 ✅
+3-b. 거부: 브라우저가 본 요청을 보내지 않음 O
 
 → 서버에서 실행되기 전에 차단 가능
 ```
@@ -86,12 +86,12 @@ fetch('https://bank.com/transfer', {
 ```
 
 ```javascript
-// ✅ 단순 요청 — Preflight 없음
+// O 단순 요청 — Preflight 없음
 fetch('https://api.example.com/data', {
     method: 'GET'
 });
 
-// ✅ 단순 요청 — Preflight 없음
+// O 단순 요청 — Preflight 없음
 fetch('https://api.example.com/form', {
     method: 'POST',
     headers: {
@@ -104,7 +104,7 @@ fetch('https://api.example.com/form', {
 ### 비단순 요청 — Preflight 발생
 
 ```javascript
-// ❌ Content-Type: application/json → Preflight 발생
+// X Content-Type: application/json → Preflight 발생
 fetch('https://api.example.com/products', {
     method: 'POST',
     headers: {
@@ -113,7 +113,7 @@ fetch('https://api.example.com/products', {
     body: JSON.stringify({ name: '이어폰' })
 });
 
-// ❌ Authorization 헤더 → Preflight 발생
+// X Authorization 헤더 → Preflight 발생
 fetch('https://api.example.com/products', {
     method: 'GET',
     headers: {
@@ -121,7 +121,7 @@ fetch('https://api.example.com/products', {
     }
 });
 
-// ❌ PUT, DELETE 메서드 → Preflight 발생
+// X PUT, DELETE 메서드 → Preflight 발생
 fetch('https://api.example.com/products/1', {
     method: 'DELETE'  // ← 단순 요청 메서드가 아님
 });
@@ -138,9 +138,9 @@ fetch('https://api.example.com/products/1', {
 ```
 [실무에서는 거의 항상 Preflight 발생]
 
-REST API:     Content-Type: application/json → Preflight ✅
-JWT 인증:     Authorization: Bearer ... → Preflight ✅
-PUT/DELETE:   RESTful 메서드 사용 → Preflight ✅
+REST API:     Content-Type: application/json → Preflight O
+JWT 인증:     Authorization: Bearer ... → Preflight O
+PUT/DELETE:   RESTful 메서드 사용 → Preflight O
 
 → 단순 요청 조건이 매우 제한적이므로
 → 실무의 API 호출은 대부분 Preflight 발생
@@ -263,7 +263,7 @@ DELETE /api/products/1 → OPTIONS + DELETE = 2번
 브라우저 ──POST────→ 서버
 
 2번째 요청 (1시간 이내):
-브라우저 ──POST────→ 서버 (OPTIONS 생략 ✅)
+브라우저 ──POST────→ 서버 (OPTIONS 생략 O)
 
 1시간 후 요청:
 브라우저 ──OPTIONS──→ 서버 (캐시 만료 → 다시 확인)

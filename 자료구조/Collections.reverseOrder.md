@@ -121,7 +121,7 @@ words.sort(Collections.reverseOrder());
 ### 배열 내림차순 (박싱 필수)
 
 ```java
-Integer[] arr = {3, 1, 4, 1, 5};   // ⚠️ int[]가 아니라 Integer[]
+Integer[] arr = {3, 1, 4, 1, 5};   // int[]가 아니라 Integer[]
 
 Arrays.sort(arr, Collections.reverseOrder());
 // [5, 4, 3, 1, 1]
@@ -148,13 +148,13 @@ list.sort(
 // reverseOrder()로는 다중 기준 안 됨 — reversed() 또는 직접 비교자 작성
 ```
 
-## ⚠️ 자주 하는 실수
+## 자주 하는 실수
 
 ### 원시 타입 배열에 못 씀
 
 ```java
 int[] arr = {3, 1, 4};
-Arrays.sort(arr, Collections.reverseOrder());   // ❌ 컴파일 에러
+Arrays.sort(arr, Collections.reverseOrder());   // X 컴파일 에러
 ```
 
 > `int[]`에는 `Comparator` 적용 불가. `Integer[]`로 박싱하거나 Stream 사용.
@@ -165,7 +165,7 @@ Arrays.sort(arr, Collections.reverseOrder());   // ❌ 컴파일 에러
 class Job { int priority; }   // Comparable 미구현
 
 PriorityQueue<Job> pq = new PriorityQueue<>(Collections.reverseOrder());
-pq.offer(new Job());   // ❌ ClassCastException (런타임)
+pq.offer(new Job());   // X ClassCastException (런타임)
 ```
 
 > 객체 클래스에 `implements Comparable<T>`가 없으면 `reverseOrder` 사용 불가.
@@ -174,10 +174,10 @@ pq.offer(new Job());   // ❌ ClassCastException (런타임)
 ### `b - a` 오버플로의 안전한 대안
 
 ```java
-// ❌ Integer.MIN_VALUE 근처에서 오버플로
+// X Integer.MIN_VALUE 근처에서 오버플로
 new PriorityQueue<>((a, b) -> b - a);
 
-// ✅ 안전
+// O 안전
 new PriorityQueue<>(Collections.reverseOrder());
 new PriorityQueue<>(Comparator.reverseOrder());
 ```
@@ -192,7 +192,7 @@ new PriorityQueue<>(Comparator.reverseOrder());
 |`Collections.reverseOrder(Comparator<T>)`|주어진 비교자의 역|
 |`Comparator.reverseOrder()`|동일 (Java 8+)|
 |`Comparator.naturalOrder()`|자연 순서 (기본)|
-|`(a, b) -> b - a`|❌ 비추천 (오버플로 위험)|
+|`(a, b) -> b - a`|X 비추천 (오버플로 위험)|
 
 ### `Collections.reverseOrder(Comparator)` — 비교자 뒤집기
 

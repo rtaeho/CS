@@ -13,10 +13,10 @@ https://example.com:443
 
 |요청 출처|대상|동일 출처?|이유|
 |---|---|---|---|
-|`https://example.com`|`https://example.com/api`|✅|경로만 다름|
-|`https://example.com`|`http://example.com`|❌|scheme 다름|
-|`https://example.com`|`https://api.example.com`|❌|host 다름|
-|`https://example.com`|`https://example.com:8080`|❌|port 다름|
+|`https://example.com`|`https://example.com/api`|O|경로만 다름|
+|`https://example.com`|`http://example.com`|X|scheme 다름|
+|`https://example.com`|`https://api.example.com`|X|host 다름|
+|`https://example.com`|`https://example.com:8080`|X|port 다름|
 
 ## SOP가 없다면 어떤 일이 벌어지나
 
@@ -34,11 +34,11 @@ https://example.com:443
    });
 
 4. 브라우저가 bank.com 쿠키를 자동으로 포함하여 요청 전송
-5. bank.com 서버: 정상 요청으로 판단 → 송금 실행 ❌
+5. bank.com 서버: 정상 요청으로 판단 → 송금 실행 X
 
 [SOP가 있는 세상]
 3번에서 브라우저가 차단
-→ evil.com(다른 출처)에서 bank.com으로의 요청 금지 ✅
+→ evil.com(다른 출처)에서 bank.com으로의 요청 금지 O
 ```
 
 ## 그런데 왜 CORS가 필요한가
@@ -78,7 +78,7 @@ Origin: https://frontend.com
 HTTP/1.1 200 OK
 Access-Control-Allow-Origin: https://frontend.com  ← 이 출처 허용
 
-브라우저: Allow-Origin 확인 → 응답을 JavaScript에 전달 ✅
+브라우저: Allow-Origin 확인 → 응답을 JavaScript에 전달 O
 ```
 
 ```
@@ -86,7 +86,7 @@ Access-Control-Allow-Origin: https://frontend.com  ← 이 출처 허용
 HTTP/1.1 200 OK
 (Access-Control-Allow-Origin 헤더 없음)
 
-브라우저: 허용 안 됨 → JavaScript에 응답 전달 차단 ❌
+브라우저: 허용 안 됨 → JavaScript에 응답 전달 차단 X
 → 서버는 정상 처리했지만, 브라우저가 응답을 숨김
 ```
 
@@ -152,7 +152,7 @@ Access-Control-Allow-Credentials: true              // 필수
 ```
 [주의]
 credentials: "include" 사용 시
-Access-Control-Allow-Origin: * → 불가 ❌
+Access-Control-Allow-Origin: * → 불가 X
 → 반드시 정확한 출처를 명시해야 함
 ```
 

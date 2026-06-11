@@ -33,11 +33,11 @@ List<User> users = entityManager
 
 ```java
 public interface UserRepository extends JpaRepository<User, Long> {
-    
+
     // JPQL
     @Query("SELECT u FROM User u WHERE u.name = :name")
     List<User> findByNameJPQL(@Param("name") String name);
-    
+
     // Native Query
     @Query(value = "SELECT * FROM users WHERE name = :name", nativeQuery = true)
     List<User> findByNameNative(@Param("name") String name);
@@ -55,7 +55,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 ```java
 // 예: MySQL 전용 함수 사용
-@Query(value = "SELECT * FROM users WHERE MATCH(name) AGAINST(:keyword)", 
+@Query(value = "SELECT * FROM users WHERE MATCH(name) AGAINST(:keyword)",
        nativeQuery = true)
 List<User> fullTextSearch(@Param("keyword") String keyword);
 ```
@@ -64,9 +64,9 @@ List<User> fullTextSearch(@Param("keyword") String keyword);
 
 |구분|JPQL|Native Query|
 |---|---|---|
-|DB 독립성|⭕ 유지됨|❌ DB 종속|
+|DB 독립성|유지됨|X DB 종속|
 |엔티티 매핑|자동|직접 설정 필요할 수 있음|
-|DB 고유 기능|❌ 제한적|⭕ 모두 사용 가능|
+|DB 고유 기능|X 제한적|모두 사용 가능|
 |성능 최적화|제한적|세밀한 튜닝 가능|
 
 ## 한줄 요약

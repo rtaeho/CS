@@ -21,7 +21,7 @@
     │                          │
     │  ... 응답 없음 ...        │
     │                          │
-    ✕ Connection Timeout 발생   │
+    X Connection Timeout 발생   │
 
 [Read Timeout]
 클라이언트                     서버
@@ -33,7 +33,7 @@
     │                          │  (서버가 처리 중...)
     │  ... 응답 없음 ...        │
     │                          │
-    ✕ Read Timeout 발생         │
+    X Read Timeout 발생         │
 ```
 
 ## Connection Timeout이 발생하는 원인
@@ -51,7 +51,7 @@
 
 ```
 [방화벽이 패킷을 드롭하는 경우 — Timeout 발생]
-클라이언트 ── SYN ──→ 방화벽(DROP) ──✕ 서버
+클라이언트 ── SYN ──→ 방화벽(DROP) ──X 서버
              응답 없음 → 재전송 → 재전송 → Timeout
 
 [서버 포트가 닫혀 있는 경우 — 즉시 실패]
@@ -143,7 +143,7 @@ try {
 |**CDN / 정적 리소스**|1~2초|3~5초|
 
 ```
-⚠ Timeout을 설정하지 않으면?
+Timeout을 설정하지 않으면?
 
 클라이언트 → 서버 연결 시도 (서버 다운)
     │

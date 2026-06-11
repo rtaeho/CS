@@ -156,7 +156,7 @@ public CompletableFuture<String> process() {
 }
 ```
 
-## ⚠️ 주의사항
+## 주의사항
 
 |주의점|설명|
 |---|---|

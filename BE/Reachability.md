@@ -4,8 +4,8 @@
 
 ```
 GC Root에서 참조 그래프 탐색 시작
-→ 도달 가능(Reachable)   → 살아있는 객체 ✅
-→ 도달 불가(Unreachable) → 수거 대상 💀
+→ 도달 가능(Reachable)   → 살아있는 객체 O
+→ 도달 불가(Unreachable) → 수거 대상
 ```
 
 ## GC Root 종류
@@ -24,28 +24,28 @@ A → B → A (순환 참조)
 
 GC Root → A 도달 불가
 GC Root → B 도달 불가
-→ 순환 참조여도 수거 가능 ✅
+→ 순환 참조여도 수거 가능 O
 ```
 
 ## 탐색 과정
 
 ```
 GC Root
-├── Object A (Reachable ✅)
-│   └── Object B (Reachable ✅)
-│       └── Object C (Reachable ✅)
-├── Object D (Reachable ✅)
+├── Object A (Reachable O)
+│   └── Object B (Reachable O)
+│       └── Object C (Reachable O)
+├── Object D (Reachable O)
 └── (끊김)
-    Object E (Unreachable 💀) → 수거
-    Object F (Unreachable 💀) → 수거
-    Object G ↔ Object H (순환참조, Unreachable 💀) → 수거
+    Object E (Unreachable) → 수거
+    Object F (Unreachable) → 수거
+    Object G ↔ Object H (순환참조, Unreachable) → 수거
 ```
 
 ## Reference Counting과 비교
 
 ||Reference Counting|Reachability|
 |---|---|---|
-|**순환 참조**|해결 불가 💀|해결 가능 ✅|
+|**순환 참조**|해결 불가|해결 가능 O|
 |**해제 시점**|즉시|GC 실행 시|
 |**STW**|없음|발생|
 |**사용 언어**|Python, Swift|Java, C#|

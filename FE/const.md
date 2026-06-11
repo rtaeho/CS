@@ -58,8 +58,8 @@ user.name = "김철수";  // 무시됨 (strict mode에서는 에러)
 console.log(user.name);  // "홍길동"
 
 // 중첩 객체는 얕은 동결
-const data = Object.freeze({ 
-  user: { name: "홍길동" } 
+const data = Object.freeze({
+  user: { name: "홍길동" }
 });
 data.user.name = "김철수";  // 변경됨! (내부 객체는 동결 안 됨)
 ```

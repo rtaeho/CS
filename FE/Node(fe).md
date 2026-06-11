@@ -67,7 +67,7 @@ div.nextElementSibling // 다음 형제 Element
 const element = <div>내용</div>;
 // → Virtual DOM Node 생성
 // → 실제 DOM과 비교(diffing)
-// → 변경된 부분만 실제 DOM에 반영 ✅
+// → 변경된 부분만 실제 DOM에 반영 O
 ```
 
 > FE에서 Node는 **DOM 조작의 기본 단위**로, JavaScript로 웹 페이지를 동적으로 변경할 때 Node를 추가/삭제/수정하는 방식으로 동작합니다.

@@ -130,10 +130,10 @@ map.putIfAbsent(key, new ArrayList<>());
 ## 주의: putIfAbsent의 객체 생성 낭비
 
 ```java
-// ❌ 매번 ArrayList 객체를 생성하지만, 키가 있으면 버려짐 (GC 부담)
+// X 매번 ArrayList 객체를 생성하지만, 키가 있으면 버려짐 (GC 부담)
 map.putIfAbsent(key, new ArrayList<>());
 
-// ✅ [[HashMap.compute]]의 computeIfAbsent — 없을 때만 람다 실행
+// O [[HashMap.compute]]의 computeIfAbsent — 없을 때만 람다 실행
 map.computeIfAbsent(key, k -> new ArrayList<>()).add(item);
 ```
 

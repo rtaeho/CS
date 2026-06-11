@@ -8,7 +8,7 @@ CSRF를 예방하기 위해 브라우저는 동일 출처 정책(SOP, same-origi
 
 하지만, SOP는 한계가 있습니다. 현대의 웹 애플리케이션은 다른 출처의 리소스를 사용하는 경우가 많기 때문입니다. 따라서, SOP를 확장한 CORS가 필요합니다.
 
-## [](https://www.maeil-mail.kr/question/96#cors%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%A0%EA%B9%8C%EC%9A%94-)CORS는 어떻게 작동할까요? 🤔
+## [](https://www.maeil-mail.kr/question/96#cors%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%A0%EA%B9%8C%EC%9A%94-)CORS는 어떻게 작동할까요?
 
 브라우저가 요청 메시지에 Origin 헤더와 응답 메시지의 Access-Control-Allow-Origin 헤더를 비교해서 CORS를 위반하는지 확인합니다. 이때, Origin에는 현재 요청하는 클라이언트의 출처(프로토콜, 도메인, 포트)가, Access-Control-Allow-Origin은 리소스 요청을 허용하는 출처가 작성됩니다.
 

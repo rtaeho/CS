@@ -38,28 +38,28 @@ ES5 (2009) ──── 6년 공백 ──── ES6 (2015) ── ES7 ── ES
 ### 1. let / const (블록 스코프)
 
 ```javascript
-// ❌ var — 함수 스코프, 호이스팅 문제
+// X var — 함수 스코프, 호이스팅 문제
 var x = 1;
 if (true) {
     var x = 2;  // 같은 x를 덮어씀
 }
 console.log(x);  // 2 (의도치 않은 변경)
 
-// ✅ let — 블록 스코프, 재할당 가능
+// O let — 블록 스코프, 재할당 가능
 let y = 1;
 if (true) {
     let y = 2;  // 블록 내부의 별도 y
 }
 console.log(y);  // 1 (외부 y 유지)
 
-// ✅ const — 블록 스코프, 재할당 불가
+// O const — 블록 스코프, 재할당 불가
 const PI = 3.14;
-PI = 3.15;  // ❌ TypeError
+PI = 3.15;  // X TypeError
 
 // 단, 객체의 내부 속성은 변경 가능
 const user = { name: "홍길동" };
-user.name = "김철수";  // ✅ 가능
-user = {};             // ❌ 재할당 불가
+user.name = "김철수";  // O 가능
+user = {};             // X 재할당 불가
 ```
 
 |구분|var|let|const|
@@ -74,7 +74,7 @@ user = {};             // ❌ 재할당 불가
 console.log(a);  // undefined (var는 호이스팅 시 undefined 초기화)
 var a = 1;
 
-console.log(b);  // ❌ ReferenceError (TDZ — Temporal Dead Zone)
+console.log(b);  // X ReferenceError (TDZ — Temporal Dead Zone)
 let b = 2;
 ```
 
@@ -102,7 +102,7 @@ const double = x => x * 2;
 화살표 함수의 핵심 차이는 **this 바인딩**입니다.
 
 ```javascript
-// ❌ 일반 함수 — this가 호출 방식에 따라 변함
+// X 일반 함수 — this가 호출 방식에 따라 변함
 const obj = {
     name: "홍길동",
     greet: function() {
@@ -112,7 +112,7 @@ const obj = {
     }
 };
 
-// ✅ 화살표 함수 — this가 선언된 위치의 this를 그대로 사용
+// O 화살표 함수 — this가 선언된 위치의 this를 그대로 사용
 const obj2 = {
     name: "홍길동",
     greet: function() {

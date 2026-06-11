@@ -1,12 +1,12 @@
 [[JPA]]에서 ID를 생성하기 위해서는 직접 할당과 자동 할당을 사용할 수 있습니다. 직접 할당은 `@Id`[[어노테이션]]만을 사용하여 Id값을 직접 할당하는 방식입니다. 반면, 자동 할당은 `@Id`와 `@GeneratedValue`를 함께 사용해서 원하는 [[키 생성 전략]]을 선택하는 방식입니다. `@GeneratedValue`의 stretagy 옵션을 통해 생성 전략을 설정할 수 있는데, 여기에 올 수 있는 값인 GenerationType는 다음과 같습니다.
 
 ```java
-@Target({ElementType.METHOD, ElementType.FIELD})  
-@Retention(RetentionPolicy.RUNTIME)  
-public @interface GeneratedValue {  
-    GenerationType strategy() default GenerationType.AUTO;  
-  
-    String generator() default "";  
+@Target({ElementType.METHOD, ElementType.FIELD})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface GeneratedValue {
+    GenerationType strategy() default GenerationType.AUTO;
+
+    String generator() default "";
 }
 
 public enum GenerationType { 
@@ -17,7 +17,7 @@ public enum GenerationType { 
 }
 ```
 
-## [](https://www.maeil-mail.kr/question/69#%EC%9E%90%EB%8F%99-%EC%83%9D%EC%84%B1-%EB%B0%A9%EC%8B%9D%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%A0-%EB%95%8C-%EA%B0%81-%EC%A0%84%EB%9E%B5%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94-)자동 생성 방식을 사용할 때 각 전략에 대해서 설명해주세요. 🤔
+## [](https://www.maeil-mail.kr/question/69#%EC%9E%90%EB%8F%99-%EC%83%9D%EC%84%B1-%EB%B0%A9%EC%8B%9D%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%A0-%EB%95%8C-%EA%B0%81-%EC%A0%84%EB%9E%B5%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%84%A4%EB%AA%85%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94-)자동 생성 방식을 사용할 때 각 전략에 대해서 설명해주세요.
 
 **IDENTITY 전략**은 기본 키 생성을 DB에 위임하는 전략입니다. 주로 MySQL, PostgreSQL, SQL Server, DB2에서 사용됩니다. 해당 전략을 사용하면 엔티티를 생성할 때 쓰기 지연이 적용되지 않습니다. 왜냐하면 JPA에서 엔티티를 영속하기 위해선 식별자가 필요한데, IDENTITY 전략에서는 이 식별자가 DB에 저장되어야 할당되기 때문입니다. 따라서 엔티티를 생성할 때 즉시 INSERT 쿼리가 실행되어야 합니다. 이때 하이버네이트를 사용하는 경우에는 INSERT 쿼리의 결과를 다시 조회하지 않기 위해서 내부적으로 Statement.getGeneratedKeys를 사용합니다. 추가로 IDENTITY 전략을 사용하면 배치 인서트가 불가하다는 점을 주의해야합니다.
 

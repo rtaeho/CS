@@ -104,15 +104,15 @@ for (int i = 1; i < list.size(); i++) {
 ### 변경 불가능한 List
 
 ```java
-// ❌ List.of() 는 진짜 불변 — 정렬 불가
+// X List.of() 는 진짜 불변 — 정렬 불가
 List<Integer> list = List.of(3, 1, 2);
 Collections.sort(list);   // UnsupportedOperationException
 
-// ❌ Arrays.asList()는 고정 크기지만 정렬은 가능
+// X Arrays.asList()는 고정 크기지만 정렬은 가능
 List<Integer> list = Arrays.asList(3, 1, 2);
-Collections.sort(list);   // ✅ 동작함
+Collections.sort(list);   // O 동작함
 
-// ✅ 안전: 새 ArrayList로 감싸기
+// O 안전: 새 ArrayList로 감싸기
 List<Integer> list = new ArrayList<>(List.of(3, 1, 2));
 Collections.sort(list);
 ```
@@ -120,10 +120,10 @@ Collections.sort(list);
 ### `b - a` 오버플로
 
 ```java
-// ❌ a=Integer.MIN_VALUE, b=Integer.MAX_VALUE면 오버플로
+// X a=Integer.MIN_VALUE, b=Integer.MAX_VALUE면 오버플로
 Collections.sort(list, (a, b) -> a - b);
 
-// ✅ 안전
+// O 안전
 Collections.sort(list, (a, b) -> Integer.compare(a, b));
 Collections.sort(list, Comparator.naturalOrder());
 ```
@@ -132,11 +132,11 @@ Collections.sort(list, Comparator.naturalOrder());
 
 |방법|대상|반환|in-place|
 |---|---|---|---|
-|[[Arrays.sort]]|배열|void|✅|
-|`Collections.sort`|List|void|✅|
-|[[List.sort]]|List|void|✅|
-|[[Stream.sorted]]|모든 컬렉션|새 Stream|❌|
-|[[Arrays.parallelSort]]|배열|void|✅|
+|[[Arrays.sort]]|배열|void|O|
+|`Collections.sort`|List|void|O|
+|[[List.sort]]|List|void|O|
+|[[Stream.sorted]]|모든 컬렉션|새 Stream|X|
+|[[Arrays.parallelSort]]|배열|void|O|
 
 ## 시간복잡도
 

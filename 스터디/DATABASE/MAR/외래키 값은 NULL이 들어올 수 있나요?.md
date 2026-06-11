@@ -11,8 +11,8 @@ CREATE TABLE orders (
 );
 
 -- 비회원 주문 → user_id = NULL 허용
-INSERT INTO orders VALUES (1, NULL, '상품A');  -- ✅ 정상 삽입
-INSERT INTO orders VALUES (2, 999, '상품B');   -- ❌ FK 제약 위반 (user_id=999 없음)
+INSERT INTO orders VALUES (1, NULL, '상품A');  -- O 정상 삽입
+INSERT INTO orders VALUES (2, 999, '상품B');   -- X FK 제약 위반 (user_id=999 없음)
 ```
 
 > NULL은 **"참조 대상 없음"** 을 의미하며, FK 제약 조건 검사 자체를 건너뜁니다.
@@ -45,17 +45,17 @@ private User user;
 SELECT o.order_id, u.email
 FROM orders o
 INNER JOIN user u ON o.user_id = u.id;
--- user_id가 NULL인 비회원 주문은 결과에서 제외됨 ❌
+-- user_id가 NULL인 비회원 주문은 결과에서 제외됨 X
 
 -- 비회원도 포함하려면 LEFT JOIN 사용
 SELECT o.order_id, u.email
 FROM orders o
-LEFT JOIN user u ON o.user_id = u.id;  -- ✅
+LEFT JOIN user u ON o.user_id = u.id;  -- O
 ```
 
 ## 결론
 
 > 외래키에 NULL이 **들어올 수 있지만**, 설계 의도에 따라 `NOT NULL` 여부를 명확히 결정해야 합니다.
-> 
+>
 > - 관계가 **필수** → `NOT NULL`
 > - 관계가 **선택적** → `NULL` 허용 + `LEFT JOIN` 주의

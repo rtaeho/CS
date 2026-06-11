@@ -13,12 +13,12 @@ Optional<String> opt3 = Optional.empty();             // 빈 Optional
 ```java
 Optional<String> opt = Optional.of("hello");
 
-// ❌ 나쁜 방법 — isPresent() + get() 조합
+// X 나쁜 방법 — isPresent() + get() 조합
 if (opt.isPresent()) {
     String val = opt.get();
 }
 
-// ✅ 좋은 방법들
+// O 좋은 방법들
 opt.orElse("기본값")                    // 없으면 기본값 반환
 opt.orElseGet(() -> computeDefault())   // 없으면 공급자 실행 (지연 평가)
 opt.orElseThrow(() -> new NoSuchElementException())  // 없으면 예외
@@ -63,18 +63,18 @@ String city = Optional.ofNullable(user.getAddress())
 ## 안티패턴
 
 ```java
-// ❌ 필드로 사용 — 직렬화 불가, 설계 의도에 반함
+// X 필드로 사용 — 직렬화 불가, 설계 의도에 반함
 class User {
     private Optional<String> nickname;
 }
 
-// ❌ 메서드 파라미터로 사용
+// X 메서드 파라미터로 사용
 void process(Optional<String> name) {}  // null 넘기면 NPE 발생 가능
 
-// ❌ isPresent() + get() 조합 — 그냥 null 체크와 다를 바 없음
+// X isPresent() + get() 조합 — 그냥 null 체크와 다를 바 없음
 if (opt.isPresent()) { opt.get(); }
 
-// ✅ 반환 타입으로만 사용
+// O 반환 타입으로만 사용
 Optional<User> findById(Long id) { ... }
 ```
 

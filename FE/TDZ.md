@@ -34,11 +34,11 @@ let b = 10;
 ```javascript
 {
   // 블록 시작 = TDZ 시작
-  
+
   // 이 구간에서 name 접근 불가
-  
+
   let name = "홍길동";  // TDZ 끝
-  
+
   console.log(name);  // 접근 가능
 }
 ```

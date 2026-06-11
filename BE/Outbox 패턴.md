@@ -5,10 +5,10 @@
 ```
 주문 저장 (DB 트랜잭션)
 → 메시지 발행 (Kafka)
-→ 메시지 발행 실패 💀
+→ 메시지 발행 실패
 
 주문은 저장됐는데 재고/결제 서비스에 알림 못함
-→ 데이터 불일치 발생 💀
+→ 데이터 불일치 발생
 ```
 
 ## 해결 방법
@@ -27,7 +27,7 @@ BEGIN TRANSACTION
   orders 테이블에 주문 저장
   outbox 테이블에 이벤트 저장  ← 메시지 대신 DB에 저장
 COMMIT
-→ 둘 다 성공 or 둘 다 실패 (원자성 보장) ✅
+→ 둘 다 성공 or 둘 다 실패 (원자성 보장) O
 
 [2단계 - 별도 프로세스]
 Outbox 테이블 조회
@@ -61,7 +61,7 @@ public void createOrder(OrderRequest request) {
         .payload(objectMapper.writeValueAsString(order))
         .status(OutboxStatus.PENDING)
         .build());
-    // 트랜잭션 커밋 시 둘 다 저장 ✅
+    // 트랜잭션 커밋 시 둘 다 저장 O
 }
 
 // 별도 스케줄러 or CDC
@@ -101,7 +101,7 @@ public void publishPendingEvents() {
 ```
 Outbox → 발행 성공
 → 상태 변경 전 장애 발생
-→ 재시도 시 중복 발행 💀
+→ 재시도 시 중복 발행
 
 해결: Consumer가 멱등성 보장
 → 같은 메시지 여러 번 받아도 한 번만 처리

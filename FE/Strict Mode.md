@@ -33,13 +33,13 @@ root.render(
 ```jsx
 function Counter() {
   const [count, setCount] = useState(0);
-  
+
   // 잘못된 예: 렌더링 중 외부 상태 변경
   let external = 0;
   external++;  // StrictMode에서 두 번 실행되어 문제 발견
-  
+
   console.log('렌더링');  // 개발 모드에서 두 번 출력됨
-  
+
   return <div>{count}</div>;
 }
 ```
@@ -50,7 +50,7 @@ function Counter() {
 useEffect(() => {
   const connection = createConnection();
   connection.connect();
-  
+
   // cleanup이 없으면 StrictMode에서 연결이 두 번 생김
   return () => connection.disconnect();  // cleanup 필수!
 }, []);

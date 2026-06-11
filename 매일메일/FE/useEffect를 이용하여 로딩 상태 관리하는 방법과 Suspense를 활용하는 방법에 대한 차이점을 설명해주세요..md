@@ -2,7 +2,7 @@
 
 반면, `Suspense`는 로딩 중인 컴포넌트를 직접 렌더링하지 않고, `Suspense` 컴포넌트의 `fallback` 속성으로 로딩 UI를 정의하게끔 합니다. 데이터를 기다리는 동안에는 `fallback`으로 정의된 UI만 보여주고, 데이터가 모두 준비되면 `Suspense`에 감싸진 컴포넌트를 자연스럽게 표시합니다. 이렇게 로딩 상태를 선언적으로 관리할 수 있기 때문에, 전체적인 코드가 단순해지고 유지보수도 쉬워집니다.
 
-## [](https://www.maeil-mail.kr/question/82#suspense%EC%9D%98-%EB%8B%A8%EC%A0%90%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C%EC%9A%94-)Suspense의 단점은 무엇일까요? 🤔
+## [](https://www.maeil-mail.kr/question/82#suspense%EC%9D%98-%EB%8B%A8%EC%A0%90%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C%EC%9A%94-)Suspense의 단점은 무엇일까요?
 
 여러 개의 `Suspense` 컴포넌트를 중첩하거나 트리 구조로 사용할 경우, 각 `Suspense`가 독립적으로 로딩 상태를 관리하기 때문에 데이터 준비 시점이 다를 수 있습니다. 그 결과 로딩 화면(fallback)이 여러 번 표시되거나 비일관적인 UI 경험이 발생할 수 있습니다. 이를 적절히 제어하기 위해서는 트리의 구조와 데이터 로딩 흐름을 신중하게 설계해야 합니다.
 

@@ -14,7 +14,7 @@ CSRF(Cross-Site Request Forgery)는 **사용자가 의도하지 않은 요청을
 2. 사용자가 악성 사이트(evil.com) 방문
 3. evil.com이 bank.com으로 송금 요청을 몰래 전송
 4. 브라우저가 bank.com의 쿠키를 자동으로 포함 ← 핵심!
-5. 서버: 쿠키 확인 → 인증된 사용자 → 송금 처리 ❌
+5. 서버: 쿠키 확인 → 인증된 사용자 → 송금 처리 X
 
 → 사용자는 요청을 보낸 적이 없지만
 → 브라우저가 쿠키를 자동 전송하므로 서버는 정상 요청으로 인식
@@ -31,7 +31,7 @@ CSRF(Cross-Site Request Forgery)는 **사용자가 의도하지 않은 요청을
 
 <!-- 브라우저: bank.com에 GET 요청 전송 -->
 <!-- 쿠키가 자동으로 포함됨 -->
-<!-- 서버: 정상 요청으로 처리 ❌ -->
+<!-- 서버: 정상 요청으로 처리 X -->
 ```
 
 ### 2. 폼을 이용한 POST 공격
@@ -97,7 +97,7 @@ XSS:
 |**목적**|사용자 권한으로 행동 실행|데이터 탈취, 스크립트 실행|
 |**쿠키 접근**|읽지 않음 (자동 전송 이용)|읽을 수 있음|
 |**공격 위치**|외부 사이트에서 요청|대상 사이트 내부에 스크립트 삽입|
-|**HttpOnly 효과**|방어 불가 ❌|쿠키 탈취 방지 ✅|
+|**HttpOnly 효과**|방어 불가 X|쿠키 탈취 방지 O|
 
 ## 방어 방법
 
@@ -172,10 +172,10 @@ SameSite=None:   모든 요청에 쿠키 전송 (Secure 필수)
 [SameSite=Lax (기본값)]
 
 같은 사이트 요청:
-bank.com → bank.com/transfer (POST) → 쿠키 포함 ✅
+bank.com → bank.com/transfer (POST) → 쿠키 포함 O
 
 다른 사이트 요청:
-evil.com → bank.com/transfer (POST) → 쿠키 미포함 ✅ CSRF 차단
+evil.com → bank.com/transfer (POST) → 쿠키 미포함 O CSRF 차단
 evil.com → bank.com/products (GET)  → 쿠키 포함 (링크 클릭 등)
 ```
 
@@ -192,9 +192,9 @@ public CookieSerializer cookieSerializer() {
 
 |SameSite|같은 사이트|다른 사이트 GET|다른 사이트 POST|
 |---|---|---|---|
-|**Strict**|✅|❌|❌|
-|**Lax**|✅|✅|❌|
-|**None**|✅|✅|✅|
+|**Strict**|O|X|X|
+|**Lax**|O|O|X|
+|**None**|O|O|O|
 
 ### 3. Referer / Origin 헤더 검증
 
@@ -262,17 +262,17 @@ fetch('https://bank.com/transfer', {
 // evil.com에서는:
 // → bank.com의 localStorage에 접근 불가 (SOP)
 // → 토큰을 알 수 없으므로 Authorization 헤더를 설정할 수 없음
-// → CSRF 공격 불가 ✅
+// → CSRF 공격 불가 O
 ```
 
 ## 방어 방법 비교
 
 |방어 방법|원리|적합한 환경|
 |---|---|---|
-|**CSRF Token**|예측 불가능한 토큰 검증|SSR (Thymeleaf 등) ✅|
-|**SameSite 쿠키**|다른 사이트에서 쿠키 미전송|모든 환경 ✅|
+|**CSRF Token**|예측 불가능한 토큰 검증|SSR (Thymeleaf 등) O|
+|**SameSite 쿠키**|다른 사이트에서 쿠키 미전송|모든 환경 O|
 |**Referer/Origin 검증**|요청 출처 확인|보조적 방어|
-|**JWT (Bearer Token)**|쿠키 미사용, 수동 헤더|CSR (SPA) ✅|
+|**JWT (Bearer Token)**|쿠키 미사용, 수동 헤더|CSR (SPA) O|
 
 ## Spring Security의 CSRF 처리
 
@@ -319,7 +319,7 @@ JWT 환경: 쿠키를 사용하지 않고 Authorization 헤더에 수동 설정
                 │
                 └──→ 브라우저: bank.com 쿠키 자동 포함
                        │
-                       └──→ bank.com 서버: 정상 요청으로 처리 ❌
+                       └──→ bank.com 서버: 정상 요청으로 처리 X
 
 [CSRF Token으로 방어 시]
 사용자 ──→ bank.com 로그인 ──→ 세션 쿠키 + CSRF 토큰 발급
@@ -330,7 +330,7 @@ JWT 환경: 쿠키를 사용하지 않고 Authorization 헤더에 수동 설정
                 │
                 └──→ 브라우저: bank.com 쿠키 포함 + CSRF 토큰 없음
                        │
-                       └──→ bank.com 서버: 토큰 불일치 → 거부 ✅
+                       └──→ bank.com 서버: 토큰 불일치 → 거부 O
 ```
 
 ## 면접 포인트

@@ -48,8 +48,8 @@ Arrays.sort(words);       // 팀소트
 
 |타입|내부 알고리즘|평균|최악|안정성|
 |---|---|---|---|---|
-|`int[]`, `long[]` 등|dual-pivot 퀵소트|O(n log n)|O(n²)|❌|
-|`Object[]`|팀소트|O(n log n)|O(n log n)|✅|
+|`int[]`, `long[]` 등|dual-pivot 퀵소트|O(n log n)|O(n²)|X|
+|`Object[]`|팀소트|O(n log n)|O(n log n)|O|
 
 ## 사전식 정렬 (String 배열)
 

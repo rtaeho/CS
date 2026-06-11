@@ -28,7 +28,7 @@
     │                                      │   │
     │  ... 서버 처리 중, 응답 없음 ...        │   │
     │                                      │   │
-    ✕  SocketTimeoutException: Read timed out  │
+    X  SocketTimeoutException: Read timed out  │
 ```
 
 ## Java에서의 Socket Timeout 설정
@@ -133,13 +133,13 @@ try {
 
 |구분|Connection Timeout|Read Timeout|
 |---|---|---|
-|서버 다운|✅|-|
-|방화벽 DROP|✅|-|
-|잘못된 IP/포트|✅|-|
-|서버 과부하|△ (백로그 초과 시)|✅|
-|느린 쿼리 / 처리|-|✅|
-|대용량 응답|-|✅|
-|네트워크 지연|✅|✅|
+|서버 다운|O|-|
+|방화벽 DROP|O|-|
+|잘못된 IP/포트|O|-|
+|서버 과부하|△ (백로그 초과 시)|O|
+|느린 쿼리 / 처리|-|O|
+|대용량 응답|-|O|
+|네트워크 지연|O|O|
 
 ## Timeout을 설정하지 않으면?
 

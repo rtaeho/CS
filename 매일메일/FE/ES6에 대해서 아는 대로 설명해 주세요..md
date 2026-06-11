@@ -10,7 +10,7 @@
 
 그 외에도, 구조 분해 할당, Spread Operator와 Rest Parameter, `Promise` 등 중요한 기능들이 ES6를 기점으로 추가되었습니다.
 
-## [](https://www.maeil-mail.kr/question/67#%EC%9D%B4%EC%A0%9C-es6-%EC%9D%B4%EC%A0%84-%EB%B2%84%EC%A0%84%EC%9D%98-%EB%AC%B8%EB%B2%95%EC%9D%80-%EB%AA%B0%EB%9D%BC%EB%8F%84-%EA%B4%9C%EC%B0%AE%EC%9D%84%EA%B9%8C%EC%9A%94-)이제 ES6 이전 버전의 문법은 몰라도 괜찮을까요? 🤔
+## [](https://www.maeil-mail.kr/question/67#%EC%9D%B4%EC%A0%9C-es6-%EC%9D%B4%EC%A0%84-%EB%B2%84%EC%A0%84%EC%9D%98-%EB%AC%B8%EB%B2%95%EC%9D%80-%EB%AA%B0%EB%9D%BC%EB%8F%84-%EA%B4%9C%EC%B0%AE%EC%9D%84%EA%B9%8C%EC%9A%94-)이제 ES6 이전 버전의 문법은 몰라도 괜찮을까요?
 
 ES6 이전 버전의 자바스크립트 문법과 특징을 이해하는 것이 여전히 중요하다고 생각합니다. 그 이유는 다음과 같습니다.
 

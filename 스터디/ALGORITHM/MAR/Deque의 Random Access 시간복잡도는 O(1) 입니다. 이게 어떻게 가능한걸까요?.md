@@ -14,11 +14,11 @@ index: [ 0 ][ 1 ][ 2 ][ 3 ][ 4 ][ 5 ][ 6 ][ 7 ]
                                   ↑
                                  head
 
-논리적 index 0 → (5 + 0) % 8 = 5 → arr[5] = A ✓
-논리적 index 1 → (5 + 1) % 8 = 6 → arr[6] = B ✓
+논리적 index 0 → (5 + 0) % 8 = 5 → arr[5] = A O
+논리적 index 1 → (5 + 1) % 8 = 6 → arr[6] = B O
 논리적 index 2 → (5 + 2) % 8 = 7 → arr[7] = ? (wrap around)
-논리적 index 2 → (5 + 2) % 8 = 0 → arr[0] = C ✓
-논리적 index 3 → (5 + 3) % 8 = 1 → arr[1] = D ✓
+논리적 index 2 → (5 + 2) % 8 = 0 → arr[0] = C O
+논리적 index 3 → (5 + 3) % 8 = 1 → arr[1] = D O
 ```
 
 ## 구현
@@ -54,7 +54,7 @@ deque.addLast(1);
 deque.addLast(2);
 deque.addLast(3);
 
-// ArrayDeque는 get(index) 미제공 ❌
+// ArrayDeque는 get(index) 미제공 X
 // deque.get(1) → 컴파일 에러
 
 // 내부적으로는 O(1) 접근 가능하나 외부에 노출하지 않음

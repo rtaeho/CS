@@ -56,12 +56,12 @@ String[] arr = list.toArray(String[]::new);
 
 > 가장 깔끔한 방법. Java 11+에서는 이걸 추천.
 
-## ❌ 원시 타입 배열의 함정
+## X 원시 타입 배열의 함정
 
 ```java
 List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3));
 
-// ❌ int[]로 직접 변환 안 됨
+// X int[]로 직접 변환 안 됨
 int[] arr = list.toArray();   // 컴파일 에러
 int[] arr = list.toArray(new int[0]);   // 컴파일 에러
 
@@ -70,7 +70,7 @@ Integer[] arr = list.toArray(new Integer[0]);
 Integer[] arr = list.toArray(Integer[]::new);
 ```
 
-## ✅ List<Integer> → int[] 변환 방법
+## O List<Integer> → int[] 변환 방법
 
 ### 방법 1: Stream
 
@@ -136,15 +136,15 @@ String[] arr = list.toArray(String[]::new);   // Java 11+
 String[] arr = list.toArray(new String[0]);
 ```
 
-## ⚠️ 흔한 실수
+## 흔한 실수
 
 ### `new int[]` 못 던짐
 
 ```java
-// ❌ 컴파일 에러 — toArray의 타입 매개변수는 객체만
+// X 컴파일 에러 — toArray의 타입 매개변수는 객체만
 list.toArray(new int[0]);
 
-// ✅ Stream 사용
+// O Stream 사용
 list.stream().mapToInt(Integer::intValue).toArray();
 ```
 
@@ -153,10 +153,10 @@ list.stream().mapToInt(Integer::intValue).toArray();
 ```java
 List<String> list = ...;
 
-// ❌ ClassCastException
+// X ClassCastException
 String[] arr = (String[]) list.toArray();
 
-// ✅ 타입 매개변수로 지정
+// O 타입 매개변수로 지정
 String[] arr = list.toArray(new String[0]);
 ```
 

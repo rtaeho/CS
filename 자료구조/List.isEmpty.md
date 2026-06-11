@@ -51,8 +51,8 @@ list.isEmpty();   // true
 ```java
 // 둘 다 동일한 결과지만:
 
-if (list.size() == 0) { ... }   // ❌ 의도가 덜 명확
-if (list.isEmpty())   { ... }   // ✅ 권장
+if (list.size() == 0) { ... }   // X 의도가 덜 명확
+if (list.isEmpty())   { ... }   // O 권장
 ```
 
 > `Collection` 인터페이스의 모든 컬렉션(List, Set, Map, Queue)이 `isEmpty()`를 제공. 일관성을 위해 `isEmpty()` 사용 권장.

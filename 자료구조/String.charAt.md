@@ -24,7 +24,7 @@ String s = "hello";
 s.charAt(0);   // 'h'
 s.charAt(2);   // 'l'
 s.charAt(4);   // 'o'
-s.charAt(5);   // ❌ StringIndexOutOfBoundsException
+s.charAt(5);   // X StringIndexOutOfBoundsException
 ```
 
 ## charAt vs toCharArray — 성능 비교
@@ -59,13 +59,13 @@ for (char c : s.toCharArray()) {
 
 charAt:
   s ──→ "hello"   ← 내부 byte[]에 직접 접근
-  
+
 toCharArray:
   s ──→ "hello"
         │
         ▼ (n개 복사)
   char[] ──→ ['h','e','l','l','o']   ← 새 배열 추가 할당
-  
+
 → 짧은 문자열은 차이 미미하지만, 길거나 호출이 많으면 charAt 우세
 ```
 
@@ -77,7 +77,7 @@ toCharArray:
 ```java
 char[] arr = s.toCharArray();
 Arrays.sort(arr);                    // 직접 정렬
-String sorted = new String(arr);     // ✅ char[] 자체를 변형해야 할 때
+String sorted = new String(arr);     // O char[] 자체를 변형해야 할 때
 ```
 
 > 문자 순서 변경, 정렬, in-place 수정이 필요할 때만 `toCharArray`.
@@ -150,14 +150,14 @@ int digit = c - '0';        // '0'~'9' → 0~9
 int alpha = c - 'a';        // 'a'~'z' → 0~25
 ```
 
-## ⚠️ 주의 사항
+## 주의 사항
 
 ### 범위 검사
 
 ```java
 String s = "abc";
-s.charAt(3);   // ❌ StringIndexOutOfBoundsException
-s.charAt(-1);  // ❌ 동일
+s.charAt(3);   // X StringIndexOutOfBoundsException
+s.charAt(-1);  // X 동일
 ```
 
 > 인덱스는 항상 `0 ≤ i < s.length()` 범위.
@@ -165,10 +165,10 @@ s.charAt(-1);  // ❌ 동일
 ### length() 캐싱
 
 ```java
-// ❌ 매 반복마다 length() 호출 — JIT가 보통 최적화하지만
+// X 매 반복마다 length() 호출 — JIT가 보통 최적화하지만
 for (int i = 0; i < s.length(); i++) { ... }
 
-// ✅ 명시적 캐싱 — 의도가 더 명확
+// O 명시적 캐싱 — 의도가 더 명확
 int len = s.length();
 for (int i = 0; i < len; i++) { ... }
 ```

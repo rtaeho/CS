@@ -6,6 +6,6 @@ Body와 Header의 가장 큰 차이는 **정보(데이터)의 역할**입니다
 
 즉, Header는 네트워크 통신에서 안내 역할을, Body는 본질적인 데이터를 전달하는 역할을 맡고 있습니다. 이 둘의 조화가 효율적인 통신을 가능하게 합니다.
 
-## [](https://www.maeil-mail.kr/question/108#header-%ED%81%AC%EA%B8%B0%EC%97%90-%EC%A0%9C%ED%95%9C%EC%9D%B4-%EC%9E%88%EB%82%98%EC%9A%94-)Header 크기에 제한이 있나요? 🤔
+## [](https://www.maeil-mail.kr/question/108#header-%ED%81%AC%EA%B8%B0%EC%97%90-%EC%A0%9C%ED%95%9C%EC%9D%B4-%EC%9E%88%EB%82%98%EC%9A%94-)Header 크기에 제한이 있나요?
 
 HTTP 표준을 정의하는 문서인 HTTP RFC에 따르면, Header의 명시적인 크기 제한은 정해져 있지 않습니다. 다만, Apache, Nginx와 같은 웹서버 단에서 Header의 크기를 제한하고 있는 경우가 많습니다. 일반적으로, 8KB-16KB로 설정되어 있습니다. 이러한 제한값을 초과할 경우, 일반적으로 응답코드 `413(Content Too Large)`를 응답합니다.

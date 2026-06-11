@@ -38,21 +38,21 @@ public class Main {
 
 |조건|인라이닝|예시|
 |---|---|---|
-|`static final` + 리터럴|✓|`static final int MAX = 100;`|
-|`static final` + 문자열 리터럴|✓|`static final String S = "hi";`|
-|`static final` + 메서드 호출|✗|`static final int X = compute();`|
-|`static final` + 객체|✗|`static final List L = List.of();`|
-|`final` 인스턴스 변수|✗|`final int age;`|
+|`static final` + 리터럴|O|`static final int MAX = 100;`|
+|`static final` + 문자열 리터럴|O|`static final String S = "hi";`|
+|`static final` + 메서드 호출|X|`static final int X = compute();`|
+|`static final` + 객체|X|`static final List L = List.of();`|
+|`final` 인스턴스 변수|X|`final int age;`|
 
 ```java
 // 인라이닝 됨
-static final int A = 100;                    // 리터럴 → ✓
-static final String B = "hello";             // 문자열 리터럴 → ✓
-static final int C = 10 + 20;               // 컴파일 타임 연산 → ✓
+static final int A = 100;                    // 리터럴 → O
+static final String B = "hello";             // 문자열 리터럴 → O
+static final int C = 10 + 20;               // 컴파일 타임 연산 → O
 
 // 인라이닝 안 됨
-static final int D = Integer.parseInt("100"); // 메서드 호출 → ✗
-static final int E = new Random().nextInt();  // 런타임 값 → ✗
+static final int D = Integer.parseInt("100"); // 메서드 호출 → X
+static final int E = new Random().nextInt();  // 런타임 값 → X
 ```
 
 ### 인라이닝의 부작용 — 재컴파일 문제

@@ -14,7 +14,7 @@
 
 공격자 사이트에 방문한 사용자는 자신의 의지와 무관하게 img 태그로 인해 세션 ID가 포함된 쿠키와 함께 비밀번호 변경 요청을 매일메일 서버로 전달합니다.
 
-## [](https://www.maeil-mail.kr/question/168#csrf-%EA%B3%B5%EA%B2%A9%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%B0%A9%EC%96%B4%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98%EC%9A%94-)CSRF 공격은 어떻게 방어할 수 있나요? 🤓
+## [](https://www.maeil-mail.kr/question/168#csrf-%EA%B3%B5%EA%B2%A9%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%B0%A9%EC%96%B4%ED%95%A0-%EC%88%98-%EC%9E%88%EB%82%98%EC%9A%94-)CSRF 공격은 어떻게 방어할 수 있나요?
 
 교차 출처인 상황에서의 요청을 막는 방식으로 CSRF를 방어할 수 있습니다.
 

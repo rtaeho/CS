@@ -79,19 +79,19 @@ remove(4) → true   →  remaining: [1, 3, 5]
 ### 순회 중 안전한 삭제
 
 ```java
-// ❌ for-each 중 set.remove → ConcurrentModificationException
+// X for-each 중 set.remove → ConcurrentModificationException
 for (String s : set) {
     if (조건) set.remove(s);   // 예외 발생
 }
 
-// ✅ Iterator의 remove()
+// O Iterator의 remove()
 Iterator<String> it = set.iterator();
 while (it.hasNext()) {
     String s = it.next();
     if (조건) it.remove();
 }
 
-// ✅ Java 8+ removeIf — 가장 깔끔
+// O Java 8+ removeIf — 가장 깔끔
 set.removeIf(s -> 조건);
 ```
 

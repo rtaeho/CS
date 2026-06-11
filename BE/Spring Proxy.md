@@ -80,8 +80,8 @@ userService.register(u);              // 자식의 오버라이드 메서드 호
 
 class UserService$$Proxy extends UserService { ... }
 
-✅ 인터페이스 없어도 OK
-❌ final 클래스/메서드 사용 불가 (상속 못 함)
+O 인터페이스 없어도 OK
+X final 클래스/메서드 사용 불가 (상속 못 함)
 ```
 
 ### JDK Dynamic Proxy — 인터페이스 구현
@@ -91,8 +91,8 @@ class UserService$$Proxy extends UserService { ... }
 
 class $Proxy implements UserService { ... }
 
-✅ 가벼움 (CGLIB보다 빠름)
-❌ 대상이 인터페이스를 구현해야 함
+O 가벼움 (CGLIB보다 빠름)
+X 대상이 인터페이스를 구현해야 함
 ```
 
 | 항목 | CGLIB | JDK Dynamic Proxy |
@@ -218,12 +218,12 @@ public class OrderService {
 
 ```java
 @Configuration
-public final class AppConfig { ... }   // ❌ CGLIB 상속 불가
+public final class AppConfig { ... }   // X CGLIB 상속 불가
 
 @Service
 public class UserService {
     @Transactional
-    public final void register(User u) { ... }   // ❌ 메서드도 안 됨
+    public final void register(User u) { ... }   // X 메서드도 안 됨
 }
 ```
 
@@ -251,7 +251,7 @@ public class UserService {
 @Service
 public class UserService {
     public UserService() {
-        register(...);   // ❌ 생성자에선 프록시 동작 안 함
+        register(...);   // X 생성자에선 프록시 동작 안 함
     }
 
     @Transactional

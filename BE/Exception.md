@@ -97,7 +97,7 @@ void divide(int a, int b) {
 AutoCloseable을 구현한 자원을 자동으로 닫아줌.
 
 ```java
-// ❌ 기존 방식 — finally에서 close() 직접 호출
+// X 기존 방식 — finally에서 close() 직접 호출
 BufferedReader br = null;
 try {
     br = new BufferedReader(new FileReader("file.txt"));
@@ -106,7 +106,7 @@ try {
     if (br != null) br.close();
 }
 
-// ✅ try-with-resources
+// O try-with-resources
 try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
     return br.readLine();
 }  // 블록 종료 시 자동으로 br.close() 호출

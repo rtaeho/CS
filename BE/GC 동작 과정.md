@@ -90,7 +90,7 @@ Young + Old 전체를 대상으로 GC 수행
 GC Root에서 참조 그래프 탐색
 도달 가능한 객체에 표시(Mark)
 
-Old: [A✅] [B❌] [C✅] [D❌] [E✅]
+Old: [AO] [BX] [CO] [DX] [EO]
 ```
 
 **Sweep 단계**
@@ -98,7 +98,7 @@ Old: [A✅] [B❌] [C✅] [D❌] [E✅]
 ```
 Mark 안 된 객체 수거
 
-Old: [A✅] [  ] [C✅] [  ] [E✅]
+Old: [AO] [  ] [CO] [  ] [EO]
      → 중간중간 빈 공간 발생 (단편화)
 ```
 

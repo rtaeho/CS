@@ -27,7 +27,7 @@ function App() {
 // 3. 하위 어디서든 바로 접근
 function D() {
     const { user } = useContext(UserContext);
-    return <div>{user.name}</div>;  // Props 없이 접근 ✅
+    return <div>{user.name}</div>;  // Props 없이 접근 O
 }
 ```
 
@@ -42,19 +42,19 @@ App(Provider)
 ├── A
 │   └── B
 │       └── C
-│           └── D → useContext로 바로 접근 ✅
+│           └── D → useContext로 바로 접근 O
 ```
 
 ## 주의점 - 리렌더링
 
 ```jsx
 // Provider value가 바뀌면 useContext 사용하는 모든 컴포넌트 리렌더링
-// 객체를 직접 넣으면 매번 새 객체 생성 → 불필요한 리렌더링 💀
+// 객체를 직접 넣으면 매번 새 객체 생성 → 불필요한 리렌더링
 <UserContext.Provider value={{ user, setUser }}>
 
 // useMemo로 최적화
 const value = useMemo(() => ({ user, setUser }), [user]);
-<UserContext.Provider value={value}>  // ✅
+<UserContext.Provider value={value}>  // O
 ```
 
 ## 언제 사용하나?
@@ -71,7 +71,7 @@ const value = useMemo(() => ({ user, setUser }), [user]);
 |---|---|---|
 |**설치**|불필요 (내장)|별도 설치|
 |**리렌더링 최적화**|어려움|쉬움|
-|**DevTools**|❌|✅|
+|**DevTools**|X|O|
 |**복잡한 상태**|부적합|적합|
 |**적합한 규모**|소~중규모|중~대규모|
 

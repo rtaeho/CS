@@ -8,8 +8,8 @@ V getOrDefault(Object key, V defaultValue)
 
 |상황|반환값|map 변경|
 |---|---|---|
-|키 존재|저장된 값|❌|
-|키 없음|`defaultValue`|❌ (저장하지 않음)|
+|키 존재|저장된 값|X|
+|키 없음|`defaultValue`|X (저장하지 않음)|
 
 ## 동작 추적
 

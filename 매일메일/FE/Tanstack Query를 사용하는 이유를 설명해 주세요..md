@@ -10,7 +10,7 @@ TanStack Query를 사용하는 주요 이유는 다음과 같습니다.
 
 이처럼 TanStack Query는 서버 상태 관리에서 발생하는 복잡한 문제를 해결하고 개발자가 비즈니스 로직에 더 집중할 수 있도록 도와줍니다.
 
-## [](https://www.maeil-mail.kr/question/86#tanstack-query%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%A0-%EB%95%8C-%EB%B0%9C%EC%83%9D%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%8B%A8%EC%A0%90%EC%9D%B4%EB%82%98-%ED%95%9C%EA%B3%84%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-)TanStack Query를 사용할 때 발생할 수 있는 단점이나 한계는 무엇인가요? 🤔
+## [](https://www.maeil-mail.kr/question/86#tanstack-query%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%A0-%EB%95%8C-%EB%B0%9C%EC%83%9D%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%8B%A8%EC%A0%90%EC%9D%B4%EB%82%98-%ED%95%9C%EA%B3%84%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-)TanStack Query를 사용할 때 발생할 수 있는 단점이나 한계는 무엇인가요?
 
 TanStack Query는 서버 상태 관리를 간편하게 해주지만, 사용 시 몇 가지 단점 및 한계가 있습니다.
 

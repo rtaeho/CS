@@ -18,7 +18,7 @@
 
 커넥션 풀의 주요 구성 요소는 초기 풀 크기(Initial Pool Size), 최소 풀 크기(Minimum Pool Size), 최대 풀 크기(Maximum Pool Size), 연결 대기 시간(Connection Timeout) 등이 있고, 이를 통해 커넥션을 효율적으로 관리하고 사용할 수 있습니다.
 
-## [](https://www.maeil-mail.kr/question/88#%EA%B7%B8%EB%9F%BC-%EC%BB%A4%EB%84%A5%EC%85%98-%ED%92%80-%EC%82%AC%EC%9D%B4%EC%A6%88%EB%8A%94-%ED%81%B4-%EC%88%98%EB%A1%9D-%EC%A2%8B%EB%82%98%EC%9A%94-)그럼 커넥션 풀 사이즈는 클 수록 좋나요? 🤔
+## [](https://www.maeil-mail.kr/question/88#%EA%B7%B8%EB%9F%BC-%EC%BB%A4%EB%84%A5%EC%85%98-%ED%92%80-%EC%82%AC%EC%9D%B4%EC%A6%88%EB%8A%94-%ED%81%B4-%EC%88%98%EB%A1%9D-%EC%A2%8B%EB%82%98%EC%9A%94-)그럼 커넥션 풀 사이즈는 클 수록 좋나요?
 
 커넥션을 사용하는 주체는 스레드(Thread)이기 때문에, 커넥션과 스레드를 연결지어 생각해야 합니다. 만약 커넥션 풀 사이즈가 스레드 풀 사이즈보다 크면, 스레드가 모두 사용하지 못해서 리소스가 낭비됩니다. 반대로 커넥션 풀 사이즈가 스레드 풀 사이즈보다 작으면, 스레드가 커넥션이 반환되기를 기다려야 하기 때문에 작업이 지연됩니다.
 

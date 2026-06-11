@@ -5,7 +5,7 @@
 ||Call By Value|Call By Reference|
 |---|---|---|
 |**전달 방식**|값 복사|참조(주소) 전달|
-|**원본 영향**|❌ 영향 없음|✅ 영향 있음|
+|**원본 영향**|X 영향 없음|O 영향 있음|
 |**메모리**|별도 공간 생성|같은 공간 공유|
 
 ## Java 예시 - 기본형 (Primitive Type)
@@ -36,7 +36,7 @@ public static void main(String[] args) {
 }
 ```
 
-## ⚠️ Java는 항상 Call By Value
+## Java는 항상 Call By Value
 
 ```
 기본형 → 값 자체를 복사하여 전달

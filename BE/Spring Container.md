@@ -44,9 +44,9 @@ public class App {
 |---|---|---|
 | 역할 | 빈 생성·조회의 가장 기본 기능 | BeanFactory + 부가 기능 |
 | 빈 로딩 | 지연(lazy) — 처음 요청 시 생성 | 즉시(eager) — 시작 시 모두 생성 |
-| 메시지 국제화 | ❌ | ✅ |
-| 이벤트 발행 | ❌ | ✅ (ApplicationEvent) |
-| AOP 통합 | ❌ | ✅ |
+| 메시지 국제화 | X | O |
+| 이벤트 발행 | X | O (ApplicationEvent) |
+| AOP 통합 | X | O |
 | 실무 사용 | 거의 안 씀 | **표준** |
 
 > 실무에서 "Spring 컨테이너"라고 하면 거의 항상 **ApplicationContext**를 말함.

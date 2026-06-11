@@ -4,7 +4,7 @@
 
 **rem은 root em을 의미하며, 최상위 HTML 요소의 font-size를 기준으로 계산**됩니다. 이는 em과 달리 요소 계층에 따라 크기가 누적되지 않으며, 전역적인 기준을 따릅니다. 예를 들어, HTML의 font-size가 16px로 설정되어 있다면, 1rem은 항상 16px로 계산됩니다. 따라서 rem은 전역적으로 일관된 상대적인 크기를 설정할 때 유용하며, 접근성 측면에서도 사용자 설정에 잘 대응한다는 장점이 있습니다.
 
-## [](https://www.maeil-mail.kr/question/114#em%EA%B3%BC-rem%EC%9D%B4-%EB%AA%A8%EB%91%90-%EC%83%81%EB%8C%80-%EB%8B%A8%EC%9C%84%EB%9D%BC%EB%A9%B4-rem%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EA%B3%A0-em%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EA%B2%BD%EC%9A%B0%EB%8A%94-%EC%96%B8%EC%A0%9C%EC%9D%B8%EA%B0%80%EC%9A%94-)em과 rem이 모두 상대 단위라면, rem을 사용하지 않고 em을 사용해야 하는 경우는 언제인가요? 🤔
+## [](https://www.maeil-mail.kr/question/114#em%EA%B3%BC-rem%EC%9D%B4-%EB%AA%A8%EB%91%90-%EC%83%81%EB%8C%80-%EB%8B%A8%EC%9C%84%EB%9D%BC%EB%A9%B4-rem%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EA%B3%A0-em%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EA%B2%BD%EC%9A%B0%EB%8A%94-%EC%96%B8%EC%A0%9C%EC%9D%B8%EA%B0%80%EC%9A%94-)em과 rem이 모두 상대 단위라면, rem을 사용하지 않고 em을 사용해야 하는 경우는 언제인가요?
 
 rem을 항상 사용하지 않고 em을 사용하는 경우는 **특정 상황에서 해당 컨텍스트에 따라 상대적인 크기를 지정해야 하는 경우**입니다. em은 부모 요소 또는 현재 요소의 font-size를 기준으로 크기가 결정되므로, 구성 요소 간의 비례적인 크기를 쉽게 조정할 수 있습니다. 예를 들어, 버튼 안의 텍스트와 패딩을 비율로 정의하고 싶을 때, 각각의 속성에 em을 사용하면 텍스트 크기를 조정될 때 패딩이 자연스럽게 비례적으로 조정되도록 할 수 있습니다.
 

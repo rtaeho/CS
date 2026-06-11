@@ -9,10 +9,10 @@ JPA가 Entity 클래스를 분석해서 만들어놓은 **메타데이터 모델
 public class Member {
     @Id
     private Long id;
-    
+
     @Version
     private Long version;
-    
+
     private String name;
 }
 ```
@@ -30,13 +30,13 @@ public class Member {
 Metamodel에서 정보를 꺼내와서 `EntityInformation` 인터페이스를 구현합니다.
 
 ```java
-public class JpaMetamodelEntityInformation<T, ID> 
-        extends AbstractEntityInformation<T, ID> 
+public class JpaMetamodelEntityInformation<T, ID>
+        extends AbstractEntityInformation<T, ID>
         implements JpaEntityInformation<T, ID> {
 
     private final IdMetadata<T> idMetadata;           // @Id 정보
     private final Optional<SingularAttribute<? super T, ?>> versionAttribute;  // @Version 정보
-    
+
     @Override
     public boolean isNew(T entity) {
         // 1) @Version 필드가 없거나 primitive면 → 부모 클래스(ID 기반)로 위임
@@ -45,14 +45,14 @@ public class JpaMetamodelEntityInformation<T, ID>
                                  .map(Class::isPrimitive).orElse(false)) {
             return super.isNew(entity);
         }
-        
+
         // 2) @Version 필드가 Wrapper 타입이면 → null 여부로 판단
         BeanWrapper wrapper = new DirectFieldAccessFallbackBeanWrapper(entity);
         return versionAttribute
                 .map(it -> wrapper.getPropertyValue(it.getName()) == null)
                 .orElse(true);
     }
-    
+
     @Override
     public ID getId(T entity) {
         // Metamodel에서 @Id 필드 정보를 가져와서 값 추출

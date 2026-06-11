@@ -8,8 +8,8 @@
 1. 캐시 먼저 조회
         ↓
    캐시 Hit?
-   ✅ Yes → 캐시에서 반환 (끝)
-   ❌ No  → DB 조회 → 캐시에 저장 → 반환
+   O Yes → 캐시에서 반환 (끝)
+   X No  → DB 조회 → 캐시에 저장 → 반환
 
 쓰기 (Write)
 ────────────────────────────────
@@ -32,7 +32,7 @@ public class UserService {
         // 1. 캐시 먼저 확인
         User cached = redisTemplate.opsForValue().get(cacheKey);
         if (cached != null) {
-            return cached;  // ✅ Cache Hit
+            return cached;  // O Cache Hit
         }
 
         // 2. Cache Miss → DB 조회
@@ -68,14 +68,14 @@ public class UserService {
 
 ```
 장점
-✅ 구조 단순, 이해하기 쉬움
-✅ 캐시 장애 시 DB로 fallback 가능
-✅ 필요한 데이터만 캐싱 (메모리 효율)
+O 구조 단순, 이해하기 쉬움
+O 캐시 장애 시 DB로 fallback 가능
+O 필요한 데이터만 캐싱 (메모리 효율)
 
 단점
-❌ Cache Miss 시 DB 조회 + 캐시 저장으로 첫 응답 느림
-❌ DB 업데이트 후 캐시 삭제 전 순간적으로 데이터 불일치 발생
-❌ 캐시 관리 로직을 개발자가 직접 작성해야 함
+X Cache Miss 시 DB 조회 + 캐시 저장으로 첫 응답 느림
+X DB 업데이트 후 캐시 삭제 전 순간적으로 데이터 불일치 발생
+X 캐시 관리 로직을 개발자가 직접 작성해야 함
 ```
 
 ## 캐시 불일치 문제
@@ -83,7 +83,7 @@ public class UserService {
 ```
 Thread A: DB 업데이트 완료
                         ↓
-Thread B: 캐시 조회 → 아직 삭제 전 → 구버전 데이터 반환 ❌
+Thread B: 캐시 조회 → 아직 삭제 전 → 구버전 데이터 반환 X
                         ↓
 Thread A: 캐시 삭제
 ```

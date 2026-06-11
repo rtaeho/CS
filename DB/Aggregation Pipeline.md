@@ -91,13 +91,13 @@ db.orders.aggregate([
 ## 성능 팁
 
 ```
-✅ $match, $limit은 최대한 앞 단계에 배치
+O $match, $limit은 최대한 앞 단계에 배치
    → 처리할 문서 수를 먼저 줄여야 성능 향상
 
-❌ 나쁜 예
+X 나쁜 예
 aggregate([ $group → $match ])  // 전체 집계 후 필터링
 
-✅ 좋은 예
+O 좋은 예
 aggregate([ $match → $group ])  // 필터링 후 집계
 ```
 

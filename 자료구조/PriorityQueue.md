@@ -15,7 +15,7 @@
        1
       / \
      3   5
-    / \ / 
+    / \ /
    7  4 9
 
 배열 표현: [1, 3, 5, 7, 4, 9]
@@ -34,8 +34,8 @@
 |`peek()`|루트 조회 (없으면 null)|O(1)|
 |`size()`|원소 개수|O(1)|
 |`isEmpty()`|비었는지 확인|O(1)|
-|`contains(e)`|원소 존재 확인|O(n) ⚠️|
-|`remove(e)`|특정 원소 제거|O(n) ⚠️|
+|`contains(e)`|원소 존재 확인|O(n)|
+|`remove(e)`|특정 원소 제거|O(n)|
 
 > `contains`, `remove`는 힙 구조상 선형 탐색이 필요 — 자주 쓰지 말 것.
 
@@ -163,11 +163,11 @@ pq.offer(new int[]{start, 0});
 ```java
 PriorityQueue<Integer> pq = new PriorityQueue<>(List.of(3, 1, 2));
 
-// ❌ 정렬되어 보이지 않음
+// X 정렬되어 보이지 않음
 for (int x : pq) System.out.println(x);
 // 출력 예: 1 3 2  (힙 배열 순서)
 
-// ✅ poll로 꺼내야 정렬 순서
+// O poll로 꺼내야 정렬 순서
 while (!pq.isEmpty()) System.out.println(pq.poll());
 // 출력: 1 2 3
 ```
@@ -179,7 +179,7 @@ while (!pq.isEmpty()) System.out.println(pq.poll());
 ```java
 PriorityQueue<Task> pq = ...;
 Task t = pq.peek();
-t.priority = 0;   // ⚠️ 힙은 이걸 모름
+t.priority = 0;   // 힙은 이걸 모름
 
 // 우선순위 변경하려면 제거 후 다시 삽입
 pq.remove(t);
@@ -190,10 +190,10 @@ pq.offer(t);
 ### `b - a` 오버플로
 
 ```java
-// ❌ Integer.MIN/MAX 근처에서 오버플로
+// X Integer.MIN/MAX 근처에서 오버플로
 new PriorityQueue<>((a, b) -> b - a);
 
-// ✅ 안전
+// O 안전
 new PriorityQueue<>((a, b) -> Integer.compare(b, a));
 new PriorityQueue<>(Comparator.reverseOrder());
 ```

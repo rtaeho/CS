@@ -201,11 +201,11 @@ list.sort(Comparator.comparingInt(Student::getScore));
 ### `b - a` 오버플로
 
 ```java
-// ❌ a = Integer.MIN_VALUE, b = Integer.MAX_VALUE
+// X a = Integer.MIN_VALUE, b = Integer.MAX_VALUE
 //    → a - b 가 음수로 오버플로 → 잘못된 결과
 list.sort((a, b) -> a - b);
 
-// ✅ 안전
+// O 안전
 list.sort((a, b) -> Integer.compare(a, b));
 list.sort(Comparator.naturalOrder());
 list.sort(Integer::compare);
@@ -214,19 +214,19 @@ list.sort(Integer::compare);
 ### thenComparing 타입 추론 실패
 
 ```java
-// ❌ 컴파일러가 첫 람다의 타입을 추론 못 해 에러
+// X 컴파일러가 첫 람다의 타입을 추론 못 해 에러
 list.sort(
     Comparator.comparing(s -> s.score).reversed()
         .thenComparing(s -> s.name)
 );
 
-// ✅ 메서드 레퍼런스 사용 — 타입 추론 잘 됨
+// O 메서드 레퍼런스 사용 — 타입 추론 잘 됨
 list.sort(
     Comparator.comparingInt(Student::getScore).reversed()
         .thenComparing(Student::getName)
 );
 
-// ✅ 명시적 타입 지정
+// O 명시적 타입 지정
 list.sort(
     Comparator.<Student>comparingInt(s -> s.score).reversed()
         .thenComparing(s -> s.name)
@@ -236,12 +236,12 @@ list.sort(
 ### reversed의 위치
 
 ```java
-// ❌ 두 기준 모두 뒤집힘 (의도와 다름)
+// X 두 기준 모두 뒤집힘 (의도와 다름)
 Comparator.comparing(Student::getScore)
     .thenComparing(Student::getName)
     .reversed();
 
-// ✅ 점수만 뒤집기
+// O 점수만 뒤집기
 Comparator.comparingInt(Student::getScore).reversed()
     .thenComparing(Student::getName);
 ```
@@ -257,10 +257,10 @@ A.reversed().thenComparing(B)  →  A만 뒤집고 B는 그대로
 ### 음수 반환의 함정
 
 ```java
-// ❌ boolean을 int로 잘못 변환 — 0 또는 1만 나와서 동률 다수 발생
+// X boolean을 int로 잘못 변환 — 0 또는 1만 나와서 동률 다수 발생
 list.sort((a, b) -> a > b ? 1 : 0);    // -1을 안 주면 정렬 깨짐
 
-// ✅ -1, 0, 1 셋 다 가능해야 함
+// O -1, 0, 1 셋 다 가능해야 함
 list.sort((a, b) -> a > b ? 1 : (a < b ? -1 : 0));
 list.sort((a, b) -> Integer.compare(a, b));   // 권장
 ```
@@ -380,7 +380,7 @@ a와 b 중 어느 것을 앞에 놓을지:
 예: a="3", b="30"
   b+a = "303"
   a+b = "330"
-  "303".compareTo("330") < 0  →  a("3")가 먼저  ✅
+  "303".compareTo("330") < 0  →  a("3")가 먼저  O
 ```
 
 ```java

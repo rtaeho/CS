@@ -27,20 +27,20 @@ p1.sayHello();  // "안녕, 나는 김철수"
 p2.sayHello();  // "안녕, 나는 홍길동"
 
 // sayHello는 프로토타입에 하나만 존재
-// p1, p2가 공유해서 사용 → 메모리 효율 ✅
+// p1, p2가 공유해서 사용 → 메모리 효율 O
 ```
 
 ## 프로토타입 체인
 
 ```javascript
 p1.sayHello()
-→ p1 자신에 sayHello 있나? ❌
-→ p1.__proto__ (Person.prototype)에 있나? ✅ → 실행
+→ p1 자신에 sayHello 있나? X
+→ p1.__proto__ (Person.prototype)에 있나? O → 실행
 
 p1.toString()
-→ p1 자신에 없음 ❌
-→ Person.prototype에 없음 ❌
-→ Object.prototype에 있음 ✅ → 실행
+→ p1 자신에 없음 X
+→ Person.prototype에 없음 X
+→ Object.prototype에 있음 O → 실행
 ```
 
 ```
@@ -101,7 +101,7 @@ function Dog(name) {
 Dog.prototype = Object.create(Animal.prototype);  // 상속
 
 const dog = new Dog('멍멍이');
-dog.eat();  // "멍멍이이 먹는다" ✅ (Animal 메서드 사용 가능)
+dog.eat();  // "멍멍이이 먹는다" O (Animal 메서드 사용 가능)
 ```
 
 ## 주요 메서드

@@ -17,7 +17,7 @@
 |항목|내용|
 |---|---|
 |**전달 방식**|변수의 메모리 주소(참조) 전달|
-|**원본 영향**|✅ 함수 내 변경이 원본에 반영|
+|**원본 영향**|O 함수 내 변경이 원본에 반영|
 |**메모리**|복사본 생성 없이 같은 공간 공유|
 
 ## C++ 예시 (Call By Reference 지원 언어)
@@ -34,7 +34,7 @@ int main() {
 }
 ```
 
-## ⚠️ Java는 Call By Reference가 없다
+## Java는 Call By Reference가 없다
 
 ```java
 // Java는 참조형도 참조값(주소)을 복사하여 전달
@@ -56,7 +56,7 @@ public static void main(String[] args) {
 ||Call By Value|Call By Reference|
 |---|---|---|
 |**전달**|값 복사|주소 직접 전달|
-|**원본 영향**|❌|✅|
+|**원본 영향**|X|O|
 |**메모리**|별도 공간|공유|
 |**지원 언어**|Java, Python 등|C++, C#(`ref`) 등|
 

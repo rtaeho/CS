@@ -82,7 +82,7 @@ fetchUser(-1)
 ### 콜백 지옥 (Callback Hell)
 
 ```javascript
-// ❌ 콜백 중첩 → 가독성 최악, 에러 처리 어려움
+// X 콜백 중첩 → 가독성 최악, 에러 처리 어려움
 getUser(1, function(user) {
     getOrders(user.id, function(orders) {
         getOrderDetail(orders[0].id, function(detail) {
@@ -98,7 +98,7 @@ getUser(1, function(user) {
 ### Promise 체이닝
 
 ```javascript
-// ✅ 깔끔한 체이닝 + 에러 처리 일원화
+// O 깔끔한 체이닝 + 에러 처리 일원화
 getUser(1)
     .then(user => getOrders(user.id))
     .then(orders => getOrderDetail(orders[0].id))

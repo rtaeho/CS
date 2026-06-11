@@ -31,7 +31,7 @@ function Counter() {
 setCount(5);
 
 // 2. 함수형 업데이트 (이전 값 기반으로 변경 시 권장)
-setCount(prev => prev + 1);  // ✅ 이전 값 보장
+setCount(prev => prev + 1);  // O 이전 값 보장
 ```
 
 ## 비동기 특성
@@ -39,24 +39,24 @@ setCount(prev => prev + 1);  // ✅ 이전 값 보장
 ```jsx
 function handleClick() {
     setCount(count + 1);
-    console.log(count);  // 아직 이전 값 출력 💀
+    console.log(count);  // 아직 이전 값 출력
     // setState는 즉시 반영되지 않고 리렌더링 시 반영
 }
 
 // 함수형 업데이트로 해결
 function handleClick() {
-    setCount(prev => prev + 1);  // ✅ 항상 최신 값 보장
+    setCount(prev => prev + 1);  // O 항상 최신 값 보장
 }
 ```
 
 ## 객체/배열 상태 관리
 
 ```jsx
-// ❌ 직접 수정 (리렌더링 안됨)
+// X 직접 수정 (리렌더링 안됨)
 const [user, setUser] = useState({ name: '김철수', age: 20 });
-user.name = '홍길동';  // 리렌더링 발생 안함 💀
+user.name = '홍길동';  // 리렌더링 발생 안함
 
-// ✅ 새 객체로 교체
+// O 새 객체로 교체
 setUser({ ...user, name: '홍길동' });  // 스프레드로 복사 후 수정
 ```
 
@@ -64,18 +64,18 @@ setUser({ ...user, name: '홍길동' });  // 스프레드로 복사 후 수정
 
 ||useState|useRef|
 |---|---|---|
-|**값 변경 시 리렌더링**|✅|❌|
-|**렌더링 간 값 유지**|✅|✅|
-|**DOM 접근**|❌|✅|
+|**값 변경 시 리렌더링**|O|X|
+|**렌더링 간 값 유지**|O|O|
+|**DOM 접근**|X|O|
 |**사용 목적**|UI에 반영되는 값|UI 무관한 값|
 
 ## 언제 사용하나?
 
 ```
-✅ UI에 표시되는 값 (카운터, 입력값, 토글 등)
-✅ 변경 시 화면을 다시 그려야 하는 값
-❌ UI와 무관한 값 → useRef 사용
-❌ 전역으로 공유해야 하는 값 → Context API, Zustand 등 사용
+O UI에 표시되는 값 (카운터, 입력값, 토글 등)
+O 변경 시 화면을 다시 그려야 하는 값
+X UI와 무관한 값 → useRef 사용
+X 전역으로 공유해야 하는 값 → Context API, Zustand 등 사용
 ```
 
 > `useState`는 **값이 바뀔 때마다 화면을 다시 그려야 하는 경우**에 사용하며, UI와 무관한 값 저장은 `useRef`, 전역 상태는 별도 상태관리 라이브러리를 사용합니다.

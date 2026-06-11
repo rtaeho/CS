@@ -45,7 +45,7 @@ map: { apple=1000, banana=500, grape=2000 }   ← 변화 없음
 ## 왜 entrySet인가? — 성능 차이
 
 ```java
-// ❌ keySet + get — 매번 해시 조회 한 번 더 발생
+// X keySet + get — 매번 해시 조회 한 번 더 발생
 for (String key : map.keySet()) {
     int value = map.get(key);   // 또 한 번의 해시 조회
 }
@@ -59,7 +59,7 @@ for (String key : map.keySet()) {
 ```
 
 ```java
-// ✅ entrySet — 한 번에 키·값 모두 가져옴
+// O entrySet — 한 번에 키·값 모두 가져옴
 for (Map.Entry<String, Integer> e : map.entrySet()) {
     int value = e.getValue();   // 추가 해시 조회 없음
 }

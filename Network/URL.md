@@ -10,12 +10,12 @@ scheme      host         port   path    query   fragment
 
 |요소|필수 여부|설명|예시|
 |---|---|---|---|
-|**scheme**|✅|프로토콜|`https`, `http`, `ftp`|
-|**host**|✅|서버 주소|`www.example.com`|
-|**port**|❌|포트 번호 (생략 시 기본값)|`8080`|
-|**path**|❌|자원 경로|`/users/1`|
-|**query**|❌|추가 파라미터 (`?`로 시작)|`?name=kim`|
-|**fragment**|❌|페이지 내 특정 위치 (`#`로 시작)|`#section`|
+|**scheme**|O|프로토콜|`https`, `http`, `ftp`|
+|**host**|O|서버 주소|`www.example.com`|
+|**port**|X|포트 번호 (생략 시 기본값)|`8080`|
+|**path**|X|자원 경로|`/users/1`|
+|**query**|X|추가 파라미터 (`?`로 시작)|`?name=kim`|
+|**fragment**|X|페이지 내 특정 위치 (`#`로 시작)|`#section`|
 
 ## 기본 포트 번호
 
@@ -37,7 +37,7 @@ ftp   → 21
 
 ```
 URL은 위치 기반이므로
-자원의 위치가 바뀌면 → URL도 바뀜 → 링크 깨짐 💀
+자원의 위치가 바뀌면 → URL도 바뀜 → 링크 깨짐
 (이를 보완하기 위해 URN 개념 존재)
 ```
 

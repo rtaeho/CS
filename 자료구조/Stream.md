@@ -87,16 +87,16 @@ intStream.boxed()                            // primitive → boxed
 ```java
 Stream<Integer> s = list.stream();
 s.count();            // 사용
-s.filter(...);        // ❌ IllegalStateException — 이미 소비됨
+s.filter(...);        // X IllegalStateException — 이미 소비됨
 ```
 
 ### 무한 스트림은 limit 필요
 
 ```java
-// ❌ 무한 루프
+// X 무한 루프
 Stream.iterate(0, n -> n + 1).forEach(System.out::println);
 
-// ✅ limit으로 끊기
+// O limit으로 끊기
 Stream.iterate(0, n -> n + 1).limit(10).forEach(System.out::println);
 ```
 

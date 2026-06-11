@@ -30,7 +30,7 @@ function Child(props) {
 
 ```jsx
 function Child(props) {
-    props.name = "영희";  // ❌ 에러! 수정 불가
+    props.name = "영희";  // X 에러! 수정 불가
 }
 ```
 
@@ -41,7 +41,7 @@ function Child(props) {
 ```jsx
 function Parent() {
     const [count, setCount] = useState(0);  // state: 내가 관리
-    
+
     return <Child count={count} />;  // props: 자식에게 전달
 }
 

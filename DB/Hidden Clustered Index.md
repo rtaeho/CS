@@ -47,13 +47,13 @@ SELECT * FROM user WHERE email = 'kim@test.com';
 ```
 
 ```sql
--- ✅ 명시적 PK → 클러스터드 인덱스 = id
+-- O 명시적 PK → 클러스터드 인덱스 = id
 CREATE TABLE user (
     id    BIGINT PRIMARY KEY,  -- 이 순서로 데이터 정렬·저장
     email VARCHAR(255)
 );
 
--- ❌ PK 없음 → GEN_CLUST_INDEX 자동 생성
+-- X PK 없음 → GEN_CLUST_INDEX 자동 생성
 CREATE TABLE user (
     email VARCHAR(255)
 );
@@ -64,11 +64,11 @@ CREATE TABLE user (
 
 ```sql
 -- PK로 조회 → 클러스터드 인덱스 1회 탐색
-SELECT * FROM user WHERE id = 1;  -- ✅ 빠름
+SELECT * FROM user WHERE id = 1;  -- O 빠름
 
 -- Hidden ROW_ID는 외부 접근 불가
 -- → 모든 조회가 Full Scan 위험
-SELECT * FROM user WHERE email = 'kim@test.com';  -- ❌ PK 없으면 비효율
+SELECT * FROM user WHERE email = 'kim@test.com';  -- X PK 없으면 비효율
 ```
 
 > InnoDB는 **항상 클러스터드 인덱스 기반으로 동작**하기 때문에, 명시적 PK 선언이 곧 성능 최적화의 시작입니다.

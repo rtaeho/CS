@@ -12,14 +12,14 @@ IntStream mapToInt(ToIntFunction<? super T> mapper)
 
 ```
 [ Stream<Integer>의 한계 ]
-list.stream().sum()          // ❌ Stream에는 sum() 없음
+list.stream().sum()          // X Stream에는 sum() 없음
 list.stream().toArray();     // Object[] 반환 — int[] 못 만듦
 
 [ IntStream으로 바꾸면 ]
 list.stream()
     .mapToInt(Integer::intValue)
-    .sum();                  // ✅ int 합계
-    .toArray();              // ✅ int[] 반환
+    .sum();                  // O int 합계
+    .toArray();              // O int[] 반환
 ```
 
 > `Stream<Integer>`는 객체 박싱 비용이 있고, 합계/평균 등 수치 연산이 부족해서 **수치 처리는 IntStream이 표준**.
@@ -158,13 +158,13 @@ List<Integer> list = Arrays.stream(arr)   // IntStream
 
 > `boxed()`가 `mapToObj(Integer::valueOf)`의 단축형.
 
-## ⚠️ 흔한 실수
+## 흔한 실수
 
 ### `Stream<int[]>`에 mapToInt 못 씀
 
 ```java
 Stream<int[]> s = ...;
-// ❌ ToIntFunction<int[]>로 어떻게 변환할지 정의해야 함
+// X ToIntFunction<int[]>로 어떻게 변환할지 정의해야 함
 s.mapToInt(arr -> arr[0]);   // 의도가 명확할 때만
 ```
 
@@ -173,10 +173,10 @@ s.mapToInt(arr -> arr[0]);   // 의도가 명확할 때만
 ```java
 List<Integer> list = Arrays.asList(1, null, 3);
 
-// ❌ NullPointerException — null을 int로 언박싱 못 함
+// X NullPointerException — null을 int로 언박싱 못 함
 list.stream().mapToInt(Integer::intValue).sum();
 
-// ✅ filter로 걸러내기
+// O filter로 걸러내기
 list.stream()
     .filter(Objects::nonNull)
     .mapToInt(Integer::intValue)

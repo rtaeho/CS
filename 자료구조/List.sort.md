@@ -66,7 +66,7 @@ public static <T extends Comparable<? super T>> void sort(List<T> list) {
 |---|---|---|
 |호출 방식|인스턴스 메서드|정적 메서드|
 |등장|Java 8|Java 1.2|
-|구현체별 최적화|✅ 가능 (오버라이드)|❌ 어려움|
+|구현체별 최적화|O 가능 (오버라이드)|X 어려움|
 |선호도|**Java 8+ 권장**|기존 코드 호환용|
 
 > 메서드 호출이 한 단계 짧고, List 구현체가 자체 최적화 가능 (예: ArrayList는 내부 배열 직접 정렬).
@@ -98,9 +98,9 @@ int max = nums.get(nums.size() - 1);      // 5
 ### 부분 정렬 — 직접 지원 안 함
 
 ```java
-// ❌ List.sort에는 fromIndex/toIndex 버전 없음
+// X List.sort에는 fromIndex/toIndex 버전 없음
 
-// ✅ subList로 부분 정렬 (subList는 원본의 뷰)
+// O subList로 부분 정렬 (subList는 원본의 뷰)
 List<Integer> list = new ArrayList<>(Arrays.asList(5, 4, 3, 2, 1));
 list.subList(1, 4).sort(null);
 // list: [5, 2, 3, 4, 1]
@@ -129,19 +129,19 @@ list.sort(null);   // UnsupportedOperationException
 ```java
 // Arrays.asList는 고정 크기지만 정렬은 가능
 List<Integer> list = Arrays.asList(3, 1, 2);
-list.sort(null);   // ✅ 동작
-list.add(4);       // ❌ UnsupportedOperationException
+list.sort(null);   // O 동작
+list.add(4);       // X UnsupportedOperationException
 ```
 
 ## 다른 정렬 방법과 비교
 
 |방법|대상|반환|in-place|
 |---|---|---|---|
-|[[Arrays.sort]]|배열|void|✅|
-|[[Collections.sort]]|List|void|✅|
-|`List.sort`|List|void|✅|
-|[[Stream.sorted]]|모든 컬렉션|새 Stream|❌|
-|[[Arrays.parallelSort]]|배열|void|✅|
+|[[Arrays.sort]]|배열|void|O|
+|[[Collections.sort]]|List|void|O|
+|`List.sort`|List|void|O|
+|[[Stream.sorted]]|모든 컬렉션|새 Stream|X|
+|[[Arrays.parallelSort]]|배열|void|O|
 
 ## 시간복잡도
 

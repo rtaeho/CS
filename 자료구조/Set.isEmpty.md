@@ -51,8 +51,8 @@ set.isEmpty();   // true
 ```java
 // 둘 다 동일한 결과지만:
 
-if (set.size() == 0) { ... }   // ❌ 의도가 덜 명확
-if (set.isEmpty())   { ... }   // ✅ 권장
+if (set.size() == 0) { ... }   // X 의도가 덜 명확
+if (set.isEmpty())   { ... }   // O 권장
 ```
 
 > 모든 컬렉션 인터페이스(List, Set, Map)가 `isEmpty()`를 제공. 동일한 컨벤션이라 일관성 측면에서도 권장됨.

@@ -13,14 +13,14 @@
 ## S - 단일 책임 원칙 (SRP)
 
 ```java
-// ❌ 하나의 클래스가 여러 책임
+// X 하나의 클래스가 여러 책임
 class User {
     public void login() { ... }       // 인증 책임
     public void saveToDb() { ... }    // DB 책임
     public void sendEmail() { ... }   // 이메일 책임
 }
 
-// ✅ 책임별로 클래스 분리
+// O 책임별로 클래스 분리
 class AuthService   { public void login() { ... } }
 class UserRepository { public void save() { ... } }
 class EmailService  { public void send() { ... } }
@@ -29,7 +29,7 @@ class EmailService  { public void send() { ... } }
 ## O - 개방-폐쇄 원칙 (OCP)
 
 ```java
-// ❌ 새 결제 수단 추가 시 기존 코드 수정 필요
+// X 새 결제 수단 추가 시 기존 코드 수정 필요
 class PaymentService {
     public void pay(String type) {
         if (type.equals("card")) { ... }
@@ -37,7 +37,7 @@ class PaymentService {
     }
 }
 
-// ✅ 인터페이스로 확장에만 열기
+// O 인터페이스로 확장에만 열기
 interface PaymentStrategy {
     void pay();
 }
@@ -54,7 +54,7 @@ class PaymentService {
 ## L - 리스코프 치환 원칙 (LSP)
 
 ```java
-// ❌ 자식이 부모를 대체하지 못하는 경우
+// X 자식이 부모를 대체하지 못하는 경우
 class Rectangle {
     public void setWidth(int w)  { this.width = w; }
     public void setHeight(int h) { this.height = h; }
@@ -63,11 +63,11 @@ class Square extends Rectangle {
     @Override
     public void setWidth(int w) {
         this.width = w;
-        this.height = w;  // 정사각형이라 높이도 같이 변경 → 부모 동작 위반 ❌
+        this.height = w;  // 정사각형이라 높이도 같이 변경 → 부모 동작 위반 X
     }
 }
 
-// ✅ 공통 인터페이스로 분리
+// O 공통 인터페이스로 분리
 interface Shape { int area(); }
 class Rectangle implements Shape { ... }
 class Square    implements Shape { ... }
@@ -76,17 +76,17 @@ class Square    implements Shape { ... }
 ## I - 인터페이스 분리 원칙 (ISP)
 
 ```java
-// ❌ 너무 많은 기능을 가진 인터페이스
+// X 너무 많은 기능을 가진 인터페이스
 interface Worker {
     void work();
     void eat();   // 로봇은 eat()이 필요 없음
 }
 class Robot implements Worker {
     public void work() { ... }
-    public void eat()  { }  // 억지로 구현 ❌
+    public void eat()  { }  // 억지로 구현 X
 }
 
-// ✅ 인터페이스 분리
+// O 인터페이스 분리
 interface Workable { void work(); }
 interface Eatable  { void eat(); }
 
@@ -97,12 +97,12 @@ class Robot implements Workable { ... }  // 필요한 것만 구현
 ## D - 의존성 역전 원칙 (DIP)
 
 ```java
-// ❌ 구체 클래스에 직접 의존
+// X 구체 클래스에 직접 의존
 class OrderService {
     private MySQLRepository repo = new MySQLRepository();  // 구체 클래스에 의존
 }
 
-// ✅ 추상화(인터페이스)에 의존
+// O 추상화(인터페이스)에 의존
 class OrderService {
     private final OrderRepository repo;  // 인터페이스에 의존
 

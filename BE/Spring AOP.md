@@ -8,7 +8,7 @@ public void createOrder() {
     log.info("주문 시작");           // 로깅
     checkAuth();                     // 보안
     beginTransaction();              // 트랜잭션
-    orderRepository.save(order);     // ★ 핵심 로직
+    orderRepository.save(order);     // 핵심 로직
     commitTransaction();             // 트랜잭션
     log.info("주문 완료");           // 로깅
 }
@@ -17,7 +17,7 @@ public void createOrder() {
 @Transactional
 @Logging
 public void createOrder() {
-    orderRepository.save(order);     // ★ 핵심 로직만 집중
+    orderRepository.save(order);     // 핵심 로직만 집중
 }
 ```
 

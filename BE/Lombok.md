@@ -73,12 +73,12 @@ public class Person {
 }
 
 // 위 코드가 자동 생성하는 것:
-// ✓ getter (getName, getAge)
-// ✓ setter (setName, setAge)
-// ✓ toString()
-// ✓ equals()
-// ✓ hashCode()
-// ✓ @RequiredArgsConstructor
+// O getter (getName, getAge)
+// O setter (setName, setAge)
+// O toString()
+// O equals()
+// O hashCode()
+// O @RequiredArgsConstructor
 ```
 
 #### @Value — 불변 객체용
@@ -91,11 +91,11 @@ public class Money {
 }
 
 // 자동 생성:
-// ✓ private final 필드
-// ✓ getter (setter 없음)
-// ✓ 모든 필드 생성자
-// ✓ toString(), equals(), hashCode()
-// ✓ final class
+// O private final 필드
+// O getter (setter 없음)
+// O 모든 필드 생성자
+// O toString(), equals(), hashCode()
+// O final class
 ```
 
 ### 자주 쓰이는 조합

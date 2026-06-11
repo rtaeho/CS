@@ -82,9 +82,9 @@ public class UserService {
 
 |전략|시점|정합성|구현 난이도|
 |---|---|---|---|
-|**TTL**|시간 만료 시|낮음 (stale 허용)|✅ 단순|
-|**Event-Based**|데이터 변경 시 즉시|높음|🔺 보통|
-|**@CacheEvict**|메서드 실행 시|높음|✅ 단순|
+|**TTL**|시간 만료 시|낮음 (stale 허용)|O 단순|
+|**Event-Based**|데이터 변경 시 즉시|높음|보통|
+|**@CacheEvict**|메서드 실행 시|높음|O 단순|
 
 ## 주의 - Cache Stampede
 
@@ -94,7 +94,7 @@ public class UserService {
 시간 →
 캐시 만료!
 요청1 → DB 조회 중...
-요청2 → DB 조회 중...   ← 동시에 몰림 ❌
+요청2 → DB 조회 중...   ← 동시에 몰림 X
 요청3 → DB 조회 중...
 ```
 

@@ -38,22 +38,22 @@ ID를 직접 할당하는 경우에 필요합니다.
 ```java
 @Entity
 public class Item implements Persistable<String> {
-    
+
     @Id
     private String id;  // 직접 할당 (UUID 등)
-    
+
     @CreatedDate
     private LocalDateTime createdDate;
-    
+
     public Item(String id) {
         this.id = id;  // 생성 시점에 ID 할당
     }
-    
+
     @Override
     public String getId() {
         return id;
     }
-    
+
     @Override
     public boolean isNew() {
         return createdDate == null;  // 생성일 없으면 신규

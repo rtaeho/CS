@@ -5,7 +5,7 @@ Flexbox는 **1차원(한 방향) 레이아웃을 효율적으로 배치, 정렬,
 ```css
 /* Flexbox 이전 — 수직 가운데 정렬이 매우 어려웠음 */
 
-/* ❌ 방법 1: position + transform */
+/* X 방법 1: position + transform */
 .parent { position: relative; }
 .child {
     position: absolute;
@@ -14,14 +14,14 @@ Flexbox는 **1차원(한 방향) 레이아웃을 효율적으로 배치, 정렬,
     transform: translate(-50%, -50%);
 }
 
-/* ❌ 방법 2: table-cell */
+/* X 방법 2: table-cell */
 .parent {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
 }
 
-/* ✅ Flexbox — 3줄로 해결 */
+/* O Flexbox — 3줄로 해결 */
 .parent {
     display: flex;
     justify-content: center;

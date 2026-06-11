@@ -15,11 +15,11 @@ API = Application Programming Interface
 ## API가 없다면?
 
 ```
-❌ API 없이 DB 직접 접근
+X API 없이 DB 직접 접근
 클라이언트 → DB 직접 접근
 → 보안 위험, DB 구조 노출, 클라이언트마다 쿼리 작성
 
-✅ API를 통한 접근
+O API를 통한 접근
 클라이언트 → API → 서버 → DB
 → 내부 구현 숨김, 보안 유지, 일관된 인터페이스
 ```

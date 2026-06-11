@@ -6,7 +6,7 @@
 
 따라서 `resolve()`는 `Promise`를 성공적으로 **마무리 짓는 행위**라고 볼 수 있고, `fulfilled`는 그 결과로 발생하는 **완료된 상태**를 의미합니다.
 
-## [](https://www.maeil-mail.kr/question/73#resolve%EC%97%90%EC%84%9C-%EC%9E%91%EC%97%85%EC%9D%B4-%EC%8B%A4%ED%8C%A8%ED%95%A0-%EC%88%98%EB%8F%84-%EC%9E%88%EB%82%98%EC%9A%94-)resolve에서 작업이 실패할 수도 있나요? 🤔
+## [](https://www.maeil-mail.kr/question/73#resolve%EC%97%90%EC%84%9C-%EC%9E%91%EC%97%85%EC%9D%B4-%EC%8B%A4%ED%8C%A8%ED%95%A0-%EC%88%98%EB%8F%84-%EC%9E%88%EB%82%98%EC%9A%94-)resolve에서 작업이 실패할 수도 있나요?
 
 `resolve()`가 실패하는 상황은 발생하지 않습니다. `resolve()`는 `Promise`를 '이행(`fulfilled`)'으로 만드는 함수이기 때문에, 성공적인 결과를 전달할 때 사용되며 실패 자체와는 관련이 없습니다. 만약 `Promise`가 실패한다면, `resolve()`가 호출조차 되지 않고 `reject()`가 호출됩니다.
 

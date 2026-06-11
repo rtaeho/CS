@@ -83,7 +83,7 @@ labels.put(Direction.NORTH, "북쪽");
 ## 상수 대비 장점
 
 ```java
-// ❌ int 상수 (타입 안전성 없음)
+// X int 상수 (타입 안전성 없음)
 static final int RED   = 0;
 static final int GREEN = 1;
 static final int BLUE  = 2;
@@ -91,10 +91,10 @@ static final int BLUE  = 2;
 void setColor(int color) {}
 setColor(999);   // 컴파일 OK, 런타임 오류 가능
 
-// ✅ enum (타입 안전)
+// O enum (타입 안전)
 enum Color { RED, GREEN, BLUE }
 void setColor(Color color) {}
-// setColor(999);  // ❌ 컴파일 에러
+// setColor(999);  // X 컴파일 에러
 ```
 
 ## 핵심 정리

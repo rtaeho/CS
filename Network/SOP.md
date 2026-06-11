@@ -17,11 +17,11 @@ https://www.example.com:443/path
 ```
 기준: https://www.example.com
 
-https://www.example.com/api      ✅ 같은 출처 (경로만 다름)
-http://www.example.com           ❌ 다른 출처 (프로토콜 다름)
-https://api.example.com          ❌ 다른 출처 (호스트 다름)
-https://www.example.com:8080     ❌ 다른 출처 (포트 다름)
-https://www.other.com            ❌ 다른 출처 (호스트 다름)
+https://www.example.com/api      O 같은 출처 (경로만 다름)
+http://www.example.com           X 다른 출처 (프로토콜 다름)
+https://api.example.com          X 다른 출처 (호스트 다름)
+https://www.example.com:8080     X 다른 출처 (포트 다름)
+https://www.other.com            X 다른 출처 (호스트 다름)
 ```
 
 ## 왜 필요한가?
@@ -31,27 +31,27 @@ SOP 없다면
 
 악성 사이트(evil.com) 접속
 → evil.com이 JS로 mybank.com에 요청
-→ 내 쿠키/세션으로 계좌 정보 탈취 💀
+→ 내 쿠키/세션으로 계좌 정보 탈취
 
 SOP 있으면
-→ evil.com → mybank.com 요청 차단 ✅
+→ evil.com → mybank.com 요청 차단 O
 ```
 
 ## SOP가 차단하는 것
 
 ```
-❌ 다른 출처 AJAX 요청 결과 읽기
-❌ 다른 출처 iframe 내용 접근
-❌ 다른 출처 쿠키/localStorage 접근
+X 다른 출처 AJAX 요청 결과 읽기
+X 다른 출처 iframe 내용 접근
+X 다른 출처 쿠키/localStorage 접근
 ```
 
 ## SOP가 차단 안 하는 것
 
 ```
-✅ <img src="다른출처/image.png">   → 이미지 로드
-✅ <script src="다른출처/js">       → 스크립트 로드
-✅ <link href="다른출처/css">       → CSS 로드
-✅ <form action="다른출처">         → 폼 전송
+O <img src="다른출처/image.png">   → 이미지 로드
+O <script src="다른출처/js">       → 스크립트 로드
+O <link href="다른출처/css">       → CSS 로드
+O <form action="다른출처">         → 폼 전송
 ```
 
 ## 해결 방법

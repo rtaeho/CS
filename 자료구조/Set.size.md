@@ -111,8 +111,8 @@ N=4, N/2=2, 고유종=1
 ### 빈 집합 확인
 
 ```java
-if (set.size() == 0) { ... }   // ❌ 비효율
-if (set.isEmpty())   { ... }   // ✅ 권장 — [[Set.isEmpty]]
+if (set.size() == 0) { ... }   // X 비효율
+if (set.isEmpty())   { ... }   // O 권장 — [[Set.isEmpty]]
 ```
 
 > 결과는 같지만 `isEmpty()`가 의도가 명확하고 미세하게 더 빠름.

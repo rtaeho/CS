@@ -53,8 +53,8 @@ q.offer(1);   // OK
 // 용량 제한 있는 큐
 Queue<Integer> bq = new ArrayBlockingQueue<>(2);
 bq.add(1); bq.add(2);
-bq.add(3);     // ❌ IllegalStateException
-bq.offer(3);   // ✅ false 반환 (조용히 실패)
+bq.add(3);     // X IllegalStateException
+bq.offer(3);   // O false 반환 (조용히 실패)
 ```
 
 > 일반적인 코딩테스트/BFS에서는 `add`/`offer` 어느 쪽을 써도 됨.
@@ -118,17 +118,17 @@ while (!queue.isEmpty()) {
 }
 ```
 
-## ⚠️ List.add와 혼동 주의
+## List.add와 혼동 주의
 
 `Queue<Integer> q = new LinkedList<>()`로 선언했을 때 `q.add(1, 99)`는 사용할 수 없습니다.
 
 ```java
 Queue<Integer> q = new LinkedList<>();
-q.add(99);          // ✅ Queue.add — rear에 삽입
-q.add(0, 99);       // ❌ 컴파일 에러 — Queue 인터페이스에 없음
+q.add(99);          // O Queue.add — rear에 삽입
+q.add(0, 99);       // X 컴파일 에러 — Queue 인터페이스에 없음
 
 LinkedList<Integer> ll = new LinkedList<>();
-ll.add(0, 99);      // ✅ List.add — 인덱스 삽입 가능 (LinkedList는 List도 구현)
+ll.add(0, 99);      // O List.add — 인덱스 삽입 가능 (LinkedList는 List도 구현)
 ```
 
 > 선언 타입(`Queue` vs `LinkedList`)에 따라 호출 가능한 메서드가 달라짐.

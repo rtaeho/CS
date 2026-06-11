@@ -29,9 +29,9 @@ Content-Type: application/json
 
 {"query": "홍길동", "filters": {"age": 25}}
 
-프록시: GET에 Body? → Body 제거 후 전달 ❌
-CDN: GET 요청 캐싱 → Body 무시하고 URL만으로 캐시 키 생성 ❌
-로드밸런서: Body 없는 GET으로 전달 ❌
+프록시: GET에 Body? → Body 제거 후 전달 X
+CDN: GET 요청 캐싱 → Body 무시하고 URL만으로 캐시 키 생성 X
+로드밸런서: Body 없는 GET으로 전달 X
 
 → 서버에 도달할 때 Body가 사라져 있을 수 있음
 ```
@@ -49,7 +49,7 @@ CDN: GET 요청 캐싱 → Body 무시하고 URL만으로 캐시 키 생성 ❌
 // JavaScript fetch — GET Body 지원 안 함
 fetch("/search", {
     method: "GET",
-    body: JSON.stringify({query: "홍길동"})  // 일부 브라우저에서 에러 ❌
+    body: JSON.stringify({query: "홍길동"})  // 일부 브라우저에서 에러 X
 });
 
 // XMLHttpRequest — 스펙상 GET Body 전송 가능하나 브라우저마다 다름
@@ -59,23 +59,23 @@ fetch("/search", {
 // Java HttpURLConnection — GET Body 지원하지 않음
 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 conn.setRequestMethod("GET");
-conn.setDoOutput(true);  // GET에서는 예외 발생할 수 있음 ❌
+conn.setDoOutput(true);  // GET에서는 예외 발생할 수 있음 X
 
 // RestTemplate — GET Body 기본 미지원
 restTemplate.exchange(
     url, HttpMethod.GET,
-    new HttpEntity<>(body, headers),  // Body가 무시될 수 있음 ⚠️
+    new HttpEntity<>(body, headers),  // Body가 무시될 수 있음
     String.class
 );
 ```
 
 ```
 [다양한 클라이언트의 GET Body 지원 현황]
-브라우저 fetch API:  ❌ 미지원 (에러 또는 무시)
-axios:              ❌ GET 요청 시 data 무시
-OkHttp:             ❌ GET에 Body 설정 시 예외
-curl:               ✅ -d 옵션으로 가능 (비표준 사용)
-Postman:            ✅ 가능하지만 경고 표시
+브라우저 fetch API:  X 미지원 (에러 또는 무시)
+axios:              X GET 요청 시 data 무시
+OkHttp:             X GET에 Body 설정 시 예외
+curl:               O -d 옵션으로 가능 (비표준 사용)
+Postman:            O 가능하지만 경고 표시
 ```
 
 ### 3. [[캐싱]]이 불가능
@@ -91,12 +91,12 @@ Body: {"name": "홍길동", "age": 25}
 
 → 브라우저, CDN, 프록시 모두 URL만으로 캐시 키 생성
 → Body가 다르더라도 URL이 같으면 같은 캐시 반환
-→ 잘못된 결과 반환 ❌
+→ 잘못된 결과 반환 X
 ```
 
 ```
 GET /search (Body: {"query": "사과"}) → 결과A 캐싱
-GET /search (Body: {"query": "바나나"}) → URL 동일 → 결과A 반환 ❌
+GET /search (Body: {"query": "바나나"}) → URL 동일 → 결과A 반환 X
 
 → Body를 무시하고 URL만으로 캐싱하므로
 → 다른 검색어임에도 같은 결과를 반환하는 문제 발생
@@ -107,16 +107,16 @@ GET /search (Body: {"query": "바나나"}) → URL 동일 → 결과A 반환 ❌
 ```
 [쿼리스트링 사용 시]
 GET /search?query=홍길동&age=25
-→ URL 복사하여 공유 가능 ✅
-→ 브라우저 북마크 가능 ✅
-→ 뒤로가기 시 동일 결과 ✅
+→ URL 복사하여 공유 가능 O
+→ 브라우저 북마크 가능 O
+→ 뒤로가기 시 동일 결과 O
 
 [GET Body 사용 시]
 GET /search (Body: {"query": "홍길동", "age": 25})
 → URL만으로는 검색 조건을 알 수 없음
-→ 링크 공유 불가 ❌
-→ 북마크 불가 ❌
-→ 뒤로가기 시 Body가 없어 동일 결과 보장 불가 ❌
+→ 링크 공유 불가 X
+→ 북마크 불가 X
+→ 뒤로가기 시 Body가 없어 동일 결과 보장 불가 X
 ```
 
 ## 그럼 복잡한 검색 조건은 어떻게 전달하나

@@ -19,11 +19,11 @@ public class MemberDto {
 	public String getName() {
 		return name;
 	}
-	
+
 	public String getEamil() {
 		return email;
 	}
-	
+
 	public int getAge() {
 		return age;
 	}

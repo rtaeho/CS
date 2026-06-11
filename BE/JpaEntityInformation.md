@@ -4,19 +4,19 @@
 
 ```java
 public interface JpaEntityInformation<T, ID> extends EntityInformation<T, ID> {
-    
+
     // Entity가 신규인지 판단
     boolean isNew(T entity);
-    
+
     // Entity의 ID 값 조회
     ID getId(T entity);
-    
+
     // ID 타입 조회
     Class<ID> getIdType();
-    
+
     // Entity 이름 조회
     String getEntityName();
-    
+
     // ...
 }
 ```

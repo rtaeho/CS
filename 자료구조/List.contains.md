@@ -41,7 +41,7 @@ List<Person> list = new ArrayList<>();
 list.add(new Person("Alice"));
 list.add(new Person("Bob"));
 
-list.contains(new Person("Alice"));   // false ❌
+list.contains(new Person("Alice"));   // false X
                                        // (equals 재정의 안 됨 → 메모리 주소 비교)
 ```
 
@@ -57,7 +57,7 @@ class Person {
     public int hashCode() { return name.hashCode(); }
 }
 
-list.contains(new Person("Alice"));   // true ✅
+list.contains(new Person("Alice"));   // true O
 ```
 
 > 객체를 List에 담아 contains 사용하려면 `equals`를 반드시 재정의.
@@ -73,13 +73,13 @@ list.contains(new Person("Alice"));   // true ✅
 ```
 
 ```java
-// ❌ contains를 자주 호출하는데 List 사용
+// X contains를 자주 호출하는데 List 사용
 List<Integer> blocked = ...;
 for (int id : ids) {
     if (blocked.contains(id)) { ... }   // 매번 O(n) → 전체 O(n²)
 }
 
-// ✅ Set 사용
+// O Set 사용
 Set<Integer> blocked = new HashSet<>(...);
 for (int id : ids) {
     if (blocked.contains(id)) { ... }   // 매번 O(1) → 전체 O(n)

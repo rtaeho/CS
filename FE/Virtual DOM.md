@@ -8,7 +8,7 @@
 DOM 변경
 → 레이아웃 재계산 (Reflow)
 → 화면 다시 그리기 (Repaint)
-→ 잦은 변경 시 성능 저하 💀
+→ 잦은 변경 시 성능 저하
 ```
 
 ## 동작 방식
@@ -31,7 +31,7 @@ DOM 변경
 </ul>                    <li>D</li>  ← 추가됨
                        </ul>
 
-→ D만 실제 DOM에 추가 ✅
+→ D만 실제 DOM에 추가 O
 → A, B, C는 건드리지 않음
 ```
 
@@ -42,7 +42,7 @@ DOM 변경
 |**저장 위치**|브라우저|메모리|
 |**조작 비용**|높음|낮음|
 |**업데이트**|즉시 반영|배치 처리 후 반영|
-|**직접 접근**|✅|❌|
+|**직접 접근**|O|X|
 
 ## React에서의 Virtual DOM
 
@@ -63,7 +63,7 @@ function Counter() {
 // setCount 호출 시
 // 1. 새 Virtual DOM 생성
 // 2. 이전과 비교 → <p>만 변경됨
-// 3. 실제 DOM의 <p>만 업데이트 ✅
+// 3. 실제 DOM의 <p>만 업데이트 O
 // 4. <div>, <button>은 그대로
 ```
 
@@ -71,17 +71,17 @@ function Counter() {
 
 ```jsx
 // key 없으면 Diffing 비효율
-{items.map(item => <li>{item}</li>)}  // ❌
+{items.map(item => <li>{item}</li>)}  // X
 
 // key 있으면 정확한 Diffing 가능
-{items.map(item => <li key={item.id}>{item}</li>)}  // ✅
+{items.map(item => <li key={item.id}>{item}</li>)}  // O
 → key로 어떤 요소가 변경/추가/삭제됐는지 정확히 파악
 ```
 
 ## Virtual DOM이 항상 빠른가?
 
 ```
-❌ 항상 빠른 건 아님
+X 항상 빠른 건 아님
 
 단순한 변경: 실제 DOM 직접 조작이 더 빠를 수 있음
 복잡한 UI:   Virtual DOM의 배치 처리가 효율적

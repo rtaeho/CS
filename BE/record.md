@@ -51,14 +51,14 @@ record Person(String name, int age) { }
                 │           │
                 ▼           ▼
 ┌─────────────────────────────────────┐
-│  ✓ private final String name;       │
-│  ✓ private final int age;           │
-│  ✓ 모든 필드를 받는 생성자            │
-│  ✓ name(), age() 접근자 메서드       │
-│  ✓ equals()   — 모든 필드 비교       │
-│  ✓ hashCode() — 모든 필드 기반       │
-│  ✓ toString() — "Person[name=Kim, age=25]" │
-│  ✓ final class (상속 불가)           │
+│  O private final String name;       │
+│  O private final int age;           │
+│  O 모든 필드를 받는 생성자            │
+│  O name(), age() 접근자 메서드       │
+│  O equals()   — 모든 필드 비교       │
+│  O hashCode() — 모든 필드 기반       │
+│  O toString() — "Person[name=Kim, age=25]" │
+│  O final class (상속 불가)           │
 └─────────────────────────────────────┘
 ```
 
@@ -101,8 +101,8 @@ record Age(int value) {
     }
 }
 
-new Age(25);   // 정상 ✓
-new Age(-1);   // IllegalArgumentException ✗
+new Age(25);   // 정상 O
+new Age(-1);   // IllegalArgumentException X
 ```
 
 ### 커스텀 메서드 추가
@@ -155,7 +155,7 @@ record Product(String name, int price) implements Printable {
 
 ```java
 record Person(String name, int age) {
-    private String nickname;      // 컴파일 에러 ✗ — 필드 추가 불가
+    private String nickname;      // 컴파일 에러 X — 필드 추가 불가
     void setName(String name) { } // setter 의미 없음 — final 필드
 }
 ```

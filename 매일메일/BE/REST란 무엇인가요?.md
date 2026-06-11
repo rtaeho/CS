@@ -2,7 +2,7 @@
 
 **[[API]](Application Programming Interface)** 란 컴퓨터 프로그램 간 정보를 주고받을 수 있도록 하는 일종의 출입구와 같은 역할을 수행합니다. API가 REST 기반으로 구현되어 있다면, 이를 REST API라고 부릅니다.
 
-## [](https://www.maeil-mail.kr/question/122#rest%EC%9D%98-%EC%9E%A5%EB%8B%A8%EC%A0%90%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-)REST의 장단점은 무엇인가요? 🤔
+## [](https://www.maeil-mail.kr/question/122#rest%EC%9D%98-%EC%9E%A5%EB%8B%A8%EC%A0%90%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-)REST의 장단점은 무엇인가요?
 
 REST는 서버와 클라이언트의 역할을 명확하게 분리해 주며, HTTP 프로토콜을 따르는 모든 플랫폼에서 사용할 수 있습니다. 또한, CURL, Postman을 사용하여 간단하게 테스트할 수 있다는 장점도 존재합니다. 반면, 요청 및 응답 스타일의 통신만 지원합니다. 그리고, HTTP 메서드로 행위를 표현하기 어려운 경우도 존재하며 요청 한 번으로 여러 자원을 가져오기 어렵다는 단점이 존재합니다.
 

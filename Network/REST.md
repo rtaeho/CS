@@ -9,7 +9,7 @@
 ```
 
 ```
-❌ 잘못된 설계          ✅ REST 설계
+X 잘못된 설계          O REST 설계
 /getUser/1             GET    /users/1
 /createUser            POST   /users
 /updateUser/1          PUT    /users/1
@@ -20,11 +20,11 @@
 
 |메서드|역할|멱등성|
 |---|---|---|
-|**GET**|조회|✅|
-|**POST**|생성|❌|
-|**PUT**|전체 수정|✅|
-|**PATCH**|부분 수정|❌|
-|**DELETE**|삭제|✅|
+|**GET**|조회|O|
+|**POST**|생성|X|
+|**PUT**|전체 수정|O|
+|**PATCH**|부분 수정|X|
+|**DELETE**|삭제|O|
 
 > 멱등성: 같은 요청을 여러 번 해도 결과가 동일
 
@@ -42,13 +42,13 @@
 ## Stateless 핵심
 
 ```
-❌ Stateful
+X Stateful
 클라이언트: "나 kim이야"
 서버: 기억함
 클라이언트: "내 정보 줘"
 서버: "kim 정보 줘?" (이전 상태 기억)
 
-✅ Stateless (REST)
+O Stateless (REST)
 클라이언트: "나 kim이야, 내 정보 줘" (매 요청마다 정보 포함)
 서버: 매 요청을 독립적으로 처리
 → JWT 토큰, API Key 등으로 인증 정보 매 요청에 포함
@@ -57,17 +57,17 @@
 ## REST API 설계 규칙
 
 ```
-✅ 명사 사용          ❌ 동사 사용
+O 명사 사용          X 동사 사용
 /users               /getUsers
 /users/1/orders      /getUserOrders
 
-✅ 소문자             ❌ 대문자
+O 소문자             X 대문자
 /users/profile       /Users/Profile
 
-✅ 하이픈             ❌ 언더스코어
+O 하이픈             X 언더스코어
 /user-profiles       /user_profiles
 
-✅ 계층 관계 표현
+O 계층 관계 표현
 /users/{id}/orders/{orderId}
 ```
 
@@ -107,7 +107,7 @@ public class UserController {
 REST     : 아키텍처 스타일 (개념)
 RESTful  : REST 원칙을 잘 준수한 API (구현)
 
-"이 API는 RESTful하다" 
+"이 API는 RESTful하다"
 = REST 제약 조건을 잘 지키고 있다는 의미
 ```
 

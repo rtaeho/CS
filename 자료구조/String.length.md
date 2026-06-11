@@ -15,7 +15,7 @@ int length()
 "abc 123".length();  // 7 (공백, 숫자 모두 포함)
 ```
 
-## ⚠️ 비슷해 보이는 length들
+## 비슷해 보이는 length들
 
 |대상|길이 확인 방법|
 |---|---|
@@ -28,12 +28,12 @@ String s = "abc";
 int[] arr = {1, 2, 3};
 List<Integer> list = List.of(1, 2, 3);
 
-s.length();      // ✅ 메서드 (괄호 있음)
-arr.length;      // ✅ 필드 (괄호 없음)
-list.size();     // ✅ size, length 아님
+s.length();      // O 메서드 (괄호 있음)
+arr.length;      // O 필드 (괄호 없음)
+list.size();     // O size, length 아님
 
-s.length;        // ❌ 컴파일 에러
-arr.length();    // ❌ 컴파일 에러
+s.length;        // X 컴파일 에러
+arr.length();    // X 컴파일 에러
 ```
 
 > 자바에서 가장 자주 헷갈리는 부분. **String은 메서드, 배열은 필드, 컬렉션은 size**.
@@ -68,7 +68,7 @@ for (int i = 0; i < len; i++) {
 
 ```java
 if (s.length() == 0) { ... }    // 동작은 같지만
-if (s.isEmpty())     { ... }    // ✅ 의도가 명확
+if (s.isEmpty())     { ... }    // O 의도가 명확
 
 if (s.isBlank())     { ... }    // 공백만 있어도 true (Java 11+)
 ```
@@ -96,7 +96,7 @@ int len = (s == null) ? 0 : s.length();   // null이면 0
 
 > Java 자체에는 안전 length 메서드 없음. Apache Commons의 `StringUtils.length(s)`는 null 안전.
 
-## ⚠️ 서로게이트 페어 주의
+## 서로게이트 페어 주의
 
 ```java
 String s = "𝄞";    // U+1D11E (BMP 범위 밖)

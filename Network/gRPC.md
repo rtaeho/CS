@@ -79,7 +79,7 @@ PostResponse res = stub.getPost(PostRequest.newBuilder().setId(1).build());
 | 직렬화 | JSON (텍스트) | Protocol Buffers (바이너리) |
 | 인터페이스 정의 | OpenAPI (선택) | `.proto` (필수) |
 | 스트리밍 | SSE / WebSocket 별도 | 기본 제공 |
-| 브라우저 지원 | ✅ 직접 지원 | ❌ grpc-web 필요 |
+| 브라우저 지원 | O 직접 지원 | X grpc-web 필요 |
 | 성능 | 상대적으로 낮음 | 높음 (바이너리, HTTP/2) |
 | 적합한 상황 | 외부 API, 브라우저 통신 | 내부 마이크로서비스 통신 |
 
