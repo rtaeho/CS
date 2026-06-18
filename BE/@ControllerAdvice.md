@@ -29,7 +29,7 @@ public class GlobalExceptionHandler {
 
 ## @RestControllerAdvice
 
-`@ControllerAdvice` + `@ResponseBody`의 결합. REST API에서 JSON 에러 응답을 반환할 때 사용한다.
+`@ControllerAdvice` + `@ResponseBody`의 결합입니다. REST API에서 JSON 에러 응답을 반환할 때 사용합니다.
 
 ## 핵심 정리
 

@@ -33,7 +33,7 @@ public class ServerProperties {
 
 ## 핵심 정리
 
-- 환경에 따라 프로퍼티 이름 표기가 달라도 바인딩이 깨지지 않는다
-- `@Value`를 사용할 경우 RelaxedBinding이 없으므로 정확한 키 이름을 사용해야 함
+- 환경에 따라 프로퍼티 이름 표기가 달라도 바인딩이 깨지지 않습니다
+- `@Value`를 사용할 경우 RelaxedBinding이 없으므로 정확한 키 이름을 사용해야 합니다
 
 → [[@ConfigurationProperties]]

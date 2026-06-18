@@ -1,4 +1,4 @@
-[[DispatcherServlet]]이 [[HandlerMapping]]으로 찾은 핸들러를 실제로 실행할 수 있도록 어댑터 역할을 수행하는 컴포넌트다.
+[[DispatcherServlet]]이 [[HandlerMapping]]으로 찾은 핸들러를 실제로 실행할 수 있도록 어댑터 역할을 수행하는 컴포넌트입니다.
 
 ## 핵심 특징
 
@@ -17,4 +17,4 @@
 
 ## 핵심 정리
 
-HandlerAdapter는 DispatcherServlet과 실제 컨트롤러 사이의 어댑터 레이어로, 다양한 컨트롤러 유형을 단일 인터페이스로 위임한다.
+HandlerAdapter는 DispatcherServlet과 실제 컨트롤러 사이의 어댑터 레이어로, 다양한 컨트롤러 유형을 단일 인터페이스로 위임합니다.

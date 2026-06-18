@@ -45,7 +45,7 @@ public class MailProperties {
 
 ## 핵심 정리
 
-- 설정 값이 여러 개 묶이는 경우 `@Value`보다 `@ConfigurationProperties`가 유지보수에 유리
-- [[RelaxedBinding]]으로 환경 변수(`MY_MAIL_HOST`)나 YAML(`my-mail.host`) 표기 모두 자동 처리
+- 설정 값이 여러 개 묶이는 경우 `@Value`보다 `@ConfigurationProperties`가 유지보수에 유리합니다
+- [[RelaxedBinding]]으로 환경 변수(`MY_MAIL_HOST`)나 YAML(`my-mail.host`) 표기 모두 자동 처리합니다
 
 → [[@Component]] | [[RelaxedBinding]]

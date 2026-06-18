@@ -1,4 +1,4 @@
-Spring MVC에서 컨트롤러 메서드의 파라미터 값을 HTTP 요청으로부터 자동으로 생성하고 주입하는 컴포넌트다.
+Spring MVC에서 컨트롤러 메서드의 파라미터 값을 HTTP 요청으로부터 자동으로 생성하고 주입하는 컴포넌트입니다.
 
 ## 핵심 특징
 
@@ -26,4 +26,4 @@ public class LoginUserArgumentResolver implements HandlerMethodArgumentResolver 
 
 ## 핵심 정리
 
-ArgumentResolver는 컨트롤러 파라미터 바인딩을 담당하는 확장 포인트로, 커스텀 구현으로 어노테이션 기반 파라미터 주입을 추가할 수 있다.
+ArgumentResolver는 컨트롤러 파라미터 바인딩을 담당하는 확장 포인트로, 커스텀 구현으로 어노테이션 기반 파라미터 주입을 추가할 수 있습니다.

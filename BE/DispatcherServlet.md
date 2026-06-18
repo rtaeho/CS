@@ -26,7 +26,7 @@ HTTP 응답
 
 ## 예외 처리 흐름
 
-예외 발생 시 [[HandlerExceptionResolver]] 체인에 위임한다.
+예외 발생 시 [[HandlerExceptionResolver]] 체인에 위임합니다.
 
 ```
 예외 발생
