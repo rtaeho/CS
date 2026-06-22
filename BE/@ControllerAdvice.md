@@ -36,3 +36,5 @@ public class GlobalExceptionHandler {
 - 모든 `@Controller`에 적용되는 전역 예외 처리 설정
 - `@ExceptionHandler`와 함께 사용해 일관된 에러 응답 처리 가능
 - [[DispatcherServlet]]이 예외를 위임하면 [[HandlerExceptionResolver]]가 이 클래스를 탐색
+
+→ [[ControllerAdvice에 대해 설명해주세요]]
