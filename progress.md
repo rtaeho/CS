@@ -6,7 +6,7 @@ status: draft
 > `/cs` 인자 없이 호출하면 이 파일 기반으로 다음 학습 주제를 추천합니다.
 > 학습 완료 시 `[ ]` → `[x]` 로 자동 변경됩니다.
 
-last_category: Infa
+last_category: FE
 
 ---
 
@@ -191,6 +191,7 @@ last_category: Infa
 - [X] 번들러
 - [X] 코드 스플리팅
 - [X] 레이지 로딩
+- [X] Resource Hint
 - [ ] useEffect
 - [ ] useMemo / useCallback
 - [ ] 웹 성능 최적화
