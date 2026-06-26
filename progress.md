@@ -6,7 +6,7 @@ status: draft
 > `/cs` 인자 없이 호출하면 이 파일 기반으로 다음 학습 주제를 추천합니다.
 > 학습 완료 시 `[ ]` → `[x]` 로 자동 변경됩니다.
 
-last_category: FE
+last_category: BE
 
 ---
 
@@ -121,6 +121,8 @@ last_category: FE
 - [X] RAG
 - [X] LangChain4j
 - [X] RequestBody vs ModelAttribute
+- [X] Tomcat
+- [X] Servlet
 
 ---
 
