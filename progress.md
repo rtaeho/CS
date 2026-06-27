@@ -6,7 +6,7 @@ status: draft
 > `/cs` 인자 없이 호출하면 이 파일 기반으로 다음 학습 주제를 추천합니다.
 > 학습 완료 시 `[ ]` → `[x]` 로 자동 변경됩니다.
 
-last_category: BE
+last_category: FE
 
 ---
 
@@ -196,6 +196,7 @@ last_category: BE
 - [X] 레이지 로딩
 - [X] Resource Hint
 - [X] this 바인딩
+- [X] 타입 단언
 - [ ] useEffect
 - [ ] useMemo / useCallback
 - [ ] 웹 성능 최적화
