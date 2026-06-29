@@ -9,9 +9,9 @@ status: published
 ## RequestBody
 
 - 클라이언트가 보내는 요청의 본문을 Java 객체로 변환합니다.
-- 내부적으로 [[HttpMessageConverter]]를 거치며, JSON 요청은 보통 ObjectMapper를 통해 Java 객체로 역직렬화합니다.
+- 내부적으로 [[HttpMessageConverter]]를 거치며, JSON 요청은 보통 [[ObjectMapper]]를 통해 Java 객체로 [[직렬화|역직렬화]]합니다.
 - 따라서 변환될 Java 객체는 Jackson이 생성할 수 있는 형태여야 합니다.
-- record는 기본 생성자를 자동으로 제공하지 않지만, 모든 필드를 초기화하는 canonical constructor가 있어 Jackson이 이를 사용해 역직렬화할 수 있습니다.
+- [[record]]는 기본 생성자를 자동으로 제공하지 않지만, 모든 필드를 초기화하는 canonical constructor가 있어 Jackson이 이를 사용해 역직렬화할 수 있습니다.
 
 ## ModelAttribute
 
@@ -32,3 +32,4 @@ status: published
 
 - https://tecoble.techcourse.co.kr/post/2021-05-11-requestbody-modelattribute/
 - https://blog.karsei.pe.kr/59
+- https://jenkov.com/tutorials/java-json/jackson-objectmapper.html
