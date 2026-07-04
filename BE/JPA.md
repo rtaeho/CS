@@ -65,3 +65,4 @@ Spring Data JPA
 간단히 말해, **SQL 대신 객체로 DB를 다루게 해주는 기술**입니다.
 
 → [[JPA를 사용하는 이유를 설명해주세요]]
+→ [[JPA, Hibernate, Spring Data JPA 의 차이가 무엇인가요]]

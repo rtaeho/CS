@@ -42,3 +42,5 @@ session.save(user);  // 끝!
 - **Hibernate**: JPA를 구현한 구현체 중 하나 (가장 유명함)
 
 Spring Boot에서는 보통 **Spring Data JPA + Hibernate** 조합으로 많이 사용합니다.
+
+→ [[JPA, Hibernate, Spring Data JPA 의 차이가 무엇인가요]]

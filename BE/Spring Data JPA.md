@@ -43,3 +43,4 @@ Spring Data JPA는 JPA 사용을 편하게 해주는 Repository 추상화입니�
 JPA 자체나 Hibernate 구현체와 같은 층이 아니라, 그 위에서 반복적인 데이터 접근 코드를 줄여주는 도구입니다.
 
 → [[JPA를 사용하는 이유를 설명해주세요]]
+→ [[JPA, Hibernate, Spring Data JPA 의 차이가 무엇인가요]]
