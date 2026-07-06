@@ -106,6 +106,31 @@ set.add(new Point(1, 2));
 set.contains(new Point(1, 2));  // hashCode 없으면 false
 ```
 
+## equals만 재정의했을 때
+
+`equals()`만 재정의하고 `hashCode()`를 재정의하지 않으면, 논리적으로 같은 객체라도 해시 기반 컬렉션에서는 다른 객체처럼 저장될 수 있습니다.
+
+```java
+class Subscribe {
+    private final String email;
+    private final String category;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Subscribe that)) return false;
+        return Objects.equals(email, that.email)
+                && Objects.equals(category, that.category);
+    }
+}
+
+Set<Subscribe> set = new HashSet<>();
+set.add(new Subscribe("team.maeilmail@gmail.com", "backend"));
+set.add(new Subscribe("team.maeilmail@gmail.com", "backend"));
+
+set.size(); // hashCode가 다르면 2
+```
+
 ## 핵심 정리
 
 - equals()만 오버라이딩하고 hashCode()를 빠뜨리면 HashMap/HashSet에서 객체를 찾지 못함
@@ -115,4 +140,4 @@ set.contains(new Point(1, 2));  // hashCode 없으면 false
 - equals() true → hashCode() 같음 (역은 성립하지 않아도 됨 — 해시 충돌 허용)
 
 → [[동등성]] | [[동일성]] | [[HashMap]]
-
+→ [[equals와 hashCode는 왜 함께 재정의해야 할까요]]
