@@ -51,8 +51,8 @@ Content-Type: text/html
 |버전|특징|
 |---|---|
 |**HTTP/1.0**|요청마다 연결 새로 맺음|
-|**HTTP/1.1**|Keep-Alive로 연결 재사용|
-|**HTTP/2**|멀티플렉싱, 헤더 압축|
+|**[[HTTP 1.1]]**|Keep-Alive로 연결 재사용|
+|**[[HTTP 2]]**|멀티플렉싱, 헤더 압축|
 |**HTTP/3**|UDP 기반(QUIC), 더 빠른 연결|
 
 ## HTTP vs [[HTTPS]]
@@ -63,3 +63,5 @@ Content-Type: text/html
 ## 무상태의 한계와 해결
 
 로그인 상태 유지가 안 됨 → [[쿠키]], [[세션]], [[JWT]]로 해결
+
+→ [[HTTP 1.1과 HTTP 2.0에 대해서 설명해주세요]]
