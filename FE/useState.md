@@ -85,3 +85,21 @@ X 전역으로 공유해야 하는 값 → Context API, Zustand 등 사용
 ```
 
 > `useState`는 **값이 바뀔 때마다 화면을 다시 그려야 하는 경우**에 사용하며, UI와 무관한 값 저장은 `useRef`, 전역 상태는 별도 상태관리 라이브러리를 사용합니다.
+
+## 조건문 안에서 호출하면 안 되는 이유
+
+React는 Hook 호출 순서를 기준으로 각 상태를 연결합니다. 따라서 `useState`를 조건문, 반복문, 중첩 함수 안에서 호출하면 렌더링마다 Hook 호출 순서가 달라질 수 있습니다.
+
+```jsx
+function Example({ shouldUseState }) {
+    if (shouldUseState) {
+        const [count, setCount] = useState(0);
+    }
+
+    const [name, setName] = useState("");
+}
+```
+
+`shouldUseState`가 바뀌면 첫 번째 `useState` 호출이 생기거나 사라지고, 이후 Hook의 상태 슬롯이 어긋날 수 있습니다. 그래서 [[Hook의 규칙]]에 따라 Hook은 항상 컴포넌트 최상위에서 같은 순서로 호출해야 합니다.
+
+→ [[왜 useState를 조건문 안에서 사용하면 안 되나요]]
