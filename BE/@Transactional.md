@@ -160,3 +160,9 @@ public void process() throws IOException {
     // rollbackFor = IOException.class 추가 필요
 }
 ```
+
+## 트랜잭션 AOP 동작 흐름
+
+`@Transactional`은 [[트랜잭션 AOP]]를 통해 적용됩니다. 클라이언트가 Bean을 호출하면 실제 객체가 아니라 프록시가 먼저 요청을 받고, 프록시는 TransactionManager로 트랜잭션을 시작한 뒤 실제 메서드를 실행합니다. 성공하면 커밋하고, 예외가 발생하면 롤백합니다.
+
+→ [[스프링 트랜잭션 AOP 동작 흐름에 대해서 설명해주세요]]
