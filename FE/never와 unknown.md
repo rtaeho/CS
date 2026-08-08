@@ -4,6 +4,8 @@ tags: [TypeScript, never, unknown]
 status: published
 ---
 
+`never`와 `unknown`은 TypeScript에서 불가능한 값과 아직 확정되지 않은 값을 안전하게 표현하는 타입입니다.
+
 ## never
 먼저, `never`는 **절대 발생할 수 없는 값을 나타내는 타입입니다.** 함수가 값을 반환하지 않고 항상 예외를 던지거나 무한 루프를 도는 경우, 그 반환 타입은 `never`가 됩니다. `never`는 "bottom type"이라고도 불리며, 모든 타입의 하위 타입입니다.
 
@@ -45,4 +47,3 @@ function processUnknownValue(value: unknown) {
 - [[f-lab] 타입스크립트에서의 unknown과 never 타입의 이해와 활용](https://f-lab.kr/insight/understanding-unknown-and-never-in-typescript)
 
 → [[never와 unknown 타입에 대해서 설명해주세요]]
-

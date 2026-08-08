@@ -4,6 +4,8 @@ tags: [pnpm, YarnBerry, 패키지매니저]
 status: published
 ---
 
+pnpm과 Yarn Berry는 의존성 설치 속도와 저장 공간, 재현성을 개선하기 위해 서로 다른 전략을 사용하는 JavaScript 패키지 매니저입니다.
+
 ## pnpm
 pnpm은 **npm에 비해 성능과 디스크 효율성을 개선한 패키지 매니저입니다.**
 
@@ -32,4 +34,3 @@ Yarn Berry는 **Yarn의 2.0 버전 이상을 가리키며, PnP(Plug'n'Play) 와 
 - [[toss] node_modules로부터 우리를 구원해 줄 Yarn Berry](https://toss.tech/article/node-modules-and-yarn-berry)
 
 → [[패키지 매니저 pnpm과 yarn berry에 대해 설명해주세요]]
-
