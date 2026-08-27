@@ -47,6 +47,45 @@ Old:   Parallel Mark-Sweep-Compact 알고리즘
 
 ---
 
+## Parallel Old GC
+
+Parallel GC를 Old 영역까지 확장하여, Old 영역 수거도 멀티 스레드로 처리하는 GC입니다.
+
+```
+GC 발생 → Young/Old 영역 모두 멀티 스레드로 처리
+→ Parallel GC보다 Old 영역 수거 성능 향상
+```
+
+|항목|내용|
+|---|---|
+|**스레드**|멀티 (Young + Old 모두)|
+|**적합한 환경**|Parallel GC와 동일, 처리량 중요|
+|**JVM 옵션**|`-XX:+UseParallelOldGC`|
+
+---
+
+## CMS(Concurrent Mark-Sweep) GC
+
+애플리케이션 스레드와 병렬로 실행되어 STW 시간을 최소화하도록 설계된 GC입니다.
+
+```
+GC 발생 → 애플리케이션과 동시(Concurrent)에 마킹·스윕 수행
+→ STW 최소화에 초점
+
+단점: Compaction(압축)을 수행하지 않아 메모리 단편화 발생
+      → 메모리, CPU 사용량이 높음
+```
+
+|항목|내용|
+|---|---|
+|**스레드**|멀티 + 동시(Concurrent)|
+|**STW**|짧음 (마킹 시작/종료 시에만 발생)|
+|**단점**|메모리 단편화, 높은 CPU 사용량|
+|**Java 버전**|Java 5~8, Java 9 deprecated, Java 14 제거|
+|**JVM 옵션**|`-XX:+UseConcMarkSweepGC`|
+
+---
+
 ## [[G1 GC]] (Garbage First GC)
 
 힙을 동일한 크기의 **Region으로 분할**하여 가비지가 많은 Region부터 우선 수거하는 GC입니다.
@@ -116,20 +155,55 @@ Load Barriers:    객체 접근 시 GC 상태 확인
 
 ---
 
+## Shenandoah GC
+
+Red Hat에서 개발한 GC로, G1 GC처럼 힙을 Region으로 분할하면서 ZGC처럼 저지연 STW와 대용량 힙 처리를 목표로 합니다.
+
+|항목|내용|
+|---|---|
+|**힙 구조**|Region 기반|
+|**STW**|매우 짧음 (힙 크기와 무관)|
+|**Java 버전**|Java 12+|
+|**JVM 옵션**|`-XX:+UseShenandoahGC`|
+
+---
+
+## Epsilon GC
+
+GC 기능이 없는 실험용(No-Op) GC입니다.
+
+```
+객체 할당만 수행하고 회수는 하지 않음
+→ 힙이 가득 차면 OutOfMemoryError 발생
+
+용도: GC 오버헤드를 제외한 순수 성능 측정, 메모리 사용량 한계 테스트
+```
+
+|항목|내용|
+|---|---|
+|**GC 수행**|없음|
+|**적합한 환경**|성능 테스트, 극히 짧은 수명의 작업|
+|**Java 버전**|Java 11+|
+|**JVM 옵션**|`-XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC`|
+
+---
+
 ## 전체 비교
 
-||Serial|Parallel|G1|ZGC|
-|---|---|---|---|---|
-|**스레드**|단일|멀티|멀티|멀티+동시|
-|**STW**|매우 김|중간|짧음|1ms 이하|
-|**처리량**|낮음|높음|높음|중간|
-|**힙 크기**|소규모|중규모|대규모|초대규모|
-|**Java 기본**|-|Java 8|Java 9+|-|
+||Serial|Parallel|CMS|G1|ZGC|Shenandoah|
+|---|---|---|---|---|---|---|
+|**스레드**|단일|멀티|멀티+동시|멀티|멀티+동시|멀티+동시|
+|**STW**|매우 김|중간|짧음|짧음|1ms 이하|매우 짧음|
+|**처리량**|낮음|높음|중간|높음|중간|중간|
+|**힙 크기**|소규모|중규모|중규모|대규모|초대규모|대규모|
+|**Java 기본**|-|Java 8|-|Java 9+|-|-|
 
 ```
 처리량 중요    → Parallel GC
 응답시간 중요  → G1 GC
-초저지연 필요  → ZGC
+초저지연 필요  → ZGC / Shenandoah GC
 ```
 
-> 대부분의 서버 환경에서는 **G1 GC**가 적합하며, 수십 ms의 지연도 허용되지 않는 실시간 서비스에서는 **ZGC** 도입을 고려합니다.
+> 대부분의 서버 환경에서는 **G1 GC**가 적합하며, 수십 ms의 지연도 허용되지 않는 실시간 서비스에서는 **ZGC**나 **Shenandoah GC** 도입을 고려합니다. CMS GC는 Java 14에서 제거되어 신규 도입 대상이 아닙니다.
+
+→ [[GC 알고리즘은 어떤 것이 있나요?]]
