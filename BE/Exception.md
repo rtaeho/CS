@@ -139,3 +139,5 @@ throw new PostNotFoundException(id);
 - Unchecked: RuntimeException 하위, 프로그래밍 오류 — 실무에서 커스텀 예외는 대부분 Unchecked 선호
 
 - try-with-resources로 자원 누수 방지 — AutoCloseable 구현체에 사용
+
+→ [[어떤 예외가 발생하면 트랜잭션을 롤백하나요?]]

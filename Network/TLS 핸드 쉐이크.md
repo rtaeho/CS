@@ -232,3 +232,5 @@ SslContext sslContext = SslContextBuilder.forClient()
     .protocols("TLSv1.3")  // TLS 1.3 강제
     .build();
 ```
+
+→ [[TLS 핸드셰이크 과정에 대해 설명해주세요]]

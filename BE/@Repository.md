@@ -134,3 +134,5 @@ public class UserQueryRepository {
     }
 }
 ```
+
+→ [[어떤 예외가 발생하면 트랜잭션을 롤백하나요?]]
