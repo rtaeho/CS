@@ -54,6 +54,17 @@ row_key: "user:1"
 (Alice) --[BOUGHT]--> (Book)
 ```
 
+### 5. Time Series DB
+
+타임스탬프가 있는 메트릭, 이벤트 등 시간에 따라 변화하는 데이터를 저장합니다.
+
+```
+// InfluxDB 예시
+measurement: cpu_usage
+  2026-02-25T10:00:00Z, host=server1, value=42.1
+  2026-02-25T10:00:10Z, host=server1, value=45.8
+```
+
 ## 핵심 특성: CAP 이론
 
 분산 시스템에서 세 가지를 동시에 만족할 수 없습니다.
@@ -91,8 +102,9 @@ NoSQL이 ACID 대신 따르는 원칙입니다.
 |---|---|---|
 |Document|MongoDB|콘텐츠, 카탈로그|
 |Key-Value|Redis|캐시, 세션|
-|Column|Cassandra|로그, 시계열 데이터|
+|Column|Cassandra|로그, 대규모 데이터 분석|
 |Graph|Neo4j|SNS, 추천 시스템|
+|Time Series|InfluxDB, Prometheus|IoT 데이터 수집, 모니터링|
 
 ## RDB vs NoSQL
 
@@ -105,3 +117,5 @@ NoSQL이 ACID 대신 따르는 원칙입니다.
 |적합한 데이터|정형 데이터|비정형 대용량|
 
 > 서비스 초기엔 RDB로 시작하고, 트래픽 증가나 비정형 데이터가 많아지면 NoSQL을 도입하는 **혼합 전략**이 일반적입니다.
+
+→ [[NoSQL 데이터베이스의 유형에는 어떤 것들이 있나요?]]
