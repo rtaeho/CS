@@ -96,6 +96,8 @@ function App() {
 4. Error Boundary 자체에서 발생한 에러
 ```
 
+Error Boundary는 렌더링이 진행되는 하나의 연속된 [[콜 스택]] 흐름 안에서만 동작합니다. `Promise`나 `setTimeout` 같은 비동기 작업은 렌더링 콜스택이 모두 비워진 뒤 별도로 실행되기 때문에, 그 시점에 발생한 오류는 Error Boundary가 감지할 수 없습니다. 따라서 비동기 에러는 `try-catch`로 직접 처리하거나, `setState`로 에러 상태를 관리해 동기 렌더링 중에 에러를 다시 던지는 방식으로 우회해야 합니다.
+
 ## react-error-boundary 라이브러리
 
 함수형 컴포넌트에서 편리하게 사용할 수 있는 라이브러리입니다.
