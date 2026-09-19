@@ -13,7 +13,7 @@ Vercel이 만든 React 기반 풀스택 웹 프레임워크로, 파일 기반 �
 - **코드 스플리팅**: 페이지 단위로 자동 [[코드 스플리팅]] 적용
 - **이미지·폰트 최적화**: `next/image`, `next/font`로 성능 최적화 내장
 - **서버 컴포넌트**: React Server Components를 기본 지원
-- **미들웨어**: Edge Runtime에서 요청을 가로채 인증·리다이렉션 처리 가능
+- **[[Next.js Middleware|미들웨어]]**: Edge Runtime에서 요청을 가로채 인증·리다이렉션 처리 가능
 
 ## CSR / SSR / SSG 비교
 
