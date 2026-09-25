@@ -81,7 +81,7 @@ int x = queue.remove();   // 빈 큐면 즉시 예외 → 버그 조기 발견
 
 ## 자주 쓰는 패턴
 
-### BFS — 큐가 빌 때까지 처리
+### [[BFS]] — 큐가 빌 때까지 처리
 
 ```java
 Queue<Integer> queue = new LinkedList<>();

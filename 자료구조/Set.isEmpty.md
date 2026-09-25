@@ -65,7 +65,7 @@ if (set.isEmpty())   { ... }   // O 권장
 
 ## 자주 쓰는 패턴
 
-### BFS / [[DFS]]의 종료 조건
+### [[BFS]] / [[DFS]]의 종료 조건
 
 ```java
 Set<Integer> visited = new HashSet<>();

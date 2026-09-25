@@ -64,7 +64,7 @@ if (q.isEmpty())   { ... }   // O 권장
 
 ## 자주 쓰는 패턴
 
-### BFS — 큐가 빌 때까지 처리 (표준 패턴)
+### [[BFS]] — 큐가 빌 때까지 처리 (표준 패턴)
 
 ```java
 Queue<Integer> queue = new LinkedList<>();
