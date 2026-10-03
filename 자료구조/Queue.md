@@ -302,5 +302,5 @@ public void bfs(int[][] graph, int start) {
 |**삽입**|push (top에)|enqueue (rear에)|
 |**삭제**|pop (top에서)|dequeue (front에서)|
 |**비유**|접시 쌓기|줄 서기|
-|**활용**|함수 호출, DFS, Undo|BFS, 작업 큐, 버퍼|
+|**활용**|함수 호출, [[DFS]], Undo|BFS, 작업 큐, 버퍼|
 |**Java 권장**|`ArrayDeque`|`ArrayDeque` 또는 `LinkedList`|

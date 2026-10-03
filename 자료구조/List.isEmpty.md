@@ -87,7 +87,7 @@ while (!queue.isEmpty()) {
 }
 ```
 
-> 실제 BFS/DFS에서는 [[ArrayDeque]]를 쓰는 게 빠름 — `remove(0)`은 O(n)이라 느림.
+> 실제 BFS/[[DFS]]에서는 [[ArrayDeque]]를 쓰는 게 빠름 — `remove(0)`은 O(n)이라 느림.
 
 ## 시간복잡도
 
