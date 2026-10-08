@@ -29,7 +29,7 @@ List, Set 등은 자체 메서드로 제공되지 않는 작업이 많음:
 |`Collections.shuffle`|List 무작위 섞기|
 |`Collections.reverse`|List 뒤집기|
 |`Collections.max` / `min`|최댓값 / 최솟값|
-|`Collections.binarySearch`|이진 탐색 (정렬 전제)|
+|`Collections.binarySearch`|[[이진 탐색]] (정렬 전제)|
 |`Collections.frequency`|특정 값 등장 횟수|
 |`Collections.unmodifiableList`|읽기 전용 뷰|
 |`Collections.synchronizedList`|동기화 래퍼|

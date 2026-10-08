@@ -33,7 +33,7 @@ Java 배열은 가변 메서드가 거의 없음:
 |`Arrays.equals`|두 배열의 원소 비교|
 |`Arrays.toString`|배열을 문자열로 (디버깅)|
 |`Arrays.deepToString`|2차원 배열을 문자열로|
-|`Arrays.binarySearch`|이진 탐색 (정렬 전제)|
+|`Arrays.binarySearch`|[[이진 탐색]] (정렬 전제)|
 |`Arrays.stream`|배열 → Stream 변환|
 
 ## 정적 메서드인 이유
