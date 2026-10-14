@@ -87,7 +87,7 @@ while (!queue.isEmpty()) {
 }
 ```
 
-### 고정 크기 슬라이딩 윈도우
+### 고정 크기 [[슬라이딩 윈도우]]
 
 ```java
 Queue<Integer> q = new LinkedList<>();
