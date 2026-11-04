@@ -4,7 +4,7 @@ tags: [AI소식, 에이전트, 오픈스탠다드]
 status: published
 ---
 
-앤트로픽이 에이전트에 절차적 지식을 넣는 개방형 표준 Agent Skills를 리눅스 파운데이션 산하 Agentic AI Foundation(AAIF)에 기부했다고 밝혔다.
+앤트로픽이 에이전트에 절차적 지식을 넣는 개방형 표준 [[Agent Skills]]를 리눅스 파운데이션 산하 Agentic AI Foundation(AAIF)에 기부했다고 밝혔다.
 기준 시점: 2026-10-22
 
 ## 무슨 일인가
@@ -23,7 +23,7 @@ Agent Skills가 Claude Code 전용 기능에서 70개 넘는 플랫폼이 통합
 
 ## 짚고 갈 개념
 
-- Agent Skills — `SKILL.md` 폴더 단위로 에이전트에 특정 작업의 절차적 지식을 넣는 개방형 표준
+- [[Agent Skills]] — `SKILL.md` 폴더 단위로 에이전트에 특정 작업의 절차적 지식을 넣는 개방형 표준
 - MCP — 모델에 외부 컨텍스트·툴을 붙이는 프로토콜 ([[MCP]]). AAIF가 먼저 기부받아 관리하던 표준으로, Agent Skills가 그 뒤를 따랐다
 
 ## 내 생각
