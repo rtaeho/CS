@@ -81,6 +81,16 @@ RAG는 **검색된 실제 문서를 근거로** 답변을 생성하게 해 이 �
 | 청킹 | 고정 크기 | 의미 단위, 계층적 |
 | 질문 처리 | 원본 질문 그대로 | 질문 확장/분해 (HyDE, Multi-Query) |
 
+## RAG의 한계와 Contextual Retrieval
+
+문서를 청크 단위로 쪼개면 청크 하나만 봐서는 맥락을 알 수 없는 문제가 생긴다. 예를 들어 "매출이 3% 올랐다"는 청크만 보면 어느 회사, 어느 시기의 이야기인지 알 수 없어 검색에 걸리지 않거나 잘못 쓰일 수 있다. 임베딩만 쓰면 "TS-999"처럼 정확히 일치해야 하는 코드·용어도 놓치기 쉽다.
+
+앤트로픽은 Contextual Retrieval이라는 기법으로 이를 완화했다. 각 청크를 임베딩·BM25 인덱싱하기 전에, Claude로 그 청크가 전체 문서에서 어떤 맥락인지 설명하는 50~100 토큰 분량의 짧은 문구를 만들어 청크 앞에 붙인다(Contextual Embeddings, Contextual BM25). 프롬프트 캐싱으로 이 전처리 비용을 100만 문서 토큰당 약 $1.02까지 낮췄다고 밝혔다.
+
+앤트로픽이 여러 도메인에서 측정한 top-20 검색 실패율은 기본 5.7%에서, Contextual Embeddings만 적용하면 3.7%(35% 감소), Contextual BM25까지 더하면 2.9%(49% 감소), 여기에 상위 150개를 20개로 추리는 재순위(Cohere reranker)를 더하면 1.9%(67% 감소)까지 줄었다고 밝혔다. 즉 하이브리드 검색(벡터+BM25)과 재순위는 각자 따로도 유의미하지만, 청크 자체에 맥락을 채워 넣는 전처리가 먼저 있어야 효과가 더 커진다.
+
+(참고: [Anthropic - Introducing Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval))
+
 ## LangChain4j로 구현 (Java)
 
 ```java
