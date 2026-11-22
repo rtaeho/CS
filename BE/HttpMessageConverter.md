@@ -1,3 +1,9 @@
+---
+title: "HttpMessageConverter"
+tags: [Spring, MVC, 직렬화]
+status: published
+---
+
 Spring MVC에서 HTTP 요청 본문을 Java 객체로, Java 객체를 HTTP 응답 본문으로 변환하는 인터페이스입니다.
 
 ## 핵심 특징

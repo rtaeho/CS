@@ -1,3 +1,9 @@
+---
+title: "Server Action"
+tags: [Next.js, 서버]
+status: published
+---
+
 [[Next.js]]에서 `"use server"` 디렉티브로 선언하는 서버 전용 비동기 함수로, 클라이언트 코드에서 직접 호출할 수 있습니다.
 
 ## 핵심 특징

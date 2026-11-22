@@ -1,3 +1,9 @@
+---
+title: "@ResponseBody"
+tags: [Spring, MVC, 직렬화]
+status: published
+---
+
 `@ResponseBody`는 Spring MVC 컨트롤러 메서드의 반환값을 [[HttpMessageConverter]]로 직렬화해 HTTP 응답 본문에 직접 쓰는 어노테이션이다.
 
 ## 핵심 특징

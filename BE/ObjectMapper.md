@@ -1,3 +1,9 @@
+---
+title: "ObjectMapper"
+tags: [Java, JSON, 직렬화]
+status: published
+---
+
 Jackson 라이브러리에서 JSON과 Java 객체 간의 [[직렬화]]·역직렬화를 수행하는 핵심 클래스입니다.
 
 ## 핵심 특징

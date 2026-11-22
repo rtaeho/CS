@@ -1,3 +1,9 @@
+---
+title: "@Controller 와 @RestController 의 차이점을 설명해주세요."
+tags: [Spring, MVC]
+status: published
+---
+
 이 두 어노테이션의 주요 차이점은 HTTP 응답의 처리 방식에 있습니다.
 
 ### `@Controller`

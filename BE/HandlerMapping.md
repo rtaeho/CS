@@ -1,3 +1,9 @@
+---
+title: "HandlerMapping"
+tags: [Spring, MVC]
+status: published
+---
+
 Spring MVC에서 HTTP 요청 URL을 처리할 핸들러(컨트롤러 메서드)를 찾아 [[DispatcherServlet]]에 반환하는 컴포넌트입니다.
 
 ## 핵심 특징

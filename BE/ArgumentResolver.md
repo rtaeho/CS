@@ -1,3 +1,9 @@
+---
+title: "ArgumentResolver"
+tags: [Spring, MVC, 확장]
+status: published
+---
+
 Spring MVC에서 컨트롤러 메서드의 파라미터 값을 HTTP 요청으로부터 자동으로 생성하고 주입하는 컴포넌트입니다.
 
 ## 핵심 특징

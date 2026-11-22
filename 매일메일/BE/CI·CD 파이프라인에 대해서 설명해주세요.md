@@ -1,5 +1,5 @@
 ---
-title: "CI/CD 파이프라인에 대해서 설명해주세요"
+title: "CI·CD 파이프라인에 대해서 설명해주세요"
 tags: [매일메일, Backend]
 status: published
 ---

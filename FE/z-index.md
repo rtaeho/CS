@@ -1,3 +1,9 @@
+---
+title: "z-index"
+tags: [CSS, 레이아웃]
+status: published
+---
+
 `z-index`는 `position`이 `static`이 아닌 HTML 요소의 z축 쌓임 순서를 지정하는 CSS 속성이다.
 
 ## 핵심 특징

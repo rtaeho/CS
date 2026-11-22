@@ -1,3 +1,9 @@
+---
+title: "Spring MVC의 실행 흐름에 대해 설명해주세요"
+tags: [Spring, MVC]
+status: published
+---
+
 **[View를 응답하는 경우]**
 
 이미지 출처 : www.egovframe.go.kr

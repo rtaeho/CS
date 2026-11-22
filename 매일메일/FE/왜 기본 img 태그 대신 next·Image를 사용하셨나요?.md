@@ -1,5 +1,5 @@
 ---
-title: "왜 기본 img 태그 대신 next/Image를 사용하셨나요?"
+title: "왜 기본 img 태그 대신 next·Image를 사용하셨나요?"
 tags: [매일메일, Frontend]
 status: published
 ---

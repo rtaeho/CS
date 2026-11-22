@@ -1,5 +1,5 @@
 ---
-title: "Tanstack-Query"
+title: "Tanstack-query"
 tags: [React, 데이터페칭]
 status: published
 ---

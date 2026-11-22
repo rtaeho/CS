@@ -1,3 +1,9 @@
+---
+title: "HandlerAdapter"
+tags: [Spring, MVC]
+status: published
+---
+
 [[DispatcherServlet]]이 [[HandlerMapping]]으로 찾은 핸들러를 실제로 실행할 수 있도록 어댑터 역할을 수행하는 컴포넌트입니다.
 
 ## 핵심 특징
