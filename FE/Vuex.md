@@ -94,7 +94,7 @@ store.state.post.posts
 
 ## Vuex vs Pinia vs 지역 상태
 
-| | Vuex | [[Pinia]] | 지역 상태 (`ref`/`reactive`) |
+| | Vuex | Pinia | 지역 상태 (`ref`/`reactive`) |
 |---|---|---|---|
 | 구조 | state/mutations/actions | state/actions (getters 통합) | 없음 |
 | 타입스크립트 | 설정 복잡 | 기본 지원 | 기본 지원 |

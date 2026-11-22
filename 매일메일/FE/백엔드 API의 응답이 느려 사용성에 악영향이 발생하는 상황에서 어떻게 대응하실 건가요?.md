@@ -4,7 +4,7 @@ tags: [매일메일, Frontend]
 status: published
 ---
 
-관련 개념: [[Tanstack-Query]] · [[Resource Hint]]
+관련 개념: [[Tanstack-query]] · [[Resource Hint]]
 
 > 개인의 경험과 생각을 기반으로 대답해야 하는 질문입니다. 아래 답변은 참고용으로만 읽어주세요. 🙂
 

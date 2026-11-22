@@ -77,7 +77,7 @@ es.onerror = () => es.close();
 
 ## SSE vs WebSocket vs Polling
 
-| | SSE | [[WebSocket]] | Long Polling |
+| | SSE | WebSocket | Long Polling |
 |---|---|---|---|
 | 방향 | 단방향 (서버→클라이언트) | 양방향 | 단방향 |
 | 프로토콜 | HTTP | WS (업그레이드) | HTTP |
@@ -99,5 +99,5 @@ es.onerror = () => es.close();
 
 - Spring MVC → `SseEmitter` / Spring WebFlux → `Flux<ServerSentEvent>` 로 구현
 
-→ [[Spring WebFlux]] | [[WebSocket]]
+→ [[Spring WebFlux]]
 

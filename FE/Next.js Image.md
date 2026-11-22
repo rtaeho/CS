@@ -24,5 +24,5 @@ status: published
 - [[next js 한글문서] Image](https://nextjs-ko.org/docs/pages/api-reference/components/image)
 - [[kakao entertainment] Next/Image를 활용한 이미지 최적화](https://fe-developers.kakaoent.com/2022/220714-next-image/)
 
-→ [[왜 기본 img 태그 대신 next/Image를 사용하셨나요?]]
+→ [[왜 기본 img 태그 대신 next·Image를 사용하셨나요?]]
 
