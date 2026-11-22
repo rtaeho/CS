@@ -5,6 +5,7 @@ status: published
 ---
 
 MCP(Model Context Protocol) 스펙이 2026-07-28 개정판에서 `initialize` 핸드셰이크와 연결별 세션을 없애고 완전한 스테이트리스 프로토콜로 바뀌었다.
+
 기준 시점: 2026-07-28
 
 ## 무슨 일인가

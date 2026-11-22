@@ -5,6 +5,7 @@ status: published
 ---
 
 앤트로픽이 에이전트에 절차적 지식을 넣는 개방형 표준 [[Agent Skills]]를 리눅스 파운데이션 산하 Agentic AI Foundation(AAIF)에 기부했다고 밝혔다.
+
 기준 시점: 2026-10-22
 
 ## 무슨 일인가

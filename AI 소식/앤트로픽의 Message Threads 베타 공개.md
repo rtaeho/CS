@@ -5,6 +5,7 @@ status: published
 ---
 
 앤트로픽이 Messages API에 대화 상태를 서버에 잠시 보관해 매 턴 전체 대화를 다시 보내지 않게 하는 Message Threads 베타를 공개했다.
+
 기준 시점: 2026-11-02
 
 ## 무슨 일인가

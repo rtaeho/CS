@@ -5,6 +5,7 @@ status: published
 ---
 
 앤트로픽이 "같은 모델에 안전장치 수준만 다르게 적용한" 두 모델, Claude Fable 5.1과 Claude Mythos 5.1을 출시했다.
+
 기준 시점: 2026-09-15
 
 ## 무슨 일인가

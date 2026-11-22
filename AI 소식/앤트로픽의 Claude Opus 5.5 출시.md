@@ -5,6 +5,7 @@ status: published
 ---
 
 앤트로픽이 Claude 5.5 패밀리의 첫 모델인 Claude Opus 5.5를 출시했다.
+
 기준 시점: 2026-09-22
 
 ## 무슨 일인가

@@ -5,6 +5,7 @@ status: published
 ---
 
 앤트로픽이 Claude Fable 5.1·Mythos 5.1을 두 달도 안 돼 Fable 5.2·Mythos 5.2로 올리며, 속도 전용 "패스트 모드"와 모델 간 자문·위임 구조(Advisor/Orchestrator)를 처음 넣었다.
+
 기준 시점: 2026-11-09
 
 ## 무슨 일인가
